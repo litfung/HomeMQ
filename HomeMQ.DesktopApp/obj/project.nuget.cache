@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "n59hEiNyEx53VVR/yOF0CLvJJVXtDXlf+UBaF8bYXCyg2N3mb94xXBwes2VZhdwH4iKBwzi1GmI4jK/BbQzolw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.DesktopApp\\HomeMQ.DesktopApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\devin\\.nuget\\packages\\mvvmcross\\7.1.2\\mvvmcross.7.1.2.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\mvvmcross.platforms.wpf\\7.1.2\\mvvmcross.platforms.wpf.7.1.2.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}
