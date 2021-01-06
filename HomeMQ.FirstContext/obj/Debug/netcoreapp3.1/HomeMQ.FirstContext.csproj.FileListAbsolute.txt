@@ -1,4 +1,6 @@
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstContext\bin\Debug\netcoreapp3.1\HomeMQ.FirstContext.deps.json
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstContext\bin\Debug\netcoreapp3.1\HomeMQ.FirstContext.runtimeconfig.json
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstContext\bin\Debug\netcoreapp3.1\HomeMQ.FirstContext.runtimeconfig.dev.json
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstContext\bin\Debug\netcoreapp3.1\HomeMQ.FirstContext.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstContext\bin\Debug\netcoreapp3.1\HomeMQ.FirstContext.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstContext\bin\Debug\netcoreapp3.1\BaseClasses.dll
@@ -12,6 +14,4 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstContext\obj\Debug\netcoreapp3.1\H
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstContext\obj\Debug\netcoreapp3.1\HomeMQ.FirstContext.csproj.CopyComplete
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstContext\obj\Debug\netcoreapp3.1\HomeMQ.FirstContext.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstContext\obj\Debug\netcoreapp3.1\HomeMQ.FirstContext.pdb
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstContext\bin\Debug\netcoreapp3.1\HomeMQ.FirstContext.runtimeconfig.json
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstContext\bin\Debug\netcoreapp3.1\HomeMQ.FirstContext.runtimeconfig.dev.json
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstContext\obj\Debug\netcoreapp3.1\HomeMQ.FirstContext.genruntimeconfig.cache
