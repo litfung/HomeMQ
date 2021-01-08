@@ -5,10 +5,6 @@ VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.ConsoleApp", "HomeMQ\HomeMQ.ConsoleApp.csproj", "{3E4AC0B8-2E07-45F9-ABFB-44ACBB09BAB1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Send", "..\HelloWorld\Send\Send.csproj", "{F88A633A-F3DD-41CC-A2F9-CD49A1573FAF}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Receive", "..\HelloWorld\Receive\Receive.csproj", "{EB611627-FFCD-4F7E-9D95-32E8DE26121E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.Core", "HomeMQ.Core\HomeMQ.Core.csproj", "{F1143867-04D7-4F34-986A-0FEEB37B30B4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NanoLeafControlStandard", "..\ButlerAndroid\NanoLeafControlStandard\NanoLeafControlStandard.csproj", "{5FB54032-2AF7-48CA-96AB-04E90AEDBB20}"
@@ -27,7 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.FirstContext", "Home
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.SecondWebApp", "HomeMQ.SecondWebApp\HomeMQ.SecondWebApp.csproj", "{FC57E498-E831-460C-9501-4736D04F9D76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeMQ.MainContext", "HomeMQ.MainContext\HomeMQ.MainContext.csproj", "{575C1703-C97F-4D87-8EF1-42150F7BE95E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.MainContext", "HomeMQ.MainContext\HomeMQ.MainContext.csproj", "{575C1703-C97F-4D87-8EF1-42150F7BE95E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeMQ.RabbitMQ.Consumer", "HomeMQ.RabbitMQ.Consumer\HomeMQ.RabbitMQ.Consumer.csproj", "{658861E9-922A-43A6-BD7F-5DD847F7A07D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeMQ.RabbitMQ.Publisher", "HomeMQ.RabbitMQ.Publisher\HomeMQ.RabbitMQ.Publisher.csproj", "{9ECABBB2-9575-4898-B85C-AFADF787CE9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,14 +39,6 @@ Global
 		{3E4AC0B8-2E07-45F9-ABFB-44ACBB09BAB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E4AC0B8-2E07-45F9-ABFB-44ACBB09BAB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E4AC0B8-2E07-45F9-ABFB-44ACBB09BAB1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F88A633A-F3DD-41CC-A2F9-CD49A1573FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F88A633A-F3DD-41CC-A2F9-CD49A1573FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F88A633A-F3DD-41CC-A2F9-CD49A1573FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F88A633A-F3DD-41CC-A2F9-CD49A1573FAF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EB611627-FFCD-4F7E-9D95-32E8DE26121E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB611627-FFCD-4F7E-9D95-32E8DE26121E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB611627-FFCD-4F7E-9D95-32E8DE26121E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB611627-FFCD-4F7E-9D95-32E8DE26121E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F1143867-04D7-4F34-986A-0FEEB37B30B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F1143867-04D7-4F34-986A-0FEEB37B30B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1143867-04D7-4F34-986A-0FEEB37B30B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -87,6 +79,14 @@ Global
 		{575C1703-C97F-4D87-8EF1-42150F7BE95E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{575C1703-C97F-4D87-8EF1-42150F7BE95E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{575C1703-C97F-4D87-8EF1-42150F7BE95E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{658861E9-922A-43A6-BD7F-5DD847F7A07D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{658861E9-922A-43A6-BD7F-5DD847F7A07D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{658861E9-922A-43A6-BD7F-5DD847F7A07D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{658861E9-922A-43A6-BD7F-5DD847F7A07D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ECABBB2-9575-4898-B85C-AFADF787CE9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ECABBB2-9575-4898-B85C-AFADF787CE9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ECABBB2-9575-4898-B85C-AFADF787CE9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ECABBB2-9575-4898-B85C-AFADF787CE9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

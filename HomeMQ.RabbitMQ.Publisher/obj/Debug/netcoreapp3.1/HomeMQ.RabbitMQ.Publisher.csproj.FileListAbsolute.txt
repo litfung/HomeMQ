@@ -1,0 +1,4 @@
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\obj\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Publisher.csprojAssemblyReference.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\obj\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Publisher.AssemblyInfoInputs.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\obj\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Publisher.AssemblyInfo.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\obj\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Publisher.csproj.CoreCompileInputs.cache

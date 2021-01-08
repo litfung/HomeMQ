@@ -54,7 +54,6 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.MainContext\bin\Debug\netcoreapp3.1\ru
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.MainContext\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.MainContext\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.MainContext\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.MainContext\obj\Debug\netcoreapp3.1\HomeMQ.MainContext.csprojAssemblyReference.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.MainContext\obj\Debug\netcoreapp3.1\HomeMQ.MainContext.AssemblyInfoInputs.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.MainContext\obj\Debug\netcoreapp3.1\HomeMQ.MainContext.AssemblyInfo.cs
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.MainContext\obj\Debug\netcoreapp3.1\HomeMQ.MainContext.csproj.CoreCompileInputs.cache
