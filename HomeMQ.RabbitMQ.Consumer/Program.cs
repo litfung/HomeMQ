@@ -1,4 +1,12 @@
-﻿using System;
+﻿using HomeMQ.Core;
+using Newtonsoft.Json;
+using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
+using System;
+using System.Linq;
+using System.Net;
+using System.Net.NetworkInformation;
+using System.Text;
 
 namespace HomeMQ.RabbitMQ.Consumer
 {
@@ -173,3 +181,4 @@ namespace HomeMQ.RabbitMQ.Consumer
         //    }
         //}
     }
+}

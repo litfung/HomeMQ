@@ -1,4 +1,11 @@
-﻿using System;
+﻿using HomeMQ.Core;
+using HomeMQ.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Serialization;
+using RabbitMQ.Client;
+using System;
+using System.Text;
 
 namespace HomeMQ.RabbitMQ.Publisher
 {

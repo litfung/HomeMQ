@@ -52,7 +52,7 @@ namespace HomeMQ.MainContext
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source = DESKTOP-7S00QLE\SQLEXPRESS; Initial Catalog = HomeMQ; uid = master; pwd=control; timeout=100000;");
+            //optionsBuilder.UseSqlServer(@"Data Source = DESKTOP-7S00QLE\SQLEXPRESS; Initial Catalog = HomeMQ; uid = master; pwd=control; timeout=100000;");
 
         }
         #endregion

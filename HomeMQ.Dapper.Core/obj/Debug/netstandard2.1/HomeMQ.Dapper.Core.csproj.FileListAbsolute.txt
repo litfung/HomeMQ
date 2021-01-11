@@ -1,0 +1,9 @@
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Core\bin\Debug\netstandard2.1\HomeMQ.Dapper.Core.deps.json
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Core\bin\Debug\netstandard2.1\HomeMQ.Dapper.Core.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Core\bin\Debug\netstandard2.1\HomeMQ.Dapper.Core.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Core\obj\Debug\netstandard2.1\HomeMQ.Dapper.Core.csprojAssemblyReference.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Core\obj\Debug\netstandard2.1\HomeMQ.Dapper.Core.AssemblyInfoInputs.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Core\obj\Debug\netstandard2.1\HomeMQ.Dapper.Core.AssemblyInfo.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Core\obj\Debug\netstandard2.1\HomeMQ.Dapper.Core.csproj.CoreCompileInputs.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Core\obj\Debug\netstandard2.1\HomeMQ.Dapper.Core.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Core\obj\Debug\netstandard2.1\HomeMQ.Dapper.Core.pdb
