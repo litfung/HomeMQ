@@ -57,7 +57,7 @@ namespace HomeMQ.RabbitMQ.Publisher
     {
         var exchangeName = "rtsh_topics";
         channel.ExchangeDeclare(exchangeName, type: "topic");
-        var routingKey = "rasp.control.pi2";
+        var routingKey = "rasp.control.all";
 
         var contractResolver = new DefaultContractResolver
         {

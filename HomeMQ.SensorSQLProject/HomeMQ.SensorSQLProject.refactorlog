@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="4aee8a8d-6810-4467-9bd0-f84cd4111ccb" ChangeDateTime="01/11/2021 23:37:20">
+    <Property Name="ElementName" Value="[dbo].[Location].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Location]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LocationId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="da145783-5b47-4126-a17b-2bbf8559d4ae" ChangeDateTime="01/11/2021 23:38:48">
+    <Property Name="ElementName" Value="[dbo].[Location].[Location]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Location]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="InstalledLocation" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="53a7941e-b5e7-4698-96e0-3245072d0106" ChangeDateTime="01/11/2021 23:42:55">
+    <Property Name="ElementName" Value="[dbo].[Sensor].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Sensor]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SensorId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7b03b36b-258b-49f2-b0ad-bc6b9bc18953" ChangeDateTime="01/11/2021 23:44:08">
+    <Property Name="ElementName" Value="[dbo].[Sensor].[Time]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Sensor]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Identifier" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="033e889f-540f-4afd-b511-cf34737f4222" ChangeDateTime="01/11/2021 23:48:25">
+    <Property Name="ElementName" Value="[dbo].[IPAddress].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[IPAddress]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IPAddressId" />
+  </Operation>
+</Operations>
