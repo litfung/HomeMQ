@@ -62,16 +62,28 @@
     <Folder Include="dbo\Views" />
     <Folder Include="dbo\StoredProcedures" />
     <Folder Include="dbo\Compares" />
+    <Folder Include="dbo\Types" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Person.sql" />
     <Build Include="dbo\Tables\Address.sql" />
     <Build Include="dbo\Views\FullPerson.sql" />
     <Build Include="dbo\StoredProcedures\spPerson_FilterByLastName.sql" />
+    <Build Include="dbo\StoredProcedures\spPerson_ReadAll.sql" />
+    <Build Include="dbo\StoredProcedures\spPerson_Insert.sql" />
+    <Build Include="dbo\StoredProcedures\spAddress_Insert.sql" />
+    <Build Include="dbo\StoredProcedures\spPersonWithAddresses_FilterByLastName.sql" />
+    <Build Include="dbo\StoredProcedures\spPersonWithAddresses_ReadAll.sql" />
+    <Build Include="dbo\Types\BasicUDT.sql" />
+    <Build Include="dbo\StoredProcedures\spPerson_InsertSet.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dbo\PublishLocations\SQLDemoDB.publish.xml" />
     <None Include="dbo\Compares\LocalDBCompare.scmp" />
+    <None Include="dbo\PublishLocations\SQLDemoDBCreateReadSP.publish.xml" />
+    <None Include="dbo\PublishLocations\HomeMQ.SQLProjectCreateJoinAddressSP.publish.xml" />
+    <None Include="dbo\PublishLocations\HomeMQ.SQL.publish.xml" />
+    <None Include="dbo\PublishLocations\HomeMQ.SQLProjectCreateTypeBasicUDT.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="HomeMQ.SQLProject.refactorlog" />

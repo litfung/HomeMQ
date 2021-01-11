@@ -27,9 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.RabbitMQ.Consumer", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.RabbitMQ.Publisher", "HomeMQ.RabbitMQ.Publisher\HomeMQ.RabbitMQ.Publisher.csproj", "{9ECABBB2-9575-4898-B85C-AFADF787CE9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeMQ.Dapper.Core", "HomeMQ.Dapper.Core\HomeMQ.Dapper.Core.csproj", "{5C3E0BB5-DAE2-481D-BB5A-FFBA350E8288}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.DapperCore", "HomeMQ.Dapper.Core\HomeMQ.DapperCore.csproj", "{5C3E0BB5-DAE2-481D-BB5A-FFBA350E8288}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeMQ.Dapper.Test", "HomeMQ.Dapper.Test\HomeMQ.Dapper.Test.csproj", "{5AC66285-6590-4302-B9B8-855A173EC52D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.DapperTest", "HomeMQ.Dapper.Test\HomeMQ.DapperTest.csproj", "{5AC66285-6590-4302-B9B8-855A173EC52D}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "HomeMQ.SQLProject", "HomeMQ.SQLProject\HomeMQ.SQLProject.sqlproj", "{8B18C462-9958-4F4F-9389-AB38A1B51041}"
 EndProject

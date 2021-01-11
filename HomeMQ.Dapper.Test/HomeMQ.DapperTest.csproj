@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HomeMQ.Dapper.Core\HomeMQ.Dapper.Core.csproj" />
+    <ProjectReference Include="..\HomeMQ.Dapper.Core\HomeMQ.DapperCore.csproj" />
   </ItemGroup>
 
 </Project>

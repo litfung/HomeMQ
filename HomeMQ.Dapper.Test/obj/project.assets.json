@@ -396,7 +396,7 @@
           }
         }
       },
-      "HomeMQ.Dapper.Core/1.0.0": {
+      "HomeMQ.DapperCore/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -405,10 +405,10 @@
           "System.Configuration.ConfigurationManager": "5.0.0"
         },
         "compile": {
-          "bin/placeholder/HomeMQ.Dapper.Core.dll": {}
+          "bin/placeholder/HomeMQ.DapperCore.dll": {}
         },
         "runtime": {
-          "bin/placeholder/HomeMQ.Dapper.Core.dll": {}
+          "bin/placeholder/HomeMQ.DapperCore.dll": {}
         }
       }
     }
@@ -1319,15 +1319,15 @@
         "version.txt"
       ]
     },
-    "HomeMQ.Dapper.Core/1.0.0": {
+    "HomeMQ.DapperCore/1.0.0": {
       "type": "project",
-      "path": "../HomeMQ.Dapper.Core/HomeMQ.Dapper.Core.csproj",
-      "msbuildProject": "../HomeMQ.Dapper.Core/HomeMQ.Dapper.Core.csproj"
+      "path": "../HomeMQ.Dapper.Core/HomeMQ.DapperCore.csproj",
+      "msbuildProject": "../HomeMQ.Dapper.Core/HomeMQ.DapperCore.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "HomeMQ.Dapper.Core >= 1.0.0"
+      "HomeMQ.DapperCore >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1337,9 +1337,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Test\\HomeMQ.Dapper.Test.csproj",
-      "projectName": "HomeMQ.Dapper.Test",
-      "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Test\\HomeMQ.Dapper.Test.csproj",
+      "projectUniqueName": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Test\\HomeMQ.DapperTest.csproj",
+      "projectName": "HomeMQ.DapperTest",
+      "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Test\\HomeMQ.DapperTest.csproj",
       "packagesPath": "C:\\Users\\devin\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Test\\obj\\",
       "projectStyle": "PackageReference",
@@ -1362,8 +1362,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Core\\HomeMQ.Dapper.Core.csproj": {
-              "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Core\\HomeMQ.Dapper.Core.csproj"
+            "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Core\\HomeMQ.DapperCore.csproj": {
+              "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Core\\HomeMQ.DapperCore.csproj"
             }
           }
         }

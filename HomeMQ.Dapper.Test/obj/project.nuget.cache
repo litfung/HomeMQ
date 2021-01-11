@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xYJFW15K9hgz9aHBJz6VOwoARzWgqhM8tCxzb/iab6lhn58UjJ4hlgAqv32wIip984o2GP8Vam2yIx3kfkraqA==",
+  "dgSpecHash": "2p4VlR3JKizRiJPfpbdXtYsjA6azPfpavU9dBm57KfQMm6JZYU7b+lHjYBdJuTCpL5LhTSOITON9zJ3roRphzA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Test\\HomeMQ.Dapper.Test.csproj",
+  "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Test\\HomeMQ.DapperTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\devin\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

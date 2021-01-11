@@ -6018,9 +6018,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Core\\HomeMQ.Dapper.Core.csproj",
-      "projectName": "HomeMQ.Dapper.Core",
-      "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Core\\HomeMQ.Dapper.Core.csproj",
+      "projectUniqueName": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Core\\HomeMQ.DapperCore.csproj",
+      "projectName": "HomeMQ.DapperCore",
+      "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Core\\HomeMQ.DapperCore.csproj",
       "packagesPath": "C:\\Users\\devin\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Core\\obj\\",
       "projectStyle": "PackageReference",
