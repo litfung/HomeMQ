@@ -4,14 +4,14 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Data.SqlClient;
 
 namespace HomeMQ.DapperCore
 {
-    public class HomeDataAccess
+    public class HomeDataAccess : IDataAccess
     {
-
         public List<Person> GetPeople(string lastName)
         {
             //var wtf = @"Data Source=DESKTOP-7S00QLE\SQLEXPRESS; Initial Catalog = DemoDB2; uid = master; pwd=control; timeout= 100000;";
@@ -20,6 +20,15 @@ namespace HomeMQ.DapperCore
             {
                 //var ienum = newConnection.Query<Person>($"select * from Person where LastName = '{lastName}'");
                 var output = newConnection.Query<Person>($"dbo.spPerson_FilterByLastName @LastName", new { LastName = lastName });
+                return output.ToList();
+            }
+        }
+
+        public async Task<List<Person>> GetPeopleAsync()
+        {
+            using (IDbConnection newConnection = new SqlConnection(SQLHelper.ConnectionString))
+            {
+                var output = await newConnection.QueryAsync<Person>($"dbo.spPerson_ReadAll");
                 return output.ToList();
             }
         }
@@ -91,7 +100,7 @@ namespace HomeMQ.DapperCore
                 //            on ad.PersonId = pe.PersonId";
 
                 var sql = $"dbo.spPersonWithAddresses_ReadAll";
-                var people = newConnection.Query<Person, Address, Person>(sql, (person,address) => { person.Address = address; return person; }  );
+                var people = newConnection.Query<Person, Address, Person>(sql, (person, address) => { person.Address = address; return person; });
                 foreach (var p in people)
                 {
                     Console.WriteLine($"{p.FullInfo}: \nAddress: {p.Address?.ToString()}");
@@ -195,7 +204,24 @@ namespace HomeMQ.DapperCore
                 {
                     Console.WriteLine(se.Message);
                 }
-                
+
+            }
+        }
+
+        public async Task InsertPersonAsync(Person person)
+        {
+            using (IDbConnection conn = new SqlConnection(SQLHelper.ConnectionString))
+            {
+                var people = new List<Person> { person };
+                try
+                {
+                    await conn.ExecuteAsync("dbo.spPerson_Insert @FirstName, @LastName", people);//, @EmailAddress, @PhoneNumber");
+                }
+                catch (SqlException se)
+                {
+                    Console.WriteLine(se.Message);
+                }
+
             }
         }
     }

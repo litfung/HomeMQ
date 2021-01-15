@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>1ad5cb53-b2fd-4263-a2a0-fa190e68fa51</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HomeMQ.Dapper.Core\HomeMQ.DapperCore.csproj" />
+    <ProjectReference Include="..\HomeMQ.Models\HomeMQ.Models.csproj" />
+  </ItemGroup>
+
+</Project>

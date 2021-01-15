@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HomeMQ.Core\HomeMQ.Core.csproj" />
+    <ProjectReference Include="..\NetworkDeviceModels\NetworkDeviceModels.csproj" />
   </ItemGroup>
 
   <ItemGroup>

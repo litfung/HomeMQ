@@ -3,8 +3,10 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\HomeMQ.C
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\HomeMQ.Core.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\BaseClasses.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\HomeMQ.Models.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\NetworkDeviceModels.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\HomeMQ.Models.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\BaseClasses.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\NetworkDeviceModels.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\obj\Debug\netstandard2.0\HomeMQ.Core.csprojAssemblyReference.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\obj\Debug\netstandard2.0\HomeMQ.Core.AssemblyInfoInputs.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\obj\Debug\netstandard2.0\HomeMQ.Core.AssemblyInfo.cs

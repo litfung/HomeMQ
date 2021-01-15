@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:HomeMQ.DesktopApp.Styles">
+    <!--Menu Background-->
+    <Color x:Key="MenuBackground">Black</Color>
+    <SolidColorBrush x:Key="MenuBackgroundBrush" Color="{StaticResource MenuBackground}"/>
+
+    <!--Menu Button Foreground-->
+    <Color x:Key="MenuButtonForeground">White</Color>
+    <SolidColorBrush x:Key="MenuButtonForegroundBrush" Color="{StaticResource MenuButtonForeground}"/>
+
+    <!--Primary Background-->
+    <Color x:Key="PrimaryBackground">#324158</Color>
+    <SolidColorBrush x:Key="PrimaryBackgroundBrush" Color="{StaticResource PrimaryBackground}"/>
+
+    <!--Primary Button Foreground-->
+    <Color x:Key="PrimaryForeground">White</Color>
+    <SolidColorBrush x:Key="PrimaryForegroundBrush" Color="{StaticResource PrimaryForeground}"/>
+
+    <!--Primary Button Background-->
+    <Color x:Key="ButtonBackground">#667182</Color>
+    <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="{StaticResource ButtonBackground}"/>
+
+    <!--Primary Disabled Background-->
+    <Color x:Key="PrimaryDisabledBackground">#FFDDDDDD</Color>
+    <SolidColorBrush x:Key="PrimaryDisabledBackgroundBrush" Color="{StaticResource PrimaryDisabledBackground}"/>
+
+    <!--Default Selection Background-->
+    <Color x:Key="DefaultSelectionBackground">#FF4F4F4F</Color>
+    <SolidColorBrush x:Key="DefaultSelectionBackgroundBrush" Color="{StaticResource DefaultSelectionBackground}"/>
+</ResourceDictionary>

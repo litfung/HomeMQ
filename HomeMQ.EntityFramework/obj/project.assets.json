@@ -2283,6 +2283,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "BaseClasses": "1.0.0",
+          "NetworkDeviceModels": "1.0.0",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -2290,6 +2291,16 @@
         },
         "runtime": {
           "bin/placeholder/HomeMQ.Models.dll": {}
+        }
+      },
+      "NetworkDeviceModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/NetworkDeviceModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NetworkDeviceModels.dll": {}
         }
       }
     }
@@ -7724,6 +7735,11 @@
       "type": "project",
       "path": "../HomeMQ.Models/HomeMQ.Models.csproj",
       "msbuildProject": "../HomeMQ.Models/HomeMQ.Models.csproj"
+    },
+    "NetworkDeviceModels/1.0.0": {
+      "type": "project",
+      "path": "../NetworkDeviceModels/NetworkDeviceModels.csproj",
+      "msbuildProject": "../NetworkDeviceModels/NetworkDeviceModels.csproj"
     }
   },
   "projectFileDependencyGroups": {

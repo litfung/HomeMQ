@@ -9,6 +9,7 @@
       "HomeMQ.RabbitMQ.Consumer/1.0.0": {
         "dependencies": {
           "HomeMQ.Core": "1.0.0",
+          "NetworkDeviceModels": "1.0.0",
           "RabbitMQ.Client": "6.2.1",
           "Newtonsoft.Json": "11.0.0.0"
         },
@@ -71,10 +72,16 @@
       "HomeMQ.Models/1.0.0": {
         "dependencies": {
           "BaseClasses": "1.0.0",
+          "NetworkDeviceModels": "1.0.0",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "runtime": {
           "HomeMQ.Models.dll": {}
+        }
+      },
+      "NetworkDeviceModels/1.0.0": {
+        "runtime": {
+          "NetworkDeviceModels.dll": {}
         }
       },
       "Newtonsoft.Json/11.0.0.0": {
@@ -139,6 +146,11 @@
       "sha512": ""
     },
     "HomeMQ.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NetworkDeviceModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

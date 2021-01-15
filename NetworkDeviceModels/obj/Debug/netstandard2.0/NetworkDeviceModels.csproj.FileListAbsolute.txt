@@ -1,0 +1,9 @@
+C:\Users\devin\source\repos\HomeMQ\NetworkDeviceModels\bin\Debug\netstandard2.0\NetworkDeviceModels.deps.json
+C:\Users\devin\source\repos\HomeMQ\NetworkDeviceModels\bin\Debug\netstandard2.0\NetworkDeviceModels.dll
+C:\Users\devin\source\repos\HomeMQ\NetworkDeviceModels\bin\Debug\netstandard2.0\NetworkDeviceModels.pdb
+C:\Users\devin\source\repos\HomeMQ\NetworkDeviceModels\obj\Debug\netstandard2.0\NetworkDeviceModels.csprojAssemblyReference.cache
+C:\Users\devin\source\repos\HomeMQ\NetworkDeviceModels\obj\Debug\netstandard2.0\NetworkDeviceModels.AssemblyInfoInputs.cache
+C:\Users\devin\source\repos\HomeMQ\NetworkDeviceModels\obj\Debug\netstandard2.0\NetworkDeviceModels.AssemblyInfo.cs
+C:\Users\devin\source\repos\HomeMQ\NetworkDeviceModels\obj\Debug\netstandard2.0\NetworkDeviceModels.csproj.CoreCompileInputs.cache
+C:\Users\devin\source\repos\HomeMQ\NetworkDeviceModels\obj\Debug\netstandard2.0\NetworkDeviceModels.dll
+C:\Users\devin\source\repos\HomeMQ\NetworkDeviceModels\obj\Debug\netstandard2.0\NetworkDeviceModels.pdb

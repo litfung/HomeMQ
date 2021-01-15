@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetworkDeviceModels;
+using System;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 

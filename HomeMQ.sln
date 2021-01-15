@@ -33,7 +33,15 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "HomeMQ.SQLProject", "HomeMQ
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "HomeMQ.SensorSQLProject", "HomeMQ.SensorSQLProject\HomeMQ.SensorSQLProject.sqlproj", "{DEE57D67-981E-485A-84C2-91D48E40A7DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeMQ.SensorSQL.DataAccess", "HomeMQ.SensorSQL.DataAccess\HomeMQ.SensorSQL.DataAccess.csproj", "{F158953E-E7B4-4248-884A-E48168336CF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.SensorSQL.DataAccess", "HomeMQ.SensorSQL.DataAccess\HomeMQ.SensorSQL.DataAccess.csproj", "{F158953E-E7B4-4248-884A-E48168336CF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeMQ.WebAppNoDb", "HomeMQ.WebAppNoDb\HomeMQ.WebAppNoDb.csproj", "{5329AA10-415A-40A0-8160-C974992FEA4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeMQ.FirstBlazor", "HomeMQ.FirstBlazor\HomeMQ.FirstBlazor.csproj", "{6AD07C27-7AE5-4D43-AEB4-24ED1F39A654}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkDeviceModels", "NetworkDeviceModels\NetworkDeviceModels.csproj", "{9570AF45-3743-443D-91DB-85BA6C7F37B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeMQ.RabbitMQ.ConsumerTest", "HomeMQ.RabbitMQ.ConsumerTest\HomeMQ.RabbitMQ.ConsumerTest.csproj", "{8785EF6B-5003-4578-A06A-5A192F6811DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -109,6 +117,22 @@ Global
 		{F158953E-E7B4-4248-884A-E48168336CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F158953E-E7B4-4248-884A-E48168336CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F158953E-E7B4-4248-884A-E48168336CF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5329AA10-415A-40A0-8160-C974992FEA4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5329AA10-415A-40A0-8160-C974992FEA4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5329AA10-415A-40A0-8160-C974992FEA4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5329AA10-415A-40A0-8160-C974992FEA4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AD07C27-7AE5-4D43-AEB4-24ED1F39A654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD07C27-7AE5-4D43-AEB4-24ED1F39A654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD07C27-7AE5-4D43-AEB4-24ED1F39A654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD07C27-7AE5-4D43-AEB4-24ED1F39A654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9570AF45-3743-443D-91DB-85BA6C7F37B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9570AF45-3743-443D-91DB-85BA6C7F37B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9570AF45-3743-443D-91DB-85BA6C7F37B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9570AF45-3743-443D-91DB-85BA6C7F37B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8785EF6B-5003-4578-A06A-5A192F6811DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8785EF6B-5003-4578-A06A-5A192F6811DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8785EF6B-5003-4578-A06A-5A192F6811DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8785EF6B-5003-4578-A06A-5A192F6811DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

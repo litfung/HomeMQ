@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\App.xaml
-2-1331668027
+8-1147269613
 
 4-526038884
-1991727039483
-MainWindow.xaml;Views\MainView.xaml;
+200-666826984
+MainWindow.xaml;Styles\Buttons.xaml;Styles\Collections.xaml;Styles\Colors.xaml;Styles\DataTemplates.xaml;Styles\Fonts.xaml;Styles\Texts.xaml;Views\MainView.xaml;
 
 False
 

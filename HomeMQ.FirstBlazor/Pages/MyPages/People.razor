@@ -1,0 +1,70 @@
+﻿@page "/Data/People"
+
+@using HomeMQ.DapperCore
+@using HomeMQ.Models
+@using HomeMQ.FirstBlazor.Models
+
+@inject IPeopleData database
+
+<h1>People Page</h1>
+
+<h4>Insert New Person</h4>
+<EditForm Model="@newPerson" OnValidSubmit="@InsertPerson">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText id="firstName" @bind-Value="newPerson.FirstName" />
+    <InputText id="lastName" @bind-Value="newPerson.LastName" />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</EditForm>
+
+<h4>Current People</h4>
+@if(people is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in people)
+            {
+                <tr>
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                    @*<td>@item.Address</td>*@
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Person> people;
+    private DisplayPerson newPerson = new DisplayPerson();
+
+    protected override async Task OnInitializedAsync()
+    {
+        people = await database.GetPeople();
+    }
+
+    private async Task InsertPerson()
+    {
+        var pp = new Person
+        {
+            FirstName = newPerson.FirstName,
+            LastName = newPerson.LastName
+        };
+        await database.InsertPerson(pp);
+
+        people.Add(pp);
+
+        newPerson = new DisplayPerson();
+    }
+}
