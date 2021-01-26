@@ -8,6 +8,7 @@ using MvvmCross;
 using WiznetControllers;
 using DeviceManagers;
 using WPFMessageBox;
+using RabbitMqManagers;
 
 namespace HomeMQ.Core
 {
@@ -17,6 +18,7 @@ namespace HomeMQ.Core
         {
             Mvx.IoCProvider.RegisterSingleton(() => WPFUserDialogs.Instance);
             Mvx.IoCProvider.RegisterSingleton(() => WiznetManager.Instance);
+            Mvx.IoCProvider.RegisterSingleton(() => MQConnectionManager.Instance);
             RegisterAppStart<MainViewModel>();
         }
     }

@@ -15,15 +15,28 @@ namespace HomeMQ.RabbitMQ.Consumer
         public ConsumerSettings Settings { get; set; } = new ConsumerSettings();
         public string ExchangeName { get; set; }
         public List<string> RoutingKeys { get; set; }
+        private IConnection Connection { get; set; }
         public Dictionary<string, string> RoutesToQueues { get; set; } = new Dictionary<string, string>();
         #endregion
 
         #region Constructors
         public TopicConsumer(IConnection conn, string exchange, string routeKey)
         {
+            Connection = conn;
             ExchangeName = exchange;
             RoutingKeys = new List<string> { routeKey };
-            Model = conn.CreateModel();
+            Model = Connection.CreateModel();
+        }
+
+        public TopicConsumer(ConnectionFactory factory, string exchange, string routeKey)
+            : this(factory, exchange, new List<string> { routeKey }) { }
+
+        public TopicConsumer(ConnectionFactory factory, string exchange, List<string> routeKeys)
+        {
+            Connection = factory.CreateConnection();
+            ExchangeName = exchange;
+            RoutingKeys = routeKeys;
+            Model = Connection.CreateModel();
         }
         #endregion
 
@@ -60,11 +73,13 @@ namespace HomeMQ.RabbitMQ.Consumer
         public void CancelByKey(string key)
         {
             Model.BasicCancel(RoutesToQueues[key]);
+            Connection.Dispose();
         }
 
         public void CancelByQueue(string queueName)
         {
             Model.BasicCancel(queueName);
+            Connection.Dispose();
         }
 
         //public override void HandleBasicDeliver(string consumerTag, ulong deliveryTag, bool redelivered, string exchange, string routingKey, IBasicProperties properties, ReadOnlyMemory<byte> body)

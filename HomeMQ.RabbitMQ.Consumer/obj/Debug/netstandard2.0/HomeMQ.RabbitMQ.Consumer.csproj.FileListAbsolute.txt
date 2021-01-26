@@ -6,3 +6,4 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Consumer\obj\Debug\netstandar
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Consumer\obj\Debug\netstandard2.0\HomeMQ.RabbitMQ.Consumer.csproj.CoreCompileInputs.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Consumer\obj\Debug\netstandard2.0\HomeMQ.RabbitMQ.Consumer.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Consumer\obj\Debug\netstandard2.0\HomeMQ.RabbitMQ.Consumer.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Consumer\obj\Debug\netstandard2.0\HomeMQ.RabbitMQ.Consumer.csprojAssemblyReference.cache

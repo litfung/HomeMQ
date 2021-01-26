@@ -116,8 +116,10 @@
           "BaseViewModels": "1.0.0",
           "DeviceManagers": "1.0.0",
           "HomeMQ.Models": "1.0.0",
+          "HomeMQ.RabbitMQ.Consumer": "1.0.0",
           "MvvmCross": "7.1.2",
           "RabbitMQ.Client": "6.2.1",
+          "RabbitMqManagers": "1.0.0",
           "WPFMessageBox": "1.0.0",
           "WiznetControllers": "1.0.0"
         },
@@ -166,6 +168,19 @@
         },
         "runtime": {
           "bin/placeholder/NetworkDeviceModels.dll": {}
+        }
+      },
+      "RabbitMqManagers/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "RabbitMQ.Client": "6.2.1"
+        },
+        "compile": {
+          "bin/placeholder/RabbitMqManagers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RabbitMqManagers.dll": {}
         }
       },
       "WiznetControllers/1.0.0": {
@@ -501,6 +516,11 @@
       "type": "project",
       "path": "../../SharedProjects/Standard/NetworkDeviceModels/NetworkDeviceModels.csproj",
       "msbuildProject": "../../SharedProjects/Standard/NetworkDeviceModels/NetworkDeviceModels.csproj"
+    },
+    "RabbitMqManagers/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/Standard/RabbitMqManagers/RabbitMqManagers.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/RabbitMqManagers/RabbitMqManagers.csproj"
     },
     "WiznetControllers/1.0.0": {
       "type": "project",

@@ -11,6 +11,11 @@ namespace HomeMQ.RabbitMQ.Consumer
         {
         }
 
+        public MasterControlConsumer(ConnectionFactory factory, string exchange, string routeKey) : base(factory, exchange, routeKey)
+        {
+            
+        }
+
         public override void HandleBasicDeliver(string consumerTag, ulong deliveryTag, bool redelivered, string exchange, string routingKey, IBasicProperties properties, ReadOnlyMemory<byte> body)
         {
             Model.BasicAck(deliveryTag, false);

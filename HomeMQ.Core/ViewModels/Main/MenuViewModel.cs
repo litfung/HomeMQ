@@ -3,6 +3,7 @@ using BaseClasses;
 using BaseViewModels;
 using MvvmCross.Commands;
 using MvvmCross.ViewModels;
+using RabbitMqManagers;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -17,6 +18,7 @@ namespace HomeMQ.Core.ViewModels
         #region Fields
         private IWiznetManager wiznetManager;
         private IUserDialogs userDialogs;
+        private MQConnectionManager rabbitConnectionManager;
         #endregion
 
         #region Properties
@@ -29,10 +31,11 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public MenuViewModel(IWiznetManager wizManager, IUserDialogs dialog)
+        public MenuViewModel(IWiznetManager wizManager, IUserDialogs dialog, MQConnectionManager rabbitManager)
         {
             wiznetManager = wizManager;
             userDialogs = dialog;
+            rabbitConnectionManager = rabbitManager;
             ShowFirstPageCommand = new MvxCommand(ShowFirstPage);
             ShowSecondPageCommand = new MvxCommand(ShowSecondPage);
         }
@@ -46,13 +49,13 @@ namespace HomeMQ.Core.ViewModels
         public void ShowFirstPage()
         {
             Messenger.Instance.Send(new ViewUnloadedMessage());
-            Messenger.Instance.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(wiznetManager, userDialogs)));
+            Messenger.Instance.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(wiznetManager, userDialogs, rabbitConnectionManager)));
         }
 
         public void ShowSecondPage()
         {
             Messenger.Instance.Send(new ViewUnloadedMessage());
-            Messenger.Instance.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(wiznetManager, userDialogs)));
+            Messenger.Instance.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(wiznetManager, userDialogs, rabbitConnectionManager)));
         }
         #endregion
 

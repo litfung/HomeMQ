@@ -3,6 +3,7 @@ using BaseClasses;
 using BaseViewModels;
 using MvvmCross;
 using MvvmCross.ViewModels;
+using RabbitMqManagers;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,6 +16,7 @@ namespace HomeMQ.Core.ViewModels
         private readonly IWiznetManager wiznetManager;
         private INavigationViewModel detailViewModel;
         private IUserDialogs alerts;
+        private MQConnectionManager rabbitConnectionManager;
         public INavigationViewModel DetailViewModel
         {
             get { return detailViewModel; }
@@ -49,8 +51,9 @@ namespace HomeMQ.Core.ViewModels
 
             wiznetManager = Mvx.IoCProvider.Resolve<IWiznetManager>();
             alerts = Mvx.IoCProvider.Resolve<IUserDialogs>();
+            rabbitConnectionManager = Mvx.IoCProvider.Resolve<MQConnectionManager>();
             MasterViewModel = new MenuViewModel(wiznetManager, alerts);
-            DetailViewModel = new PrimaryOverviewViewModel(wiznetManager, alerts);
+            DetailViewModel = new PrimaryOverviewViewModel(wiznetManager, alerts, rabbitConnectionManager);
         }
     }
 }
