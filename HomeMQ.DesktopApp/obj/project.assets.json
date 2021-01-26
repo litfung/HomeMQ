@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net5.0-windows7.0": {
+      "Acr.UserDialogs/7.1.0.475": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Acr.UserDialogs.dll": {}
+        }
+      },
       "MvvmCross/7.1.2": {
         "type": "package",
         "compile": {
@@ -76,13 +85,47 @@
           "bin/placeholder/BaseClasses.dll": {}
         }
       },
+      "BaseViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BaseClasses": "1.0.0",
+          "MvvmCross": "7.1.2"
+        },
+        "compile": {
+          "bin/placeholder/BaseViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BaseViewModels.dll": {}
+        }
+      },
+      "DeviceManagers/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "NetworkDeviceModels": "1.0.0",
+          "WiznetControllers": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DeviceManagers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DeviceManagers.dll": {}
+        }
+      },
       "HomeMQ.Core/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
+          "BaseClasses": "1.0.0",
+          "BaseViewModels": "1.0.0",
+          "DeviceManagers": "1.0.0",
           "HomeMQ.Models": "1.0.0",
           "MvvmCross": "7.1.2",
-          "RabbitMQ.Client": "6.2.1"
+          "RabbitMQ.Client": "6.2.1",
+          "WPFMessageBox": "1.0.0",
+          "WiznetControllers": "1.0.0"
         },
         "compile": {
           "bin/placeholder/HomeMQ.Core.dll": {}
@@ -96,7 +139,6 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "BaseClasses": "1.0.0",
-          "NetworkDeviceModels": "1.0.0",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -109,16 +151,109 @@
       "NetworkDeviceModels/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BaseClasses": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/NetworkDeviceModels.dll": {}
         },
         "runtime": {
           "bin/placeholder/NetworkDeviceModels.dll": {}
         }
+      },
+      "WiznetControllers/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
+          "BaseClasses": "1.0.0",
+          "MvvmCross": "7.1.2",
+          "NetworkDeviceModels": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WiznetControllers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WiznetControllers.dll": {}
+        }
+      },
+      "WPFConverters/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/WPFConverters.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WPFConverters.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "WPFMessageBox/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Acr.UserDialogs": "7.1.0.470"
+        },
+        "compile": {
+          "bin/placeholder/WPFMessageBox.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WPFMessageBox.dll": {}
+        }
+      },
+      "WPFToggleButtons/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/WPFToggleButtons.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WPFToggleButtons.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       }
     }
   },
   "libraries": {
+    "Acr.UserDialogs/7.1.0.475": {
+      "sha512": "iGW0uda9bmbGcPABm0UzDjSd5DtGwcTCkOg265aUxKhG9IW0HtoNA3gASMXK64hMye2A+9mfkcmWJDOudbhJWw==",
+      "type": "package",
+      "path": "acr.userdialogs/7.1.0.475",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "acr.userdialogs.7.1.0.475.nupkg.sha512",
+        "acr.userdialogs.nuspec",
+        "lib/monoandroid10.0/Acr.UserDialogs.dll",
+        "lib/monoandroid10.0/Acr.UserDialogs.pdb",
+        "lib/monoandroid10.0/Acr.UserDialogs.xml",
+        "lib/monoandroid90/Acr.UserDialogs.dll",
+        "lib/monoandroid90/Acr.UserDialogs.pdb",
+        "lib/monoandroid90/Acr.UserDialogs.xml",
+        "lib/netstandard2.0/Acr.UserDialogs.dll",
+        "lib/netstandard2.0/Acr.UserDialogs.pdb",
+        "lib/netstandard2.0/Acr.UserDialogs.xml",
+        "lib/uap10.0.16299/Acr.UserDialogs.dll",
+        "lib/uap10.0.16299/Acr.UserDialogs.pdb",
+        "lib/uap10.0.16299/Acr.UserDialogs.pri",
+        "lib/uap10.0.16299/Acr.UserDialogs.xml",
+        "lib/uap10.0.16299/Acr.UserDialogs/Acr.UserDialogs.xr.xml",
+        "lib/xamarinios10/Acr.UserDialogs.dll",
+        "lib/xamarinios10/Acr.UserDialogs.pdb",
+        "lib/xamarinios10/Acr.UserDialogs.xml",
+        "lib/xamarinmac20/Acr.UserDialogs.dll",
+        "lib/xamarinmac20/Acr.UserDialogs.pdb",
+        "lib/xamarinmac20/Acr.UserDialogs.xml",
+        "lib/xamarintvos10/Acr.UserDialogs.dll",
+        "lib/xamarintvos10/Acr.UserDialogs.pdb",
+        "lib/xamarintvos10/Acr.UserDialogs.xml",
+        "readme.txt"
+      ]
+    },
     "MvvmCross/7.1.2": {
       "sha512": "1tYkYslR8c7Dp/3itlx8+djBp+cim/ieS1Xp+d/waL0Yrl3H4HGmqxSm89yz/Ts+H9pmrS5DeKpOb+HUOzaERQ==",
       "type": "package",
@@ -345,6 +480,16 @@
       "path": "../../SharedProjects/Standard/BaseClasses/BaseClasses.csproj",
       "msbuildProject": "../../SharedProjects/Standard/BaseClasses/BaseClasses.csproj"
     },
+    "BaseViewModels/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/Standard/BaseViewModels/BaseViewModels.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/BaseViewModels/BaseViewModels.csproj"
+    },
+    "DeviceManagers/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/Standard/DeviceManagers/DeviceManagers.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/DeviceManagers/DeviceManagers.csproj"
+    },
     "HomeMQ.Core/1.0.0": {
       "type": "project",
       "path": "../HomeMQ.Core/HomeMQ.Core.csproj",
@@ -357,15 +502,37 @@
     },
     "NetworkDeviceModels/1.0.0": {
       "type": "project",
-      "path": "../NetworkDeviceModels/NetworkDeviceModels.csproj",
-      "msbuildProject": "../NetworkDeviceModels/NetworkDeviceModels.csproj"
+      "path": "../../SharedProjects/Standard/NetworkDeviceModels/NetworkDeviceModels.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/NetworkDeviceModels/NetworkDeviceModels.csproj"
+    },
+    "WiznetControllers/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/Standard/WiznetControllers/WiznetControllers.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/WiznetControllers/WiznetControllers.csproj"
+    },
+    "WPFConverters/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/DotNet5Desktop/WPFConverters/WPFConverters.csproj",
+      "msbuildProject": "../../SharedProjects/DotNet5Desktop/WPFConverters/WPFConverters.csproj"
+    },
+    "WPFMessageBox/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/Standard/WPFUserDialogs/WPFMessageBox.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/WPFUserDialogs/WPFMessageBox.csproj"
+    },
+    "WPFToggleButtons/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/DotNet5Desktop/WPFToggleButtons/WPFToggleButtons.csproj",
+      "msbuildProject": "../../SharedProjects/DotNet5Desktop/WPFToggleButtons/WPFToggleButtons.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
       "HomeMQ.Core >= 1.0.0",
       "MvvmCross >= 7.1.2",
-      "MvvmCross.Platforms.Wpf >= 7.1.2"
+      "MvvmCross.Platforms.Wpf >= 7.1.2",
+      "WPFConverters >= 1.0.0",
+      "WPFToggleButtons >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -402,6 +569,12 @@
           "projectReferences": {
             "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Core\\HomeMQ.Core.csproj": {
               "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Core\\HomeMQ.Core.csproj"
+            },
+            "C:\\Users\\devin\\source\\repos\\SharedProjects\\DotNet5Desktop\\WPFConverters\\WPFConverters.csproj": {
+              "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\DotNet5Desktop\\WPFConverters\\WPFConverters.csproj"
+            },
+            "C:\\Users\\devin\\source\\repos\\SharedProjects\\DotNet5Desktop\\WPFToggleButtons\\WPFToggleButtons.csproj": {
+              "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\DotNet5Desktop\\WPFToggleButtons\\WPFToggleButtons.csproj"
             }
           }
         }

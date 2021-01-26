@@ -8,11 +8,21 @@
     ".NETCoreApp,Version=v3.1": {
       "HomeMQ.RabbitMQ.ConsumerTest/1.0.0": {
         "dependencies": {
+          "HomeMQ.Core": "1.0.0",
           "HomeMQ.RabbitMQ.Consumer": "1.0.0",
+          "Newtonsoft.Json": "12.0.3",
           "RabbitMQ.Client": "6.2.1"
         },
         "runtime": {
           "HomeMQ.RabbitMQ.ConsumerTest.dll": {}
+        }
+      },
+      "Acr.UserDialogs/7.1.0.475": {
+        "runtime": {
+          "lib/netstandard2.0/Acr.UserDialogs.dll": {
+            "assemblyVersion": "7.1.0.475",
+            "fileVersion": "7.1.0.475"
+          }
         }
       },
       "MvvmCross/7.1.2": {
@@ -20,6 +30,14 @@
           "lib/netcoreapp3.1/MvvmCross.dll": {
             "assemblyVersion": "7.1.2.0",
             "fileVersion": "7.1.2.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
           }
         }
       },
@@ -57,11 +75,35 @@
           "BaseClasses.dll": {}
         }
       },
+      "BaseViewModels/1.0.0": {
+        "dependencies": {
+          "BaseClasses": "1.0.0",
+          "MvvmCross": "7.1.2"
+        },
+        "runtime": {
+          "BaseViewModels.dll": {}
+        }
+      },
+      "DeviceManagers/1.0.0": {
+        "dependencies": {
+          "NetworkDeviceModels": "1.0.0",
+          "WiznetControllers": "1.0.0"
+        },
+        "runtime": {
+          "DeviceManagers.dll": {}
+        }
+      },
       "HomeMQ.Core/1.0.0": {
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
+          "BaseClasses": "1.0.0",
+          "BaseViewModels": "1.0.0",
+          "DeviceManagers": "1.0.0",
           "HomeMQ.Models": "1.0.0",
           "MvvmCross": "7.1.2",
-          "RabbitMQ.Client": "6.2.1"
+          "RabbitMQ.Client": "6.2.1",
+          "WPFMessageBox": "1.0.0",
+          "WiznetControllers": "1.0.0"
         },
         "runtime": {
           "HomeMQ.Core.dll": {}
@@ -70,7 +112,6 @@
       "HomeMQ.Models/1.0.0": {
         "dependencies": {
           "BaseClasses": "1.0.0",
-          "NetworkDeviceModels": "1.0.0",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "runtime": {
@@ -79,8 +120,6 @@
       },
       "HomeMQ.RabbitMQ.Consumer/1.0.0": {
         "dependencies": {
-          "HomeMQ.Core": "1.0.0",
-          "NetworkDeviceModels": "1.0.0",
           "RabbitMQ.Client": "6.2.1"
         },
         "runtime": {
@@ -88,15 +127,125 @@
         }
       },
       "NetworkDeviceModels/1.0.0": {
+        "dependencies": {
+          "BaseClasses": "1.0.0"
+        },
         "runtime": {
           "NetworkDeviceModels.dll": {}
         }
       },
-      "Newtonsoft.Json/11.0.0.0": {
+      "WiznetControllers/1.0.0": {
+        "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
+          "BaseClasses": "1.0.0",
+          "MvvmCross": "7.1.2",
+          "NetworkDeviceModels": "1.0.0"
+        },
         "runtime": {
-          "Newtonsoft.Json.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.2.21924"
+          "WiznetControllers.dll": {}
+        }
+      },
+      "WPFMessageBox/1.0.0": {
+        "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475"
+        },
+        "runtime": {
+          "WPFMessageBox.dll": {}
+        }
+      },
+      "PresentationFramework/4.0.0.0": {
+        "runtime": {
+          "PresentationFramework.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.7.3062.0"
+          }
+        }
+      },
+      "System.Xaml/4.0.0.0": {
+        "runtime": {
+          "System.Xaml.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.7.3062.0"
+          }
+        }
+      },
+      "PresentationCore/4.0.0.0": {
+        "runtime": {
+          "PresentationCore.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.7.3062.0"
+          }
+        }
+      },
+      "UIAutomationProvider/4.0.0.0": {
+        "runtime": {
+          "UIAutomationProvider.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.7.3062.0"
+          }
+        }
+      },
+      "UIAutomationTypes/4.0.0.0": {
+        "runtime": {
+          "UIAutomationTypes.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.7.3062.0"
+          }
+        }
+      },
+      "ReachFramework/4.0.0.0": {
+        "runtime": {
+          "ReachFramework.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.7.3062.0"
+          }
+        }
+      },
+      "System.Printing/4.0.0.0": {
+        "runtime": {
+          "System.Printing.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.7.3062.0"
+          }
+        }
+      },
+      "Accessibility/4.0.0.0": {
+        "runtime": {
+          "Accessibility.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.7.3062.0"
+          }
+        }
+      },
+      "System.Deployment/4.0.0.0": {
+        "runtime": {
+          "System.Deployment.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.7.3062.0"
+          }
+        }
+      },
+      "System.Windows.Input.Manipulations/4.0.0.0": {
+        "runtime": {
+          "System.Windows.Input.Manipulations.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.7.3062.0"
+          }
+        }
+      },
+      "System.Windows.Forms/4.0.0.0": {
+        "runtime": {
+          "System.Windows.Forms.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.7.3062.0"
+          }
+        }
+      },
+      "System.Runtime.Serialization.Formatters.Soap/4.0.0.0": {
+        "runtime": {
+          "System.Runtime.Serialization.Formatters.Soap.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.7.3062.0"
           }
         }
       }
@@ -108,12 +257,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Acr.UserDialogs/7.1.0.475": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iGW0uda9bmbGcPABm0UzDjSd5DtGwcTCkOg265aUxKhG9IW0HtoNA3gASMXK64hMye2A+9mfkcmWJDOudbhJWw==",
+      "path": "acr.userdialogs/7.1.0.475",
+      "hashPath": "acr.userdialogs.7.1.0.475.nupkg.sha512"
+    },
     "MvvmCross/7.1.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-1tYkYslR8c7Dp/3itlx8+djBp+cim/ieS1Xp+d/waL0Yrl3H4HGmqxSm89yz/Ts+H9pmrS5DeKpOb+HUOzaERQ==",
       "path": "mvvmcross/7.1.2",
       "hashPath": "mvvmcross.7.1.2.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
     "RabbitMQ.Client/6.2.1": {
       "type": "package",
@@ -148,6 +311,16 @@
       "serviceable": false,
       "sha512": ""
     },
+    "BaseViewModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DeviceManagers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "HomeMQ.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -168,7 +341,72 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Newtonsoft.Json/11.0.0.0": {
+    "WiznetControllers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WPFMessageBox/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PresentationFramework/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Xaml/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PresentationCore/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UIAutomationProvider/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UIAutomationTypes/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ReachFramework/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Printing/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Accessibility/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Deployment/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Windows.Input.Manipulations/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Windows.Forms/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Runtime.Serialization.Formatters.Soap/4.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

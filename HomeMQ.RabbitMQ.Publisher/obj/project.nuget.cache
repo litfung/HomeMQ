@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EUza0WzbGyhsoAjoSZYCldKZxWOD5ENS4hycQBcf92qHiktvFo90bRl2lXZ78lierKy+DWLBXdxEozWoA2IWhg==",
+  "dgSpecHash": "8xGRKqqCcKNSbx3dq57OncP4Mv/wfhVGxcTV8vTA82Kd9Ft79tNY8y1A750HtibQ/cHXGAoT+9O6wLHe2TkvZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Publisher\\HomeMQ.RabbitMQ.Publisher.csproj",
+  "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Publisher\\HomeMQ.RabbitMQ.PublisherTest.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\devin\\.nuget\\packages\\acr.userdialogs\\7.1.0.475\\acr.userdialogs.7.1.0.475.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\mvvmcross\\7.1.2\\mvvmcross.7.1.2.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",

@@ -4,6 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using HomeMQ.Core.ViewModels;
+using MvvmCross;
+using WiznetControllers;
+using DeviceManagers;
+using WPFMessageBox;
 
 namespace HomeMQ.Core
 {
@@ -11,6 +15,8 @@ namespace HomeMQ.Core
     {
         public override void Initialize()
         {
+            Mvx.IoCProvider.RegisterSingleton(() => WPFUserDialogs.Instance);
+            Mvx.IoCProvider.RegisterSingleton(() => WiznetManager.Instance);
             RegisterAppStart<MainViewModel>();
         }
     }

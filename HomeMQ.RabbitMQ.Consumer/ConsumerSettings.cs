@@ -8,7 +8,7 @@ namespace HomeMQ.RabbitMQ.Consumer
     {
         #region Fields
         const ushort PREFETCH_DEFAULT = 1;
-        const bool DURABLE_DEFAULT = true;
+        const bool DURABLE_DEFAULT = false;
         const bool AUTOACK_DEFAULT = false;
         const bool AUTODELETE_DEFAULT = false;
         #endregion

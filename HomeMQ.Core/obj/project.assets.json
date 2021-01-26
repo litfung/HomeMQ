@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "Acr.UserDialogs/7.1.0.475": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Acr.UserDialogs.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -132,12 +141,39 @@
           "bin/placeholder/BaseClasses.dll": {}
         }
       },
+      "BaseViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BaseClasses": "1.0.0",
+          "MvvmCross": "7.1.2"
+        },
+        "compile": {
+          "bin/placeholder/BaseViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BaseViewModels.dll": {}
+        }
+      },
+      "DeviceManagers/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "NetworkDeviceModels": "1.0.0",
+          "WiznetControllers": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DeviceManagers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DeviceManagers.dll": {}
+        }
+      },
       "HomeMQ.Models/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "BaseClasses": "1.0.0",
-          "NetworkDeviceModels": "1.0.0",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -150,16 +186,83 @@
       "NetworkDeviceModels/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BaseClasses": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/NetworkDeviceModels.dll": {}
         },
         "runtime": {
           "bin/placeholder/NetworkDeviceModels.dll": {}
         }
+      },
+      "WiznetControllers/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
+          "BaseClasses": "1.0.0",
+          "MvvmCross": "7.1.2",
+          "NetworkDeviceModels": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WiznetControllers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WiznetControllers.dll": {}
+        }
+      },
+      "WPFMessageBox/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Acr.UserDialogs": "7.1.0.470"
+        },
+        "compile": {
+          "bin/placeholder/WPFMessageBox.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WPFMessageBox.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Acr.UserDialogs/7.1.0.475": {
+      "sha512": "iGW0uda9bmbGcPABm0UzDjSd5DtGwcTCkOg265aUxKhG9IW0HtoNA3gASMXK64hMye2A+9mfkcmWJDOudbhJWw==",
+      "type": "package",
+      "path": "acr.userdialogs/7.1.0.475",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "acr.userdialogs.7.1.0.475.nupkg.sha512",
+        "acr.userdialogs.nuspec",
+        "lib/monoandroid10.0/Acr.UserDialogs.dll",
+        "lib/monoandroid10.0/Acr.UserDialogs.pdb",
+        "lib/monoandroid10.0/Acr.UserDialogs.xml",
+        "lib/monoandroid90/Acr.UserDialogs.dll",
+        "lib/monoandroid90/Acr.UserDialogs.pdb",
+        "lib/monoandroid90/Acr.UserDialogs.xml",
+        "lib/netstandard2.0/Acr.UserDialogs.dll",
+        "lib/netstandard2.0/Acr.UserDialogs.pdb",
+        "lib/netstandard2.0/Acr.UserDialogs.xml",
+        "lib/uap10.0.16299/Acr.UserDialogs.dll",
+        "lib/uap10.0.16299/Acr.UserDialogs.pdb",
+        "lib/uap10.0.16299/Acr.UserDialogs.pri",
+        "lib/uap10.0.16299/Acr.UserDialogs.xml",
+        "lib/uap10.0.16299/Acr.UserDialogs/Acr.UserDialogs.xr.xml",
+        "lib/xamarinios10/Acr.UserDialogs.dll",
+        "lib/xamarinios10/Acr.UserDialogs.pdb",
+        "lib/xamarinios10/Acr.UserDialogs.xml",
+        "lib/xamarinmac20/Acr.UserDialogs.dll",
+        "lib/xamarinmac20/Acr.UserDialogs.pdb",
+        "lib/xamarinmac20/Acr.UserDialogs.xml",
+        "lib/xamarintvos10/Acr.UserDialogs.dll",
+        "lib/xamarintvos10/Acr.UserDialogs.pdb",
+        "lib/xamarintvos10/Acr.UserDialogs.xml",
+        "readme.txt"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -650,6 +753,16 @@
       "path": "../../SharedProjects/Standard/BaseClasses/BaseClasses.csproj",
       "msbuildProject": "../../SharedProjects/Standard/BaseClasses/BaseClasses.csproj"
     },
+    "BaseViewModels/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/Standard/BaseViewModels/BaseViewModels.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/BaseViewModels/BaseViewModels.csproj"
+    },
+    "DeviceManagers/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/Standard/DeviceManagers/DeviceManagers.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/DeviceManagers/DeviceManagers.csproj"
+    },
     "HomeMQ.Models/1.0.0": {
       "type": "project",
       "path": "../HomeMQ.Models/HomeMQ.Models.csproj",
@@ -657,16 +770,32 @@
     },
     "NetworkDeviceModels/1.0.0": {
       "type": "project",
-      "path": "../NetworkDeviceModels/NetworkDeviceModels.csproj",
-      "msbuildProject": "../NetworkDeviceModels/NetworkDeviceModels.csproj"
+      "path": "../../SharedProjects/Standard/NetworkDeviceModels/NetworkDeviceModels.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/NetworkDeviceModels/NetworkDeviceModels.csproj"
+    },
+    "WiznetControllers/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/Standard/WiznetControllers/WiznetControllers.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/WiznetControllers/WiznetControllers.csproj"
+    },
+    "WPFMessageBox/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/Standard/WPFUserDialogs/WPFMessageBox.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/WPFUserDialogs/WPFMessageBox.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Acr.UserDialogs >= 7.1.0.475",
+      "BaseClasses >= 1.0.0",
+      "BaseViewModels >= 1.0.0",
+      "DeviceManagers >= 1.0.0",
       "HomeMQ.Models >= 1.0.0",
       "MvvmCross >= 7.1.2",
       "NETStandard.Library >= 2.0.3",
-      "RabbitMQ.Client >= 6.2.1"
+      "RabbitMQ.Client >= 6.2.1",
+      "WPFMessageBox >= 1.0.0",
+      "WiznetControllers >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -703,6 +832,21 @@
           "projectReferences": {
             "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj": {
               "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj"
+            },
+            "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj": {
+              "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj"
+            },
+            "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseViewModels\\BaseViewModels.csproj": {
+              "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseViewModels\\BaseViewModels.csproj"
+            },
+            "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\DeviceManagers\\DeviceManagers.csproj": {
+              "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\DeviceManagers\\DeviceManagers.csproj"
+            },
+            "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\WiznetControllers\\WiznetControllers.csproj": {
+              "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\WiznetControllers\\WiznetControllers.csproj"
+            },
+            "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\WPFUserDialogs\\WPFMessageBox.csproj": {
+              "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\WPFUserDialogs\\WPFMessageBox.csproj"
             }
           }
         }
@@ -717,6 +861,10 @@
       "netstandard2.0": {
         "targetAlias": "netstandard2.0",
         "dependencies": {
+          "Acr.UserDialogs": {
+            "target": "Package",
+            "version": "[7.1.0.475, )"
+          },
           "MvvmCross": {
             "target": "Package",
             "version": "[7.1.2, )"

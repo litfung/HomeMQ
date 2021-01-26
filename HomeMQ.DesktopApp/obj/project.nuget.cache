@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "sNiBd+eLuFWjNBZLvr6PaOX+yaS9/IihK+xaoMil5e6b8brcKdw2DXpMZDfcqMXj4NTAh586EU5/M8AVleOVng==",
+  "dgSpecHash": "eQJxgcA1bj9Lh6nCVjje8bLZRsCe/OsDyceITmHERIm4EJpxMBTiyW+AAj6OY2SpJqUaZ6ziQecoFUfGT8n4hg==",
   "success": true,
   "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.DesktopApp\\HomeMQ.DesktopApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\devin\\.nuget\\packages\\acr.userdialogs\\7.1.0.475\\acr.userdialogs.7.1.0.475.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\mvvmcross\\7.1.2\\mvvmcross.7.1.2.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\mvvmcross.platforms.wpf\\7.1.2\\mvvmcross.platforms.wpf.7.1.2.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",

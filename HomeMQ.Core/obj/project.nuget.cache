@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "fVdRJcF+lg3gy1VugyIbANHgQfDz10OfzIcyacHI2/R0w1HcpJNpnl/aO4IcNRiDu6LFNAq27bq3RbdYa4Z3LA==",
+  "dgSpecHash": "/d6ofWHGY8egJ67NztRU/np2q44Ut0NUSF5fzaedA9jhbrKtQ+0Yym+RHMwzjeq7qu7zCrZm9LaVL90DfUkPiw==",
   "success": true,
   "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Core\\HomeMQ.Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\devin\\.nuget\\packages\\acr.userdialogs\\7.1.0.475\\acr.userdialogs.7.1.0.475.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\mvvmcross\\7.1.2\\mvvmcross.7.1.2.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

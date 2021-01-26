@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Acr.UserDialogs/7.1.0.475": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Acr.UserDialogs.dll": {}
+        }
+      },
       "MvvmCross/7.1.2": {
         "type": "package",
         "compile": {
@@ -9,6 +18,15 @@
         },
         "runtime": {
           "lib/netcoreapp3.1/MvvmCross.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "RabbitMQ.Client/6.2.1": {
@@ -61,13 +79,47 @@
           "bin/placeholder/BaseClasses.dll": {}
         }
       },
+      "BaseViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BaseClasses": "1.0.0",
+          "MvvmCross": "7.1.2"
+        },
+        "compile": {
+          "bin/placeholder/BaseViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BaseViewModels.dll": {}
+        }
+      },
+      "DeviceManagers/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "NetworkDeviceModels": "1.0.0",
+          "WiznetControllers": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DeviceManagers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DeviceManagers.dll": {}
+        }
+      },
       "HomeMQ.Core/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
+          "BaseClasses": "1.0.0",
+          "BaseViewModels": "1.0.0",
+          "DeviceManagers": "1.0.0",
           "HomeMQ.Models": "1.0.0",
           "MvvmCross": "7.1.2",
-          "RabbitMQ.Client": "6.2.1"
+          "RabbitMQ.Client": "6.2.1",
+          "WPFMessageBox": "1.0.0",
+          "WiznetControllers": "1.0.0"
         },
         "compile": {
           "bin/placeholder/HomeMQ.Core.dll": {}
@@ -81,7 +133,6 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "BaseClasses": "1.0.0",
-          "NetworkDeviceModels": "1.0.0",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -93,10 +144,8 @@
       },
       "HomeMQ.RabbitMQ.Consumer/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
+        "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "HomeMQ.Core": "1.0.0",
-          "NetworkDeviceModels": "1.0.0",
           "RabbitMQ.Client": "6.2.1"
         },
         "compile": {
@@ -109,16 +158,83 @@
       "NetworkDeviceModels/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BaseClasses": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/NetworkDeviceModels.dll": {}
         },
         "runtime": {
           "bin/placeholder/NetworkDeviceModels.dll": {}
         }
+      },
+      "WiznetControllers/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
+          "BaseClasses": "1.0.0",
+          "MvvmCross": "7.1.2",
+          "NetworkDeviceModels": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WiznetControllers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WiznetControllers.dll": {}
+        }
+      },
+      "WPFMessageBox/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Acr.UserDialogs": "7.1.0.470"
+        },
+        "compile": {
+          "bin/placeholder/WPFMessageBox.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WPFMessageBox.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Acr.UserDialogs/7.1.0.475": {
+      "sha512": "iGW0uda9bmbGcPABm0UzDjSd5DtGwcTCkOg265aUxKhG9IW0HtoNA3gASMXK64hMye2A+9mfkcmWJDOudbhJWw==",
+      "type": "package",
+      "path": "acr.userdialogs/7.1.0.475",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "acr.userdialogs.7.1.0.475.nupkg.sha512",
+        "acr.userdialogs.nuspec",
+        "lib/monoandroid10.0/Acr.UserDialogs.dll",
+        "lib/monoandroid10.0/Acr.UserDialogs.pdb",
+        "lib/monoandroid10.0/Acr.UserDialogs.xml",
+        "lib/monoandroid90/Acr.UserDialogs.dll",
+        "lib/monoandroid90/Acr.UserDialogs.pdb",
+        "lib/monoandroid90/Acr.UserDialogs.xml",
+        "lib/netstandard2.0/Acr.UserDialogs.dll",
+        "lib/netstandard2.0/Acr.UserDialogs.pdb",
+        "lib/netstandard2.0/Acr.UserDialogs.xml",
+        "lib/uap10.0.16299/Acr.UserDialogs.dll",
+        "lib/uap10.0.16299/Acr.UserDialogs.pdb",
+        "lib/uap10.0.16299/Acr.UserDialogs.pri",
+        "lib/uap10.0.16299/Acr.UserDialogs.xml",
+        "lib/uap10.0.16299/Acr.UserDialogs/Acr.UserDialogs.xr.xml",
+        "lib/xamarinios10/Acr.UserDialogs.dll",
+        "lib/xamarinios10/Acr.UserDialogs.pdb",
+        "lib/xamarinios10/Acr.UserDialogs.xml",
+        "lib/xamarinmac20/Acr.UserDialogs.dll",
+        "lib/xamarinmac20/Acr.UserDialogs.pdb",
+        "lib/xamarinmac20/Acr.UserDialogs.xml",
+        "lib/xamarintvos10/Acr.UserDialogs.dll",
+        "lib/xamarintvos10/Acr.UserDialogs.pdb",
+        "lib/xamarintvos10/Acr.UserDialogs.xml",
+        "readme.txt"
+      ]
+    },
     "MvvmCross/7.1.2": {
       "sha512": "1tYkYslR8c7Dp/3itlx8+djBp+cim/ieS1Xp+d/waL0Yrl3H4HGmqxSm89yz/Ts+H9pmrS5DeKpOb+HUOzaERQ==",
       "type": "package",
@@ -162,6 +278,37 @@
         "mvvmcross.7.1.2.nupkg.sha512",
         "mvvmcross.nuspec",
         "readme.txt"
+      ]
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "RabbitMQ.Client/6.2.1": {
@@ -325,6 +472,16 @@
       "path": "../../SharedProjects/Standard/BaseClasses/BaseClasses.csproj",
       "msbuildProject": "../../SharedProjects/Standard/BaseClasses/BaseClasses.csproj"
     },
+    "BaseViewModels/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/Standard/BaseViewModels/BaseViewModels.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/BaseViewModels/BaseViewModels.csproj"
+    },
+    "DeviceManagers/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/Standard/DeviceManagers/DeviceManagers.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/DeviceManagers/DeviceManagers.csproj"
+    },
     "HomeMQ.Core/1.0.0": {
       "type": "project",
       "path": "../HomeMQ.Core/HomeMQ.Core.csproj",
@@ -342,13 +499,25 @@
     },
     "NetworkDeviceModels/1.0.0": {
       "type": "project",
-      "path": "../NetworkDeviceModels/NetworkDeviceModels.csproj",
-      "msbuildProject": "../NetworkDeviceModels/NetworkDeviceModels.csproj"
+      "path": "../../SharedProjects/Standard/NetworkDeviceModels/NetworkDeviceModels.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/NetworkDeviceModels/NetworkDeviceModels.csproj"
+    },
+    "WiznetControllers/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/Standard/WiznetControllers/WiznetControllers.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/WiznetControllers/WiznetControllers.csproj"
+    },
+    "WPFMessageBox/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/Standard/WPFUserDialogs/WPFMessageBox.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/WPFUserDialogs/WPFMessageBox.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "HomeMQ.Core >= 1.0.0",
       "HomeMQ.RabbitMQ.Consumer >= 1.0.0",
+      "Newtonsoft.Json >= 12.0.3",
       "RabbitMQ.Client >= 6.2.1"
     ]
   },
@@ -384,6 +553,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Core\\HomeMQ.Core.csproj": {
+              "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Core\\HomeMQ.Core.csproj"
+            },
             "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Consumer\\HomeMQ.RabbitMQ.Consumer.csproj": {
               "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Consumer\\HomeMQ.RabbitMQ.Consumer.csproj"
             }
@@ -400,6 +572,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.3, )"
+          },
           "RabbitMQ.Client": {
             "target": "Package",
             "version": "[6.2.1, )"

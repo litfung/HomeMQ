@@ -22,7 +22,7 @@ namespace HomeMQ.DapperCore
 
         public Task InsertPerson(Person person)
         {
-            //no need to await here....
+            //no need to await here.... according to Tim Corey
             //supposed to make life easier by having one less await???
             return database.InsertPersonAsync(person);
 

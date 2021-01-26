@@ -6,10 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="RabbitMQ.Client" Version="6.2.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HomeMQ.Core\HomeMQ.Core.csproj" />
     <ProjectReference Include="..\HomeMQ.RabbitMQ.Consumer\HomeMQ.RabbitMQ.Consumer.csproj" />
   </ItemGroup>
 

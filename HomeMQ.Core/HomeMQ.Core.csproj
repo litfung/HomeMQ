@@ -5,11 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.1.0.475" />
     <PackageReference Include="MvvmCross" Version="7.1.2" />
     <PackageReference Include="RabbitMQ.Client" Version="6.2.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\SharedProjects\Standard\BaseClasses\BaseClasses.csproj" />
+    <ProjectReference Include="..\..\SharedProjects\Standard\BaseViewModels\BaseViewModels.csproj" />
+    <ProjectReference Include="..\..\SharedProjects\Standard\DeviceManagers\DeviceManagers.csproj" />
+    <ProjectReference Include="..\..\SharedProjects\Standard\WiznetControllers\WiznetControllers.csproj" />
+    <ProjectReference Include="..\..\SharedProjects\Standard\WPFUserDialogs\WPFMessageBox.csproj" />
     <ProjectReference Include="..\HomeMQ.Models\HomeMQ.Models.csproj" />
   </ItemGroup>
 

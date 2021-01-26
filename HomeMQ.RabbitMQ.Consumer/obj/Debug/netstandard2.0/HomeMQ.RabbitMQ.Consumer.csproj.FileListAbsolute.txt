@@ -1,0 +1,8 @@
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Consumer\bin\Debug\netstandard2.0\HomeMQ.RabbitMQ.Consumer.deps.json
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Consumer\bin\Debug\netstandard2.0\HomeMQ.RabbitMQ.Consumer.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Consumer\bin\Debug\netstandard2.0\HomeMQ.RabbitMQ.Consumer.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Consumer\obj\Debug\netstandard2.0\HomeMQ.RabbitMQ.Consumer.AssemblyInfoInputs.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Consumer\obj\Debug\netstandard2.0\HomeMQ.RabbitMQ.Consumer.AssemblyInfo.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Consumer\obj\Debug\netstandard2.0\HomeMQ.RabbitMQ.Consumer.csproj.CoreCompileInputs.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Consumer\obj\Debug\netstandard2.0\HomeMQ.RabbitMQ.Consumer.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Consumer\obj\Debug\netstandard2.0\HomeMQ.RabbitMQ.Consumer.pdb

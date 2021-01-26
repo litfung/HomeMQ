@@ -10,10 +10,20 @@
         "dependencies": {
           "HomeMQ.Core": "1.0.0",
           "MvvmCross": "7.1.2",
-          "MvvmCross.Platforms.Wpf": "7.1.2"
+          "MvvmCross.Platforms.Wpf": "7.1.2",
+          "WPFConverters": "1.0.0",
+          "WPFToggleButtons": "1.0.0"
         },
         "runtime": {
           "HomeMQ.DesktopApp.dll": {}
+        }
+      },
+      "Acr.UserDialogs/7.1.0.475": {
+        "runtime": {
+          "lib/netstandard2.0/Acr.UserDialogs.dll": {
+            "assemblyVersion": "7.1.0.475",
+            "fileVersion": "7.1.0.475"
+          }
         }
       },
       "MvvmCross/7.1.2": {
@@ -55,11 +65,35 @@
           "BaseClasses.dll": {}
         }
       },
+      "BaseViewModels/1.0.0": {
+        "dependencies": {
+          "BaseClasses": "1.0.0",
+          "MvvmCross": "7.1.2"
+        },
+        "runtime": {
+          "BaseViewModels.dll": {}
+        }
+      },
+      "DeviceManagers/1.0.0": {
+        "dependencies": {
+          "NetworkDeviceModels": "1.0.0",
+          "WiznetControllers": "1.0.0"
+        },
+        "runtime": {
+          "DeviceManagers.dll": {}
+        }
+      },
       "HomeMQ.Core/1.0.0": {
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
+          "BaseClasses": "1.0.0",
+          "BaseViewModels": "1.0.0",
+          "DeviceManagers": "1.0.0",
           "HomeMQ.Models": "1.0.0",
           "MvvmCross": "7.1.2",
-          "RabbitMQ.Client": "6.2.1"
+          "RabbitMQ.Client": "6.2.1",
+          "WPFMessageBox": "1.0.0",
+          "WiznetControllers": "1.0.0"
         },
         "runtime": {
           "HomeMQ.Core.dll": {}
@@ -68,7 +102,6 @@
       "HomeMQ.Models/1.0.0": {
         "dependencies": {
           "BaseClasses": "1.0.0",
-          "NetworkDeviceModels": "1.0.0",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "runtime": {
@@ -76,8 +109,40 @@
         }
       },
       "NetworkDeviceModels/1.0.0": {
+        "dependencies": {
+          "BaseClasses": "1.0.0"
+        },
         "runtime": {
           "NetworkDeviceModels.dll": {}
+        }
+      },
+      "WiznetControllers/1.0.0": {
+        "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
+          "BaseClasses": "1.0.0",
+          "MvvmCross": "7.1.2",
+          "NetworkDeviceModels": "1.0.0"
+        },
+        "runtime": {
+          "WiznetControllers.dll": {}
+        }
+      },
+      "WPFConverters/1.0.0": {
+        "runtime": {
+          "WPFConverters.dll": {}
+        }
+      },
+      "WPFMessageBox/1.0.0": {
+        "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475"
+        },
+        "runtime": {
+          "WPFMessageBox.dll": {}
+        }
+      },
+      "WPFToggleButtons/1.0.0": {
+        "runtime": {
+          "WPFToggleButtons.dll": {}
         }
       }
     }
@@ -87,6 +152,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Acr.UserDialogs/7.1.0.475": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iGW0uda9bmbGcPABm0UzDjSd5DtGwcTCkOg265aUxKhG9IW0HtoNA3gASMXK64hMye2A+9mfkcmWJDOudbhJWw==",
+      "path": "acr.userdialogs/7.1.0.475",
+      "hashPath": "acr.userdialogs.7.1.0.475.nupkg.sha512"
     },
     "MvvmCross/7.1.2": {
       "type": "package",
@@ -135,6 +207,16 @@
       "serviceable": false,
       "sha512": ""
     },
+    "BaseViewModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DeviceManagers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "HomeMQ.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -146,6 +228,26 @@
       "sha512": ""
     },
     "NetworkDeviceModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WiznetControllers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WPFConverters/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WPFMessageBox/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WPFToggleButtons/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

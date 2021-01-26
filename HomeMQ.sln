@@ -21,9 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.WebApp", "HomeMQ.Web
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.SecondWebApp", "HomeMQ.SecondWebApp\HomeMQ.SecondWebApp.csproj", "{FC57E498-E831-460C-9501-4736D04F9D76}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.RabbitMQ.Consumer", "HomeMQ.RabbitMQ.Consumer\HomeMQ.RabbitMQ.Consumer.csproj", "{658861E9-922A-43A6-BD7F-5DD847F7A07D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.RabbitMQ.Publisher", "HomeMQ.RabbitMQ.Publisher\HomeMQ.RabbitMQ.Publisher.csproj", "{9ECABBB2-9575-4898-B85C-AFADF787CE9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.RabbitMQ.PublisherTest", "HomeMQ.RabbitMQ.Publisher\HomeMQ.RabbitMQ.PublisherTest.csproj", "{9ECABBB2-9575-4898-B85C-AFADF787CE9C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.DapperCore", "HomeMQ.Dapper.Core\HomeMQ.DapperCore.csproj", "{5C3E0BB5-DAE2-481D-BB5A-FFBA350E8288}"
 EndProject
@@ -35,13 +33,27 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "HomeMQ.SensorSQLProject", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.SensorSQL.DataAccess", "HomeMQ.SensorSQL.DataAccess\HomeMQ.SensorSQL.DataAccess.csproj", "{F158953E-E7B4-4248-884A-E48168336CF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeMQ.WebAppNoDb", "HomeMQ.WebAppNoDb\HomeMQ.WebAppNoDb.csproj", "{5329AA10-415A-40A0-8160-C974992FEA4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.WebAppNoDb", "HomeMQ.WebAppNoDb\HomeMQ.WebAppNoDb.csproj", "{5329AA10-415A-40A0-8160-C974992FEA4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeMQ.FirstBlazor", "HomeMQ.FirstBlazor\HomeMQ.FirstBlazor.csproj", "{6AD07C27-7AE5-4D43-AEB4-24ED1F39A654}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.FirstBlazor", "HomeMQ.FirstBlazor\HomeMQ.FirstBlazor.csproj", "{6AD07C27-7AE5-4D43-AEB4-24ED1F39A654}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkDeviceModels", "NetworkDeviceModels\NetworkDeviceModels.csproj", "{9570AF45-3743-443D-91DB-85BA6C7F37B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.RabbitMQ.ConsumerTest", "HomeMQ.RabbitMQ.ConsumerTest\HomeMQ.RabbitMQ.ConsumerTest.csproj", "{8785EF6B-5003-4578-A06A-5A192F6811DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeMQ.RabbitMQ.ConsumerTest", "HomeMQ.RabbitMQ.ConsumerTest\HomeMQ.RabbitMQ.ConsumerTest.csproj", "{8785EF6B-5003-4578-A06A-5A192F6811DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.RabbitMQ.Consumer", "HomeMQ.RabbitMQ.Consumer\HomeMQ.RabbitMQ.Consumer.csproj", "{E80EB3B3-0F14-488C-AC6D-11ADEB119BF4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseViewModels", "..\SharedProjects\Standard\BaseViewModels\BaseViewModels.csproj", "{046694F9-93C6-4D3E-BBC6-9F07ED371645}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetworkDeviceModels", "..\SharedProjects\Standard\NetworkDeviceModels\NetworkDeviceModels.csproj", "{1B6D3BEF-FF83-48C6-9785-98FB4D6229EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeviceManagers", "..\SharedProjects\Standard\DeviceManagers\DeviceManagers.csproj", "{EA580C9D-D349-4424-9BE2-15ACD3AED57B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFToggleButtons", "..\SharedProjects\DotNet5Desktop\WPFToggleButtons\WPFToggleButtons.csproj", "{FEC5EB6B-9E98-470A-BE90-D7BDF7575F11}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiznetControllers", "..\SharedProjects\Standard\WiznetControllers\WiznetControllers.csproj", "{0082E9F2-E63C-471A-99CB-F9257658EBD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFConverters", "..\SharedProjects\DotNet5Desktop\WPFConverters\WPFConverters.csproj", "{AFC5A030-2AAE-49B7-A310-6B0BF7ACAD9A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFMessageBox", "..\SharedProjects\Standard\WPFUserDialogs\WPFMessageBox.csproj", "{2089243D-ED33-49D8-8ACA-A52FE7E3AB7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,10 +97,6 @@ Global
 		{FC57E498-E831-460C-9501-4736D04F9D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC57E498-E831-460C-9501-4736D04F9D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC57E498-E831-460C-9501-4736D04F9D76}.Release|Any CPU.Build.0 = Release|Any CPU
-		{658861E9-922A-43A6-BD7F-5DD847F7A07D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{658861E9-922A-43A6-BD7F-5DD847F7A07D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{658861E9-922A-43A6-BD7F-5DD847F7A07D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{658861E9-922A-43A6-BD7F-5DD847F7A07D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9ECABBB2-9575-4898-B85C-AFADF787CE9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9ECABBB2-9575-4898-B85C-AFADF787CE9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ECABBB2-9575-4898-B85C-AFADF787CE9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -125,14 +133,42 @@ Global
 		{6AD07C27-7AE5-4D43-AEB4-24ED1F39A654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AD07C27-7AE5-4D43-AEB4-24ED1F39A654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AD07C27-7AE5-4D43-AEB4-24ED1F39A654}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9570AF45-3743-443D-91DB-85BA6C7F37B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9570AF45-3743-443D-91DB-85BA6C7F37B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9570AF45-3743-443D-91DB-85BA6C7F37B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9570AF45-3743-443D-91DB-85BA6C7F37B1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8785EF6B-5003-4578-A06A-5A192F6811DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8785EF6B-5003-4578-A06A-5A192F6811DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8785EF6B-5003-4578-A06A-5A192F6811DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8785EF6B-5003-4578-A06A-5A192F6811DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E80EB3B3-0F14-488C-AC6D-11ADEB119BF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E80EB3B3-0F14-488C-AC6D-11ADEB119BF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E80EB3B3-0F14-488C-AC6D-11ADEB119BF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E80EB3B3-0F14-488C-AC6D-11ADEB119BF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{046694F9-93C6-4D3E-BBC6-9F07ED371645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{046694F9-93C6-4D3E-BBC6-9F07ED371645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{046694F9-93C6-4D3E-BBC6-9F07ED371645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{046694F9-93C6-4D3E-BBC6-9F07ED371645}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B6D3BEF-FF83-48C6-9785-98FB4D6229EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B6D3BEF-FF83-48C6-9785-98FB4D6229EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B6D3BEF-FF83-48C6-9785-98FB4D6229EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B6D3BEF-FF83-48C6-9785-98FB4D6229EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA580C9D-D349-4424-9BE2-15ACD3AED57B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA580C9D-D349-4424-9BE2-15ACD3AED57B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA580C9D-D349-4424-9BE2-15ACD3AED57B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA580C9D-D349-4424-9BE2-15ACD3AED57B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEC5EB6B-9E98-470A-BE90-D7BDF7575F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEC5EB6B-9E98-470A-BE90-D7BDF7575F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEC5EB6B-9E98-470A-BE90-D7BDF7575F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEC5EB6B-9E98-470A-BE90-D7BDF7575F11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0082E9F2-E63C-471A-99CB-F9257658EBD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0082E9F2-E63C-471A-99CB-F9257658EBD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0082E9F2-E63C-471A-99CB-F9257658EBD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0082E9F2-E63C-471A-99CB-F9257658EBD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFC5A030-2AAE-49B7-A310-6B0BF7ACAD9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFC5A030-2AAE-49B7-A310-6B0BF7ACAD9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFC5A030-2AAE-49B7-A310-6B0BF7ACAD9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFC5A030-2AAE-49B7-A310-6B0BF7ACAD9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2089243D-ED33-49D8-8ACA-A52FE7E3AB7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2089243D-ED33-49D8-8ACA-A52FE7E3AB7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2089243D-ED33-49D8-8ACA-A52FE7E3AB7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2089243D-ED33-49D8-8ACA-A52FE7E3AB7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

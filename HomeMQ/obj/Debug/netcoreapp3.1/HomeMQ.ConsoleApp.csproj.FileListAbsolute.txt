@@ -1,0 +1,12 @@
+C:\Users\devin\source\repos\HomeMQ\HomeMQ\bin\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.exe
+C:\Users\devin\source\repos\HomeMQ\HomeMQ\bin\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.deps.json
+C:\Users\devin\source\repos\HomeMQ\HomeMQ\bin\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.runtimeconfig.json
+C:\Users\devin\source\repos\HomeMQ\HomeMQ\bin\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.runtimeconfig.dev.json
+C:\Users\devin\source\repos\HomeMQ\HomeMQ\bin\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ\bin\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ\obj\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ\obj\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.AssemblyInfo.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ\obj\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ\obj\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ\obj\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ\obj\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.genruntimeconfig.cache

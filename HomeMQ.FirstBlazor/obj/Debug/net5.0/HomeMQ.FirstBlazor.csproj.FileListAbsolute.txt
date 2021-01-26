@@ -37,11 +37,9 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\runtimes\
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\BaseClasses.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\HomeMQ.DapperCore.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\HomeMQ.Models.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\NetworkDeviceModels.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\HomeMQ.DapperCore.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\HomeMQ.Models.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\BaseClasses.pdb
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\NetworkDeviceModels.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\HomeMQ.FirstBlazor.csprojAssemblyReference.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\HomeMQ.FirstBlazor.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\HomeMQ.FirstBlazor.AssemblyInfoInputs.cache

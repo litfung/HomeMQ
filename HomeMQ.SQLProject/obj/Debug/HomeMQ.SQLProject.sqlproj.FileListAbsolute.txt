@@ -1,0 +1,5 @@
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.SQLProject\bin\Debug\HomeMQ.SQLProject.dacpac
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.SQLProject\bin\Debug\HomeMQ.SQLProject.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.SQLProject\bin\Debug\HomeMQ.SQLProject.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.SQLProject\obj\Debug\HomeMQ.SQLProject.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.SQLProject\obj\Debug\HomeMQ.SQLProject.pdb
