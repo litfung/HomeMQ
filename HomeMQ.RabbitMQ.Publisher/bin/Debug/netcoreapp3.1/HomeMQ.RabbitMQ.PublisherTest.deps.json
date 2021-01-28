@@ -77,6 +77,7 @@
       },
       "DeviceManagers/1.0.0": {
         "dependencies": {
+          "HomeMQ.Models": "1.0.0",
           "NetworkDeviceModels": "1.0.0",
           "WiznetControllers": "1.0.0"
         },
@@ -91,8 +92,10 @@
           "BaseViewModels": "1.0.0",
           "DeviceManagers": "1.0.0",
           "HomeMQ.Models": "1.0.0",
+          "HomeMQ.RabbitMQ.Consumer": "1.0.0",
           "MvvmCross": "7.1.2",
           "RabbitMQ.Client": "6.2.1",
+          "RabbitMqManagers": "1.0.0",
           "WPFMessageBox": "1.0.0",
           "WiznetControllers": "1.0.0"
         },
@@ -103,10 +106,22 @@
       "HomeMQ.Models/1.0.0": {
         "dependencies": {
           "BaseClasses": "1.0.0",
+          "NetworkDeviceModels": "1.0.0",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "runtime": {
           "HomeMQ.Models.dll": {}
+        }
+      },
+      "HomeMQ.RabbitMQ.Consumer/1.0.0": {
+        "dependencies": {
+          "BaseClasses": "1.0.0",
+          "DeviceManagers": "1.0.0",
+          "HomeMQ.Models": "1.0.0",
+          "RabbitMQ.Client": "6.2.1"
+        },
+        "runtime": {
+          "HomeMQ.RabbitMQ.Consumer.dll": {}
         }
       },
       "NetworkDeviceModels/1.0.0": {
@@ -115,6 +130,14 @@
         },
         "runtime": {
           "NetworkDeviceModels.dll": {}
+        }
+      },
+      "RabbitMqManagers/1.0.0": {
+        "dependencies": {
+          "RabbitMQ.Client": "6.2.1"
+        },
+        "runtime": {
+          "RabbitMqManagers.dll": {}
         }
       },
       "WiznetControllers/1.0.0": {
@@ -315,7 +338,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "HomeMQ.RabbitMQ.Consumer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "NetworkDeviceModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RabbitMqManagers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

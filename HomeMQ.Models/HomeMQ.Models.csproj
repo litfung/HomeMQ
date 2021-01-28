@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\SharedProjects\Standard\BaseClasses\BaseClasses.csproj" />
+    <ProjectReference Include="..\..\SharedProjects\Standard\NetworkDeviceModels\NetworkDeviceModels.csproj" />
   </ItemGroup>
 
   <ItemGroup>

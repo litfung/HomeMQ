@@ -24,17 +24,13 @@ namespace HomeMQ.Core.ViewModels
         {
             Wiznet = wiz;
 
-            Messenger.Instance.Register<UpdateViewMessage>(this, async x => await OnUpdateView());
+            
         }
         #endregion
 
         #region Methods
 
         #endregion
-        public async Task OnUpdateView()
-        {
-            await UpdateUIControlAccess();
-        }
 
         //public async Task PollAllRegisters()
         //{

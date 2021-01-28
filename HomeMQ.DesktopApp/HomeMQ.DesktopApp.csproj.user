@@ -15,16 +15,16 @@
     <Compile Update="Views\MenuView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\PrimaryOverviewView.xaml.cs">
+    <Compile Update="Views\PrimaryOverviewPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\WiznetConnections\WiznetConnectionsPage.xaml.cs">
+    <Compile Update="Views\RabbitConnections\RabbitConsumerView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\WiznetPiControlView.xaml.cs">
+    <Compile Update="Views\WiznetConnections\WiznetPiControlView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\WiznetStatusView.xaml.cs">
+    <Compile Update="Views\WiznetConnections\WiznetStatusView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -56,16 +56,16 @@
     <Page Update="Views\MenuView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\PrimaryOverviewView.xaml">
+    <Page Update="Views\PrimaryOverviewPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\WiznetConnections\WiznetConnectionsPage.xaml">
+    <Page Update="Views\RabbitConnections\RabbitConsumerView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\WiznetPiControlView.xaml">
+    <Page Update="Views\WiznetConnections\WiznetPiControlView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\WiznetStatusView.xaml">
+    <Page Update="Views\WiznetConnections\WiznetStatusView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -103,6 +103,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "HomeMQ.Models": "1.0.0",
           "NetworkDeviceModels": "1.0.0",
           "WiznetControllers": "1.0.0"
         },
@@ -141,6 +142,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "BaseClasses": "1.0.0",
+          "NetworkDeviceModels": "1.0.0",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -154,6 +156,9 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "BaseClasses": "1.0.0",
+          "DeviceManagers": "1.0.0",
+          "HomeMQ.Models": "1.0.0",
           "RabbitMQ.Client": "6.2.1"
         },
         "compile": {

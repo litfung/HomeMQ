@@ -40,7 +40,7 @@ namespace HomeMQ.DesktopApp.Views {
     /// <summary>
     /// PrimaryOverviewView
     /// </summary>
-    public partial class PrimaryOverviewView : MvvmCross.Platforms.Wpf.Views.MvxWpfView, System.Windows.Markup.IComponentConnector {
+    public partial class PrimaryOverviewPage : MvvmCross.Platforms.Wpf.Views.MvxWpfView, System.Windows.Markup.IComponentConnector {
         
         
         #line 10 "..\..\..\..\Views\PrimaryOverviewView.xaml"
@@ -62,7 +62,7 @@ namespace HomeMQ.DesktopApp.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/HomeMQ.DesktopApp;component/views/primaryoverviewview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/HomeMQ.DesktopApp;V1.0.0.0;component/views/primaryoverviewview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\PrimaryOverviewView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

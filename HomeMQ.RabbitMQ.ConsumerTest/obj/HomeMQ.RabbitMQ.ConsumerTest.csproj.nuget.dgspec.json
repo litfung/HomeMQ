@@ -132,6 +132,9 @@
             "projectReferences": {
               "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj": {
                 "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj"
+              },
+              "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\NetworkDeviceModels\\NetworkDeviceModels.csproj": {
+                "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\NetworkDeviceModels\\NetworkDeviceModels.csproj"
               }
             }
           }
@@ -273,7 +276,17 @@
         "frameworks": {
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj": {
+                "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj"
+              },
+              "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj": {
+                "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj"
+              },
+              "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\DeviceManagers\\DeviceManagers.csproj": {
+                "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\DeviceManagers\\DeviceManagers.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -469,6 +482,9 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
+              "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj": {
+                "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj"
+              },
               "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\NetworkDeviceModels\\NetworkDeviceModels.csproj": {
                 "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\NetworkDeviceModels\\NetworkDeviceModels.csproj"
               },

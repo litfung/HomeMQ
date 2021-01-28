@@ -76,6 +76,7 @@
       },
       "DeviceManagers/1.0.0": {
         "dependencies": {
+          "HomeMQ.Models": "1.0.0",
           "NetworkDeviceModels": "1.0.0",
           "WiznetControllers": "1.0.0"
         },
@@ -104,6 +105,7 @@
       "HomeMQ.Models/1.0.0": {
         "dependencies": {
           "BaseClasses": "1.0.0",
+          "NetworkDeviceModels": "1.0.0",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "runtime": {
@@ -112,6 +114,9 @@
       },
       "HomeMQ.RabbitMQ.Consumer/1.0.0": {
         "dependencies": {
+          "BaseClasses": "1.0.0",
+          "DeviceManagers": "1.0.0",
+          "HomeMQ.Models": "1.0.0",
           "RabbitMQ.Client": "6.2.1"
         },
         "runtime": {
@@ -161,6 +166,14 @@
       "WPFToggleButtons/1.0.0": {
         "runtime": {
           "WPFToggleButtons.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.0.0": {
+        "runtime": {
+          "Newtonsoft.Json.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.2.21924"
+          }
         }
       }
     }
@@ -277,6 +290,11 @@
     },
     "WPFToggleButtons/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/11.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

@@ -1,5 +1,4 @@
-﻿using MvvmCross.Platforms.Wpf.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace HomeMQ.DesktopApp.Views
 {
     /// <summary>
-    /// Interaction logic for PrimaryOverviewView.xaml
+    /// Interaction logic for RabbitConsumerView.xaml
     /// </summary>
-    public partial class PrimaryOverviewView : MvxWpfView
+    public partial class RabbitConsumerStatusView : UserControl
     {
-        public PrimaryOverviewView()
+        public RabbitConsumerStatusView()
         {
             InitializeComponent();
         }

@@ -28,16 +28,22 @@ namespace HomeMQ.RabbitMQ.Consumer
             Model = Connection.CreateModel();
         }
 
-        public TopicConsumer(ConnectionFactory factory, string exchange, string routeKey)
+        public TopicConsumer(IConnectionFactory factory, string exchange, string routeKey)
             : this(factory, exchange, new List<string> { routeKey }) { }
 
-        public TopicConsumer(ConnectionFactory factory, string exchange, List<string> routeKeys)
+        public TopicConsumer(IConnectionFactory factory, string exchange, List<string> routeKeys)
         {
             Connection = factory.CreateConnection();
             ExchangeName = exchange;
             RoutingKeys = routeKeys;
             Model = Connection.CreateModel();
         }
+
+        ~TopicConsumer()
+        {
+            Connection.Dispose();
+        }
+
         #endregion
 
         #region Methods

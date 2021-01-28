@@ -59,3 +59,7 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreap
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\System.Windows.Input.Manipulations.xml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\System.Windows.Forms.xml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\System.Runtime.Serialization.Formatters.Soap.xml
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Consumer.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\RabbitMqManagers.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Consumer.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\RabbitMqManagers.pdb

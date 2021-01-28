@@ -44,6 +44,19 @@
         "runtime": {
           "bin/placeholder/BaseClasses.dll": {}
         }
+      },
+      "NetworkDeviceModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BaseClasses": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/NetworkDeviceModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NetworkDeviceModels.dll": {}
+        }
       }
     }
   },
@@ -286,12 +299,18 @@
       "type": "project",
       "path": "../../SharedProjects/Standard/BaseClasses/BaseClasses.csproj",
       "msbuildProject": "../../SharedProjects/Standard/BaseClasses/BaseClasses.csproj"
+    },
+    "NetworkDeviceModels/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/Standard/NetworkDeviceModels/NetworkDeviceModels.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/NetworkDeviceModels/NetworkDeviceModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "BaseClasses >= 1.0.0",
       "NETStandard.Library >= 2.0.3",
+      "NetworkDeviceModels >= 1.0.0",
       "System.ComponentModel.Annotations >= 5.0.0"
     ]
   },
@@ -329,6 +348,9 @@
           "projectReferences": {
             "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj": {
               "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj"
+            },
+            "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\NetworkDeviceModels\\NetworkDeviceModels.csproj": {
+              "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\NetworkDeviceModels\\NetworkDeviceModels.csproj"
             }
           }
         }

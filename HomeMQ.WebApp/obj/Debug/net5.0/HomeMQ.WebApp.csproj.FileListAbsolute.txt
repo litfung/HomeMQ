@@ -173,3 +173,5 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\obj\Debug\net5.0\HomeMQ.WebApp.
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\obj\Debug\net5.0\ref\HomeMQ.WebApp.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\obj\Debug\net5.0\HomeMQ.WebApp.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\obj\Debug\net5.0\HomeMQ.WebApp.genruntimeconfig.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\bin\Debug\net5.0\NetworkDeviceModels.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\bin\Debug\net5.0\NetworkDeviceModels.pdb

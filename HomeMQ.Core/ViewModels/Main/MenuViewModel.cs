@@ -1,6 +1,7 @@
 ﻿using Acr.UserDialogs;
 using BaseClasses;
 using BaseViewModels;
+using HomeMQ.RabbitMQ.Consumer;
 using MvvmCross.Commands;
 using MvvmCross.ViewModels;
 using RabbitMqManagers;
@@ -19,6 +20,7 @@ namespace HomeMQ.Core.ViewModels
         private IWiznetManager wiznetManager;
         private IUserDialogs userDialogs;
         private MQConnectionManager rabbitConnectionManager;
+        private IMasterControlProcessor commandProcessor;
         #endregion
 
         #region Properties
@@ -31,11 +33,13 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public MenuViewModel(IWiznetManager wizManager, IUserDialogs dialog, MQConnectionManager rabbitManager)
+        public MenuViewModel(IWiznetManager wizManager, IUserDialogs dialog, MQConnectionManager rabbitManager, IMasterControlProcessor processor)
         {
             wiznetManager = wizManager;
             userDialogs = dialog;
             rabbitConnectionManager = rabbitManager;
+            commandProcessor = processor;
+
             ShowFirstPageCommand = new MvxCommand(ShowFirstPage);
             ShowSecondPageCommand = new MvxCommand(ShowSecondPage);
         }
@@ -49,13 +53,13 @@ namespace HomeMQ.Core.ViewModels
         public void ShowFirstPage()
         {
             Messenger.Instance.Send(new ViewUnloadedMessage());
-            Messenger.Instance.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(wiznetManager, userDialogs, rabbitConnectionManager)));
+            Messenger.Instance.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(wiznetManager, userDialogs, rabbitConnectionManager, commandProcessor)));
         }
 
         public void ShowSecondPage()
         {
             Messenger.Instance.Send(new ViewUnloadedMessage());
-            Messenger.Instance.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(wiznetManager, userDialogs, rabbitConnectionManager)));
+            Messenger.Instance.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(wiznetManager, userDialogs, rabbitConnectionManager, commandProcessor)));
         }
         #endregion
 

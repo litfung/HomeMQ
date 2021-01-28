@@ -9,7 +9,7 @@
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type vms:PrimaryOverviewViewModel}">
-        <views:PrimaryOverviewView/>
+        <views:PrimaryOverviewPage/>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type vms:WiznetStatusViewModel}">
@@ -18,5 +18,9 @@
     
     <DataTemplate DataType="{x:Type vms:WiznetPiControlViewModel}">
         <views:WiznetPiControlView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vms:RabbitConsumerViewModel}">
+        <views:RabbitConsumerStatusView/>
     </DataTemplate>
 </ResourceDictionary>

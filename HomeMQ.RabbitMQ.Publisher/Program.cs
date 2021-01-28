@@ -67,12 +67,14 @@ namespace HomeMQ.RabbitMQ.Publisher
             };
 
 
-            var cm = new ControlMessage(new Heartbeat());//JObject.FromObject(new LightControlMessage());
+            var cm = new ControlMessage(new StatusCheck());//JObject.FromObject(new LightControlMessage());
             var message = JsonConvert.SerializeObject(cm, new JsonSerializerSettings
             {
                 ContractResolver = contractResolver,
                 Formatting = Formatting.Indented
             });
+
+            
 
             //var json = JObject.FromObject(cm);
             //var message = json.ToString();
@@ -84,7 +86,7 @@ namespace HomeMQ.RabbitMQ.Publisher
             while (true)
             {
                 //Thread.Sleep(1);
-                for (int i = 0; i < 200; i++)
+                for (int i = 0; i < 1; i++)
                 {
                     channel.BasicPublish(exchange: exchangeName, routingKey: routingKey, basicProperties: props, body: body);
                 }

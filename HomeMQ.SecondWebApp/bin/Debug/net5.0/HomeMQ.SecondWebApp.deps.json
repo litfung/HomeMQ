@@ -2002,6 +2002,7 @@
       "HomeMQ.Models/1.0.0": {
         "dependencies": {
           "BaseClasses": "1.0.0",
+          "NetworkDeviceModels": "1.0.0",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "runtime": {
@@ -2009,6 +2010,17 @@
         },
         "compile": {
           "HomeMQ.Models.dll": {}
+        }
+      },
+      "NetworkDeviceModels/1.0.0": {
+        "dependencies": {
+          "BaseClasses": "1.0.0"
+        },
+        "runtime": {
+          "NetworkDeviceModels.dll": {}
+        },
+        "compile": {
+          "NetworkDeviceModels.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -4653,6 +4665,11 @@
       "sha512": ""
     },
     "HomeMQ.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NetworkDeviceModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

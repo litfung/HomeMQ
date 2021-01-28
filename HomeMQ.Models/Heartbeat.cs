@@ -4,8 +4,9 @@ using System.Text;
 
 namespace HomeMQ.Models
 {
-    public class Heartbeat
+    public class StatusCheck
     {
         public string Data { get; set; } = "";
     }
+
 }

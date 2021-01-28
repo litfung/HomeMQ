@@ -6,5 +6,7 @@ namespace HomeMQ.Core.ViewModels
 {
     public interface IRabbitConsumerViewModel
     {
+        //void Start();
+        void Consume();
     }
 }

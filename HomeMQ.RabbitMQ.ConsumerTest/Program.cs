@@ -29,7 +29,7 @@ namespace HomeMQ.RabbitMQ.ConsumerTest
             var exchangeName = "rtsh_topics";
             var routeKey = "master.control.*";
 
-            var firstConsumer = new MasterControlConsumer(conn, exchangeName, routeKey).WithPrefetchCount(100);
+            var firstConsumer = new MasterControlConsumer(conn, null, exchangeName, routeKey).WithPrefetchCount(100);
             firstConsumer.Consume();
 
 

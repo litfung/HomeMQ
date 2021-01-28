@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace HomeMQ.DesktopApp.Views
 {
     /// <summary>
-    /// Interaction logic for WiznetConnectionsView.xaml
+    /// Interaction logic for PrimaryOverviewView.xaml
     /// </summary>
-    public partial class WiznetConnectionsPage : MvxWpfView
+    public partial class PrimaryOverviewPage : MvxWpfView
     {
-        public WiznetConnectionsPage()
+        public PrimaryOverviewPage()
         {
             InitializeComponent();
         }

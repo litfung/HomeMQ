@@ -52,3 +52,9 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\System.S
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\System.Windows.Input.Manipulations.xml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\System.Windows.Forms.xml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\HomeMQ.RabbitMQ.Consumer.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\RabbitMqManagers.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\Newtonsoft.Json.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\RabbitMqManagers.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\HomeMQ.RabbitMQ.Consumer.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\Newtonsoft.Json.xml

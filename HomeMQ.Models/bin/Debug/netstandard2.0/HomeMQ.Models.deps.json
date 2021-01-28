@@ -11,6 +11,7 @@
         "dependencies": {
           "BaseClasses": "1.0.0",
           "NETStandard.Library": "2.0.3",
+          "NetworkDeviceModels": "1.0.0",
           "System.ComponentModel.Annotations": "5.0.0",
           "Newtonsoft.Json": "11.0.0.0"
         },
@@ -35,6 +36,14 @@
       "BaseClasses/1.0.0": {
         "runtime": {
           "BaseClasses.dll": {}
+        }
+      },
+      "NetworkDeviceModels/1.0.0": {
+        "dependencies": {
+          "BaseClasses": "1.0.0"
+        },
+        "runtime": {
+          "NetworkDeviceModels.dll": {}
         }
       },
       "Newtonsoft.Json/11.0.0.0": {
@@ -75,6 +84,11 @@
       "hashPath": "system.componentmodel.annotations.5.0.0.nupkg.sha512"
     },
     "BaseClasses/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NetworkDeviceModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

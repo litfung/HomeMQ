@@ -12,3 +12,5 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.SensorSQL.DataAccess\obj\Debug\netstan
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.SensorSQL.DataAccess\obj\Debug\netstandard2.0\HomeMQ.SensorSQL.DataAccess.csproj.CopyComplete
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.SensorSQL.DataAccess\obj\Debug\netstandard2.0\HomeMQ.SensorSQL.DataAccess.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.SensorSQL.DataAccess\obj\Debug\netstandard2.0\HomeMQ.SensorSQL.DataAccess.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.SensorSQL.DataAccess\bin\Debug\netstandard2.0\NetworkDeviceModels.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.SensorSQL.DataAccess\bin\Debug\netstandard2.0\NetworkDeviceModels.pdb
