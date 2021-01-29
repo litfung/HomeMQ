@@ -9,6 +9,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\InterfaceInfoView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\MainView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,6 +22,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\RabbitConnections\RabbitConsumerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RabbitConnections\RabbitControlStatusView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\WiznetConnections\WiznetPiControlView.xaml.cs">
@@ -50,6 +56,9 @@
     <Page Update="Styles\Texts.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\InterfaceInfoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\MainView.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -60,6 +69,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\RabbitConnections\RabbitConsumerView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RabbitConnections\RabbitControlStatusView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\WiznetConnections\WiznetPiControlView.xaml">

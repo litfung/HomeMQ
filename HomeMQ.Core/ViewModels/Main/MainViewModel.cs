@@ -1,6 +1,7 @@
 ﻿using Acr.UserDialogs;
 using BaseClasses;
 using BaseViewModels;
+using DeviceManagers;
 using HomeMQ.RabbitMQ.Consumer;
 using MvvmCross;
 using MvvmCross.ViewModels;
@@ -19,6 +20,7 @@ namespace HomeMQ.Core.ViewModels
         private IUserDialogs alerts;
         private MQConnectionManager rabbitConnectionManager;
         private IMasterControlProcessor commandProcessor;
+        private IRabbitControlledManager deviceManager;
         public INavigationViewModel DetailViewModel
         {
             get { return detailViewModel; }
@@ -55,9 +57,10 @@ namespace HomeMQ.Core.ViewModels
             alerts = Mvx.IoCProvider.Resolve<IUserDialogs>();
             rabbitConnectionManager = Mvx.IoCProvider.Resolve<MQConnectionManager>();
             commandProcessor = Mvx.IoCProvider.Resolve<IMasterControlProcessor>();
+            deviceManager = Mvx.IoCProvider.Resolve<IRabbitControlledManager>();
 
-            MasterViewModel = new MenuViewModel(wiznetManager, alerts, rabbitConnectionManager, commandProcessor);
-            DetailViewModel = new PrimaryOverviewViewModel(wiznetManager, alerts, rabbitConnectionManager, commandProcessor);
+            MasterViewModel = new MenuViewModel(wiznetManager, alerts, rabbitConnectionManager, commandProcessor, deviceManager);
+            DetailViewModel = new PrimaryOverviewViewModel(wiznetManager, alerts, rabbitConnectionManager, commandProcessor, deviceManager);
         }
     }
 }

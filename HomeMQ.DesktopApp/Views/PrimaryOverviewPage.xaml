@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         d:Height="450" d:Width="800">
     <StackPanel Orientation="Horizontal" Background="{StaticResource PrimaryBackgroundBrush}" x:Name="mainGrid">
-        <ContentControl Content="{Binding RabbitConsumer}"/>
+        <ContentControl Content="{Binding RabbitConsumer}" />
         <ItemsControl ItemsSource="{Binding WiznetStatusControls}"/>
     </StackPanel>
 </views:MvxWpfView>

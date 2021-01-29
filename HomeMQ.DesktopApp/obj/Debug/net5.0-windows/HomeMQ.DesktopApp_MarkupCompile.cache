@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\App.xaml
-131529370327
+151165830962
 
-91952491902
+11-434607176
 2091460663046
-MainWindow.xaml;Styles\Buttons.xaml;Styles\Collections.xaml;Styles\Colors.xaml;Styles\DataTemplates.xaml;Styles\Fonts.xaml;Styles\Texts.xaml;Views\MainView.xaml;Views\MenuView.xaml;Views\PrimaryOverviewPage.xaml;Views\RabbitConnections\RabbitConsumerView.xaml;Views\WiznetConnections\WiznetPiControlView.xaml;Views\WiznetConnections\WiznetStatusView.xaml;
+MainWindow.xaml;Styles\Buttons.xaml;Styles\Collections.xaml;Styles\Colors.xaml;Styles\DataTemplates.xaml;Styles\Fonts.xaml;Styles\Texts.xaml;Views\InterfaceInfoView.xaml;Views\MainView.xaml;Views\MenuView.xaml;Views\PrimaryOverviewPage.xaml;Views\RabbitConnections\RabbitConsumerView.xaml;Views\RabbitConnections\RabbitControlStatusView.xaml;Views\WiznetConnections\WiznetPiControlView.xaml;Views\WiznetConnections\WiznetStatusView.xaml;
 
 False
 

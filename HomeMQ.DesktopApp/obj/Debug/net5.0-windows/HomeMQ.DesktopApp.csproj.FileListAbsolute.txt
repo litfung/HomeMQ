@@ -71,3 +71,7 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\Ne
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\Newtonsoft.Json.xml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitConnections\RabbitConsumerView.g.cs
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitConnections\RabbitConsumerView.baml
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitConnections\RabbitControlStatusView.g.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitConnections\RabbitControlStatusView.baml
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\InterfaceInfoView.g.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\InterfaceInfoView.baml

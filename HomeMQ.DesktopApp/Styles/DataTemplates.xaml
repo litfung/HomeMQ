@@ -23,4 +23,16 @@
     <DataTemplate DataType="{x:Type vms:RabbitConsumerViewModel}">
         <views:RabbitConsumerStatusView/>
     </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vms:RabbitControlStatusViewModel}">
+        <views:RabbitControlStatusView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vms:InterfaceInfoViewModel}">
+        <views:InterfaceInfoView/>
+    </DataTemplate>
+
+
+
+    
 </ResourceDictionary>

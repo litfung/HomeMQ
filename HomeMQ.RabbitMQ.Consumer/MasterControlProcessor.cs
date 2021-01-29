@@ -16,9 +16,24 @@ namespace HomeMQ.RabbitMQ.Consumer
         public void Process(ControlResponse data)
         {
             var device = data.ToPiDeviceStatus();
+            var found = false;
 
-            Manager.AddDevice(device);
-            Messenger.Instance.Send(new UpdateViewMessage());
+            foreach (var item in Manager.AllDevices)
+            {
+                if (item.Hostname.Equals(device.Hostname))
+                {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found)
+            {
+                Manager.AddDevice(device);
+                Messenger.Instance.Send(new UpdateViewMessage());
+            }
+
+            
         }
     }
 }

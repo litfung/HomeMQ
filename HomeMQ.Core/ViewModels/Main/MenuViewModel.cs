@@ -1,6 +1,7 @@
 ﻿using Acr.UserDialogs;
 using BaseClasses;
 using BaseViewModels;
+using DeviceManagers;
 using HomeMQ.RabbitMQ.Consumer;
 using MvvmCross.Commands;
 using MvvmCross.ViewModels;
@@ -21,6 +22,7 @@ namespace HomeMQ.Core.ViewModels
         private IUserDialogs userDialogs;
         private MQConnectionManager rabbitConnectionManager;
         private IMasterControlProcessor commandProcessor;
+        private IRabbitControlledManager deviceManager;
         #endregion
 
         #region Properties
@@ -33,12 +35,14 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public MenuViewModel(IWiznetManager wizManager, IUserDialogs dialog, MQConnectionManager rabbitManager, IMasterControlProcessor processor)
+        public MenuViewModel(IWiznetManager wizManager, IUserDialogs dialog, MQConnectionManager rabbitManager, 
+            IMasterControlProcessor processor, IRabbitControlledManager dManager)
         {
             wiznetManager = wizManager;
             userDialogs = dialog;
             rabbitConnectionManager = rabbitManager;
             commandProcessor = processor;
+            deviceManager = dManager;
 
             ShowFirstPageCommand = new MvxCommand(ShowFirstPage);
             ShowSecondPageCommand = new MvxCommand(ShowSecondPage);
@@ -53,13 +57,13 @@ namespace HomeMQ.Core.ViewModels
         public void ShowFirstPage()
         {
             Messenger.Instance.Send(new ViewUnloadedMessage());
-            Messenger.Instance.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(wiznetManager, userDialogs, rabbitConnectionManager, commandProcessor)));
+            Messenger.Instance.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(wiznetManager, userDialogs, rabbitConnectionManager, commandProcessor, deviceManager)));
         }
 
         public void ShowSecondPage()
         {
             Messenger.Instance.Send(new ViewUnloadedMessage());
-            Messenger.Instance.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(wiznetManager, userDialogs, rabbitConnectionManager, commandProcessor)));
+            Messenger.Instance.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(wiznetManager, userDialogs, rabbitConnectionManager, commandProcessor, deviceManager)));
         }
         #endregion
 

@@ -23,6 +23,7 @@ namespace HomeMQ.Core.ViewModels
         private IUserDialogs dialogs;
         private MQConnectionManager rabbitConnectionManager;
         private IMasterControlProcessor rabbitCommandProcessor;
+        private IRabbitControlledManager deviceManager;
         #endregion
 
         #region Properties
@@ -63,12 +64,13 @@ namespace HomeMQ.Core.ViewModels
 
         #region Constructors
         public PrimaryOverviewViewModel(IWiznetManager wizManager, IUserDialogs dialog, 
-            MQConnectionManager mqConnections, IMasterControlProcessor processor)
+            MQConnectionManager mqConnections, IMasterControlProcessor processor, IRabbitControlledManager dManager)
         {
             WiznetManager = wizManager;
             dialogs = dialog;
             rabbitConnectionManager = mqConnections;
             rabbitCommandProcessor = processor;
+            deviceManager = dManager;
 
             foreach (var item in WiznetManager.AllWiznets)
             {
@@ -88,7 +90,9 @@ namespace HomeMQ.Core.ViewModels
             var exchangeName = "rtsh_topics";
             var routeKey = "master.control.*";
 
-            RabbitConsumer = new RabbitConsumerViewModel(new MasterControlConsumer(factory, rabbitCommandProcessor, exchangeName, routeKey));
+            var consumer = new MasterControlConsumer(factory, rabbitCommandProcessor, exchangeName, routeKey);
+
+            RabbitConsumer = new RabbitConsumerViewModel(consumer, deviceManager);
         }
 
 

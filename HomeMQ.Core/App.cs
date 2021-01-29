@@ -20,6 +20,7 @@ namespace HomeMQ.Core
             Mvx.IoCProvider.RegisterSingleton(() => WPFUserDialogs.Instance);
             Mvx.IoCProvider.RegisterSingleton(() => WiznetManager.Instance);
             Mvx.IoCProvider.RegisterSingleton(() => MQConnectionManager.Instance);
+            Mvx.IoCProvider.RegisterSingleton<IRabbitControlledManager>(() => RabbitControlledDeviceManager.Instance);
             Mvx.IoCProvider.RegisterSingleton<IMasterControlProcessor>(new MasterControlProcessor());
             RegisterAppStart<MainViewModel>();
         }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HomeMQ.RabbitMQ.Consumer
 {
-    public class TopicConsumer : DefaultBasicConsumer
+    public class TopicConsumer : DefaultBasicConsumer, ITopicConsumer
     {
         #region Fields
 

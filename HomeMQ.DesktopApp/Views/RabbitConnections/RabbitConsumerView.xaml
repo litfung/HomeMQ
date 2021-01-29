@@ -7,7 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid ItemsSource="{Binding Devices}" Width="300"/>
+        <!--<DataGrid ItemsSource="{Binding Devices}" Width="300"/>-->
+        <ItemsControl ItemsSource="{Binding Devices}"/>
 
     </Grid>
 </UserControl>
