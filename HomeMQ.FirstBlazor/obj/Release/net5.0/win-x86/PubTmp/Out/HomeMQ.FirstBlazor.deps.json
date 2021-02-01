@@ -1912,6 +1912,9 @@
         }
       },
       "NetworkDeviceModels/1.0.0": {
+        "dependencies": {
+          "BaseClasses": "1.0.0"
+        },
         "compile": {
           "NetworkDeviceModels.dll": {}
         }
@@ -3811,6 +3814,9 @@
         }
       },
       "NetworkDeviceModels/1.0.0": {
+        "dependencies": {
+          "BaseClasses": "1.0.0"
+        },
         "runtime": {
           "NetworkDeviceModels.dll": {}
         }

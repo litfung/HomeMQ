@@ -82,8 +82,15 @@ using HomeMQ.FirstBlazor.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\Pages\Counter.razor"
+using System.Timers;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
-    public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase, IDisposable
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -91,14 +98,43 @@ using HomeMQ.FirstBlazor.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\Pages\Counter.razor"
+#line 11 "C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\Pages\Counter.razor"
        
     private int currentCount = 0;
 
     private void IncrementCount()
     {
         currentCount++;
+
+        Console.WriteLine($"Count incremented: {currentCount}");
     }
+
+    private Timer timer;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            timer = new Timer();
+            timer.Interval = 1000;
+            timer.Elapsed += OnTimerInterval;
+            timer.AutoReset = true;
+            timer.Enabled = true;
+        }
+        base.OnAfterRender(firstRender);
+    }
+
+    private void OnTimerInterval(object sender, ElapsedEventArgs e)
+    {
+        IncrementCount();
+        InvokeAsync(() => StateHasChanged());
+    }
+
+    public void Dispose()
+    {
+        timer?.Dispose();
+    }
+
 
 #line default
 #line hidden

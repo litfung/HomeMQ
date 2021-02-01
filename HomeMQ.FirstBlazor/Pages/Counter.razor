@@ -1,4 +1,6 @@
 ﻿@page "/counter"
+@implements IDisposable
+@using System.Timers
 
 <h1>Counter</h1>
 
@@ -12,5 +14,34 @@
     private void IncrementCount()
     {
         currentCount++;
+
+        Console.WriteLine($"Count incremented: {currentCount}");
     }
+
+    private Timer timer;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            timer = new Timer();
+            timer.Interval = 1000;
+            timer.Elapsed += OnTimerInterval;
+            timer.AutoReset = true;
+            timer.Enabled = true;
+        }
+        base.OnAfterRender(firstRender);
+    }
+
+    private void OnTimerInterval(object sender, ElapsedEventArgs e)
+    {
+        IncrementCount();
+        InvokeAsync(() => StateHasChanged());
+    }
+
+    public void Dispose()
+    {
+        timer?.Dispose();
+    }
+
 }

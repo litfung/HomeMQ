@@ -462,6 +462,9 @@
       "NetworkDeviceModels/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BaseClasses": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/NetworkDeviceModels.dll": {}
         },
@@ -834,6 +837,9 @@
       "NetworkDeviceModels/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BaseClasses": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/NetworkDeviceModels.dll": {}
         },
@@ -1878,8 +1884,8 @@
     },
     "NetworkDeviceModels/1.0.0": {
       "type": "project",
-      "path": "../NetworkDeviceModels/NetworkDeviceModels.csproj",
-      "msbuildProject": "../NetworkDeviceModels/NetworkDeviceModels.csproj"
+      "path": "../../SharedProjects/Standard/NetworkDeviceModels/NetworkDeviceModels.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/NetworkDeviceModels/NetworkDeviceModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
