@@ -30,8 +30,8 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Commands
-        public ICommand ShowFirstPageCommand { get; }
-        public ICommand ShowSecondPageCommand { get; }
+        public IMvxCommand ShowFirstPageCommand { get; }
+        public IMvxCommand ShowSecondPageCommand { get; }
         #endregion
 
         #region Constructors
@@ -63,7 +63,7 @@ namespace HomeMQ.Core.ViewModels
         public void ShowSecondPage()
         {
             Messenger.Instance.Send(new ViewUnloadedMessage());
-            Messenger.Instance.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(wiznetManager, userDialogs, rabbitConnectionManager, commandProcessor, deviceManager)));
+            Messenger.Instance.Send(new DetailNavigationMessage(new UpgradeDebugViewModel()));
         }
         #endregion
 

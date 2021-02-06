@@ -59,6 +59,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMqManagers", "..\Shar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeMQ.SecondBlazor", "HomeMQ.SecondBlazor\HomeMQ.SecondBlazor.csproj", "{7095CF70-7263-4B99-9773-071834EC6DCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PythonCmdTest", "PythonCmdTest\PythonCmdTest.csproj", "{2E5B1659-ABD8-48B0-B88A-7E9AFD89B516}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -181,6 +183,10 @@ Global
 		{7095CF70-7263-4B99-9773-071834EC6DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7095CF70-7263-4B99-9773-071834EC6DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7095CF70-7263-4B99-9773-071834EC6DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E5B1659-ABD8-48B0-B88A-7E9AFD89B516}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E5B1659-ABD8-48B0-B88A-7E9AFD89B516}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E5B1659-ABD8-48B0-B88A-7E9AFD89B516}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E5B1659-ABD8-48B0-B88A-7E9AFD89B516}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

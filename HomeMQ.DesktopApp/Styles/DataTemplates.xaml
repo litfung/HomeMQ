@@ -12,6 +12,10 @@
         <views:PrimaryOverviewPage/>
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vms:UpgradeDebugViewModel}">
+        <views:UpgradeDebugView/>
+    </DataTemplate>
+
     <DataTemplate DataType="{x:Type vms:WiznetStatusViewModel}">
         <views:WiznetStatusView/>
     </DataTemplate>
