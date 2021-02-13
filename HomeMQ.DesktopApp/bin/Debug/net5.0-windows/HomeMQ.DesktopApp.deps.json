@@ -45,6 +45,14 @@
           }
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
       "RabbitMQ.Client/6.2.1": {
         "dependencies": {
           "System.Memory": "4.5.4",
@@ -90,8 +98,10 @@
           "BaseClasses": "1.0.0",
           "BaseViewModels": "1.0.0",
           "DeviceManagers": "1.0.0",
+          "HomeMQ.Managers": "1.0.0",
           "HomeMQ.Models": "1.0.0",
           "HomeMQ.RabbitMQ.Consumer": "1.0.0",
+          "HomeMQ.RabbitMQ.Publishers": "1.0.0",
           "MvvmCross": "7.1.2",
           "RabbitMQ.Client": "6.2.1",
           "RabbitMqManagers": "1.0.0",
@@ -100,6 +110,16 @@
         },
         "runtime": {
           "HomeMQ.Core.dll": {}
+        }
+      },
+      "HomeMQ.Managers/1.0.0": {
+        "dependencies": {
+          "BaseClasses": "1.0.0",
+          "HomeMQ.Models": "1.0.0",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "HomeMQ.Managers.dll": {}
         }
       },
       "HomeMQ.Models/1.0.0": {
@@ -121,6 +141,17 @@
         },
         "runtime": {
           "HomeMQ.RabbitMQ.Consumer.dll": {}
+        }
+      },
+      "HomeMQ.RabbitMQ.Publishers/1.0.0": {
+        "dependencies": {
+          "HomeMQ.Models": "1.0.0",
+          "Newtonsoft.Json": "12.0.3",
+          "RabbitMQ.Client": "6.2.1",
+          "RabbitMqManagers": "1.0.0"
+        },
+        "runtime": {
+          "HomeMQ.RabbitMQ.Publishers.dll": {}
         }
       },
       "NetworkDeviceModels/1.0.0": {
@@ -167,14 +198,6 @@
         "runtime": {
           "WPFToggleButtons.dll": {}
         }
-      },
-      "Newtonsoft.Json/11.0.0.0": {
-        "runtime": {
-          "Newtonsoft.Json.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.2.21924"
-          }
-        }
       }
     }
   },
@@ -204,6 +227,13 @@
       "sha512": "sha512-Bua4RosymWv27EUT7ZD2ixrNeuYQmbqdomhWlpqa4Vop1XjS3XFzop1yv00Z37vroT1YA7VHxbFZEtoDOzv/fg==",
       "path": "mvvmcross.platforms.wpf/7.1.2",
       "hashPath": "mvvmcross.platforms.wpf.7.1.2.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
     "RabbitMQ.Client/6.2.1": {
       "type": "package",
@@ -253,12 +283,22 @@
       "serviceable": false,
       "sha512": ""
     },
+    "HomeMQ.Managers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "HomeMQ.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "HomeMQ.RabbitMQ.Consumer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HomeMQ.RabbitMQ.Publishers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -290,11 +330,6 @@
     },
     "WPFToggleButtons/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Newtonsoft.Json/11.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

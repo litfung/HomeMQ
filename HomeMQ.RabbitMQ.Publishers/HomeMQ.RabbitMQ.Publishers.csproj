@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\SharedProjects\Standard\RabbitMqManagers\RabbitMqManagers.csproj" />
+    <ProjectReference Include="..\HomeMQ.Models\HomeMQ.Models.csproj" />
+  </ItemGroup>
+
+</Project>

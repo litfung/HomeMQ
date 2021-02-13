@@ -10,6 +10,8 @@ using DeviceManagers;
 using WPFMessageBox;
 using RabbitMqManagers;
 using HomeMQ.RabbitMQ.Consumer;
+using HomeMQ.RabbitMQ.Publishers;
+using HomeMQ.Managers;
 
 namespace HomeMQ.Core
 {
@@ -17,11 +19,7 @@ namespace HomeMQ.Core
     {
         public override void Initialize()
         {
-            Mvx.IoCProvider.RegisterSingleton(() => WPFUserDialogs.Instance);
-            Mvx.IoCProvider.RegisterSingleton(() => WiznetManager.Instance);
-            Mvx.IoCProvider.RegisterSingleton(() => MQConnectionManager.Instance);
-            Mvx.IoCProvider.RegisterSingleton<IRabbitControlledManager>(() => RabbitControlledDeviceManager.Instance);
-            Mvx.IoCProvider.RegisterSingleton<IMasterControlProcessor>(new MasterControlProcessor());
+            Mvx.IoCProvider.RegisterSingleton(() => new MainControl());
             RegisterAppStart<MainViewModel>();
         }
     }

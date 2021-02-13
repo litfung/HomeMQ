@@ -116,8 +116,10 @@
           "BaseClasses": "1.0.0",
           "BaseViewModels": "1.0.0",
           "DeviceManagers": "1.0.0",
+          "HomeMQ.Managers": "1.0.0",
           "HomeMQ.Models": "1.0.0",
           "HomeMQ.RabbitMQ.Consumer": "1.0.0",
+          "HomeMQ.RabbitMQ.Publishers": "1.0.0",
           "MvvmCross": "7.1.2",
           "RabbitMQ.Client": "6.2.1",
           "RabbitMqManagers": "1.0.0",
@@ -129,6 +131,21 @@
         },
         "runtime": {
           "bin/placeholder/HomeMQ.Core.dll": {}
+        }
+      },
+      "HomeMQ.Managers/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BaseClasses": "1.0.0",
+          "HomeMQ.Models": "1.0.0",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "bin/placeholder/HomeMQ.Managers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HomeMQ.Managers.dll": {}
         }
       },
       "HomeMQ.Models/1.0.0": {
@@ -160,6 +177,22 @@
         },
         "runtime": {
           "bin/placeholder/HomeMQ.RabbitMQ.Consumer.dll": {}
+        }
+      },
+      "HomeMQ.RabbitMQ.Publishers/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "HomeMQ.Models": "1.0.0",
+          "Newtonsoft.Json": "12.0.3",
+          "RabbitMQ.Client": "6.2.1",
+          "RabbitMqManagers": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/HomeMQ.RabbitMQ.Publishers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HomeMQ.RabbitMQ.Publishers.dll": {}
         }
       },
       "NetworkDeviceModels/1.0.0": {
@@ -507,6 +540,11 @@
       "path": "../HomeMQ.Core/HomeMQ.Core.csproj",
       "msbuildProject": "../HomeMQ.Core/HomeMQ.Core.csproj"
     },
+    "HomeMQ.Managers/1.0.0": {
+      "type": "project",
+      "path": "../HomeMQ.Managers/HomeMQ.Managers.csproj",
+      "msbuildProject": "../HomeMQ.Managers/HomeMQ.Managers.csproj"
+    },
     "HomeMQ.Models/1.0.0": {
       "type": "project",
       "path": "../HomeMQ.Models/HomeMQ.Models.csproj",
@@ -516,6 +554,11 @@
       "type": "project",
       "path": "../HomeMQ.RabbitMQ.Consumer/HomeMQ.RabbitMQ.Consumer.csproj",
       "msbuildProject": "../HomeMQ.RabbitMQ.Consumer/HomeMQ.RabbitMQ.Consumer.csproj"
+    },
+    "HomeMQ.RabbitMQ.Publishers/1.0.0": {
+      "type": "project",
+      "path": "../HomeMQ.RabbitMQ.Publishers/HomeMQ.RabbitMQ.Publishers.csproj",
+      "msbuildProject": "../HomeMQ.RabbitMQ.Publishers/HomeMQ.RabbitMQ.Publishers.csproj"
     },
     "NetworkDeviceModels/1.0.0": {
       "type": "project",
@@ -621,7 +664,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

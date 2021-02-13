@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="State\" />
     <Folder Include="Tutorial\" />
   </ItemGroup>
 

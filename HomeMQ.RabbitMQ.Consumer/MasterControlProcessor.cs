@@ -7,8 +7,6 @@ using System.Text;
 
 namespace HomeMQ.RabbitMQ.Consumer
 {
-    
-
     public class MasterControlProcessor : IMasterControlProcessor
     {
 

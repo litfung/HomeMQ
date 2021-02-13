@@ -18,11 +18,12 @@ namespace HomeMQ.Core.ViewModels
     public class MenuViewModel : MvxViewModel, INavigationViewModel
     {
         #region Fields
-        private IWiznetManager wiznetManager;
-        private IUserDialogs userDialogs;
-        private MQConnectionManager rabbitConnectionManager;
-        private IMasterControlProcessor commandProcessor;
-        private IRabbitControlledManager deviceManager;
+        //private IWiznetManager wiznetManager;
+        //private IUserDialogs userDialogs;
+        //private MQConnectionManager rabbitConnectionManager;
+        //private IMasterControlProcessor commandProcessor;
+        //private IRabbitControlledManager deviceManager;
+        private IMainControl mainControl;
         #endregion
 
         #region Properties
@@ -35,17 +36,22 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public MenuViewModel(IWiznetManager wizManager, IUserDialogs dialog, MQConnectionManager rabbitManager, 
-            IMasterControlProcessor processor, IRabbitControlledManager dManager)
+        public MenuViewModel(IMainControl mControl)
+            //IWiznetManager wizManager, IUserDialogs dialog, MQConnectionManager rabbitManager, 
+            //IMasterControlProcessor processor, IRabbitControlledManager dManager)
         {
-            wiznetManager = wizManager;
-            userDialogs = dialog;
-            rabbitConnectionManager = rabbitManager;
-            commandProcessor = processor;
-            deviceManager = dManager;
+            mainControl = mControl;
+            //wiznetManager = wizManager;
+            //userDialogs = dialog;
+            //rabbitConnectionManager = rabbitManager;
+            //commandProcessor = processor;
+            //deviceManager = dManager;
 
             ShowFirstPageCommand = new MvxCommand(ShowFirstPage);
             ShowSecondPageCommand = new MvxCommand(ShowSecondPage);
+
+            
+
         }
         public Task UpdateUIControlAccess()
         {
@@ -56,14 +62,12 @@ namespace HomeMQ.Core.ViewModels
         #region Methods
         public void ShowFirstPage()
         {
-            Messenger.Instance.Send(new ViewUnloadedMessage());
-            Messenger.Instance.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(wiznetManager, userDialogs, rabbitConnectionManager, commandProcessor, deviceManager)));
+            mainControl.NavigatePrimaryOverview();
         }
 
         public void ShowSecondPage()
         {
-            Messenger.Instance.Send(new ViewUnloadedMessage());
-            Messenger.Instance.Send(new DetailNavigationMessage(new UpgradeDebugViewModel()));
+            mainControl.NavigateUpgradeDebug();
         }
         #endregion
 

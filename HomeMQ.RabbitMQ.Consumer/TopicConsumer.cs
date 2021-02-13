@@ -28,12 +28,20 @@ namespace HomeMQ.RabbitMQ.Consumer
             Model = Connection.CreateModel();
         }
 
-        public TopicConsumer(IConnectionFactory factory, string exchange, string routeKey)
-            : this(factory, exchange, new List<string> { routeKey }) { }
+        public TopicConsumer(IConnectionFactory factory, string exchange, string routeKey, string consumerName = null)
+            : this(factory, exchange, new List<string> { routeKey }, consumerName) { }
 
-        public TopicConsumer(IConnectionFactory factory, string exchange, List<string> routeKeys)
+        public TopicConsumer(IConnectionFactory factory, string exchange, List<string> routeKeys, string consumerName = null)
         {
-            Connection = factory.CreateConnection();
+            if (consumerName != null)
+            {
+                Connection = factory.CreateConnection(clientProvidedName:consumerName);
+            }
+            else
+            {
+                Connection = factory.CreateConnection();
+            }
+            
             ExchangeName = exchange;
             RoutingKeys = routeKeys;
             Model = Connection.CreateModel();

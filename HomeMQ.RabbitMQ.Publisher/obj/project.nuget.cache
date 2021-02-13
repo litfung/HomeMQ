@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "QzHZAbnO1glTQ/4vo6m9+co4vVpfCPnUGWPkW3G2A3IRFYTXX2NtScp5JjAswxWHhdg7ybvvVdwZ3NEOCnaDTw==",
+  "dgSpecHash": "MTFJFUY3RW54R7o962UYp8pY+e4PexTqqBgzBXieiqfsW50t4UlibqoRHJjYk0ZhBcpVToVM6TloW1PgrmTAPg==",
   "success": true,
   "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Publisher\\HomeMQ.RabbitMQ.PublisherTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\devin\\.nuget\\packages\\acr.userdialogs\\7.1.0.475\\acr.userdialogs.7.1.0.475.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\mvvmcross\\7.1.2\\mvvmcross.7.1.2.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",

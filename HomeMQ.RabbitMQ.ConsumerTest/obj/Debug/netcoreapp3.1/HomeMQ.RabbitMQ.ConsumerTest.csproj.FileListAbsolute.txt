@@ -62,3 +62,7 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcor
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\System.Runtime.Serialization.Formatters.Soap.xml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\RabbitMqManagers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\RabbitMqManagers.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\HomeMQ.Managers.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Publishers.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\HomeMQ.Managers.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Publishers.pdb

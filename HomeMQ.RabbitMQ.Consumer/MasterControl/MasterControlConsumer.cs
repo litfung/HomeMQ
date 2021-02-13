@@ -20,7 +20,7 @@ namespace HomeMQ.RabbitMQ.Consumer
             commandProcessor = processor;
         }
 
-        public MasterControlConsumer(IConnectionFactory factory, IMasterControlProcessor processor, string exchange, string routeKey) : base(factory, exchange, routeKey)
+        public MasterControlConsumer(IConnectionFactory factory, IMasterControlProcessor processor, string exchange, string routeKey, string readableName = null) : base(factory, exchange, routeKey, readableName)
         {
             commandProcessor = processor;
         }

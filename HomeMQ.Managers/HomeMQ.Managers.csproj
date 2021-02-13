@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\SharedProjects\Standard\BaseClasses\BaseClasses.csproj" />
     <ProjectReference Include="..\HomeMQ.Models\HomeMQ.Models.csproj" />
   </ItemGroup>

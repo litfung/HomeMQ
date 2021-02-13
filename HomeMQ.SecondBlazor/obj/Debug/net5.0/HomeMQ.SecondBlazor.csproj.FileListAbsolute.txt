@@ -55,3 +55,4 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.SecondBlazor\obj\Debug\net5.0\ref\Home
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.SecondBlazor\obj\Debug\net5.0\HomeMQ.SecondBlazor.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.SecondBlazor\obj\Debug\net5.0\HomeMQ.SecondBlazor.genruntimeconfig.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.SecondBlazor\obj\Debug\net5.0\HomeMQ.SecondBlazor.csproj.CopyComplete
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.SecondBlazor\obj\Debug\net5.0\HomeMQ.SecondBlazor.csprojAssemblyReference.cache

@@ -77,20 +77,11 @@ namespace HomeMQ.Core.ViewModels
                 WiznetStatusControls.Add(new WiznetStatusViewModel((IWiznetPiControl)item));
             }
 
-            var username = "devin";
-            var password = "Ikorgil19";
-            var factory = new ConnectionFactory()
-            {
-                HostName = "192.168.68.109",
-                UserName = username,
-                Password = password
-            };
-
-            rabbitConnectionManager.AddFactory(factory);
+            
             var exchangeName = "rtsh_topics";
             var routeKey = "master.control.*";
-
-            var consumer = new MasterControlConsumer(factory, rabbitCommandProcessor, exchangeName, routeKey);
+            var factory = mqConnections.FactoriesByName["home"];
+            var consumer = new MasterControlConsumer(factory, rabbitCommandProcessor, exchangeName, routeKey, "master control");
 
             RabbitConsumer = new RabbitConsumerViewModel(consumer, deviceManager);
         }
