@@ -1,3 +1,7 @@
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.csprojAssemblyReference.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.AssemblyInfoInputs.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.AssemblyInfo.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.csproj.CoreCompileInputs.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\HomeMQ.DapperTest.exe
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\HomeMQ.DapperTest.deps.json
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\HomeMQ.DapperTest.runtimeconfig.json
@@ -13,10 +17,7 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\Mi
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\MvvmCross.Core.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\MvvmCross.Wpf.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\MvvmCross.Platform.Wpf.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\MvvmCross.Platform.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\MvvmCross.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
@@ -43,10 +44,6 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\ru
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\HomeMQ.DapperCore.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\HomeMQ.DapperCore.pdb
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.csprojAssemblyReference.cache
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.AssemblyInfoInputs.cache
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.AssemblyInfo.cs
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.csproj.CoreCompileInputs.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.csproj.CopyComplete
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.pdb

@@ -48,7 +48,7 @@ namespace HomeMQ.DesktopApp {
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.2.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.3.0")]
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
@@ -60,7 +60,7 @@ namespace HomeMQ.DesktopApp {
             
             #line default
             #line hidden
-            System.Uri resourceLocater = new System.Uri("/HomeMQ.DesktopApp;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/HomeMQ.DesktopApp;V1.0.0.0;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
@@ -74,7 +74,7 @@ namespace HomeMQ.DesktopApp {
         /// </summary>
         [System.STAThreadAttribute()]
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.2.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.3.0")]
         public static void Main() {
             HomeMQ.DesktopApp.App app = new HomeMQ.DesktopApp.App();
             app.InitializeComponent();

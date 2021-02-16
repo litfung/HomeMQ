@@ -3,8 +3,10 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\bin\Debug\netstandard2.0\Home
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\bin\Debug\netstandard2.0\HomeMQ.Managers.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\bin\Debug\netstandard2.0\BaseClasses.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\bin\Debug\netstandard2.0\HomeMQ.Models.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\bin\Debug\netstandard2.0\NetworkDeviceModels.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\bin\Debug\netstandard2.0\BaseClasses.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\bin\Debug\netstandard2.0\HomeMQ.Models.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\bin\Debug\netstandard2.0\NetworkDeviceModels.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\obj\Debug\netstandard2.0\HomeMQ.Managers.csprojAssemblyReference.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\obj\Debug\netstandard2.0\HomeMQ.Managers.AssemblyInfoInputs.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\obj\Debug\netstandard2.0\HomeMQ.Managers.AssemblyInfo.cs
@@ -12,5 +14,3 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\obj\Debug\netstandard2.0\Home
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\obj\Debug\netstandard2.0\HomeMQ.Managers.csproj.CopyComplete
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\obj\Debug\netstandard2.0\HomeMQ.Managers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\obj\Debug\netstandard2.0\HomeMQ.Managers.pdb
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\bin\Debug\netstandard2.0\NetworkDeviceModels.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.Managers\bin\Debug\netstandard2.0\NetworkDeviceModels.pdb

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "vx3SU/md20JsQJ7BoOmWB7Ug+KD4wwNEDBW4WQKW4LAvEBshbJGrlrYURyqo3tnwK5U/LEs9VMThpOMD+xy5Qg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.SecondBlazor\\HomeMQ.SecondBlazor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\devin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\5.0.3\\microsoft.netcore.app.runtime.win-x86.5.0.3.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\5.0.3\\microsoft.windowsdesktop.app.runtime.win-x86.5.0.3.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\5.0.3\\microsoft.aspnetcore.app.runtime.win-x86.5.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

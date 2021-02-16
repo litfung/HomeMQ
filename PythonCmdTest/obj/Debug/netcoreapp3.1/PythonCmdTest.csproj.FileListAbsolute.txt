@@ -4,7 +4,6 @@ C:\Users\devin\source\repos\HomeMQ\PythonCmdTest\bin\Debug\netcoreapp3.1\PythonC
 C:\Users\devin\source\repos\HomeMQ\PythonCmdTest\bin\Debug\netcoreapp3.1\PythonCmdTest.runtimeconfig.dev.json
 C:\Users\devin\source\repos\HomeMQ\PythonCmdTest\bin\Debug\netcoreapp3.1\PythonCmdTest.dll
 C:\Users\devin\source\repos\HomeMQ\PythonCmdTest\bin\Debug\netcoreapp3.1\PythonCmdTest.pdb
-C:\Users\devin\source\repos\HomeMQ\PythonCmdTest\obj\Debug\netcoreapp3.1\PythonCmdTest.csprojAssemblyReference.cache
 C:\Users\devin\source\repos\HomeMQ\PythonCmdTest\obj\Debug\netcoreapp3.1\PythonCmdTest.AssemblyInfoInputs.cache
 C:\Users\devin\source\repos\HomeMQ\PythonCmdTest\obj\Debug\netcoreapp3.1\PythonCmdTest.AssemblyInfo.cs
 C:\Users\devin\source\repos\HomeMQ\PythonCmdTest\obj\Debug\netcoreapp3.1\PythonCmdTest.csproj.CoreCompileInputs.cache

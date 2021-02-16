@@ -137,8 +137,10 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\bin\Debug\net5.0\runtimes\win\l
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\bin\Debug\net5.0\BaseClasses.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\bin\Debug\net5.0\HomeMQ.Models.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\bin\Debug\net5.0\NetworkDeviceModels.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\bin\Debug\net5.0\HomeMQ.Models.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\bin\Debug\net5.0\BaseClasses.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\bin\Debug\net5.0\NetworkDeviceModels.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\obj\Debug\net5.0\HomeMQ.WebApp.csprojAssemblyReference.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\obj\Debug\net5.0\HomeMQ.WebApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\obj\Debug\net5.0\HomeMQ.WebApp.AssemblyInfoInputs.cache
@@ -173,5 +175,3 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\obj\Debug\net5.0\HomeMQ.WebApp.
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\obj\Debug\net5.0\ref\HomeMQ.WebApp.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\obj\Debug\net5.0\HomeMQ.WebApp.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\obj\Debug\net5.0\HomeMQ.WebApp.genruntimeconfig.cache
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\bin\Debug\net5.0\NetworkDeviceModels.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebApp\bin\Debug\net5.0\NetworkDeviceModels.pdb
