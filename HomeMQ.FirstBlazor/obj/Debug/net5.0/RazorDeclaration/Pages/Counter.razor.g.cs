@@ -89,6 +89,13 @@ using System.Timers;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\Pages\Counter.razor"
+using HomeMQ.Core.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase, IDisposable
     {
@@ -98,16 +105,16 @@ using System.Timers;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 11 "C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\Pages\Counter.razor"
+#line 13 "C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\Pages\Counter.razor"
        
-    private int currentCount = 0;
+    //private int currentCount = 0;
 
-    private void IncrementCount()
-    {
-        currentCount++;
+    //private void IncrementCount()
+    //{
+    //    currentCount++;
 
-        Console.WriteLine($"Count incremented: {currentCount}");
-    }
+    //    Console.WriteLine($"Count incremented: {currentCount}");
+    //}
 
     private Timer timer;
 
@@ -126,7 +133,7 @@ using System.Timers;
 
     private void OnTimerInterval(object sender, ElapsedEventArgs e)
     {
-        IncrementCount();
+        CounterViewModel.CounterService.IncrementCount();
         InvokeAsync(() => StateHasChanged());
     }
 
@@ -139,6 +146,7 @@ using System.Timers;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private CounterViewModel CounterViewModel { get; set; }
     }
 }
 #pragma warning restore 1591

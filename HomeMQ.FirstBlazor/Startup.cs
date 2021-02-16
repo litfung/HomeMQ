@@ -1,3 +1,4 @@
+using HomeMQ.Core.ViewModels;
 using HomeMQ.DapperCore;
 using HomeMQ.FirstBlazor.Data;
 using Microsoft.AspNetCore.Builder;
@@ -11,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WiznetControllers;
 
 namespace HomeMQ.FirstBlazor
 {
@@ -32,6 +34,8 @@ namespace HomeMQ.FirstBlazor
             services.AddSingleton<WeatherForecastService>();
             services.AddTransient<IDataAccess, HomeDataAccess>();
             services.AddTransient<IPeopleData, PeopleData>();
+            services.AddTransient<ICounterService, CounterService>();
+            services.AddScoped<CounterViewModel>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
