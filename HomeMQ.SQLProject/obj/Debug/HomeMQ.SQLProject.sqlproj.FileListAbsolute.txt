@@ -3,7 +3,4 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.SQLProject\bin\Debug\HomeMQ.SQLProject
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.SQLProject\bin\Debug\HomeMQ.SQLProject.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.SQLProject\obj\Debug\HomeMQ.SQLProject.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.SQLProject\obj\Debug\HomeMQ.SQLProject.pdb
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.SQLProject\obj\Debug\Model.xml
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.SQLProject\obj\Debug\refactor.xml
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.SQLProject\obj\Debug\postdeploy.sql
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.SQLProject\obj\Debug\predeploy.sql
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.SQLProject\obj\Debug\HomeMQ.SQLProject.sqlprojAssemblyReference.cache

@@ -4,14 +4,14 @@
     "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.FirstBlazor\\HomeMQ.FirstBlazor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Core\\HomeMQ.Core.csproj": {
+    "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.BlazorCore\\HomeMQ.CoreBlazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Core\\HomeMQ.Core.csproj",
-        "projectName": "HomeMQ.Core",
-        "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Core\\HomeMQ.Core.csproj",
+        "projectUniqueName": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.BlazorCore\\HomeMQ.CoreBlazor.csproj",
+        "projectName": "HomeMQ.CoreBlazor",
+        "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.BlazorCore\\HomeMQ.CoreBlazor.csproj",
         "packagesPath": "C:\\Users\\devin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Core\\obj\\",
+        "outputPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.BlazorCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -32,35 +32,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Managers\\HomeMQ.Managers.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Managers\\HomeMQ.Managers.csproj"
-              },
-              "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj"
-              },
-              "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Consumer\\HomeMQ.RabbitMQ.Consumer.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Consumer\\HomeMQ.RabbitMQ.Consumer.csproj"
-              },
-              "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Publishers\\HomeMQ.RabbitMQ.Publishers.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Publishers\\HomeMQ.RabbitMQ.Publishers.csproj"
-              },
-              "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj"
-              },
-              "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseViewModels\\BaseViewModels.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseViewModels\\BaseViewModels.csproj"
-              },
-              "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\DeviceManagers\\DeviceManagers.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\DeviceManagers\\DeviceManagers.csproj"
-              },
-              "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\RabbitMqManagers\\RabbitMqManagers.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\RabbitMqManagers\\RabbitMqManagers.csproj"
-              },
               "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\WiznetControllers\\WiznetControllers.csproj": {
                 "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\WiznetControllers\\WiznetControllers.csproj"
-              },
-              "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\WPFUserDialogs\\WPFMessageBox.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\WPFUserDialogs\\WPFMessageBox.csproj"
               }
             }
           }
@@ -75,23 +48,11 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
-            "Acr.UserDialogs": {
-              "target": "Package",
-              "version": "[7.1.0.475, )"
-            },
-            "MvvmCross": {
-              "target": "Package",
-              "version": "[7.1.2, )"
-            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
-            },
-            "RabbitMQ.Client": {
-              "target": "Package",
-              "version": "[6.2.1, )"
             }
           },
           "imports": [
@@ -213,8 +174,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Core\\HomeMQ.Core.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Core\\HomeMQ.Core.csproj"
+              "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.BlazorCore\\HomeMQ.CoreBlazor.csproj": {
+                "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.BlazorCore\\HomeMQ.CoreBlazor.csproj"
               },
               "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Core\\HomeMQ.DapperCore.csproj": {
                 "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Core\\HomeMQ.DapperCore.csproj"
@@ -258,78 +219,6 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Managers\\HomeMQ.Managers.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Managers\\HomeMQ.Managers.csproj",
-        "projectName": "HomeMQ.Managers",
-        "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Managers\\HomeMQ.Managers.csproj",
-        "packagesPath": "C:\\Users\\devin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Managers\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\devin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netstandard2.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
-            "projectReferences": {
-              "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj"
-              },
-              "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
-          "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[12.0.3, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
@@ -406,157 +295,6 @@
         }
       }
     },
-    "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Consumer\\HomeMQ.RabbitMQ.Consumer.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Consumer\\HomeMQ.RabbitMQ.Consumer.csproj",
-        "projectName": "HomeMQ.RabbitMQ.Consumer",
-        "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Consumer\\HomeMQ.RabbitMQ.Consumer.csproj",
-        "packagesPath": "C:\\Users\\devin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Consumer\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\devin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netstandard2.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
-            "projectReferences": {
-              "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj"
-              },
-              "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj"
-              },
-              "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\DeviceManagers\\DeviceManagers.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\DeviceManagers\\DeviceManagers.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
-          "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            },
-            "RabbitMQ.Client": {
-              "target": "Package",
-              "version": "[6.2.1, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Publishers\\HomeMQ.RabbitMQ.Publishers.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Publishers\\HomeMQ.RabbitMQ.Publishers.csproj",
-        "projectName": "HomeMQ.RabbitMQ.Publishers",
-        "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Publishers\\HomeMQ.RabbitMQ.Publishers.csproj",
-        "packagesPath": "C:\\Users\\devin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Publishers\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\devin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netstandard2.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
-            "projectReferences": {
-              "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj"
-              },
-              "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\RabbitMqManagers\\RabbitMqManagers.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\RabbitMqManagers\\RabbitMqManagers.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
-          "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[12.0.3, )"
-            },
-            "RabbitMQ.Client": {
-              "target": "Package",
-              "version": "[6.2.1, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -597,75 +335,6 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseViewModels\\BaseViewModels.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseViewModels\\BaseViewModels.csproj",
-        "projectName": "BaseViewModels",
-        "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseViewModels\\BaseViewModels.csproj",
-        "packagesPath": "C:\\Users\\devin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseViewModels\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\devin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netstandard2.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
-            "projectReferences": {
-              "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj": {
-                "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
-          "dependencies": {
-            "MvvmCross": {
-              "target": "Package",
-              "version": "[7.1.2, )"
-            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -823,71 +492,6 @@
         }
       }
     },
-    "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\RabbitMqManagers\\RabbitMqManagers.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\RabbitMqManagers\\RabbitMqManagers.csproj",
-        "projectName": "RabbitMqManagers",
-        "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\RabbitMqManagers\\RabbitMqManagers.csproj",
-        "packagesPath": "C:\\Users\\devin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\RabbitMqManagers\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\devin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netstandard2.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
-          "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            },
-            "RabbitMQ.Client": {
-              "target": "Package",
-              "version": "[6.2.1, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\WiznetControllers\\WiznetControllers.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -942,71 +546,6 @@
             "MvvmCross": {
               "target": "Package",
               "version": "[7.1.2, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\WPFUserDialogs\\WPFMessageBox.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\WPFUserDialogs\\WPFMessageBox.csproj",
-        "projectName": "WPFMessageBox",
-        "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\WPFUserDialogs\\WPFMessageBox.csproj",
-        "packagesPath": "C:\\Users\\devin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\WPFUserDialogs\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\devin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netstandard2.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
-          "dependencies": {
-            "Acr.UserDialogs": {
-              "target": "Package",
-              "version": "[7.1.0.470, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",

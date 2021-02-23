@@ -1,4 +1,5 @@
-using HomeMQ.Core.ViewModels;
+using DeviceManagers;
+using HomeMQ.CoreBlazor.ViewModels;
 using HomeMQ.DapperCore;
 using HomeMQ.FirstBlazor.Data;
 using Microsoft.AspNetCore.Builder;
@@ -35,6 +36,8 @@ namespace HomeMQ.FirstBlazor
             services.AddTransient<IDataAccess, HomeDataAccess>();
             services.AddTransient<IPeopleData, PeopleData>();
             services.AddTransient<ICounterService, CounterService>();
+            services.AddSingleton<WiznetManager>();
+            //services.AddScoped<WiznetStatusViewModel>();
             services.AddScoped<CounterViewModel>();
         }
 

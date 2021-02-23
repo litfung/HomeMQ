@@ -19,6 +19,7 @@ namespace HomeMQ.Core
     public class MainControl : IMainControl
     {
         IStateManager stateManager;
+        ILogManager logManager;
         IUserDialogs userDialogs;
         IWiznetManager wiznetManager;
         MQConnectionManager rabbitConnectionManager;
@@ -30,8 +31,9 @@ namespace HomeMQ.Core
         public MainControl()
         {
             stateManager = StateManager.Instance;
+            logManager = new LogManager();
             userDialogs = WPFUserDialogs.Instance;
-            wiznetManager = WiznetManager.Instance;
+            wiznetManager = new WiznetManager();//.Instance;
             rabbitConnectionManager = MQConnectionManager.Instance;
             deviceManager = RabbitControlledDeviceManager.Instance;
             commandProcessor = new MasterControlProcessor();

@@ -61,7 +61,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.SecondBlazor", "Home
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PythonCmdTest", "PythonCmdTest\PythonCmdTest.csproj", "{2E5B1659-ABD8-48B0-B88A-7E9AFD89B516}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeMQ.RabbitMQ.Publishers", "HomeMQ.RabbitMQ.Publishers\HomeMQ.RabbitMQ.Publishers.csproj", "{63548E09-1343-48A6-A440-81B646DF82FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.RabbitMQ.Publishers", "HomeMQ.RabbitMQ.Publishers\HomeMQ.RabbitMQ.Publishers.csproj", "{63548E09-1343-48A6-A440-81B646DF82FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeMQ.CoreBlazor", "HomeMQ.BlazorCore\HomeMQ.CoreBlazor.csproj", "{F9F86B70-C59B-4C5B-ADD8-B8E03FBF6E3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -193,6 +195,10 @@ Global
 		{63548E09-1343-48A6-A440-81B646DF82FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63548E09-1343-48A6-A440-81B646DF82FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63548E09-1343-48A6-A440-81B646DF82FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9F86B70-C59B-4C5B-ADD8-B8E03FBF6E3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9F86B70-C59B-4C5B-ADD8-B8E03FBF6E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9F86B70-C59B-4C5B-ADD8-B8E03FBF6E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9F86B70-C59B-4C5B-ADD8-B8E03FBF6E3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

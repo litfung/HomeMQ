@@ -1,0 +1,106 @@
+﻿@page "/Data/WiznetConnections"
+@*@implements IDisposable*@
+@using Microsoft.Extensions.DependencyInjection
+@using System.Diagnostics;
+@using System.Timers
+@using HomeMQ.Core.ViewModels
+@using DeviceManagers
+@using WiznetControllers
+@inject WiznetManager WiznetManager
+
+<h1>Wiznets Connection Page</h1>
+
+<h4>Current Wiznets Available</h4>
+
+@if (availableWiznets is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Status</th>
+                <th>IP Address</th>
+                <th>Is Connected</th>
+                <th>Identity</th>
+                <th>Connected</th>
+                <th>Disconnected</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in availableWiznets)
+            {
+                <tr>
+                    <td>@item.ClientStatus</td>
+                    <td>@item.IPAddress</td>
+                    <td>@item.IsConnected</td>
+                    <td>@item.Identity</td>
+                    <td><button @onclick="@(() => ConnectWiznet(item))">Connect</button></td>
+                    <td><button @onclick="@(() => DisconnectWiznet(item))">Disconnect</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<IWiznetControl> availableWiznets;
+    //private DisplayPerson newPerson = new DisplayPerson();
+
+    protected override async Task OnInitializedAsync()
+    {
+        availableWiznets = WiznetManager.AllWiznets;// database.GetPeople();
+    }
+
+    private async Task ConnectWiznet(IWiznetControl wiz)
+    {
+        Debug.WriteLine("hello");
+        await wiz.Connect();
+    }
+    private async Task DisconnectWiznet(IWiznetControl wiz)
+    {
+        Debug.WriteLine("hello");
+        await wiz.CloseAsync();
+    }
+
+    //private async Task InsertPerson()
+    //{
+    //    var pp = new Person
+    //    {
+    //        FirstName = newPerson.FirstName,
+    //        LastName = newPerson.LastName
+    //    };
+    //    await database.InsertPerson(pp);
+
+    //    people.Add(pp);
+
+    //    newPerson = new DisplayPerson();
+    //}
+
+    private Timer timer;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            timer = new Timer();
+            timer.Interval = 1000;
+            timer.Elapsed += OnTimerInterval;
+            timer.AutoReset = true;
+            timer.Enabled = true;
+        }
+        base.OnAfterRender(firstRender);
+    }
+
+    private void OnTimerInterval(object sender, ElapsedEventArgs e)
+    {
+        InvokeAsync(() => StateHasChanged());
+    }
+
+    public void Dispose()
+    {
+        timer?.Dispose();
+    }
+}

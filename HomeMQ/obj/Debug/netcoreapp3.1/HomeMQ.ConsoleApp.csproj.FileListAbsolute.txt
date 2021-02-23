@@ -10,3 +10,4 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ\obj\Debug\netcoreapp3.1\HomeMQ.Console
 C:\Users\devin\source\repos\HomeMQ\HomeMQ\obj\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ\obj\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ\obj\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.genruntimeconfig.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ\obj\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.csprojAssemblyReference.cache

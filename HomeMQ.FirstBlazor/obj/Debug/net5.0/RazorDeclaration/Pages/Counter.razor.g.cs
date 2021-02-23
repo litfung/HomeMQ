@@ -91,7 +91,7 @@ using System.Timers;
 #nullable disable
 #nullable restore
 #line 4 "C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\Pages\Counter.razor"
-using HomeMQ.Core.ViewModels;
+using HomeMQ.CoreBlazor.ViewModels;
 
 #line default
 #line hidden

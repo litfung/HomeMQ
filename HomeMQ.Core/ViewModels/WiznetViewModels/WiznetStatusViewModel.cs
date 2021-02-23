@@ -145,7 +145,7 @@ namespace HomeMQ.Core.ViewModels
             await UpdateUIControlAccess();
         }
 
-        private async Task OnConnect()
+        public async Task OnConnect()
         {
             IsConnecting = true;
             await Wiznet.Connect();
@@ -169,7 +169,7 @@ namespace HomeMQ.Core.ViewModels
             return Wiznet.ClientStatus == ClientStatus.Connecting;
         }
 
-        private async Task OnDisconnect()
+        public async Task OnDisconnect()
         {
             await Wiznet.CloseAsync();
             Messenger.Instance.Send(new UpdateViewMessage());

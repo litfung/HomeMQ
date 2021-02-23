@@ -1,0 +1,16 @@
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.BlazorCore\bin\Debug\netstandard2.0\HomeMQ.CoreBlazor.deps.json
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.BlazorCore\bin\Debug\netstandard2.0\HomeMQ.CoreBlazor.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.BlazorCore\bin\Debug\netstandard2.0\HomeMQ.CoreBlazor.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.BlazorCore\bin\Debug\netstandard2.0\BaseClasses.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.BlazorCore\bin\Debug\netstandard2.0\NetworkDeviceModels.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.BlazorCore\bin\Debug\netstandard2.0\WiznetControllers.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.BlazorCore\bin\Debug\netstandard2.0\WiznetControllers.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.BlazorCore\bin\Debug\netstandard2.0\BaseClasses.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.BlazorCore\bin\Debug\netstandard2.0\NetworkDeviceModels.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.BlazorCore\obj\Debug\netstandard2.0\HomeMQ.CoreBlazor.csprojAssemblyReference.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.BlazorCore\obj\Debug\netstandard2.0\HomeMQ.CoreBlazor.AssemblyInfoInputs.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.BlazorCore\obj\Debug\netstandard2.0\HomeMQ.CoreBlazor.AssemblyInfo.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.BlazorCore\obj\Debug\netstandard2.0\HomeMQ.CoreBlazor.csproj.CoreCompileInputs.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.BlazorCore\obj\Debug\netstandard2.0\HomeMQ.CoreBlazor.csproj.CopyComplete
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.BlazorCore\obj\Debug\netstandard2.0\HomeMQ.CoreBlazor.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.BlazorCore\obj\Debug\netstandard2.0\HomeMQ.CoreBlazor.pdb
