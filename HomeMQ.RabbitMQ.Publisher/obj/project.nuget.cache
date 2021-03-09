@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MTFJFUY3RW54R7o962UYp8pY+e4PexTqqBgzBXieiqfsW50t4UlibqoRHJjYk0ZhBcpVToVM6TloW1PgrmTAPg==",
+  "dgSpecHash": "Ranvz2hgV4BlKrSw7m8tTAmvB0NzdOYk/fBZ9/HUsbbOjTyMEKbSYePrD+D60hQ9oinlP6d93GRifxOTy2m0jQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Publisher\\HomeMQ.RabbitMQ.PublisherTest.csproj",
   "expectedPackageFiles": [

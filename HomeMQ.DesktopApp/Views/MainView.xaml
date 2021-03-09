@@ -7,11 +7,25 @@
              xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="1000">
-    <DockPanel Background="Black">
+
+    <UserControl.Resources>
+        <Style x:Key="Awesome">
+            <Setter Property="TextElement.FontFamily" Value="Resources/#FontAwesome 5 Free Solid"/>
+        </Style>
+    </UserControl.Resources>
+    <DockPanel Background="{StaticResource PrimaryBackgroundBrush}">
+        <ContentControl Content="{Binding ErrorHandlerViewModel}"
+                        DockPanel.Dock="Top"/>
         <ContentControl Content="{Binding MasterViewModel}"
                         DockPanel.Dock="Left"/>
+        <!--<Expander ExpandDirection="Down" IsExpanded="False" DockPanel.Dock="Top" >
+            <Expander.Header>
+                <Label Content="Errors"/>
+            </Expander.Header>
+        </Expander>-->
         <ContentControl Content="{Binding DetailViewModel}"
                         />
+        
     </DockPanel>
     <!--<Grid>
         <Grid.ColumnDefinitions>

@@ -63,11 +63,10 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public PrimaryOverviewViewModel(IWiznetManager wizManager, IUserDialogs dialog, 
-            MQConnectionManager mqConnections, IMasterControlProcessor processor, IRabbitControlledManager dManager)
+        public PrimaryOverviewViewModel(IWiznetManager wizManager, MQConnectionManager mqConnections, 
+            IMasterControlProcessor processor, IRabbitControlledManager dManager)
         {
             WiznetManager = wizManager;
-            dialogs = dialog;
             rabbitConnectionManager = mqConnections;
             rabbitCommandProcessor = processor;
             deviceManager = dManager;

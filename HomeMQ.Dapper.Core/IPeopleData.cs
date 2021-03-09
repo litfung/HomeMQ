@@ -5,7 +5,7 @@ namespace HomeMQ.DapperCore
 {
     public interface IPeopleData
     {
-        Task<List<Person>> GetPeople();
-        Task InsertPerson(Person person);
+        Task<List<Person>> GetPeopleAsync();
+        Task InsertPersonAsync(Person person);
     }
 }

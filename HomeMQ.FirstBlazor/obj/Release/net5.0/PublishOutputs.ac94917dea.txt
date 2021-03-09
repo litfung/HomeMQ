@@ -18,6 +18,7 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\HomeMQ.FirstBlazor.deps.json
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\HomeMQ.FirstBlazor.runtimeconfig.json
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\HomeMQ.FirstBlazor.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\Acr.UserDialogs.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\Dapper.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\Microsoft.Data.SqlClient.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\Microsoft.Identity.Client.dll
@@ -26,10 +27,7 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.Protocols.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\MvvmCross.Core.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\MvvmCross.Wpf.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\MvvmCross.Platform.Wpf.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\MvvmCross.Platform.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\MvvmCross.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\System.Configuration.ConfigurationManager.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\System.Runtime.Caching.dll
@@ -43,9 +41,15 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\BaseClasses.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\DeviceManagers.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\HomeMQ.CoreBlazor.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\HomeMQ.DapperCore.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\HomeMQ.Models.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\NetworkDeviceModels.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\WiznetControllers.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\DeviceManagers.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\WiznetControllers.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\HomeMQ.CoreBlazor.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\HomeMQ.DapperCore.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\HomeMQ.Models.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Release\net5.0\PubTmp\Out\BaseClasses.pdb

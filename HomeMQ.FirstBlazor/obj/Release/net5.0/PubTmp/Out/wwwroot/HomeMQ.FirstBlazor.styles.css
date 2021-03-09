@@ -13,6 +13,8 @@
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
 }
 
+
+
 .top-row[b-68mkwdy39a] {
     background-color: #f7f7f7;
     border-bottom: 1px solid #d6d5d5;
@@ -55,9 +57,8 @@
         width: 250px;
         height: 100vh;
         position: sticky;
-        top: 0;
+        bottom: 0px;
     }
-
     .top-row[b-68mkwdy39a] {
         position: sticky;
         top: 0;
@@ -122,9 +123,30 @@
     color: white;
 }
 
+.clock[b-ch6asng1ai] {
+    background-color: transparent;
+    font-weight:bold;
+    text-align: center;
+    vertical-align: central;
+    width: 100%;
+    color:white;
+    font-size:xx-large;
+    font-size-adjust:inherit;
+}
+
+
+
+
 @media (min-width: 641px) {
     .navbar-toggler[b-ch6asng1ai] {
         display: none;
+    }
+
+    .clock[b-ch6asng1ai] {
+        /*position: sticky;
+        width: 250px;
+        height: 20vh;
+        top: 0;*/
     }
 
     .collapse[b-ch6asng1ai] {

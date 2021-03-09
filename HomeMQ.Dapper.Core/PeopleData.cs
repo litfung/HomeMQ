@@ -14,13 +14,13 @@ namespace HomeMQ.DapperCore
             database = db;
         }
 
-        public Task<List<Person>> GetPeople()
+        public Task<List<Person>> GetPeopleAsync()
         {
             var people = database.GetPeopleAsync();
             return people;
         }
 
-        public Task InsertPerson(Person person)
+        public Task InsertPersonAsync(Person person)
         {
             //no need to await here.... according to Tim Corey
             //supposed to make life easier by having one less await???

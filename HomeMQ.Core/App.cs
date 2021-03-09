@@ -19,7 +19,7 @@ namespace HomeMQ.Core
     {
         public override void Initialize()
         {
-            Mvx.IoCProvider.RegisterSingleton(() => new MainControl());
+            //Mvx.IoCProvider.RegisterSingleton(() => new MainControl());
             RegisterAppStart<MainViewModel>();
         }
     }

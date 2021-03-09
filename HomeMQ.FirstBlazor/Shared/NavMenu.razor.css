@@ -50,9 +50,30 @@
     color: white;
 }
 
+.clock {
+    background-color: transparent;
+    font-weight:bold;
+    text-align: center;
+    vertical-align: central;
+    width: 100%;
+    color:white;
+    font-size:xx-large;
+    font-size-adjust:inherit;
+}
+
+
+
+
 @media (min-width: 641px) {
     .navbar-toggler {
         display: none;
+    }
+
+    .clock {
+        /*position: sticky;
+        width: 250px;
+        height: 20vh;
+        top: 0;*/
     }
 
     .collapse {

@@ -3,8 +3,8 @@
 @using HomeMQ.DapperCore
 @using HomeMQ.Models
 @using HomeMQ.FirstBlazor.Models
-
-@inject IPeopleData database
+@implements IDisposable
+@inject IDataAccess database
 
 <h1>People Page</h1>
 
@@ -48,10 +48,20 @@ else
 @code {
     private List<Person> people;
     private DisplayPerson newPerson = new DisplayPerson();
+    DotNetObjectReference<People> ObjectReference;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+        if (firstRender)
+        {
+            ObjectReference = DotNetObjectReference.Create(this);
+        }
+    }
 
     protected override async Task OnInitializedAsync()
     {
-        people = await database.GetPeople();
+        people = await database.GetPeopleAsync();
     }
 
     private async Task InsertPerson()
@@ -61,10 +71,20 @@ else
             FirstName = newPerson.FirstName,
             LastName = newPerson.LastName
         };
-        await database.InsertPerson(pp);
+        await database.InsertPersonAsync(pp);
 
         people.Add(pp);
 
         newPerson = new DisplayPerson();
+    }
+
+    public void Dispose()
+    {
+        GC.SuppressFinalize(this);
+        if (ObjectReference != null)
+        {
+            //Now dispose our object reference so our component can be garbage collected
+            ObjectReference.Dispose();
+        }
     }
 }

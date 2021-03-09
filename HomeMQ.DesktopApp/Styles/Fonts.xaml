@@ -3,7 +3,8 @@
                     xmlns:local="clr-namespace:HomeMQ.DesktopApp.Styles"
                     xmlns:system="clr-namespace:System;assembly=System.Runtime">
     
-    <FontFamily x:Key="FontAwesome">pack://application:,,,/Fonts/fa-solid-900.ttf#FontAwesome 5 Free Solid</FontFamily>
+    <!--<FontFamily x:Key="FontAwesome">pack://application:,,,/Fonts/fa-solid-900.ttf#FontAwesome 5 Free Solid</FontFamily>-->
+    <FontFamily x:Key="FontAwesome">/Styles/#Font Awesome 5 Free Solid</FontFamily>
     <FontFamily x:Key="Segoe">Segoe UI</FontFamily>
 
     <system:Double x:Key="FontSizeSmall">10</system:Double>
@@ -38,4 +39,8 @@
 
     <system:String x:Key="CommandSuccessful">&#xf058;</system:String>
     <system:String x:Key="CommandError">&#xf071;</system:String>
+    <system:String x:Key="LeftArrow">&#xf060;</system:String>
+    <system:String x:Key="RightArrow">&#xf061;</system:String>
+    <system:String x:Key="CloseX">&#xf00d;</system:String>
+    
 </ResourceDictionary>

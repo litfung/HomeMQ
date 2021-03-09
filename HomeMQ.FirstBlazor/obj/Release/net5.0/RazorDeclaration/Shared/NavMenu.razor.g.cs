@@ -90,7 +90,7 @@ using HomeMQ.FirstBlazor.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\Shared\NavMenu.razor"
+#line 42 "C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

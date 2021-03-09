@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Styles\fa-solid-900.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MvvmCross" Version="7.1.2" />
     <PackageReference Include="MvvmCross.Platforms.Wpf" Version="7.1.2" />
   </ItemGroup>
@@ -16,6 +20,12 @@
     <ProjectReference Include="..\..\SharedProjects\DotNet5Desktop\WPFConverters\WPFConverters.csproj" />
     <ProjectReference Include="..\..\SharedProjects\DotNet5Desktop\WPFToggleButtons\WPFToggleButtons.csproj" />
     <ProjectReference Include="..\HomeMQ.Core\HomeMQ.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Styles\fa-solid-900.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

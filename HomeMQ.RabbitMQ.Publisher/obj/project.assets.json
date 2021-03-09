@@ -112,7 +112,6 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.1.0.475",
           "BaseClasses": "1.0.0",
           "BaseViewModels": "1.0.0",
           "DeviceManagers": "1.0.0",

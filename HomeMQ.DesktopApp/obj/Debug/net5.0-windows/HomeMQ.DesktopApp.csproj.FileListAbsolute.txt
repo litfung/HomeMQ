@@ -80,3 +80,5 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Ho
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\ref\HomeMQ.DesktopApp.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\HomeMQ.DesktopApp.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\HomeMQ.DesktopApp.genruntimeconfig.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\ErrorHandlerView.g.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\ErrorHandlerView.baml

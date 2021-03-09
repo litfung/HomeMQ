@@ -908,7 +908,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Acr.UserDialogs >= 7.1.0.475",
       "BaseClasses >= 1.0.0",
       "BaseViewModels >= 1.0.0",
       "DeviceManagers >= 1.0.0",
@@ -999,10 +998,6 @@
       "netstandard2.0": {
         "targetAlias": "netstandard2.0",
         "dependencies": {
-          "Acr.UserDialogs": {
-            "target": "Package",
-            "version": "[7.1.0.475, )"
-          },
           "MvvmCross": {
             "target": "Package",
             "version": "[7.1.2, )"

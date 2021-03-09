@@ -4,6 +4,7 @@ using BaseViewModels;
 using DeviceManagers;
 using HomeMQ.Managers;
 using HomeMQ.RabbitMQ.Consumer;
+using HomeMQ.RabbitMQ.Publishers;
 using MvvmCross;
 using MvvmCross.ViewModels;
 using RabbitMQ.Client;
@@ -18,13 +19,30 @@ namespace HomeMQ.Core.ViewModels
 {
     public class MainViewModel : MvxViewModel
     {
-        //private IStateManager stateManager;
-        //private IWiznetManager wiznetManager;
-        //private IUserDialogs alerts;
-        //private MQConnectionManager rabbitConnectionManager;
-        //private IMasterControlProcessor commandProcessor;
-        //private IRabbitControlledManager deviceManager;
-        private IMainControl mainControl = new MainControl();
+        private IMainControl mainControl;
+        //private IMessenger messenger;
+        //IStateManager stateManager;
+        //ILogManager logManager;
+        //IWiznetManager wiznetManager;
+        //MQConnectionManager rabbitConnectionManager;
+        //IRabbitControlledManager deviceManager;
+        //IMasterControlProcessor commandProcessor;
+        //IPiControlPublisher piController;
+
+        private IErrorViewModel errorHandlerViewModel;
+        public IErrorViewModel ErrorHandlerViewModel
+        {
+            get { return errorHandlerViewModel; }
+            set
+            {
+                if (errorHandlerViewModel != value)
+                {
+                    errorHandlerViewModel = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
 
         private INavigationViewModel detailViewModel;
         public INavigationViewModel DetailViewModel
@@ -54,43 +72,40 @@ namespace HomeMQ.Core.ViewModels
             }
         }
 
+        //public MainViewModel()
+        //{
+        //    stateManager = StateManager.Instance;
+        //    messenger = Messenger.Instance;
+        //    logManager = new LogManager(messenger);
+        //    wiznetManager = new WiznetManager(logManager);//.Instance;
+        //    rabbitConnectionManager = MQConnectionManager.Instance;
+        //    deviceManager = RabbitControlledDeviceManager.Instance;
+        //    commandProcessor = new MasterControlProcessor();
+        //    mainControl = new MainControl(stateManager,
+        //        messenger, logManager, wiznetManager, rabbitConnectionManager, deviceManager, commandProcessor, piController);
+        //    messenger.Register<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
+        //    messenger.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
+        //}
+
         public MainViewModel()
         {
+            mainControl = new MainControl();
             Messenger.Instance.Register<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
-            Messenger.Instance.Register<DetailNavigationMessage>(this, 
-                x => 
-                DetailViewModel = x.NavigateToViewModel);
+            Messenger.Instance.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
         }
 
         public override Task Initialize()
         {
-            //stateManager = Mvx.IoCProvider.Resolve<IStateManager>();
-            //wiznetManager = Mvx.IoCProvider.Resolve<IWiznetManager>();
-            //alerts = Mvx.IoCProvider.Resolve<IUserDialogs>();
-            //rabbitConnectionManager = Mvx.IoCProvider.Resolve<MQConnectionManager>();
-            //commandProcessor = Mvx.IoCProvider.Resolve<IMasterControlProcessor>();
-            //deviceManager = Mvx.IoCProvider.Resolve<IRabbitControlledManager>();
 
-            //foreach (var item in stateManager.RabbitConnections)
-            //{
-            //    var factory = new ConnectionFactory()
-            //    {
-            //        HostName = item.Hostname,
-            //        UserName = item.UserName,
-            //        Password = item.Password
-            //    };
-
-            //    rabbitConnectionManager.AddFactory(item.ConnectionName, factory);
-            //}
             NavigateStart();
             return base.Initialize();
         }
 
         private void NavigateStart()
         {
-            MasterViewModel = new MenuViewModel(mainControl);//    wiznetManager, alerts, rabbitConnectionManager, commandProcessor, deviceManager);
+            MasterViewModel = new MenuViewModel(mainControl);
+            ErrorHandlerViewModel = new ErrorHandlerViewModel(mainControl);
             mainControl.NavigatePrimaryOverview();
-            //DetailViewModel = new PrimaryOverviewViewModel(wiznetManager, alerts, rabbitConnectionManager, commandProcessor, deviceManager);
         }
     }
 }

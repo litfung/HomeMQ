@@ -96,3 +96,9 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\RazorDecl
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\Razor\Pages\MyPages\WiznetConnections.razor.g.cs
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\HomeMQ.CoreBlazor.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\HomeMQ.CoreBlazor.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\SimpleContainer.razor.g.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\Razor\Shared\SimpleContainer.razor.g.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\ClockView.razor.g.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\Razor\Shared\ClockView.razor.g.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\Component.razor.g.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\Razor\Shared\Component.razor.g.cs

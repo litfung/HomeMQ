@@ -104,7 +104,7 @@ using HomeMQ.FirstBlazor.Models;
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/Data/People")]
-    public partial class People : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class People : Microsoft.AspNetCore.Components.ComponentBase, IDisposable
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -116,10 +116,20 @@ using HomeMQ.FirstBlazor.Models;
        
     private List<Person> people;
     private DisplayPerson newPerson = new DisplayPerson();
+    DotNetObjectReference<People> ObjectReference;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+        if (firstRender)
+        {
+            ObjectReference = DotNetObjectReference.Create(this);
+        }
+    }
 
     protected override async Task OnInitializedAsync()
     {
-        people = await database.GetPeople();
+        people = await database.GetPeopleAsync();
     }
 
     private async Task InsertPerson()
@@ -129,17 +139,27 @@ using HomeMQ.FirstBlazor.Models;
             FirstName = newPerson.FirstName,
             LastName = newPerson.LastName
         };
-        await database.InsertPerson(pp);
+        await database.InsertPersonAsync(pp);
 
         people.Add(pp);
 
         newPerson = new DisplayPerson();
     }
 
+    public void Dispose()
+    {
+        GC.SuppressFinalize(this);
+        if (ObjectReference != null)
+        {
+            //Now dispose our object reference so our component can be garbage collected
+            ObjectReference.Dispose();
+        }
+    }
+
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IPeopleData database { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IDataAccess database { get; set; }
     }
 }
 #pragma warning restore 1591

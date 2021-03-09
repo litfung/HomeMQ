@@ -34,7 +34,7 @@ namespace HomeMQ.FirstBlazor
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddTransient<IDataAccess, HomeDataAccess>();
-            services.AddTransient<IPeopleData, PeopleData>();
+            //services.AddTransient<IPeopleData, PeopleData>();
             services.AddTransient<ICounterService, CounterService>();
             services.AddSingleton<WiznetManager>();
             //services.AddScoped<WiznetStatusViewModel>();
