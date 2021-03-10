@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "TEOPxMrZPPgraw8rwxt8YwHhFsqyrInr7px8OCGeku8C/hbMztPJUOA1MFY5Me+ocsEWavq3kjILYjWkuAzt8A==",
+  "dgSpecHash": "tHRFliT9HE15qGdR+FSeMzJGPgWoDwQ+111T6GIeiQsRkSpgNfhG9Z51JfrRcmn4JtXxexEMNRxw31700o/jAA==",
   "success": true,
   "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.FirstBlazor\\HomeMQ.FirstBlazor.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\devin\\.nuget\\packages\\acr.userdialogs\\7.1.0.475\\acr.userdialogs.7.1.0.475.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.1\\microsoft.data.sqlclient.2.1.1.nupkg.sha512",

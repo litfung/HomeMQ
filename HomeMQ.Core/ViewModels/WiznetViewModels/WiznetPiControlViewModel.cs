@@ -1,4 +1,5 @@
-﻿using MvvmCross.Commands;
+﻿using BaseClasses;
+using MvvmCross.Commands;
 using MvvmCross.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -86,7 +87,7 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public WiznetPiControlViewModel(IWiznetPiControl wiz, int pi) : base(wiz)
+        public WiznetPiControlViewModel(IMessenger iMessenger, IWiznetPiControl wiz, int pi) : base(iMessenger, wiz)
         {
             //Func<int, bool> CanPiPowerFunc = new Func<int, bool>(CanPiPower());
             piNumber = pi;

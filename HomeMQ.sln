@@ -53,8 +53,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiznetControllers", "..\Sha
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFConverters", "..\SharedProjects\DotNet5Desktop\WPFConverters\WPFConverters.csproj", "{AFC5A030-2AAE-49B7-A310-6B0BF7ACAD9A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFMessageBox", "..\SharedProjects\Standard\WPFUserDialogs\WPFMessageBox.csproj", "{2089243D-ED33-49D8-8ACA-A52FE7E3AB7A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMqManagers", "..\SharedProjects\Standard\RabbitMqManagers\RabbitMqManagers.csproj", "{95CEBF4D-97AD-466D-A916-51DD88D96D76}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.SecondBlazor", "HomeMQ.SecondBlazor\HomeMQ.SecondBlazor.csproj", "{7095CF70-7263-4B99-9773-071834EC6DCE}"
@@ -177,10 +175,6 @@ Global
 		{AFC5A030-2AAE-49B7-A310-6B0BF7ACAD9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFC5A030-2AAE-49B7-A310-6B0BF7ACAD9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFC5A030-2AAE-49B7-A310-6B0BF7ACAD9A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2089243D-ED33-49D8-8ACA-A52FE7E3AB7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2089243D-ED33-49D8-8ACA-A52FE7E3AB7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2089243D-ED33-49D8-8ACA-A52FE7E3AB7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2089243D-ED33-49D8-8ACA-A52FE7E3AB7A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{95CEBF4D-97AD-466D-A916-51DD88D96D76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95CEBF4D-97AD-466D-A916-51DD88D96D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95CEBF4D-97AD-466D-A916-51DD88D96D76}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -1,5 +1,4 @@
-﻿using Acr.UserDialogs;
-using BaseClasses;
+﻿using BaseClasses;
 using BaseViewModels;
 using DeviceManagers;
 using HomeMQ.RabbitMQ.Consumer;
@@ -18,11 +17,6 @@ namespace HomeMQ.Core.ViewModels
     public class MenuViewModel : MvxViewModel, INavigationViewModel
     {
         #region Fields
-        //private IWiznetManager wiznetManager;
-        //private IUserDialogs userDialogs;
-        //private MQConnectionManager rabbitConnectionManager;
-        //private IMasterControlProcessor commandProcessor;
-        //private IRabbitControlledManager deviceManager;
         private IMainControl mainControl;
         #endregion
 
@@ -37,21 +31,10 @@ namespace HomeMQ.Core.ViewModels
 
         #region Constructors
         public MenuViewModel(IMainControl mControl)
-            //IWiznetManager wizManager, IUserDialogs dialog, MQConnectionManager rabbitManager, 
-            //IMasterControlProcessor processor, IRabbitControlledManager dManager)
         {
             mainControl = mControl;
-            //wiznetManager = wizManager;
-            //userDialogs = dialog;
-            //rabbitConnectionManager = rabbitManager;
-            //commandProcessor = processor;
-            //deviceManager = dManager;
-
             ShowFirstPageCommand = new MvxCommand(ShowFirstPage);
             ShowSecondPageCommand = new MvxCommand(ShowSecondPage);
-
-            
-
         }
         public Task UpdateUIControlAccess()
         {

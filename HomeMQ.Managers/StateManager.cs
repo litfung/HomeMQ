@@ -8,14 +8,14 @@ namespace HomeMQ.Managers
 {
     public class StateManager : IStateManager
     {
-        #region Singleton
-        private static readonly Lazy<StateManager> instance = new Lazy<StateManager>();
-        public static StateManager Instance => instance.Value;
-        public StateManager()
-        {
-            LoadState();
-        }
-        #endregion
+        //#region Singleton
+        //private static readonly Lazy<StateManager> instance = new Lazy<StateManager>();
+        //public static StateManager Instance => instance.Value;
+        //public StateManager()
+        //{
+            
+        //}
+        //#endregion
 
         #region Fields
         private const string stateFilename = "home_control.json";
@@ -25,6 +25,13 @@ namespace HomeMQ.Managers
         public SavedStateModel State { get; private set; }
         public List<RabbitMQConfigurationModel> RabbitConnections { get; private set; } = new List<RabbitMQConfigurationModel>();
 
+        #endregion
+
+        #region Constructors
+        public StateManager()
+        {
+            LoadState();
+        }
         #endregion
 
         #region Methods

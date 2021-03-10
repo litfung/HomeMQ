@@ -1,4 +1,5 @@
-﻿using BaseViewModels;
+﻿using BaseClasses;
+using BaseViewModels;
 using DeviceManagers;
 using HomeMQ.RabbitMQ.Consumer;
 using MvvmCross.ViewModels;
@@ -17,6 +18,7 @@ namespace HomeMQ.Core.ViewModels
         #region Fields
         private ITopicConsumer consumer;
         private IRabbitControlledManager deviceManager;
+        private IMessenger messenger;
         #endregion
 
         #region Properties
@@ -37,8 +39,9 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public RabbitConsumerViewModel(MasterControlConsumer topicConsumer, IRabbitControlledManager dManager)
+        public RabbitConsumerViewModel(IMessenger iMessenger, MasterControlConsumer topicConsumer, IRabbitControlledManager dManager) : base(iMessenger)
         {
+            messenger = iMessenger;
             consumer = topicConsumer;
             deviceManager = dManager;
             Consume();
@@ -51,7 +54,7 @@ namespace HomeMQ.Core.ViewModels
             var vmList = new List<IRabbitControlViewModel>();
             foreach (var item in deviceManager.AllDevices)
             {
-                vmList.Add(new RabbitControlStatusViewModel(item));
+                vmList.Add(new RabbitControlStatusViewModel(messenger, item));
             }
             Devices = new ObservableCollection<IRabbitControlViewModel>(vmList);
             //Devices = new ObservableCollection<IRabbitControlled>((IEnumerable<IRabbitControlled>)deviceManager.AllDevices);

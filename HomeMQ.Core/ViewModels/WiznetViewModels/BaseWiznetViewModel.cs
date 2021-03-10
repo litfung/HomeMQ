@@ -20,7 +20,7 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public BaseWiznetViewModel(IWiznetControl wiz)
+        public BaseWiznetViewModel(IMessenger iMessenger, IWiznetControl wiz) : base(iMessenger)
         {
             Wiznet = wiz;
 
@@ -34,7 +34,7 @@ namespace HomeMQ.Core.ViewModels
 
         //public async Task PollAllRegisters()
         //{
-        //    Messenger.Instance.Send(new LogUpdateMessage());
+        //    messenger.Send(new LogUpdateMessage());
         //    await UpdateUIControlAccess();
         //}
 

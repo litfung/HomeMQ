@@ -7,7 +7,6 @@ using HomeMQ.Core.ViewModels;
 using MvvmCross;
 using WiznetControllers;
 using DeviceManagers;
-using WPFMessageBox;
 using RabbitMqManagers;
 using HomeMQ.RabbitMQ.Consumer;
 using HomeMQ.RabbitMQ.Publishers;
@@ -19,7 +18,6 @@ namespace HomeMQ.Core
     {
         public override void Initialize()
         {
-            //Mvx.IoCProvider.RegisterSingleton(() => new MainControl());
             RegisterAppStart<MainViewModel>();
         }
     }

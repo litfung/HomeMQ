@@ -1,5 +1,4 @@
-﻿using Acr.UserDialogs;
-using BaseClasses;
+﻿using BaseClasses;
 using BaseViewModels;
 using DeviceManagers;
 using HomeMQ.RabbitMQ.Consumer;
@@ -20,8 +19,7 @@ namespace HomeMQ.Core.ViewModels
         #region Fields
         bool isDisplayed = true;
         private IWiznetManager WiznetManager;
-        private IUserDialogs dialogs;
-        private MQConnectionManager rabbitConnectionManager;
+        private IMQConnectionManager rabbitConnectionManager;
         private IMasterControlProcessor rabbitCommandProcessor;
         private IRabbitControlledManager deviceManager;
         #endregion
@@ -63,8 +61,8 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public PrimaryOverviewViewModel(IWiznetManager wizManager, MQConnectionManager mqConnections, 
-            IMasterControlProcessor processor, IRabbitControlledManager dManager)
+        public PrimaryOverviewViewModel(IMessenger iMessenger, IWiznetManager wizManager, IMQConnectionManager mqConnections, 
+            IMasterControlProcessor processor, IRabbitControlledManager dManager) : base(iMessenger)
         {
             WiznetManager = wizManager;
             rabbitConnectionManager = mqConnections;
@@ -73,7 +71,7 @@ namespace HomeMQ.Core.ViewModels
 
             foreach (var item in WiznetManager.AllWiznets)
             {
-                WiznetStatusControls.Add(new WiznetStatusViewModel((IWiznetPiControl)item));
+                WiznetStatusControls.Add(new WiznetStatusViewModel(iMessenger, (IWiznetPiControl)item));
             }
 
             
@@ -82,7 +80,7 @@ namespace HomeMQ.Core.ViewModels
             var factory = mqConnections.FactoriesByName["home"];
             var consumer = new MasterControlConsumer(factory, rabbitCommandProcessor, exchangeName, routeKey, "master control");
 
-            RabbitConsumer = new RabbitConsumerViewModel(consumer, deviceManager);
+            RabbitConsumer = new RabbitConsumerViewModel(iMessenger, consumer, deviceManager);
         }
 
 

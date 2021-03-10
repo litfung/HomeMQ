@@ -10,13 +10,34 @@ namespace HomeMQ.RabbitMQ.Consumer
     public class MasterControlProcessor : IMasterControlProcessor
     {
 
-        private RabbitControlledDeviceManager Manager => RabbitControlledDeviceManager.Instance;
+        #region Fields
+        //private RabbitControlledDeviceManager Manager => RabbitControlledDeviceManager.Instance;
+        private IRabbitControlledManager manager;
+        private IMessenger messenger;
+        #endregion
+
+        #region Properties
+
+        #endregion
+
+        #region Constructors
+        public MasterControlProcessor(IRabbitControlledManager iManager, IMessenger iMessenger)
+        {
+            manager = iManager;
+            messenger = iMessenger;
+        }
+        #endregion
+
+        #region Methods
+
+        #endregion
+
         public void Process(ControlResponse data)
         {
             var device = data.ToPiDeviceStatus();
             var found = false;
 
-            foreach (var item in Manager.AllDevices)
+            foreach (var item in manager.AllDevices)
             {
                 if (item.Hostname.Equals(device.Hostname))
                 {
@@ -27,8 +48,8 @@ namespace HomeMQ.RabbitMQ.Consumer
 
             if (!found)
             {
-                Manager.AddDevice(device);
-                Messenger.Instance.Send(new UpdateViewMessage());
+                manager.AddDevice(device);
+                messenger.Send(new UpdateViewMessage());
             }
 
             

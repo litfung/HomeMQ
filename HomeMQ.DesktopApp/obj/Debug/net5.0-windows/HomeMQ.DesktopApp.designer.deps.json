@@ -6,14 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "Acr.UserDialogs/7.1.0.475": {
-        "runtime": {
-          "lib/netstandard2.0/Acr.UserDialogs.dll": {
-            "assemblyVersion": "7.1.0.475",
-            "fileVersion": "7.1.0.475"
-          }
-        }
-      },
       "MvvmCross/7.1.2": {
         "runtime": {
           "lib/netcoreapp3.1/MvvmCross.dll": {
@@ -73,13 +65,6 @@
     }
   },
   "libraries": {
-    "Acr.UserDialogs/7.1.0.475": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-iGW0uda9bmbGcPABm0UzDjSd5DtGwcTCkOg265aUxKhG9IW0HtoNA3gASMXK64hMye2A+9mfkcmWJDOudbhJWw==",
-      "path": "acr.userdialogs/7.1.0.475",
-      "hashPath": "acr.userdialogs.7.1.0.475.nupkg.sha512"
-    },
     "MvvmCross/7.1.2": {
       "type": "package",
       "serviceable": true,

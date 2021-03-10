@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "Ranvz2hgV4BlKrSw7m8tTAmvB0NzdOYk/fBZ9/HUsbbOjTyMEKbSYePrD+D60hQ9oinlP6d93GRifxOTy2m0jQ==",
+  "dgSpecHash": "TgfB5x72h/r548WEvQc7YiJ0xgKfMpjKWxP7eDyqJ5K3YhY/IuTd39zRVGRynlke97X1x01xcqF/ODmqLi9HUg==",
   "success": true,
   "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Publisher\\HomeMQ.RabbitMQ.PublisherTest.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\devin\\.nuget\\packages\\acr.userdialogs\\7.1.0.475\\acr.userdialogs.7.1.0.475.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\mvvmcross\\7.1.2\\mvvmcross.7.1.2.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",

@@ -8,6 +8,8 @@ using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Text;
+using DeviceManagers;
+using BaseClasses;
 
 namespace HomeMQ.RabbitMQ.ConsumerTest
 {
@@ -28,6 +30,10 @@ namespace HomeMQ.RabbitMQ.ConsumerTest
 
             var exchangeName = "rtsh_topics";
             var routeKey = "master.control.*";
+            var messenger = new Messenger();
+
+            var rabbitManager = new RabbitControlledDeviceManager();
+            var mp = new MasterControlProcessor(rabbitManager, messenger);
 
             var firstConsumer = new MasterControlConsumer(conn, null, exchangeName, routeKey).WithPrefetchCount(100);
             firstConsumer.Consume();

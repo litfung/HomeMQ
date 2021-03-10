@@ -11,41 +11,40 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using WiznetControllers;
-using WPFMessageBox;
 
 namespace HomeMQ.Core
 {
     public class MainControl : IMainControl
     {
-        IStateManager stateManager;
-        ILogManager logManager;
-        IMessenger messenger;
-        IWiznetManager wiznetManager;
-        MQConnectionManager rabbitConnectionManager;
-        IRabbitControlledManager deviceManager;
-        IMasterControlProcessor commandProcessor;
-        IPiControlPublisher piController;
+        //IStateManager stateManager;
+        //ILogManager logManager;
+        //IMessenger messenger;
+        //IWiznetManager wiznetManager;
+        //MQConnectionManager rabbitConnectionManager;
+        //IRabbitControlledManager deviceManager;
+        //IMasterControlProcessor commandProcessor;
+        //IPiControlPublisher piController;
 
-        //public IStateManager StateManager { get; private set; }
-        //public ILogManager LogManager { get; private set; }
-        //public IMessenger Messenger { get; private set; }
-        //public IWiznetManager WiznetManager { get; private set; }
-        //public MQConnectionManager RabbitConnectionManager { get; private set; }
-        //public IRabbitControlledManager DeviceManager { get; private set; }
-        //public IMasterControlProcessor CommandProcessor { get; private set; }
-        //public IPiControlPublisher PiController { get; private set; }
+        public IStateManager StateManager { get; private set; }
+        public ILogManager LogManager { get; private set; }
+        public IMessenger Messenger { get; private set; }
+        public IWiznetManager WiznetManager { get; private set; }
+        public IMQConnectionManager RabbitConnectionManager { get; private set; }
+        public IRabbitControlledManager DeviceManager { get; private set; }
+        public IMasterControlProcessor CommandProcessor { get; private set; }
+        public IPiControlPublisher PiController { get; private set; }
 
         public MainControl()
         {
-            stateManager = StateManager.Instance;
-            messenger = Messenger.Instance;
-            logManager = new LogManager(messenger);
-            wiznetManager = new WiznetManager(logManager);//.Instance;
-            rabbitConnectionManager = MQConnectionManager.Instance;
-            deviceManager = RabbitControlledDeviceManager.Instance;
-            commandProcessor = new MasterControlProcessor();
+            StateManager = new StateManager();//.Instance;
+            Messenger = new Messenger();//.Instance;
+            LogManager = new LogManager(Messenger);
+            WiznetManager = new WiznetManager(LogManager);//.Instance;
+            RabbitConnectionManager = new MQConnectionManager();//.Instance;
+            DeviceManager = new RabbitControlledDeviceManager();//.Instance;
+            CommandProcessor = new MasterControlProcessor(DeviceManager, Messenger);
 
-            foreach (var item in stateManager.RabbitConnections)
+            foreach (var item in StateManager.RabbitConnections)
             {
                 var factory = new ConnectionFactory()
                 {
@@ -53,18 +52,19 @@ namespace HomeMQ.Core
                     UserName = item.UserName,
                     Password = item.Password
                 };
-                rabbitConnectionManager.AddFactory(item.ConnectionName, factory);
+                RabbitConnectionManager.AddFactory(item.ConnectionName, factory);
                 //{ HostName = "192.168.68.109", UserName = "devin", Password = "Ikorgil19" };
             }
-            var homeFactory = rabbitConnectionManager.FactoriesByName["home"];
-            piController = new PiControlPublisher(homeFactory, rabbitConnectionManager, "rtsh_topics", "Pi Controller");
+            var homeFactory = RabbitConnectionManager.FactoriesByName["home"];
+            PiController = new PiControlPublisher(homeFactory, RabbitConnectionManager, "rtsh_topics", "Pi Controller");
         }
+
         //public MainControl(IStateManager sm, IMessenger m,  ILogManager lm, 
         //    IWiznetManager wm, MQConnectionManager mq, IRabbitControlledManager dm, 
         //    IMasterControlProcessor mc, IPiControlPublisher pi)
         //{
         //    //stateManager = StateManager.Instance;
-        //    //messenger = Messenger.Instance;
+        //    //messenger = messenger;
         //    //logManager = new LogManager(messenger);
         //    //wiznetManager = new WiznetManager(logManager);//.Instance;
         //    //rabbitConnectionManager = MQConnectionManager.Instance;
@@ -98,18 +98,18 @@ namespace HomeMQ.Core
         #region Methods
         public void NavigatePrimaryOverview()
         {
-            messenger.Send(new ViewUnloadedMessage());
-            messenger.Send(new DetailNavigationMessage(
-                new PrimaryOverviewViewModel(wiznetManager, rabbitConnectionManager, commandProcessor, deviceManager))
+            Messenger.Send(new ViewUnloadedMessage());
+            Messenger.Send(new DetailNavigationMessage(
+                new PrimaryOverviewViewModel(Messenger, WiznetManager, RabbitConnectionManager, CommandProcessor, DeviceManager))
             );
         }
 
         public void NavigateUpgradeDebug()
         {
-            messenger.Send(new ViewUnloadedMessage());
-            messenger.Send(new DetailNavigationMessage(new UpgradeDebugViewModel()));
+            Messenger.Send(new ViewUnloadedMessage());
+            Messenger.Send(new DetailNavigationMessage(new UpgradeDebugViewModel(Messenger)));
         }
-            
+
 
 
         #endregion

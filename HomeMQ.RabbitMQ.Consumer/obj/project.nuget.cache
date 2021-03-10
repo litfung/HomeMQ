@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "c5f+B9OrrO0tT7Kco9nlmG1SXCJPS5OsMq66rNH/pgsIJL6TonZ+XtuFYRgp5q+nOy3ixl/jhFF15JequAQ3yA==",
+  "dgSpecHash": "fG/ZWIoGm6a27EECsoIL8fovlJfO9Min4A18ZUoanIvjkQc/3qEDVfjpPHW4V0ptVmyuYFDnWHnYTvXkj4Sv7g==",
   "success": true,
   "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Consumer\\HomeMQ.RabbitMQ.Consumer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\devin\\.nuget\\packages\\acr.userdialogs\\7.1.0.475\\acr.userdialogs.7.1.0.475.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\mvvmcross\\7.1.2\\mvvmcross.7.1.2.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

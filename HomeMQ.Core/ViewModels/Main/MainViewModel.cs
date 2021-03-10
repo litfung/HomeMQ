@@ -1,5 +1,4 @@
-﻿using Acr.UserDialogs;
-using BaseClasses;
+﻿using BaseClasses;
 using BaseViewModels;
 using DeviceManagers;
 using HomeMQ.Managers;
@@ -75,7 +74,7 @@ namespace HomeMQ.Core.ViewModels
         //public MainViewModel()
         //{
         //    stateManager = StateManager.Instance;
-        //    messenger = Messenger.Instance;
+        //    messenger = messenger;
         //    logManager = new LogManager(messenger);
         //    wiznetManager = new WiznetManager(logManager);//.Instance;
         //    rabbitConnectionManager = MQConnectionManager.Instance;
@@ -90,8 +89,8 @@ namespace HomeMQ.Core.ViewModels
         public MainViewModel()
         {
             mainControl = new MainControl();
-            Messenger.Instance.Register<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
-            Messenger.Instance.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
+            //messenger.Register<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
+            mainControl.Messenger.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
         }
 
         public override Task Initialize()

@@ -43,17 +43,17 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public ErrorHandlerViewModel(IMainControl mc)//   IMessenger mess, ILogManager logs)
+        public ErrorHandlerViewModel(IMainControl mc) : base(mc.Messenger)//   IMessenger mess, ILogManager logs)
         {
-            messenger = mess;
-            logger = logs;
-            mess.Register<UpdateViewMessage>(this, async x => await OnUpdateView());
+            messenger = mc.Messenger;//  mess;
+            logger = mc.LogManager;// logs;
+            messenger.Register<UpdateViewMessage>(this, async x => await OnUpdateView());
             DismissMessageCommand = new MvxCommand(OnDismiss);
         }
 
         public override async Task OnUpdateView()
         {
-            logger.Err
+            //logger.Err
             await base.OnUpdateView();
         }
 

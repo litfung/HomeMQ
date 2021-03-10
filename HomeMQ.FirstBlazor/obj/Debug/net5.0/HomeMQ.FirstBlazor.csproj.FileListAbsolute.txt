@@ -87,7 +87,6 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\HomeMQ.Fi
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\ref\HomeMQ.FirstBlazor.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\HomeMQ.FirstBlazor.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\HomeMQ.FirstBlazor.genruntimeconfig.cache
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\Acr.UserDialogs.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\DeviceManagers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\WiznetControllers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\DeviceManagers.pdb

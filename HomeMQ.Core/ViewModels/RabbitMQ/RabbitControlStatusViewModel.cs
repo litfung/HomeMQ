@@ -1,4 +1,5 @@
-﻿using BaseViewModels;
+﻿using BaseClasses;
+using BaseViewModels;
 using NetworkDeviceModels;
 using System;
 using System.Collections.Generic;
@@ -60,7 +61,7 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public RabbitControlStatusViewModel(IRabbitControlled device)
+        public RabbitControlStatusViewModel(IMessenger iMessenger, IRabbitControlled device) : base(iMessenger)
         {
             Device = device;
             var tmp = new List<InterfaceInfoViewModel>();

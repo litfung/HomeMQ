@@ -15,7 +15,6 @@
     <ProjectReference Include="..\..\SharedProjects\Standard\DeviceManagers\DeviceManagers.csproj" />
     <ProjectReference Include="..\..\SharedProjects\Standard\RabbitMqManagers\RabbitMqManagers.csproj" />
     <ProjectReference Include="..\..\SharedProjects\Standard\WiznetControllers\WiznetControllers.csproj" />
-    <ProjectReference Include="..\..\SharedProjects\Standard\WPFUserDialogs\WPFMessageBox.csproj" />
     <ProjectReference Include="..\HomeMQ.Managers\HomeMQ.Managers.csproj" />
     <ProjectReference Include="..\HomeMQ.Models\HomeMQ.Models.csproj" />
     <ProjectReference Include="..\HomeMQ.RabbitMQ.Consumer\HomeMQ.RabbitMQ.Consumer.csproj" />

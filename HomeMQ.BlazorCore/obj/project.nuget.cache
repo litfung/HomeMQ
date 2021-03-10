@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "kTdo0tF8F8Af8c50AYwKrVM0CqwO2vnoeLCFSJbvkt9mZWBRveKdlDQq3LNCEP5gd8EWf2Ba7XmcJsxnUIw2lw==",
+  "dgSpecHash": "mLjg6mIke9Iop/g5SeXYNPVZUVvdN9HICMCVXS4r1Oa6RW6/2A8TWNXcPqes9jCz/5jXK8WbnKe1+3S1U94H7g==",
   "success": true,
   "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.BlazorCore\\HomeMQ.CoreBlazor.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\devin\\.nuget\\packages\\acr.userdialogs\\7.1.0.475\\acr.userdialogs.7.1.0.475.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\mvvmcross\\7.1.2\\mvvmcross.7.1.2.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

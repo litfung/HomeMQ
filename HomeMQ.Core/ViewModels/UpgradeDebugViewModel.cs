@@ -58,8 +58,9 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public UpgradeDebugViewModel()
+        public UpgradeDebugViewModel(IMessenger iMessenger) : base(iMessenger)
         {
+            
             EnterKeyCommand = new MvxCommand(OnSendCmdMessage, CanSendCmdMessage);
             StartCmdConsoleCommand = new MvxCommand(OnStartCmdConsole);
             StopCmdConsoleCommand = new MvxCommand(OnStopCmdConsole);
@@ -88,7 +89,7 @@ namespace HomeMQ.Core.ViewModels
 
             var _ = UpdateStandardOutput();
 
-            Messenger.Instance.Send(new UpdateViewMessage());
+            messenger.Send(new UpdateViewMessage());
 
             // Prompt the user for input text lines to sort.
             // Write each line to the StandardInput stream of

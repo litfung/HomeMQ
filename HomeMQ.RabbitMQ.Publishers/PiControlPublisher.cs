@@ -26,7 +26,7 @@ namespace HomeMQ.RabbitMQ.Publishers
         //    var _ = StatusPoll();
         //}
 
-        public PiControlPublisher(IConnectionFactory factory, MQConnectionManager rabbitConnectionManager, string exchange, string connectionName = null) : base(factory, exchange, connectionName)
+        public PiControlPublisher(IConnectionFactory factory, IMQConnectionManager rabbitConnectionManager, string exchange, string connectionName = null) : base(factory, exchange, connectionName)
         {
             //var homeFactory = rabbitConnectionManager.FactoriesByName["home"];
             //var connection = homeFactory.CreateConnection(clientProvidedName: connectionName);

@@ -88,7 +88,7 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public WiznetStatusViewModel(IWiznetPiControl wizController)
+        public WiznetStatusViewModel(IMessenger iMessenger, IWiznetPiControl wizController) : base(iMessenger)
         {
             ConnectCommand = new MvxAsyncCommand(OnConnect, CanConnect);
             DisconnectCommand = new MvxAsyncCommand(OnDisconnect, CanDisconnect);
@@ -96,16 +96,16 @@ namespace HomeMQ.Core.ViewModels
 
             //this might be needed to handle initial bindings
             //Wiznet = new WiznetControlSCPI();
-            Wiznet = (IWiznetPiControl)wizController;
+            Wiznet = wizController;
 
             PiPowerControls = new ObservableCollection<WiznetPiControlViewModel>
             {
-                new WiznetPiControlViewModel(Wiznet, 1),
-                new WiznetPiControlViewModel(Wiznet, 2),
+                new WiznetPiControlViewModel(iMessenger, Wiznet, 1),
+                new WiznetPiControlViewModel(iMessenger, Wiznet, 2),
             };
 
-            Messenger.Instance.Register<UpdateViewMessage>(this, async x => await OnUpdateView());
-            Messenger.Instance.Register<ViewUnloadedMessage>(this, async x => await OnUnloaded());
+            messenger.Register<UpdateViewMessage>(this, async x => await OnUpdateView());
+            messenger.Register<ViewUnloadedMessage>(this, async x => await OnUnloaded());
         }
         #endregion
 
@@ -135,7 +135,7 @@ namespace HomeMQ.Core.ViewModels
         public override async Task OnUnloaded()
         {
             isDisplayed = false;
-            Messenger.Instance.Unregister(this);
+            messenger.Unregister(this);
         }
         #endregion
 
@@ -161,7 +161,7 @@ namespace HomeMQ.Core.ViewModels
         {
             await Wiznet.CancelConnect();
             await RaisePropertyChanged(nameof(ClientStatus));
-            Messenger.Instance.Send(new UpdateViewMessage());
+            messenger.Send(new UpdateViewMessage());
         }
 
         private bool CanCancelConnect()
@@ -172,7 +172,7 @@ namespace HomeMQ.Core.ViewModels
         public async Task OnDisconnect()
         {
             await Wiznet.CloseAsync();
-            Messenger.Instance.Send(new UpdateViewMessage());
+            messenger.Send(new UpdateViewMessage());
             //await UpdateUIControlAccess();
         }
 
