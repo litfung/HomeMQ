@@ -10,4 +10,3 @@ C:\Users\devin\source\repos\HomeMQ\PythonCmdTest\obj\Debug\netcoreapp3.1\PythonC
 C:\Users\devin\source\repos\HomeMQ\PythonCmdTest\obj\Debug\netcoreapp3.1\PythonCmdTest.dll
 C:\Users\devin\source\repos\HomeMQ\PythonCmdTest\obj\Debug\netcoreapp3.1\PythonCmdTest.pdb
 C:\Users\devin\source\repos\HomeMQ\PythonCmdTest\obj\Debug\netcoreapp3.1\PythonCmdTest.genruntimeconfig.cache
-C:\Users\devin\source\repos\HomeMQ\PythonCmdTest\obj\Debug\netcoreapp3.1\PythonCmdTest.csprojAssemblyReference.cache

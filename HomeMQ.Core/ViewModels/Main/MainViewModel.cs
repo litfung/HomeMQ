@@ -19,28 +19,28 @@ namespace HomeMQ.Core.ViewModels
     public class MainViewModel : MvxViewModel
     {
         private IMainControl mainControl;
-        //private IMessenger messenger;
-        //IStateManager stateManager;
-        //ILogManager logManager;
-        //IWiznetManager wiznetManager;
-        //MQConnectionManager rabbitConnectionManager;
-        //IRabbitControlledManager deviceManager;
-        //IMasterControlProcessor commandProcessor;
-        //IPiControlPublisher piController;
+        private IMessenger messenger;
+        IStateManager stateManager;
+        ILogManager logManager;
+        IWiznetManager wiznetManager;
+        MQConnectionManager rabbitConnectionManager;
+        IRabbitControlledManager deviceManager;
+        IMasterControlProcessor commandProcessor;
+        IPiControlPublisher piController;
 
-        private IErrorViewModel errorHandlerViewModel;
-        public IErrorViewModel ErrorHandlerViewModel
-        {
-            get { return errorHandlerViewModel; }
-            set
-            {
-                if (errorHandlerViewModel != value)
-                {
-                    errorHandlerViewModel = value;
-                    RaisePropertyChanged();
-                }
-            }
-        }
+        //private IErrorViewModel errorHandlerViewModel;
+        //public IErrorViewModel ErrorHandlerViewModel
+        //{
+        //    get { return errorHandlerViewModel; }
+        //    set
+        //    {
+        //        if (errorHandlerViewModel != value)
+        //        {
+        //            errorHandlerViewModel = value;
+        //            RaisePropertyChanged();
+        //        }
+        //    }
+        //}
 
 
         private INavigationViewModel detailViewModel;
@@ -88,9 +88,19 @@ namespace HomeMQ.Core.ViewModels
 
         public MainViewModel()
         {
-            mainControl = new MainControl();
+            messenger = new Messenger();
+            stateManager = new StateManager();
+            logManager = new LogManager();
+            wiznetManager = new WiznetManager();
+            rabbitConnectionManager = new MQConnectionManager();
+            deviceManager = new RabbitControlledDeviceManager();
+            commandProcessor = new MasterControlProcessor(deviceManager, messenger);
+            //IPiControlPublisher piController = new PiControlPublisher();
+            mainControl = new MainControl(stateManager, messenger, logManager, wiznetManager, rabbitConnectionManager, deviceManager, commandProcessor);
             //messenger.Register<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
-            mainControl.Messenger.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
+            //mainControl.Messenger.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
+            messenger.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
+
         }
 
         public override Task Initialize()
@@ -103,7 +113,7 @@ namespace HomeMQ.Core.ViewModels
         private void NavigateStart()
         {
             MasterViewModel = new MenuViewModel(mainControl);
-            ErrorHandlerViewModel = new ErrorHandlerViewModel(mainControl);
+            //ErrorHandlerViewModel = new ErrorHandlerViewModel(mainControl);
             mainControl.NavigatePrimaryOverview();
         }
     }

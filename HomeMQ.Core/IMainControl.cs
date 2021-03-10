@@ -10,14 +10,14 @@ namespace HomeMQ.Core
 {
     public interface IMainControl
     {
-        IMasterControlProcessor CommandProcessor { get; }
-        IRabbitControlledManager DeviceManager { get; }
-        ILogManager LogManager { get; }
-        IMessenger Messenger { get; }
-        IPiControlPublisher PiController { get; }
-        IMQConnectionManager RabbitConnectionManager { get; }
-        IStateManager StateManager { get; }
-        IWiznetManager WiznetManager { get; }
+        //IMasterControlProcessor CommandProcessor { get; }
+        //IRabbitControlledManager DeviceManager { get; }
+        //ILogManager LogManager { get; }
+        //IMessenger Messenger { get; }
+        //IPiControlPublisher PiController { get; }
+        //IMQConnectionManager RabbitConnectionManager { get; }
+        //IStateManager StateManager { get; }
+        //IWiznetManager WiznetManager { get; }
 
         void NavigatePrimaryOverview();
         void NavigateUpgradeDebug();

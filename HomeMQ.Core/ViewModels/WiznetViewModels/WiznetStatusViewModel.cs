@@ -79,6 +79,8 @@ namespace HomeMQ.Core.ViewModels
             //Wiznet = new WiznetControlSCPI();
             Wiznet = wizController;
 
+            //_ = WiznetStatus();
+
             PiPowerControls = new ObservableCollection<WiznetPiControlViewModel>
             {
                 new WiznetPiControlViewModel(iMessenger, Wiznet, 1),
@@ -91,20 +93,6 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Override Methods
-        //public override async Task Initialize()
-        //{
-        //    await base.Initialize();
-        //    try
-        //    {
-        //        var connection = await Mvx.IoCProvider.Resolve<IWiznetManager>().GetWiznetAsync(IPAddress);
-        //        Wiznet = connection;
-        //    }
-        //    finally
-        //    {
-
-        //    }
-
-        //}
 
         public override async Task UpdateUIControlAccess()
         {
@@ -162,6 +150,14 @@ namespace HomeMQ.Core.ViewModels
             return Wiznet.IsConnected;
             //Wiznet.ClientStatus == ClientStatus.Connected;
         }
+
+        //private async Task WiznetStatus()
+        //{
+        //    //await RaiseAllPropertiesChanged();
+        //    //messenger.Send(new UpdateViewMessage());
+        //    await Task.Delay(500);
+        //    await WiznetStatus();
+        //}
         #endregion
 
     }

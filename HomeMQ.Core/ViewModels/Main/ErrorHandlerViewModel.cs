@@ -1,72 +1,72 @@
-﻿using BaseClasses;
-using BaseViewModels;
-using MvvmCross.Commands;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
-using System.Threading.Tasks;
+﻿//using BaseClasses;
+//using BaseViewModels;
+//using MvvmCross.Commands;
+//using System;
+//using System.Collections.Generic;
+//using System.Collections.ObjectModel;
+//using System.Text;
+//using System.Threading.Tasks;
 
-namespace HomeMQ.Core.ViewModels
-{
-    public class ErrorHandlerViewModel : BaseViewModel, IErrorViewModel
-    {
-        #region Fields
-        private IMessenger messenger;
-        private ILogManager logger;
-        #endregion
+//namespace HomeMQ.Core.ViewModels
+//{
+//    public class ErrorHandlerViewModel : BaseViewModel, IErrorViewModel
+//    {
+//        #region Fields
+//        private IMessenger messenger;
+//        private ILogManager logger;
+//        #endregion
 
-        #region Properties
-        private LogMessage logMessage;
-        public LogMessage LogMessage
-        {
-            get { return logMessage; }
-            set
-            {
-                if (logMessage != value)
-                {
-                    logMessage = value;
-                    RaisePropertyChanged();
-                    RaisePropertyChanged(nameof(CanShowMessage));
-                }
-            }
-        }
+//        #region Properties
+//        private LogMessage logMessage;
+//        public LogMessage LogMessage
+//        {
+//            get { return logMessage; }
+//            set
+//            {
+//                if (logMessage != value)
+//                {
+//                    logMessage = value;
+//                    RaisePropertyChanged();
+//                    RaisePropertyChanged(nameof(CanShowMessage));
+//                }
+//            }
+//        }
 
-        public bool CanShowMessage => logMessage != null;
+//        public bool CanShowMessage => logMessage != null;
 
-        #endregion
+//        #endregion
 
-        #region Commands
-        public IMvxCommand DismissMessageCommand { get; private set; }
-        public IMvxCommand PreviousMessageCommand { get; private set; }
-        public IMvxCommand NextMessageCommand { get;  set; }
-        #endregion
+//        #region Commands
+//        public IMvxCommand DismissMessageCommand { get; private set; }
+//        public IMvxCommand PreviousMessageCommand { get; private set; }
+//        public IMvxCommand NextMessageCommand { get;  set; }
+//        #endregion
 
-        #region Constructors
-        public ErrorHandlerViewModel(IMainControl mc) : base(mc.Messenger)//   IMessenger mess, ILogManager logs)
-        {
-            messenger = mc.Messenger;//  mess;
-            logger = mc.LogManager;// logs;
-            messenger.Register<UpdateViewMessage>(this, async x => await OnUpdateView());
-            DismissMessageCommand = new MvxCommand(OnDismiss);
-        }
+//        #region Constructors
+//        public ErrorHandlerViewModel(IMainControl mc) : base(mc.Messenger)//   IMessenger mess, ILogManager logs)
+//        {
+//            //messenger = mc.Messenger;//  mess;
+//            //logger = mc.LogManager;// logs;
+//            //messenger.Register<UpdateViewMessage>(this, async x => await OnUpdateView());
+//            //DismissMessageCommand = new MvxCommand(OnDismiss);
+//        }
 
-        public override async Task OnUpdateView()
-        {
-            //logger.Err
-            await base.OnUpdateView();
-        }
+//        public override async Task OnUpdateView()
+//        {
+//            //logger.Err
+//            await base.OnUpdateView();
+//        }
 
 
-        private void OnDismiss()
-        {
+//        private void OnDismiss()
+//        {
 
-        }
-        #endregion
+//        }
+//        #endregion
 
-        #region Methods
+//        #region Methods
 
-        #endregion
+//        #endregion
 
-    }
-}
+//    }
+//}

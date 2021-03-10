@@ -63,7 +63,8 @@ namespace HomeMQ.DesktopApp.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/HomeMQ.DesktopApp;component/views/wiznetconnections/wiznetstatusview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/HomeMQ.DesktopApp;V1.0.0.0;component/views/wiznetconnections/wiznetstatusview.xa" +
+                    "ml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\WiznetConnections\WiznetStatusView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

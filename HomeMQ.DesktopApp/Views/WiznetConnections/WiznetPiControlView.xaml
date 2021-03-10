@@ -11,7 +11,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel d:Background="Blue">
         <StackPanel Orientation="Horizontal">
-            <TextBlock x:Name="title" Text="{Binding Title}" VerticalAlignment="Center"/>
+            <!--<TextBlock x:Name="title" Text="{Binding Title}" VerticalAlignment="Center"/>-->
             <Viewbox Width="80" Margin="0 0 10 0">
                 <switches:Switch IsChecked="{Binding PowerOn}" 
                             Command="{Binding RaspberryPowerCommand}"/>

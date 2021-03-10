@@ -6,7 +6,7 @@
 @*@using HomeMQ.Core.ViewModels*@
 @using DeviceManagers
 @using WiznetControllers
-@inject WiznetManager WiznetManager
+@inject IWiznetManager WiznetManager
 
 <h1>Wiznets Connection Page</h1>
 
@@ -61,7 +61,7 @@ else
     }
     private async Task DisconnectWiznet(IWiznetControl wiz)
     {
-        Debug.WriteLine("hello");
+        Debug.WriteLine("bye");
         await wiz.CloseAsync();
     }
 

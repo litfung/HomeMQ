@@ -143,7 +143,7 @@ using WiznetControllers;
     }
     private async Task DisconnectWiznet(IWiznetControl wiz)
     {
-        Debug.WriteLine("hello");
+        Debug.WriteLine("bye");
         await wiz.CloseAsync();
     }
 
@@ -189,7 +189,7 @@ using WiznetControllers;
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private WiznetManager WiznetManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IWiznetManager WiznetManager { get; set; }
     }
 }
 #pragma warning restore 1591

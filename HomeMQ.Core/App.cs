@@ -11,6 +11,7 @@ using RabbitMqManagers;
 using HomeMQ.RabbitMQ.Consumer;
 using HomeMQ.RabbitMQ.Publishers;
 using HomeMQ.Managers;
+using BaseClasses;
 
 namespace HomeMQ.Core
 {
@@ -18,6 +19,9 @@ namespace HomeMQ.Core
     {
         public override void Initialize()
         {
+            //Optional Dependencies
+            //Mvx.IoCProvider.RegisterSingleton(() => new LogManager());
+            //Mvx.IoCProvider.RegisterSingleton(() => new Messenger());
             RegisterAppStart<MainViewModel>();
         }
     }

@@ -10,6 +10,7 @@
     <ProjectReference Include="..\..\SharedProjects\Standard\DeviceManagers\DeviceManagers.csproj" />
     <ProjectReference Include="..\..\SharedProjects\Standard\WiznetControllers\WiznetControllers.csproj" />
     <ProjectReference Include="..\HomeMQ.BlazorCore\HomeMQ.CoreBlazor.csproj" />
+    <ProjectReference Include="..\HomeMQ.Core\HomeMQ.Core.csproj" />
     <ProjectReference Include="..\HomeMQ.Dapper.Core\HomeMQ.DapperCore.csproj" />
     <ProjectReference Include="..\HomeMQ.Models\HomeMQ.Models.csproj" />
   </ItemGroup>

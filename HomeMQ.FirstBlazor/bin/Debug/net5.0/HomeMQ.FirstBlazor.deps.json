@@ -26,6 +26,7 @@
       "HomeMQ.FirstBlazor/1.0.0": {
         "dependencies": {
           "DeviceManagers": "1.0.0",
+          "HomeMQ.Core": "1.0.0",
           "HomeMQ.CoreBlazor": "1.0.0",
           "HomeMQ.DapperCore": "1.0.0",
           "HomeMQ.Models": "1.0.0",
@@ -215,7 +216,7 @@
           "System.Linq.Expressions": "5.0.0.0",
           "System.Linq.Parallel": "5.0.0.0",
           "System.Linq.Queryable": "5.0.0.0",
-          "System.Memory": "5.0.0.0",
+          "System.Memory.Reference": "5.0.0.0",
           "System.Net": "4.0.0.0",
           "System.Net.Http": "5.0.0.0",
           "System.Net.Http.Json": "5.0.0.0",
@@ -286,7 +287,7 @@
           "System.Text.Encodings.Web": "5.0.0.0",
           "System.Text.Json": "5.0.0.0",
           "System.Text.RegularExpressions": "5.0.0.0",
-          "System.Threading.Channels": "5.0.0.0",
+          "System.Threading.Channels.Reference": "5.0.0.0",
           "System.Threading": "5.0.0.0",
           "System.Threading.Overlapped": "5.0.0.0",
           "System.Threading.Tasks.Dataflow": "5.0.0.0",
@@ -496,6 +497,32 @@
           "lib/netcoreapp3.1/MvvmCross.dll": {}
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RabbitMQ.Client/6.2.1": {
+        "dependencies": {
+          "System.Memory": "4.5.4",
+          "System.Threading.Channels": "4.7.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {}
+        }
+      },
       "System.ComponentModel.Annotations/5.0.0": {
         "compile": {
           "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {}
@@ -540,6 +567,7 @@
           "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": {}
         }
       },
+      "System.Memory/4.5.4": {},
       "System.Runtime.Caching/4.7.0": {
         "dependencies": {
           "System.Configuration.ConfigurationManager": "5.0.0"
@@ -594,6 +622,7 @@
           "Microsoft.NETCore.Platforms": "5.0.0"
         }
       },
+      "System.Threading.Channels/4.7.1": {},
       "System.Windows.Extensions/5.0.0": {
         "dependencies": {
           "System.Drawing.Common": "5.0.0"
@@ -607,6 +636,18 @@
           "BaseClasses.dll": {}
         }
       },
+      "BaseViewModels/1.0.0": {
+        "dependencies": {
+          "BaseClasses": "1.0.0",
+          "MvvmCross": "7.1.2"
+        },
+        "runtime": {
+          "BaseViewModels.dll": {}
+        },
+        "compile": {
+          "BaseViewModels.dll": {}
+        }
+      },
       "DeviceManagers/1.0.0": {
         "dependencies": {
           "HomeMQ.Models": "1.0.0",
@@ -618,6 +659,27 @@
         },
         "compile": {
           "DeviceManagers.dll": {}
+        }
+      },
+      "HomeMQ.Core/1.0.0": {
+        "dependencies": {
+          "BaseClasses": "1.0.0",
+          "BaseViewModels": "1.0.0",
+          "DeviceManagers": "1.0.0",
+          "HomeMQ.Managers": "1.0.0",
+          "HomeMQ.Models": "1.0.0",
+          "HomeMQ.RabbitMQ.Consumer": "1.0.0",
+          "HomeMQ.RabbitMQ.Publishers": "1.0.0",
+          "MvvmCross": "7.1.2",
+          "RabbitMQ.Client": "6.2.1",
+          "RabbitMqManagers": "1.0.0",
+          "WiznetControllers": "1.0.0"
+        },
+        "runtime": {
+          "HomeMQ.Core.dll": {}
+        },
+        "compile": {
+          "HomeMQ.Core.dll": {}
         }
       },
       "HomeMQ.CoreBlazor/1.0.0": {
@@ -645,6 +707,19 @@
           "HomeMQ.DapperCore.dll": {}
         }
       },
+      "HomeMQ.Managers/1.0.0": {
+        "dependencies": {
+          "BaseClasses": "1.0.0",
+          "HomeMQ.Models": "1.0.0",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "HomeMQ.Managers.dll": {}
+        },
+        "compile": {
+          "HomeMQ.Managers.dll": {}
+        }
+      },
       "HomeMQ.Models/1.0.0": {
         "dependencies": {
           "BaseClasses": "1.0.0",
@@ -658,6 +733,34 @@
           "HomeMQ.Models.dll": {}
         }
       },
+      "HomeMQ.RabbitMQ.Consumer/1.0.0": {
+        "dependencies": {
+          "BaseClasses": "1.0.0",
+          "DeviceManagers": "1.0.0",
+          "HomeMQ.Models": "1.0.0",
+          "RabbitMQ.Client": "6.2.1"
+        },
+        "runtime": {
+          "HomeMQ.RabbitMQ.Consumer.dll": {}
+        },
+        "compile": {
+          "HomeMQ.RabbitMQ.Consumer.dll": {}
+        }
+      },
+      "HomeMQ.RabbitMQ.Publishers/1.0.0": {
+        "dependencies": {
+          "HomeMQ.Models": "1.0.0",
+          "Newtonsoft.Json": "12.0.3",
+          "RabbitMQ.Client": "6.2.1",
+          "RabbitMqManagers": "1.0.0"
+        },
+        "runtime": {
+          "HomeMQ.RabbitMQ.Publishers.dll": {}
+        },
+        "compile": {
+          "HomeMQ.RabbitMQ.Publishers.dll": {}
+        }
+      },
       "NetworkDeviceModels/1.0.0": {
         "dependencies": {
           "BaseClasses": "1.0.0"
@@ -667,6 +770,17 @@
         },
         "compile": {
           "NetworkDeviceModels.dll": {}
+        }
+      },
+      "RabbitMqManagers/1.0.0": {
+        "dependencies": {
+          "RabbitMQ.Client": "6.2.1"
+        },
+        "runtime": {
+          "RabbitMqManagers.dll": {}
+        },
+        "compile": {
+          "RabbitMqManagers.dll": {}
         }
       },
       "WiznetControllers/1.0.0": {
@@ -1792,7 +1906,7 @@
         },
         "compileOnly": true
       },
-      "System.Memory/5.0.0.0": {
+      "System.Memory.Reference/5.0.0.0": {
         "compile": {
           "System.Memory.dll": {}
         },
@@ -2218,7 +2332,7 @@
         },
         "compileOnly": true
       },
-      "System.Threading.Channels/5.0.0.0": {
+      "System.Threading.Channels.Reference/5.0.0.0": {
         "compile": {
           "System.Threading.Channels.dll": {}
         },
@@ -2486,6 +2600,20 @@
       "path": "mvvmcross/7.1.2",
       "hashPath": "mvvmcross.7.1.2.nupkg.sha512"
     },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "RabbitMQ.Client/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kdcin0uz1b9xQPvlLOoa8Y2zQsfu7nRuTrcX02dCLVzwGVlsPp9AFgu1L3kRh4wSFEOGE03OVqpWKxaDlhuowQ==",
+      "path": "rabbitmq.client/6.2.1",
+      "hashPath": "rabbitmq.client.6.2.1.nupkg.sha512"
+    },
     "System.ComponentModel.Annotations/5.0.0": {
       "type": "package",
       "serviceable": true,
@@ -2520,6 +2648,13 @@
       "sha512": "sha512-5tBCjAub2Bhd5qmcd0WhR5s354e4oLYa//kOWrkX+6/7ZbDDJjMTfwLSOiZ/MMpWdE4DWPLOfTLOq/juj9CKzA==",
       "path": "system.identitymodel.tokens.jwt/6.8.0",
       "hashPath": "system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "path": "system.memory/4.5.4",
+      "hashPath": "system.memory.4.5.4.nupkg.sha512"
     },
     "System.Runtime.Caching/4.7.0": {
       "type": "package",
@@ -2570,6 +2705,13 @@
       "path": "system.text.encoding.codepages/4.7.0",
       "hashPath": "system.text.encoding.codepages.4.7.0.nupkg.sha512"
     },
+    "System.Threading.Channels/4.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6akRtHK/wab3246t4p5v3HQrtQk8LboOt5T4dtpNgsp3zvDeM4/Gx8V12t0h+c/W9/enUrilk8n6EQqdQorZAA==",
+      "path": "system.threading.channels/4.7.1",
+      "hashPath": "system.threading.channels.4.7.1.nupkg.sha512"
+    },
     "System.Windows.Extensions/5.0.0": {
       "type": "package",
       "serviceable": true,
@@ -2582,7 +2724,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "BaseViewModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "DeviceManagers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HomeMQ.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -2597,12 +2749,32 @@
       "serviceable": false,
       "sha512": ""
     },
+    "HomeMQ.Managers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "HomeMQ.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
+    "HomeMQ.RabbitMQ.Consumer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HomeMQ.RabbitMQ.Publishers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "NetworkDeviceModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RabbitMqManagers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -3537,7 +3709,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Memory/5.0.0.0": {
+    "System.Memory.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -3892,7 +4064,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Threading.Channels/5.0.0.0": {
+    "System.Threading.Channels.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

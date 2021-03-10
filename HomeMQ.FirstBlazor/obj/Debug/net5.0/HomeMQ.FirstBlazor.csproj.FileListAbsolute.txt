@@ -101,3 +101,17 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\RazorDecl
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\Razor\Shared\ClockView.razor.g.cs
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\Component.razor.g.cs
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\obj\Debug\net5.0\Razor\Shared\Component.razor.g.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\RabbitMQ.Client.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\BaseViewModels.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\HomeMQ.Core.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\HomeMQ.Managers.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\HomeMQ.RabbitMQ.Consumer.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\HomeMQ.RabbitMQ.Publishers.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\RabbitMqManagers.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\HomeMQ.Core.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\BaseViewModels.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\HomeMQ.Managers.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\HomeMQ.RabbitMQ.Consumer.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\HomeMQ.RabbitMQ.Publishers.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\RabbitMqManagers.pdb
