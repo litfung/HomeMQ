@@ -36,10 +36,10 @@ namespace HomeMQ.Core
 
         public MainControl()
         {
-            StateManager = new StateManager();//.Instance;
-            Messenger = new Messenger();//.Instance;
-            LogManager = new LogManager(Messenger);
-            WiznetManager = new WiznetManager(LogManager);//.Instance;
+            StateManager = new StateManager();  //Low level, no dependencies
+            Messenger = new Messenger();  //Low level, no dependencies
+            LogManager = new LogManager();  //Low level, no dependencies
+            WiznetManager = new WiznetManager();// LogManager);//.Instance;
             RabbitConnectionManager = new MQConnectionManager();//.Instance;
             DeviceManager = new RabbitControlledDeviceManager();//.Instance;
             CommandProcessor = new MasterControlProcessor(DeviceManager, Messenger);

@@ -5,7 +5,6 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\Ho
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\HomeMQ.DesktopApp.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\ref\HomeMQ.DesktopApp.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\HomeMQ.DesktopApp.pdb
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\Acr.UserDialogs.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\MvvmCross.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\MvvmCross.Platforms.Wpf.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
@@ -22,7 +21,6 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\Ne
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\RabbitMqManagers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\WiznetControllers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\WPFConverters.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\WPFMessageBox.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\WPFToggleButtons.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\WPFConverters.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\WPFToggleButtons.pdb
@@ -37,7 +35,6 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\Ho
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\NetworkDeviceModels.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\RabbitMqManagers.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\WiznetControllers.pdb
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\WPFMessageBox.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\HomeMQ.DesktopApp.csprojAssemblyReference.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\MainWindow.g.cs
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\InterfaceInfoView.g.cs

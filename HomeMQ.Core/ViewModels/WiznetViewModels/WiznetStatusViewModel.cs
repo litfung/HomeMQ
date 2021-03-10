@@ -24,28 +24,9 @@ namespace HomeMQ.Core.ViewModels
 
         IWiznetControl IWiznetStatusViewModel.Wiznet => Wiznet;
 
-        //public IWiznetControl Wiznet => throw new NotImplementedException();
-
         public ClientStatus ClientStatus => Wiznet.ClientStatus;
 
-        /// <summary>
-        /// Connect this to Textbox or similar on UI
-        /// </summary>
-        //private string ipAddress;
-        //public string IPAddress
-        //{
-        //    get { return ipAddress; }
-        //    set
-        //    {
-        //        if (ipAddress != value)
-        //        {
-        //            ipAddress = value;
-        //            RaisePropertyChanged();
-        //        }
-        //    }
-        //}
-
-        public string IPAddress => Wiznet.IPAddress.ToString();
+       public string IPAddress => Wiznet.IPAddress.ToString();
 
         private bool isConnecting;
         public bool IsConnecting
@@ -148,7 +129,7 @@ namespace HomeMQ.Core.ViewModels
         public async Task OnConnect()
         {
             IsConnecting = true;
-            await Wiznet.Connect();
+            await Wiznet.ConnectAsync();
             await RaisePropertyChanged(nameof(ClientStatus));
         }
 

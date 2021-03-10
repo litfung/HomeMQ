@@ -139,7 +139,7 @@ using WiznetControllers;
     private async Task ConnectWiznet(IWiznetControl wiz)
     {
         Debug.WriteLine("hello");
-        await wiz.Connect();
+        await wiz.ConnectAsync();
     }
     private async Task DisconnectWiznet(IWiznetControl wiz)
     {

@@ -37,3 +37,4 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebAppNoDb\obj\Debug\net5.0\ref\HomeMQ
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebAppNoDb\obj\Debug\net5.0\HomeMQ.WebAppNoDb.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebAppNoDb\obj\Debug\net5.0\HomeMQ.WebAppNoDb.genruntimeconfig.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebAppNoDb\obj\Debug\net5.0\HomeMQ.WebAppNoDb.csproj.CopyComplete
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.WebAppNoDb\obj\Debug\net5.0\HomeMQ.WebAppNoDb.csprojAssemblyReference.cache
