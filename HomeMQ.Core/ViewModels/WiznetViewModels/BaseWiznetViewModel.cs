@@ -20,7 +20,7 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public BaseWiznetViewModel(IMessenger iMessenger, IWiznetControl wiz) : base(iMessenger)
+        public BaseWiznetViewModel(IBackgroundHandler backgroundHandler, IWiznetControl wiz) : base(backgroundHandler)
         {
             Wiznet = wiz;
 

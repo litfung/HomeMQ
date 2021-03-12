@@ -17,14 +17,15 @@ using WiznetControllers;
 
 namespace HomeMQ.Core.ViewModels
 {
-    public class MainViewModel : MvxViewModel
+    public class MainViewModel : MvxViewModel, IHomeMQNavigation
     {
         //private IMainControl mainControl;
-        private IMvxNavigationService navService;
-        private IMessenger messenger;
-        //IStateManager stateManager;
-        //ILogManager logManager;
-        //IWiznetManager wiznetManager;
+        IBackgroundHandler _backgroundHandler;
+        //private IMvxNavigationService navService;
+        IMessenger _messenger;
+        IStateManager _stateManager;
+        ILogManager _logManager;
+        IWiznetManager _wiznetManager;
         //MQConnectionManager rabbitConnectionManager;
         //IRabbitControlledManager deviceManager;
         //IMasterControlProcessor commandProcessor;
@@ -73,12 +74,33 @@ namespace HomeMQ.Core.ViewModels
             }
         }
 
-        public MainViewModel(IMvxNavigationService nav,  IMessenger iMessenger)
+        public MainViewModel()// IBackgroundHandler backgroundHandler)
         {
-            messenger = iMessenger;
-            navService = nav;
-            messenger.Register<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
-            messenger.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
+
+            InitializeBackgroundHandler();
+            InitializeWiznetStuff();
+            
+        }
+
+        void InitializeBackgroundHandler()
+        {
+            _messenger = new Messenger();
+            _logManager = new LogManager();
+            _stateManager = new StateManager();
+            _backgroundHandler = new SimpleBackgroundHandler(_messenger, _logManager);
+            _backgroundHandler.RegisterMessage<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
+            _backgroundHandler.RegisterMessage<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
+            //messenger = iMessenger;
+            //messenger.Register<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
+            //messenger.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
+        }
+
+        void InitializeWiznetStuff()
+        {
+            _wiznetManager = new WiznetManager();
+            var firstWiz = new WiznetControlSCPI("169.254.208.100", _backgroundHandler);
+            _wiznetManager.AddWiznet(firstWiz);
+
         }
 
         //public MainViewModel()
@@ -122,10 +144,15 @@ namespace HomeMQ.Core.ViewModels
 
         private async Task NavigateStart()
         {
-            //MasterViewModel = new MenuViewModel(messenger);// mainControl);
-            await navService.Navigate<MenuViewModel>();
+            MasterViewModel = new MenuViewModel(this);// mainControl);
             //ErrorHandlerViewModel = new ErrorHandlerViewModel(mainControl);
             //mainControl.NavigatePrimaryOverview();
+        }
+
+        public void NavigateToPrimaryOverview()
+        {
+
+            _backgroundHandler.SendMessage(new DetailNavigationMessage(new PrimaryOverviewViewModel(_backgroundHandler, _wiznetManager)));
         }
     }
 }

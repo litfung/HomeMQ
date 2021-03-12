@@ -61,7 +61,7 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public RabbitControlStatusViewModel(IMessenger iMessenger, IRabbitControlled device) : base(iMessenger)
+        public RabbitControlStatusViewModel(IBackgroundHandler backgroundHandler, IRabbitControlled device) : base(backgroundHandler)
         {
             Device = device;
             var tmp = new List<InterfaceInfoViewModel>();

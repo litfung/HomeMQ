@@ -19,11 +19,11 @@ namespace HomeMQ.Core.ViewModels
     {
         #region Fields
         bool isDisplayed = true;
-        private IWiznetManager WiznetManager;
+        private IWiznetManager _wiznetManager;
         private IMQConnectionManager rabbitConnectionManager;
         private IMasterControlProcessor rabbitCommandProcessor;
         private IRabbitControlledManager deviceManager;
-        private IMvxNavigationService _navigation;
+        private IBackgroundHandler _backgroundHandler;
         #endregion
 
         #region Properties
@@ -63,28 +63,37 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public PrimaryOverviewViewModel(IMvxNavigationService nav, IMessenger iMessenger, IWiznetManager wizManager, IMQConnectionManager mqConnections, 
-            IMasterControlProcessor processor, IRabbitControlledManager dManager) : base(iMessenger)
+
+        public PrimaryOverviewViewModel(IBackgroundHandler backgroundHandler, IWiznetManager wiznetManager) : base(backgroundHandler)
         {
-            _navigation = nav;
-            WiznetManager = wizManager;
-            rabbitConnectionManager = mqConnections;
-            rabbitCommandProcessor = processor;
-            deviceManager = dManager;
-
-            foreach (var item in WiznetManager.AllWiznets)
+            _backgroundHandler = backgroundHandler;
+            _wiznetManager = wiznetManager;
+            foreach (var item in _wiznetManager.AllWiznets)
             {
-                WiznetStatusControls.Add(new WiznetStatusViewModel(iMessenger, (IWiznetPiControl)item));
+                WiznetStatusControls.Add(new WiznetStatusViewModel(_backgroundHandler, (IWiznetPiControl)item));
             }
-
-            
-            var exchangeName = "rtsh_topics";
-            var routeKey = "master.control.*";
-            var factory = mqConnections.FactoriesByName["home"];
-            var consumer = new MasterControlConsumer(factory, rabbitCommandProcessor, exchangeName, routeKey, "master control");
-
-            RabbitConsumer = new RabbitConsumerViewModel(iMessenger, consumer, deviceManager);
         }
+        //public PrimaryOverviewViewModel(IMessenger iMessenger, IWiznetManager wizManager, IMQConnectionManager mqConnections, 
+        //    IMasterControlProcessor processor, IRabbitControlledManager dManager) : base(iMessenger)
+        //{
+        //    WiznetManager = wizManager;
+        //    rabbitConnectionManager = mqConnections;
+        //    rabbitCommandProcessor = processor;
+        //    deviceManager = dManager;
+
+        //    foreach (var item in WiznetManager.AllWiznets)
+        //    {
+        //        WiznetStatusControls.Add(new WiznetStatusViewModel(iMessenger, (IWiznetPiControl)item));
+        //    }
+
+
+        //    var exchangeName = "rtsh_topics";
+        //    var routeKey = "master.control.*";
+        //    var factory = mqConnections.FactoriesByName["home"];
+        //    var consumer = new MasterControlConsumer(factory, rabbitCommandProcessor, exchangeName, routeKey, "master control");
+
+        //    RabbitConsumer = new RabbitConsumerViewModel(iMessenger, consumer, deviceManager);
+        //}
 
 
         #endregion

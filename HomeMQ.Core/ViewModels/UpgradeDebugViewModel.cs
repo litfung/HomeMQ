@@ -17,6 +17,7 @@ namespace HomeMQ.Core.ViewModels
         private Process mainProcess;
         private StreamWriter myStreamWriter;
         private StreamReader myStreamReader;
+        private IBackgroundHandler _backgroundHandler;
         #endregion
 
         #region Properties
@@ -58,9 +59,9 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public UpgradeDebugViewModel(IMessenger iMessenger) : base(iMessenger)
+        public UpgradeDebugViewModel(IBackgroundHandler backgroundHandler) : base(backgroundHandler)
         {
-            
+            _backgroundHandler = backgroundHandler;
             EnterKeyCommand = new MvxCommand(OnSendCmdMessage, CanSendCmdMessage);
             StartCmdConsoleCommand = new MvxCommand(OnStartCmdConsole);
             StopCmdConsoleCommand = new MvxCommand(OnStopCmdConsole);
@@ -89,7 +90,7 @@ namespace HomeMQ.Core.ViewModels
 
             var _ = UpdateStandardOutput();
 
-            messenger.Send(new UpdateViewMessage());
+            _backgroundHandler.SendMessage(new UpdateViewMessage());
 
             // Prompt the user for input text lines to sort.
             // Write each line to the StandardInput stream of

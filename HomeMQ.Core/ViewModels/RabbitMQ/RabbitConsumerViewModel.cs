@@ -19,6 +19,8 @@ namespace HomeMQ.Core.ViewModels
         private ITopicConsumer consumer;
         private IRabbitControlledManager deviceManager;
         private IMessenger messenger;
+
+        private IBackgroundHandler _backgroundHandler;
         #endregion
 
         #region Properties
@@ -39,12 +41,17 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public RabbitConsumerViewModel(IMessenger iMessenger, MasterControlConsumer topicConsumer, IRabbitControlledManager dManager) : base(iMessenger)
+        //public RabbitConsumerViewModel(IMessenger iMessenger, MasterControlConsumer topicConsumer, IRabbitControlledManager dManager) : base(iMessenger)
+        //{
+        //    messenger = iMessenger;
+        //    consumer = topicConsumer;
+        //    deviceManager = dManager;
+        //    Consume();
+        //}
+
+        public RabbitConsumerViewModel(IBackgroundHandler backgroundHandler) : base(backgroundHandler)
         {
-            messenger = iMessenger;
-            consumer = topicConsumer;
-            deviceManager = dManager;
-            Consume();
+            
         }
         #endregion
 
@@ -54,7 +61,7 @@ namespace HomeMQ.Core.ViewModels
             var vmList = new List<IRabbitControlViewModel>();
             foreach (var item in deviceManager.AllDevices)
             {
-                vmList.Add(new RabbitControlStatusViewModel(messenger, item));
+                vmList.Add(new RabbitControlStatusViewModel(_backgroundHandler, item));
             }
             Devices = new ObservableCollection<IRabbitControlViewModel>(vmList);
             //Devices = new ObservableCollection<IRabbitControlled>((IEnumerable<IRabbitControlled>)deviceManager.AllDevices);

@@ -75,29 +75,29 @@ namespace HomeMQ.Core
             //deviceManager = RabbitControlledDeviceManager.Instance;
             //commandProcessor = new MasterControlProcessor();
 
-            stateManager = sm;
-            logManager = lm;
-            messenger = m;
-            wiznetManager = wm;
-            rabbitConnectionManager = mq;
-            deviceManager = dm;
-            commandProcessor = mc;
-            //piController = pi;
+            //stateManager = sm;
+            //logManager = lm;
+            //messenger = m;
+            //wiznetManager = wm;
+            //rabbitConnectionManager = mq;
+            //deviceManager = dm;
+            //commandProcessor = mc;
+            ////piController = pi;
 
-            foreach (var item in stateManager.RabbitConnections)
-            {
-                var factory = new ConnectionFactory()
-                {
-                    HostName = item.Hostname,
-                    UserName = item.UserName,
-                    Password = item.Password
-                };
-                rabbitConnectionManager.AddFactory(item.ConnectionName, factory);
-                //{ HostName = "192.168.68.109", UserName = "devin", Password = "Ikorgil19" };
-            }
-            var firstWiz = new WiznetControlSCPI("169.254.208.100", messenger);
-            wiznetManager.AddWiznet(firstWiz);
-            var homeFactory = rabbitConnectionManager.FactoriesByName["home"];
+            //foreach (var item in stateManager.RabbitConnections)
+            //{
+            //    var factory = new ConnectionFactory()
+            //    {
+            //        HostName = item.Hostname,
+            //        UserName = item.UserName,
+            //        Password = item.Password
+            //    };
+            //    rabbitConnectionManager.AddFactory(item.ConnectionName, factory);
+            //    //{ HostName = "192.168.68.109", UserName = "devin", Password = "Ikorgil19" };
+            //}
+            //var firstWiz = new WiznetControlSCPI("169.254.208.100", messenger);
+            //wiznetManager.AddWiznet(firstWiz);
+            //var homeFactory = rabbitConnectionManager.FactoriesByName["home"];
             //PiController = new PiControlPublisher(homeFactory, rabbitConnectionManager, "rtsh_topics", "Pi Controller");
         }
 

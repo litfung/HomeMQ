@@ -87,7 +87,7 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public WiznetPiControlViewModel(IMessenger iMessenger, IWiznetPiControl wiz, int pi) : base(iMessenger, wiz)
+        public WiznetPiControlViewModel(IBackgroundHandler backgroundHandler, IWiznetPiControl wiz, int pi) : base(backgroundHandler, wiz)
         {
             //Func<int, bool> CanPiPowerFunc = new Func<int, bool>(CanPiPower());
             piNumber = pi;

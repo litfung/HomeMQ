@@ -18,7 +18,9 @@ namespace HomeMQ.Core.ViewModels
     {
         #region Fields
         //private IMainControl mainControl;
-        private IMessenger messenger;
+        //private IMessenger messenger;
+        //private IBackgroundHandler _backgroundHandler;
+        IHomeMQNavigation _navService;
         #endregion
 
         #region Properties
@@ -38,10 +40,12 @@ namespace HomeMQ.Core.ViewModels
         //    ShowSecondPageCommand = new MvxCommand(ShowSecondPage);
         //}
 
-        public MenuViewModel(IMessenger mess)// IMainControl mControl)
+        public MenuViewModel(IHomeMQNavigation navService)// IBackgroundHandler backgroundHandler)// IMainControl mControl)
         {
             //mainControl = mControl;
-            messenger = mess;
+            //messenger = mess;
+            //_backgroundHandler = backgroundHandler;
+            _navService = navService;
             ShowFirstPageCommand = new MvxCommand(ShowFirstPage);
             ShowSecondPageCommand = new MvxCommand(ShowSecondPage);
         }
@@ -64,6 +68,8 @@ namespace HomeMQ.Core.ViewModels
 
         public void ShowFirstPage()
         {
+            _navService.NavigateToPrimaryOverview();
+            //_backgroundHandler.SendMessage(new DetailNavigationMessage(new PrimaryOverviewViewModel(_backgroundHandler)));
             //messenger.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(messenger)));
         }
 

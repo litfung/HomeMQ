@@ -11,18 +11,21 @@ namespace HomeMQ.ConsoleApp
 {
     public class Application : IApplication
     {
-        IMessenger messenger;
-        IWiznetManager wiznetManager;
-        public Application(IMessenger blah, IWiznetManager wm)
+        IMessenger _messenger;
+        ILogManager _logger;
+        IStateManager _stateManager;
+        IBackgroundHandler _backgroundHandler;
+        IWiznetManager _wiznetManager;
+        public Application(IBackgroundHandler backgroundHandler, IWiznetManager wiznetManager)
         {
-            messenger = blah;
-            wiznetManager = wm;
+            _backgroundHandler = backgroundHandler;
+            _wiznetManager = wiznetManager;
         }
 
         public void Run()
         {
-            var firstWiz = new WiznetControlSCPI("169.254.208.100", messenger);
-            wiznetManager.AddWiznet(firstWiz);
+            var firstWiz = new WiznetControlSCPI("169.254.208.100", _backgroundHandler);
+            _wiznetManager.AddWiznet(firstWiz);
 
             _ = FirstTest();
         }
@@ -31,7 +34,7 @@ namespace HomeMQ.ConsoleApp
         {
             try
             {
-                var wiz = wiznetManager.AllWiznets.First();
+                var wiz = _wiznetManager.AllWiznets.First();
                 wiz.Connect();
                 await Task.Delay(1000);
                 var resp = await wiz.SendAsync("*idn?", false);

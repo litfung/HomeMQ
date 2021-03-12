@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HomeMQ.Managers
 {
-    public class SavedStateModel
-    {
-        public List<RabbitMQConfigurationModel> RabbitConnections { get; set; }
-    }
+    //public class SavedStateModel
+    //{
+    //    public List<RabbitMQConfigurationModel> RabbitConnections { get; set; }
+    //}
 }

@@ -22,7 +22,7 @@ namespace HomeMQ.Managers
         #endregion
 
         #region Properties
-        public SavedStateModel State { get; private set; }
+        //public SavedStateModel State { get; private set; }
         public List<RabbitMQConfigurationModel> RabbitConnections { get; private set; } = new List<RabbitMQConfigurationModel>();
 
         #endregion
