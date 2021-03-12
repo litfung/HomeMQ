@@ -17,7 +17,8 @@ namespace HomeMQ.Core.ViewModels
     public class MenuViewModel : MvxViewModel, INavigationViewModel
     {
         #region Fields
-        private IMainControl mainControl;
+        //private IMainControl mainControl;
+        private IMessenger messenger;
         #endregion
 
         #region Properties
@@ -30,9 +31,17 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public MenuViewModel(IMainControl mControl)
+        //public MenuViewModel()// IMainControl mControl)
+        //{
+        //    //mainControl = mControl;
+        //    ShowFirstPageCommand = new MvxCommand(ShowFirstPage);
+        //    ShowSecondPageCommand = new MvxCommand(ShowSecondPage);
+        //}
+
+        public MenuViewModel(IMessenger mess)// IMainControl mControl)
         {
-            mainControl = mControl;
+            //mainControl = mControl;
+            messenger = mess;
             ShowFirstPageCommand = new MvxCommand(ShowFirstPage);
             ShowSecondPageCommand = new MvxCommand(ShowSecondPage);
         }
@@ -43,14 +52,25 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Methods
+        //public void ShowFirstPage()
+        //{
+        //    mainControl.NavigatePrimaryOverview();
+        //}
+
+        //public void ShowSecondPage()
+        //{
+        //    mainControl.NavigateUpgradeDebug();
+        //}
+
         public void ShowFirstPage()
         {
-            mainControl.NavigatePrimaryOverview();
+            //messenger.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(messenger)));
         }
 
         public void ShowSecondPage()
         {
-            mainControl.NavigateUpgradeDebug();
+            //mainControl.NavigateUpgradeDebug();
+            //messenger.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(messenger)));
         }
         #endregion
 

@@ -5,6 +5,7 @@ using HomeMQ.Managers;
 using HomeMQ.RabbitMQ.Consumer;
 using HomeMQ.RabbitMQ.Publishers;
 using MvvmCross;
+using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using RabbitMQ.Client;
 using RabbitMqManagers;
@@ -18,15 +19,16 @@ namespace HomeMQ.Core.ViewModels
 {
     public class MainViewModel : MvxViewModel
     {
-        private IMainControl mainControl;
+        //private IMainControl mainControl;
+        private IMvxNavigationService navService;
         private IMessenger messenger;
-        IStateManager stateManager;
-        ILogManager logManager;
-        IWiznetManager wiznetManager;
-        MQConnectionManager rabbitConnectionManager;
-        IRabbitControlledManager deviceManager;
-        IMasterControlProcessor commandProcessor;
-        IPiControlPublisher piController;
+        //IStateManager stateManager;
+        //ILogManager logManager;
+        //IWiznetManager wiznetManager;
+        //MQConnectionManager rabbitConnectionManager;
+        //IRabbitControlledManager deviceManager;
+        //IMasterControlProcessor commandProcessor;
+        //IPiControlPublisher piController;
 
         //private IErrorViewModel errorHandlerViewModel;
         //public IErrorViewModel ErrorHandlerViewModel
@@ -71,6 +73,14 @@ namespace HomeMQ.Core.ViewModels
             }
         }
 
+        public MainViewModel(IMvxNavigationService nav,  IMessenger iMessenger)
+        {
+            messenger = iMessenger;
+            navService = nav;
+            messenger.Register<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
+            messenger.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
+        }
+
         //public MainViewModel()
         //{
         //    stateManager = StateManager.Instance;
@@ -86,35 +96,36 @@ namespace HomeMQ.Core.ViewModels
         //    messenger.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
         //}
 
-        public MainViewModel()
-        {
-            messenger = new Messenger();
-            stateManager = new StateManager();
-            logManager = new LogManager();
-            wiznetManager = new WiznetManager();
-            rabbitConnectionManager = new MQConnectionManager();
-            deviceManager = new RabbitControlledDeviceManager();
-            commandProcessor = new MasterControlProcessor(deviceManager, messenger);
-            //IPiControlPublisher piController = new PiControlPublisher();
-            mainControl = new MainControl(stateManager, messenger, logManager, wiznetManager, rabbitConnectionManager, deviceManager, commandProcessor);
-            //messenger.Register<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
-            //mainControl.Messenger.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
-            messenger.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
+        //public MainViewModel(IMessenger iMessenger)
+        //{
+        //    //messenger = new Messenger();
+        //    //stateManager = new StateManager();
+        //    //logManager = new LogManager();
+        //    //wiznetManager = new WiznetManager();
+        //    //rabbitConnectionManager = new MQConnectionManager();
+        //    //deviceManager = new RabbitControlledDeviceManager();
+        //    //commandProcessor = new MasterControlProcessor(deviceManager, messenger);
+        //    ////IPiControlPublisher piController = new PiControlPublisher();
+        //    //mainControl = new MainControl(stateManager, messenger, logManager, wiznetManager, rabbitConnectionManager, deviceManager, commandProcessor);
+        //    //messenger.Register<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
+        //    //mainControl.Messenger.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
+        //    messenger.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
 
-        }
+        //}
 
         public override Task Initialize()
         {
 
-            NavigateStart();
+            _ = NavigateStart();
             return base.Initialize();
         }
 
-        private void NavigateStart()
+        private async Task NavigateStart()
         {
-            MasterViewModel = new MenuViewModel(mainControl);
+            //MasterViewModel = new MenuViewModel(messenger);// mainControl);
+            await navService.Navigate<MenuViewModel>();
             //ErrorHandlerViewModel = new ErrorHandlerViewModel(mainControl);
-            mainControl.NavigatePrimaryOverview();
+            //mainControl.NavigatePrimaryOverview();
         }
     }
 }

@@ -20,8 +20,14 @@ namespace HomeMQ.Core
         public override void Initialize()
         {
             //Optional Dependencies
-            //Mvx.IoCProvider.RegisterSingleton(() => new LogManager());
-            //Mvx.IoCProvider.RegisterSingleton(() => new Messenger());
+            //Mvx.IoCProvider.RegisterSingleton<IMessenger>(new Messenger());
+            //Mvx.IoCProvider.RegisterSingleton<ILogManager>(new LogManager());
+
+            //Mvx.IoCProvider.RegisterSingleton<IStateManager>(new StateManager());
+            //Mvx.IoCProvider.RegisterSingleton<IMQConnectionManager>(new MQConnectionManager());
+            //Mvx.IoCProvider.RegisterSingleton< IRabbitControlledManager>(new RabbitControlledDeviceManager());
+            //Mvx.IoCProvider.RegisterType<IMasterControlProcessor, MasterControlProcessor>();
+            //Mvx.IoCProvider.RegisterSingleton<IWiznetManager>(new WiznetManager());
             RegisterAppStart<MainViewModel>();
         }
     }

@@ -5,4 +5,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\SharedProjects\Standard\BaseClasses\BaseClasses.csproj" />
+    <ProjectReference Include="..\..\SharedProjects\Standard\DeviceManagers\DeviceManagers.csproj" />
+    <ProjectReference Include="..\..\SharedProjects\Standard\WiznetControllers\WiznetControllers.csproj" />
+  </ItemGroup>
+
 </Project>

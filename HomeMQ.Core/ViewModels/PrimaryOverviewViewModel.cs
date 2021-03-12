@@ -3,6 +3,7 @@ using BaseViewModels;
 using DeviceManagers;
 using HomeMQ.RabbitMQ.Consumer;
 using MvvmCross;
+using MvvmCross.Navigation;
 using RabbitMQ.Client;
 using RabbitMqManagers;
 using System;
@@ -22,6 +23,7 @@ namespace HomeMQ.Core.ViewModels
         private IMQConnectionManager rabbitConnectionManager;
         private IMasterControlProcessor rabbitCommandProcessor;
         private IRabbitControlledManager deviceManager;
+        private IMvxNavigationService _navigation;
         #endregion
 
         #region Properties
@@ -61,9 +63,10 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public PrimaryOverviewViewModel(IMessenger iMessenger, IWiznetManager wizManager, IMQConnectionManager mqConnections, 
+        public PrimaryOverviewViewModel(IMvxNavigationService nav, IMessenger iMessenger, IWiznetManager wizManager, IMQConnectionManager mqConnections, 
             IMasterControlProcessor processor, IRabbitControlledManager dManager) : base(iMessenger)
         {
+            _navigation = nav;
             WiznetManager = wizManager;
             rabbitConnectionManager = mqConnections;
             rabbitCommandProcessor = processor;

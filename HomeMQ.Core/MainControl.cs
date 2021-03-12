@@ -95,7 +95,7 @@ namespace HomeMQ.Core
                 rabbitConnectionManager.AddFactory(item.ConnectionName, factory);
                 //{ HostName = "192.168.68.109", UserName = "devin", Password = "Ikorgil19" };
             }
-            var firstWiz = new WiznetControlSCPI("169.254.208.100");
+            var firstWiz = new WiznetControlSCPI("169.254.208.100", messenger);
             wiznetManager.AddWiznet(firstWiz);
             var homeFactory = rabbitConnectionManager.FactoriesByName["home"];
             //PiController = new PiControlPublisher(homeFactory, rabbitConnectionManager, "rtsh_topics", "Pi Controller");
@@ -104,16 +104,16 @@ namespace HomeMQ.Core
         #region Methods
         public void NavigatePrimaryOverview()
         {
-            messenger.Send(new ViewUnloadedMessage());
-            messenger.Send(new DetailNavigationMessage(
-                new PrimaryOverviewViewModel(messenger, wiznetManager, rabbitConnectionManager, commandProcessor, deviceManager))
-            );
+            //messenger.Send(new ViewUnloadedMessage());
+            //messenger.Send(new DetailNavigationMessage(
+            //    new PrimaryOverviewViewModel(messenger, wiznetManager, rabbitConnectionManager, commandProcessor, deviceManager))
+            //);
         }
 
         public void NavigateUpgradeDebug()
         {
-            messenger.Send(new ViewUnloadedMessage());
-            messenger.Send(new DetailNavigationMessage(new UpgradeDebugViewModel(messenger)));
+            //messenger.Send(new ViewUnloadedMessage());
+            //messenger.Send(new DetailNavigationMessage(new UpgradeDebugViewModel(messenger)));
         }
 
         //public void NavigatePrimaryOverview()
