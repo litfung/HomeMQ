@@ -20,10 +20,9 @@ namespace HomeMQ.Core.ViewModels
         #region Fields
         bool isDisplayed = true;
         private IWiznetManager _wiznetManager;
-        private IMQConnectionManager rabbitConnectionManager;
+        private IMQFactoryManager rabbitConnectionManager;
         private IMasterControlProcessor rabbitCommandProcessor;
-        private IRabbitControlledManager deviceManager;
-        private IBackgroundHandler _backgroundHandler;
+        private IRabbitControlledManager _deviceManager;
         #endregion
 
         #region Properties
@@ -64,14 +63,17 @@ namespace HomeMQ.Core.ViewModels
 
         #region Constructors
 
-        public PrimaryOverviewViewModel(IBackgroundHandler backgroundHandler, IWiznetManager wiznetManager) : base(backgroundHandler)
+        public PrimaryOverviewViewModel(IBackgroundHandler backgroundHandler, IWiznetManager wiznetManager, IRabbitControlledManager deviceManager) : base(backgroundHandler)
         {
             _backgroundHandler = backgroundHandler;
             _wiznetManager = wiznetManager;
+            _deviceManager = deviceManager;
             foreach (var item in _wiznetManager.AllWiznets)
             {
                 WiznetStatusControls.Add(new WiznetStatusViewModel(_backgroundHandler, (IWiznetPiControl)item));
             }
+
+            RabbitConsumer = new RabbitConsumerViewModel(_backgroundHandler, _deviceManager);
         }
         //public PrimaryOverviewViewModel(IMessenger iMessenger, IWiznetManager wizManager, IMQConnectionManager mqConnections, 
         //    IMasterControlProcessor processor, IRabbitControlledManager dManager) : base(iMessenger)

@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.FirstBlazor", "HomeM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.RabbitMQ.ConsumerTest", "HomeMQ.RabbitMQ.ConsumerTest\HomeMQ.RabbitMQ.ConsumerTest.csproj", "{8785EF6B-5003-4578-A06A-5A192F6811DA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.RabbitMQ.Consumer", "HomeMQ.RabbitMQ.Consumer\HomeMQ.RabbitMQ.Consumer.csproj", "{E80EB3B3-0F14-488C-AC6D-11ADEB119BF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.RabbitMQ.Consumers", "HomeMQ.RabbitMQ.Consumer\HomeMQ.RabbitMQ.Consumers.csproj", "{E80EB3B3-0F14-488C-AC6D-11ADEB119BF4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseViewModels", "..\SharedProjects\Standard\BaseViewModels\BaseViewModels.csproj", "{046694F9-93C6-4D3E-BBC6-9F07ED371645}"
 EndProject
@@ -62,6 +62,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.CoreBlazor", "HomeMQ.BlazorCore\HomeMQ.CoreBlazor.csproj", "{F9F86B70-C59B-4C5B-ADD8-B8E03FBF6E3C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeMQ.FirstWebAPI", "HomeMQ.FirstWebAPI\HomeMQ.FirstWebAPI.csproj", "{58A82530-2FD3-4291-9A3E-85269A303683}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Control.Core", "..\SharedProjects\Standard\MQ\RabbitMQ.Control.Core\RabbitMQ.Control.Core.csproj", "{B1417C2D-E8F7-46CA-926A-A856F1645B4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -193,6 +195,10 @@ Global
 		{58A82530-2FD3-4291-9A3E-85269A303683}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58A82530-2FD3-4291-9A3E-85269A303683}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58A82530-2FD3-4291-9A3E-85269A303683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1417C2D-E8F7-46CA-926A-A856F1645B4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1417C2D-E8F7-46CA-926A-A856F1645B4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1417C2D-E8F7-46CA-926A-A856F1645B4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1417C2D-E8F7-46CA-926A-A856F1645B4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

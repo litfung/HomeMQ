@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\SharedProjects\Standard\BaseClasses\BaseClasses.csproj" />
     <ProjectReference Include="..\..\SharedProjects\Standard\DeviceManagers\DeviceManagers.csproj" />
+    <ProjectReference Include="..\..\SharedProjects\Standard\MQ\RabbitMQ.Control.Core\RabbitMQ.Control.Core.csproj" />
     <ProjectReference Include="..\HomeMQ.Models\HomeMQ.Models.csproj" />
   </ItemGroup>
 

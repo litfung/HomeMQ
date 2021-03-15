@@ -1,11 +1,12 @@
 ﻿using RabbitMQ.Client;
+using RabbitMQ.Control.Core;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace HomeMQ.RabbitMQ.Consumer
 {
-    public class TopicConsumer : DefaultBasicConsumer, ITopicConsumer
+    public abstract class TopicConsumer : DefaultBasicConsumer, ITopicConsumer, IRabbitMQConnection
     {
         #region Fields
 
@@ -15,7 +16,7 @@ namespace HomeMQ.RabbitMQ.Consumer
         public ConsumerSettings Settings { get; set; } = new ConsumerSettings();
         public string ExchangeName { get; set; }
         public List<string> RoutingKeys { get; set; }
-        private IConnection Connection { get; set; }
+        public IConnection Connection { get; set; }
         public Dictionary<string, string> RoutesToQueues { get; set; } = new Dictionary<string, string>();
         #endregion
 
@@ -46,6 +47,17 @@ namespace HomeMQ.RabbitMQ.Consumer
             RoutingKeys = routeKeys;
             Model = Connection.CreateModel();
         }
+
+        //public static TopicConsumer Create(TopicConsumer consumer, IConnectionFactory factory, string exchange, List<string> routeKeys, string consumerName = null)
+        //{
+        //    switch (consumer)
+        //    {
+        //        case MasterControlConsumer:
+        //            return new MasterControlConsumer(factory, exchange, routeKeys, consumerName);
+        //        default:
+        //            return new TopicConsumer(factory, exchange, routeKeys, consumerName);
+        //    }
+        //}
 
         ~TopicConsumer()
         {

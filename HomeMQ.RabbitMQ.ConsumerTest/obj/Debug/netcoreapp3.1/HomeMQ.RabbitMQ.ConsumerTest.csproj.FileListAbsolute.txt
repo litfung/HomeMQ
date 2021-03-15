@@ -15,13 +15,11 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcor
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\HomeMQ.Core.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\HomeMQ.Managers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\HomeMQ.Models.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Consumer.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Publishers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\NetworkDeviceModels.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\RabbitMqManagers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\WiznetControllers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\HomeMQ.Core.pdb
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Consumer.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\BaseClasses.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\BaseViewModels.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\DeviceManagers.pdb
@@ -39,3 +37,7 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\obj\Debug\netcor
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\obj\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.ConsumerTest.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\obj\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.ConsumerTest.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\obj\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.ConsumerTest.genruntimeconfig.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Consumers.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\RabbitMQ.Control.Core.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Consumers.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\RabbitMQ.Control.Core.pdb

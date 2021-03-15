@@ -17,10 +17,7 @@ namespace HomeMQ.Core.ViewModels
     {
         #region Fields
         private ITopicConsumer consumer;
-        private IRabbitControlledManager deviceManager;
-        private IMessenger messenger;
-
-        private IBackgroundHandler _backgroundHandler;
+        private IRabbitControlledManager _deviceManager;
         #endregion
 
         #region Properties
@@ -49,9 +46,10 @@ namespace HomeMQ.Core.ViewModels
         //    Consume();
         //}
 
-        public RabbitConsumerViewModel(IBackgroundHandler backgroundHandler) : base(backgroundHandler)
+        public RabbitConsumerViewModel(IBackgroundHandler backgroundHandler, IRabbitControlledManager deviceManager) : base(backgroundHandler)
         {
-            
+            _deviceManager = deviceManager;
+            _ = OnUpdateView();
         }
         #endregion
 
@@ -59,7 +57,7 @@ namespace HomeMQ.Core.ViewModels
         public override async Task OnUpdateView()
         {
             var vmList = new List<IRabbitControlViewModel>();
-            foreach (var item in deviceManager.AllDevices)
+            foreach (var item in _deviceManager.AllDevices)
             {
                 vmList.Add(new RabbitControlStatusViewModel(_backgroundHandler, item));
             }

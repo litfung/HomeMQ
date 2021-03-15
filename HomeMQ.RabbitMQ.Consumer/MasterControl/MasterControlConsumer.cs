@@ -3,6 +3,7 @@ using DeviceManagers;
 using HomeMQ.Models;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
+using RabbitMQ.Control.Core;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
@@ -10,7 +11,7 @@ using System.Text;
 
 namespace HomeMQ.RabbitMQ.Consumer
 {
-    public class MasterControlConsumer : TopicConsumer, IRabbitConnection
+    public class MasterControlConsumer : TopicConsumer
     {
         //private RabbitControlledDeviceManager RabbitManager = RabbitControlledDeviceManager.Instance;
 

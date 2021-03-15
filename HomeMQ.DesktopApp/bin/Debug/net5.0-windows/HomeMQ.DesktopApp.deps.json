@@ -92,7 +92,7 @@
           "DeviceManagers": "1.0.0",
           "HomeMQ.Managers": "1.0.0",
           "HomeMQ.Models": "1.0.0",
-          "HomeMQ.RabbitMQ.Consumer": "1.0.0",
+          "HomeMQ.RabbitMQ.Consumers": "1.0.0",
           "HomeMQ.RabbitMQ.Publishers": "1.0.0",
           "MvvmCross": "7.1.2",
           "RabbitMQ.Client": "6.2.1",
@@ -123,15 +123,16 @@
           "HomeMQ.Models.dll": {}
         }
       },
-      "HomeMQ.RabbitMQ.Consumer/1.0.0": {
+      "HomeMQ.RabbitMQ.Consumers/1.0.0": {
         "dependencies": {
           "BaseClasses": "1.0.0",
           "DeviceManagers": "1.0.0",
           "HomeMQ.Models": "1.0.0",
-          "RabbitMQ.Client": "6.2.1"
+          "RabbitMQ.Client": "6.2.1",
+          "RabbitMQ.Control.Core": "1.0.0"
         },
         "runtime": {
-          "HomeMQ.RabbitMQ.Consumer.dll": {}
+          "HomeMQ.RabbitMQ.Consumers.dll": {}
         }
       },
       "HomeMQ.RabbitMQ.Publishers/1.0.0": {
@@ -139,7 +140,7 @@
           "HomeMQ.Models": "1.0.0",
           "Newtonsoft.Json": "12.0.3",
           "RabbitMQ.Client": "6.2.1",
-          "RabbitMqManagers": "1.0.0"
+          "RabbitMQ.Control.Core": "1.0.0"
         },
         "runtime": {
           "HomeMQ.RabbitMQ.Publishers.dll": {}
@@ -153,10 +154,21 @@
           "NetworkDeviceModels.dll": {}
         }
       },
+      "RabbitMQ.Control.Core/1.0.0": {
+        "dependencies": {
+          "RabbitMQ.Client": "6.2.1"
+        },
+        "runtime": {
+          "RabbitMQ.Control.Core.dll": {}
+        }
+      },
       "RabbitMqManagers/1.0.0": {
         "dependencies": {
           "HomeMQ.Managers": "1.0.0",
-          "RabbitMQ.Client": "6.2.1"
+          "HomeMQ.RabbitMQ.Consumers": "1.0.0",
+          "HomeMQ.RabbitMQ.Publishers": "1.0.0",
+          "RabbitMQ.Client": "6.2.1",
+          "RabbitMQ.Control.Core": "1.0.0"
         },
         "runtime": {
           "RabbitMqManagers.dll": {}
@@ -269,7 +281,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "HomeMQ.RabbitMQ.Consumer/1.0.0": {
+    "HomeMQ.RabbitMQ.Consumers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -280,6 +292,11 @@
       "sha512": ""
     },
     "NetworkDeviceModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RabbitMQ.Control.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

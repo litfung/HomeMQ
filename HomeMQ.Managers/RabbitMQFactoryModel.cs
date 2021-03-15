@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HomeMQ.Managers
 {
-    public class RabbitMQConfigurationModel
+    public class RabbitMQFactoryModel
     {
         public string ConnectionName { get; set; }
         public string UserName { get; set; }

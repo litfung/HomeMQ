@@ -200,6 +200,19 @@
           "bin/placeholder/NetworkDeviceModels.dll": {}
         }
       },
+      "RabbitMQ.Control.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "RabbitMQ.Client": "6.2.1"
+        },
+        "compile": {
+          "bin/placeholder/RabbitMQ.Control.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RabbitMQ.Control.Core.dll": {}
+        }
+      },
       "WiznetControllers/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -759,6 +772,11 @@
       "path": "../../SharedProjects/Standard/NetworkDeviceModels/NetworkDeviceModels.csproj",
       "msbuildProject": "../../SharedProjects/Standard/NetworkDeviceModels/NetworkDeviceModels.csproj"
     },
+    "RabbitMQ.Control.Core/1.0.0": {
+      "type": "project",
+      "path": "../../SharedProjects/Standard/MQ/RabbitMQ.Control.Core/RabbitMQ.Control.Core.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/MQ/RabbitMQ.Control.Core/RabbitMQ.Control.Core.csproj"
+    },
     "WiznetControllers/1.0.0": {
       "type": "project",
       "path": "../../SharedProjects/Standard/WiznetControllers/WiznetControllers.csproj",
@@ -771,7 +789,8 @@
       "DeviceManagers >= 1.0.0",
       "HomeMQ.Models >= 1.0.0",
       "NETStandard.Library >= 2.0.3",
-      "RabbitMQ.Client >= 6.2.1"
+      "RabbitMQ.Client >= 6.2.1",
+      "RabbitMQ.Control.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -781,9 +800,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Consumer\\HomeMQ.RabbitMQ.Consumer.csproj",
-      "projectName": "HomeMQ.RabbitMQ.Consumer",
-      "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Consumer\\HomeMQ.RabbitMQ.Consumer.csproj",
+      "projectUniqueName": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Consumer\\HomeMQ.RabbitMQ.Consumers.csproj",
+      "projectName": "HomeMQ.RabbitMQ.Consumers",
+      "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Consumer\\HomeMQ.RabbitMQ.Consumers.csproj",
       "packagesPath": "C:\\Users\\devin\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Consumer\\obj\\",
       "projectStyle": "PackageReference",
@@ -814,6 +833,9 @@
             },
             "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\DeviceManagers\\DeviceManagers.csproj": {
               "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\DeviceManagers\\DeviceManagers.csproj"
+            },
+            "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\MQ\\RabbitMQ.Control.Core\\RabbitMQ.Control.Core.csproj": {
+              "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\MQ\\RabbitMQ.Control.Core\\RabbitMQ.Control.Core.csproj"
             }
           }
         }

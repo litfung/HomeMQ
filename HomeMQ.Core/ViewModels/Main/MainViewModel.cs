@@ -26,6 +26,7 @@ namespace HomeMQ.Core.ViewModels
         IHomeStateManager _stateManager;
         ILogManager _logManager;
         IWiznetManager _wiznetManager;
+        IMQFactoryManager _mqFactoryManager;
         IMQConnectionManager _mqConnectionManager;
         IRabbitControlledManager _rabbitDeviceTracker;
 
@@ -111,13 +112,11 @@ namespace HomeMQ.Core.ViewModels
 
         void InitializeRabbitStuff()
         {
-            _mqConnectionManager = new MQConnectionManager(_stateManager);
-            var exchangeName = "rtsh_topics";
-            var factory = _mqConnectionManager.FactoriesByName["home"];
-            var routeKey = "master.control.*";
-            var processor = new MasterControlProcessor(_rabbitDeviceTracker, _backgroundHandler);
-            var consumer = new MasterControlConsumer(factory, processor, exchangeName, routeKey);
-            _mqConnectionManager.AddConnection(consumer);
+            _mqFactoryManager = new MQFactoryManager(_stateManager);
+            _rabbitDeviceTracker = new RabbitControlledDeviceManager();
+            _mqConnectionManager = new MQConnectionManager(_stateManager, _mqFactoryManager, _backgroundHandler, _rabbitDeviceTracker);
+            
+
 
         }
 
@@ -170,7 +169,7 @@ namespace HomeMQ.Core.ViewModels
         public void NavigateToPrimaryOverview()
         {
 
-            _backgroundHandler.SendMessage(new DetailNavigationMessage(new PrimaryOverviewViewModel(_backgroundHandler, _wiznetManager)));
+            _backgroundHandler.SendMessage(new DetailNavigationMessage(new PrimaryOverviewViewModel(_backgroundHandler, _wiznetManager, _rabbitDeviceTracker)));
         }
     }
 }

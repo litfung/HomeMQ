@@ -10,22 +10,14 @@ namespace HomeMQ.Managers
 {
     public class HomeStateManager : IHomeStateManager
     {
-        //#region Singleton
-        //private static readonly Lazy<StateManager> instance = new Lazy<StateManager>();
-        //public static StateManager Instance => instance.Value;
-        //public StateManager()
-        //{
-            
-        //}
-        //#endregion
-
         #region Fields
         private const string stateFilename = "home_control.json";
         #endregion
 
         #region Properties
         //public SavedStateModel State { get; private set; }
-        public List<RabbitMQConfigurationModel> RabbitConnections { get; private set; } = new List<RabbitMQConfigurationModel>();
+        public List<RabbitMQFactoryModel> RabbitFactories { get; private set; } = new List<RabbitMQFactoryModel>();
+        public List<RabbitMQConnectionModel> RabbitConnections { get; set; } = new List<RabbitMQConnectionModel>();
         public JObject State { get; set; }
         #endregion
 
@@ -39,24 +31,35 @@ namespace HomeMQ.Managers
         #region Methods
         public void LoadState()
         {
-            var testConfig = new RabbitMQConfigurationModel
+            var testConfig = new RabbitMQFactoryModel
             {
                 ConnectionName = "home",
                 UserName = "devin",
                 Password = "Ikorgil19",
                 Hostname = "192.168.68.109"
             };
+            RabbitFactories.Add(testConfig);
 
-            //var tmp = JObject.FromObject(testConfig);//    JsonConvert.SerializeObject(testConfig);
-            //State = tmp;
-            RabbitConnections.Add(testConfig);
+            var masterConsumer = new RabbitMQConnectionModel
+            {
+                FactoryName = "home",
+                ConnectionName = "Master consumer",
+                ExchangeName = "rtsh_topics",
+                RabbitMQDirection = RabbitMQDirection.Consumer,
+                //ConsumerType = ConsumerType.MasterControl
+            };
 
-            //var wiznetConfig = new WiznetSCPIConfigurationModel
-            //var 
+            var piControl = new RabbitMQConnectionModel
+            {
+                FactoryName = "home",
+                ConnectionName = "pi controller 1",
+                ExchangeName = "rtsh_topics",
+                RabbitMQDirection = RabbitMQDirection.Publisher
+            };
 
+            RabbitConnections.Add(masterConsumer);
+            RabbitConnections.Add(piControl);
         }
-
-
         #endregion
     }
 }

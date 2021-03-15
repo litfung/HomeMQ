@@ -132,21 +132,6 @@
           "bin/placeholder/BaseClasses.dll": {}
         }
       },
-      "HomeMQ.Managers/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "BaseClasses": "1.0.0",
-          "HomeMQ.Models": "1.0.0",
-          "Newtonsoft.Json": "12.0.3"
-        },
-        "compile": {
-          "bin/placeholder/HomeMQ.Managers.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/HomeMQ.Managers.dll": {}
-        }
-      },
       "HomeMQ.Models/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -175,18 +160,17 @@
           "bin/placeholder/NetworkDeviceModels.dll": {}
         }
       },
-      "RabbitMqManagers/1.0.0": {
+      "RabbitMQ.Control.Core/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "HomeMQ.Managers": "1.0.0",
           "RabbitMQ.Client": "6.2.1"
         },
         "compile": {
-          "bin/placeholder/RabbitMqManagers.dll": {}
+          "bin/placeholder/RabbitMQ.Control.Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RabbitMqManagers.dll": {}
+          "bin/placeholder/RabbitMQ.Control.Core.dll": {}
         }
       }
     }
@@ -668,11 +652,6 @@
       "path": "../../SharedProjects/Standard/BaseClasses/BaseClasses.csproj",
       "msbuildProject": "../../SharedProjects/Standard/BaseClasses/BaseClasses.csproj"
     },
-    "HomeMQ.Managers/1.0.0": {
-      "type": "project",
-      "path": "../HomeMQ.Managers/HomeMQ.Managers.csproj",
-      "msbuildProject": "../HomeMQ.Managers/HomeMQ.Managers.csproj"
-    },
     "HomeMQ.Models/1.0.0": {
       "type": "project",
       "path": "../HomeMQ.Models/HomeMQ.Models.csproj",
@@ -683,10 +662,10 @@
       "path": "../../SharedProjects/Standard/NetworkDeviceModels/NetworkDeviceModels.csproj",
       "msbuildProject": "../../SharedProjects/Standard/NetworkDeviceModels/NetworkDeviceModels.csproj"
     },
-    "RabbitMqManagers/1.0.0": {
+    "RabbitMQ.Control.Core/1.0.0": {
       "type": "project",
-      "path": "../../SharedProjects/Standard/RabbitMqManagers/RabbitMqManagers.csproj",
-      "msbuildProject": "../../SharedProjects/Standard/RabbitMqManagers/RabbitMqManagers.csproj"
+      "path": "../../SharedProjects/Standard/MQ/RabbitMQ.Control.Core/RabbitMQ.Control.Core.csproj",
+      "msbuildProject": "../../SharedProjects/Standard/MQ/RabbitMQ.Control.Core/RabbitMQ.Control.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -695,7 +674,7 @@
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 12.0.3",
       "RabbitMQ.Client >= 6.2.1",
-      "RabbitMqManagers >= 1.0.0"
+      "RabbitMQ.Control.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -733,8 +712,8 @@
             "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj": {
               "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj"
             },
-            "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\RabbitMqManagers\\RabbitMqManagers.csproj": {
-              "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\RabbitMqManagers\\RabbitMqManagers.csproj"
+            "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\MQ\\RabbitMQ.Control.Core\\RabbitMQ.Control.Core.csproj": {
+              "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\MQ\\RabbitMQ.Control.Core\\RabbitMQ.Control.Core.csproj"
             }
           }
         }

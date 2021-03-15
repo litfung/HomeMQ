@@ -8,6 +8,7 @@ namespace HomeMQ.Managers
     public interface IHomeStateManager : IStateManager
     {
 
-        List<RabbitMQConfigurationModel> RabbitConnections { get; }
+        List<RabbitMQFactoryModel> RabbitFactories { get; }
+        List<RabbitMQConnectionModel> RabbitConnections { get; }
     }
 }

@@ -41,7 +41,7 @@ namespace HomeMQ.FirstBlazor
             services.AddSingleton<IMessenger, Messenger>();
             services.AddSingleton<ILogManager, LogManager>();
             services.AddSingleton<IStateManager, HomeStateManager>();
-            services.AddSingleton<IMQConnectionManager, MQConnectionManager>();
+            services.AddSingleton<IMQFactoryManager, MQFactoryManager>();
             services.AddSingleton<IRabbitControlledManager, RabbitControlledDeviceManager>();
             services.AddTransient<IMasterControlProcessor, MasterControlProcessor>();
             services.AddSingleton<WeatherForecastService>();
@@ -51,7 +51,7 @@ namespace HomeMQ.FirstBlazor
             services.AddSingleton<IWiznetManager, WiznetManager>();
             //services.AddScoped<WiznetStatusViewModel>();
             services.AddScoped<CounterViewModel>();
-            services.AddSingleton<IMainControl, MainControl>();
+            //services.AddSingleton<IMainControl, MainControl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

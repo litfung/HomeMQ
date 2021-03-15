@@ -15,7 +15,6 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\De
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\HomeMQ.Core.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\HomeMQ.Managers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\HomeMQ.Models.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\HomeMQ.RabbitMQ.Consumer.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\HomeMQ.RabbitMQ.Publishers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\NetworkDeviceModels.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\RabbitMqManagers.dll
@@ -30,7 +29,6 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\Ba
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\DeviceManagers.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\HomeMQ.Managers.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\HomeMQ.Models.pdb
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\HomeMQ.RabbitMQ.Consumer.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\HomeMQ.RabbitMQ.Publishers.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\NetworkDeviceModels.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\RabbitMqManagers.pdb
@@ -79,3 +77,7 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Ho
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\HomeMQ.DesktopApp.genruntimeconfig.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\ErrorHandlerView.g.cs
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\ErrorHandlerView.baml
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\HomeMQ.RabbitMQ.Consumers.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\RabbitMQ.Control.Core.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\HomeMQ.RabbitMQ.Consumers.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\RabbitMQ.Control.Core.pdb

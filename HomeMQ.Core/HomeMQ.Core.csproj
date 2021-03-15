@@ -17,7 +17,7 @@
     <ProjectReference Include="..\..\SharedProjects\Standard\WiznetControllers\WiznetControllers.csproj" />
     <ProjectReference Include="..\HomeMQ.Managers\HomeMQ.Managers.csproj" />
     <ProjectReference Include="..\HomeMQ.Models\HomeMQ.Models.csproj" />
-    <ProjectReference Include="..\HomeMQ.RabbitMQ.Consumer\HomeMQ.RabbitMQ.Consumer.csproj" />
+    <ProjectReference Include="..\HomeMQ.RabbitMQ.Consumer\HomeMQ.RabbitMQ.Consumers.csproj" />
     <ProjectReference Include="..\HomeMQ.RabbitMQ.Publishers\HomeMQ.RabbitMQ.Publishers.csproj" />
   </ItemGroup>
 

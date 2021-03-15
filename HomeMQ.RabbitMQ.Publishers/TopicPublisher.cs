@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using RabbitMQ.Client;
+using RabbitMQ.Control.Core;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace HomeMQ.RabbitMQ.Publishers
 {
-    public class TopicPublisher
+    public class TopicPublisher : IRabbitMQConnection
     {
         #region Fields
         private DefaultContractResolver contractResolver;
@@ -21,7 +22,7 @@ namespace HomeMQ.RabbitMQ.Publishers
         #region Properties
         public string ExchangeName { get; set; }
         public List<string> RoutingKeys { get; set; }
-        private IConnection Connection { get; set; }
+        public IConnection Connection { get; set; }
         public Dictionary<string, string> RoutesToQueues { get; set; } = new Dictionary<string, string>();
         public IModel Channel { get; set; }
 

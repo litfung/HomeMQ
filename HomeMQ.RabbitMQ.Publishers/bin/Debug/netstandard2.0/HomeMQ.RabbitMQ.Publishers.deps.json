@@ -13,7 +13,7 @@
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.3",
           "RabbitMQ.Client": "6.2.1",
-          "RabbitMqManagers": "1.0.0"
+          "RabbitMQ.Control.Core": "1.0.0"
         },
         "runtime": {
           "HomeMQ.RabbitMQ.Publishers.dll": {}
@@ -117,16 +117,6 @@
           "BaseClasses.dll": {}
         }
       },
-      "HomeMQ.Managers/1.0.0": {
-        "dependencies": {
-          "BaseClasses": "1.0.0",
-          "HomeMQ.Models": "1.0.0",
-          "Newtonsoft.Json": "12.0.3"
-        },
-        "runtime": {
-          "HomeMQ.Managers.dll": {}
-        }
-      },
       "HomeMQ.Models/1.0.0": {
         "dependencies": {
           "BaseClasses": "1.0.0",
@@ -145,13 +135,12 @@
           "NetworkDeviceModels.dll": {}
         }
       },
-      "RabbitMqManagers/1.0.0": {
+      "RabbitMQ.Control.Core/1.0.0": {
         "dependencies": {
-          "HomeMQ.Managers": "1.0.0",
           "RabbitMQ.Client": "6.2.1"
         },
         "runtime": {
-          "RabbitMqManagers.dll": {}
+          "RabbitMQ.Control.Core.dll": {}
         }
       }
     }
@@ -244,11 +233,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "HomeMQ.Managers/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "HomeMQ.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -259,7 +243,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "RabbitMqManagers/1.0.0": {
+    "RabbitMQ.Control.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
