@@ -9,7 +9,7 @@ namespace HomeMQ.Managers
     {
         //List<RabbitMQConfigurationModel> RabbitConnections { get; }
         //SavedStateModel State { get; }
-        JObject State { get; }
+        //JObject State { get; }
         void LoadState();
     }
 }

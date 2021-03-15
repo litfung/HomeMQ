@@ -13,9 +13,16 @@ namespace HomeMQ.RabbitMQ.Consumer
 {
     public class MasterControlConsumer : TopicConsumer
     {
-        //private RabbitControlledDeviceManager RabbitManager = RabbitControlledDeviceManager.Instance;
 
+        #region Fields
         private IMasterControlProcessor responseProcessor;
+        #endregion
+
+        #region Properties
+
+        #endregion
+
+        #region Constructors
         public MasterControlConsumer(IConnection conn, IMasterControlProcessor processor, string exchange, string routeKey) : base(conn, exchange, routeKey)
         {
             responseProcessor = processor;
@@ -25,7 +32,9 @@ namespace HomeMQ.RabbitMQ.Consumer
         {
             responseProcessor = processor;
         }
+        #endregion
 
+        #region Methods
         public override void HandleBasicDeliver(string consumerTag, ulong deliveryTag, bool redelivered, string exchange, string routingKey, IBasicProperties properties, ReadOnlyMemory<byte> body)
         {
             Model.BasicAck(deliveryTag, false);
@@ -41,7 +50,7 @@ namespace HomeMQ.RabbitMQ.Consumer
                 HandleResponse(bodyString);
             }
 
-            
+
         }
 
         private void HandleResponse(string reponseJsonString)
@@ -58,5 +67,11 @@ namespace HomeMQ.RabbitMQ.Consumer
             responseProcessor.Process(jo);
             //Console.WriteLine();
         }
+        #endregion
+
+
+
+
+
     }
 }

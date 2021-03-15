@@ -40,15 +40,20 @@ namespace HomeMQ.FirstBlazor
             services.AddServerSideBlazor();
             services.AddSingleton<IMessenger, Messenger>();
             services.AddSingleton<ILogManager, LogManager>();
+            services.AddSingleton<IHomeStateManager, HomeStateManager>();
             services.AddSingleton<IStateManager, HomeStateManager>();
+            services.AddSingleton<IBackgroundHandler, SimpleBackgroundHandler>();
+            services.AddSingleton<IWiznetManager, WiznetManager>();
+
             services.AddSingleton<IMQFactoryManager, MQFactoryManager>();
             services.AddSingleton<IRabbitControlledManager, RabbitControlledDeviceManager>();
             services.AddTransient<IMasterControlProcessor, MasterControlProcessor>();
+            services.AddSingleton<IMQConnectionManager, MQConnectionManager>();
             services.AddSingleton<WeatherForecastService>();
             services.AddTransient<IDataAccess, HomeDataAccess>();
             //services.AddTransient<IPeopleData, PeopleData>();
             services.AddTransient<ICounterService, CounterService>();
-            services.AddSingleton<IWiznetManager, WiznetManager>();
+            
             //services.AddScoped<WiznetStatusViewModel>();
             services.AddScoped<CounterViewModel>();
             //services.AddSingleton<IMainControl, MainControl>();

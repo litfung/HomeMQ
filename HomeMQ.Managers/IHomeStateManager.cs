@@ -10,5 +10,6 @@ namespace HomeMQ.Managers
 
         List<RabbitMQFactoryModel> RabbitFactories { get; }
         List<RabbitMQConnectionModel> RabbitConnections { get; }
+        List<WiznetConnectionModel> WiznetConnections { get; }
     }
 }

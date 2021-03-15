@@ -9,9 +9,7 @@ namespace HomeMQ.RabbitMQ.Consumer
 {
     public class MasterControlProcessor : IMasterControlProcessor
     {
-
         #region Fields
-        //private RabbitControlledDeviceManager Manager => RabbitControlledDeviceManager.Instance;
         private IRabbitControlledManager _rabbitTracker;
         private IBackgroundHandler _backgroundHandler;
         #endregion

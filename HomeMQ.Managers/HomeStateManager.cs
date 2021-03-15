@@ -3,6 +3,8 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +20,9 @@ namespace HomeMQ.Managers
         //public SavedStateModel State { get; private set; }
         public List<RabbitMQFactoryModel> RabbitFactories { get; private set; } = new List<RabbitMQFactoryModel>();
         public List<RabbitMQConnectionModel> RabbitConnections { get; set; } = new List<RabbitMQConnectionModel>();
-        public JObject State { get; set; }
+        public List<WiznetConnectionModel> WiznetConnections { get; set; } = new List<WiznetConnectionModel>();
+        //public JObject State { get; set; }
+
         #endregion
 
         #region Constructors
@@ -30,6 +34,29 @@ namespace HomeMQ.Managers
 
         #region Methods
         public void LoadState()
+        {
+            //SimpleLoad();
+            //return LoadFromJson();
+        }
+
+        public static HomeStateManager StaticLoadState()
+        {
+            //SimpleLoad();
+            return LoadFromJson();
+        }
+
+        private static HomeStateManager LoadFromJson()
+        {
+            var filePath = new FileInfo($@"{AppDomain.CurrentDomain.BaseDirectory}config.json");
+            using (var file = File.OpenText(filePath.FullName))
+            {
+                var serializer = new JsonSerializer();
+                var tmp = (HomeStateManager)serializer.Deserialize(file, typeof(HomeStateManager));
+                return tmp;
+            }
+        }
+
+        private void SimpleLoad()
         {
             var testConfig = new RabbitMQFactoryModel
             {
@@ -56,9 +83,27 @@ namespace HomeMQ.Managers
                 ExchangeName = "rtsh_topics",
                 RabbitMQDirection = RabbitMQDirection.Publisher
             };
-
             RabbitConnections.Add(masterConsumer);
             RabbitConnections.Add(piControl);
+
+            var firstWiz = new WiznetConnectionModel
+            {
+                IPAddress = "169.254.208.100"
+            };
+            WiznetConnections.Add(firstWiz);
+
+            SaveState();
+        }
+
+        private void SaveState()
+        {
+            var filePath = new FileInfo($@"{AppDomain.CurrentDomain.BaseDirectory}config2.json");
+
+            using (var file = File.CreateText(filePath.FullName))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, this);
+            }
         }
         #endregion
     }

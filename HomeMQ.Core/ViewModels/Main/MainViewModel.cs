@@ -81,7 +81,8 @@ namespace HomeMQ.Core.ViewModels
 
         public MainViewModel()// IBackgroundHandler backgroundHandler)
         {
-
+            //_stateManager = new HomeStateManager();
+            _stateManager = HomeStateManager.StaticLoadState();
             InitializeBackgroundHandler();
             InitializeWiznetStuff();
             InitializeRabbitStuff();
@@ -93,7 +94,7 @@ namespace HomeMQ.Core.ViewModels
         {
             _messenger = new Messenger();
             _logManager = new LogManager();
-            _stateManager = new HomeStateManager();
+            
             _backgroundHandler = new SimpleBackgroundHandler(_messenger, _logManager);
             _backgroundHandler.RegisterMessage<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
             _backgroundHandler.RegisterMessage<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
@@ -104,9 +105,8 @@ namespace HomeMQ.Core.ViewModels
 
         void InitializeWiznetStuff()
         {
-            _wiznetManager = new WiznetManager(_stateManager);
-            var firstWiz = new WiznetControlSCPI("169.254.208.100", _backgroundHandler);
-            _wiznetManager.AddWiznet(firstWiz);
+            _wiznetManager = new WiznetManager(_stateManager, _backgroundHandler);
+
 
         }
 
@@ -115,26 +115,7 @@ namespace HomeMQ.Core.ViewModels
             _mqFactoryManager = new MQFactoryManager(_stateManager);
             _rabbitDeviceTracker = new RabbitControlledDeviceManager();
             _mqConnectionManager = new MQConnectionManager(_stateManager, _mqFactoryManager, _backgroundHandler, _rabbitDeviceTracker);
-            
-
-
         }
-
-        //public MainViewModel()
-        //{
-        //    stateManager = StateManager.Instance;
-        //    messenger = messenger;
-        //    logManager = new LogManager(messenger);
-        //    wiznetManager = new WiznetManager(logManager);//.Instance;
-        //    rabbitConnectionManager = MQConnectionManager.Instance;
-        //    deviceManager = RabbitControlledDeviceManager.Instance;
-        //    commandProcessor = new MasterControlProcessor();
-        //    mainControl = new MainControl(stateManager,
-        //        messenger, logManager, wiznetManager, rabbitConnectionManager, deviceManager, commandProcessor, piController);
-        //    messenger.Register<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
-        //    messenger.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
-        //}
-
         //public MainViewModel(IMessenger iMessenger)
         //{
         //    //messenger = new Messenger();
@@ -162,13 +143,13 @@ namespace HomeMQ.Core.ViewModels
         private async Task NavigateStart()
         {
             MasterViewModel = new MenuViewModel(this);// mainControl);
+            NavigateToPrimaryOverview();
             //ErrorHandlerViewModel = new ErrorHandlerViewModel(mainControl);
             //mainControl.NavigatePrimaryOverview();
         }
 
         public void NavigateToPrimaryOverview()
         {
-
             _backgroundHandler.SendMessage(new DetailNavigationMessage(new PrimaryOverviewViewModel(_backgroundHandler, _wiznetManager, _rabbitDeviceTracker)));
         }
     }
