@@ -23,9 +23,13 @@ namespace HomeMQ.Core.ViewModels
         IBackgroundHandler _backgroundHandler;
         //private IMvxNavigationService navService;
         IMessenger _messenger;
-        IStateManager _stateManager;
+        IHomeStateManager _stateManager;
         ILogManager _logManager;
         IWiznetManager _wiznetManager;
+        IMQConnectionManager _mqConnectionManager;
+        IRabbitControlledManager _rabbitDeviceTracker;
+
+
         //MQConnectionManager rabbitConnectionManager;
         //IRabbitControlledManager deviceManager;
         //IMasterControlProcessor commandProcessor;
@@ -79,14 +83,16 @@ namespace HomeMQ.Core.ViewModels
 
             InitializeBackgroundHandler();
             InitializeWiznetStuff();
-            
+            InitializeRabbitStuff();
+
+
         }
 
         void InitializeBackgroundHandler()
         {
             _messenger = new Messenger();
             _logManager = new LogManager();
-            _stateManager = new StateManager();
+            _stateManager = new HomeStateManager();
             _backgroundHandler = new SimpleBackgroundHandler(_messenger, _logManager);
             _backgroundHandler.RegisterMessage<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
             _backgroundHandler.RegisterMessage<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
@@ -97,9 +103,21 @@ namespace HomeMQ.Core.ViewModels
 
         void InitializeWiznetStuff()
         {
-            _wiznetManager = new WiznetManager();
+            _wiznetManager = new WiznetManager(_stateManager);
             var firstWiz = new WiznetControlSCPI("169.254.208.100", _backgroundHandler);
             _wiznetManager.AddWiznet(firstWiz);
+
+        }
+
+        void InitializeRabbitStuff()
+        {
+            _mqConnectionManager = new MQConnectionManager(_stateManager);
+            var exchangeName = "rtsh_topics";
+            var factory = _mqConnectionManager.FactoriesByName["home"];
+            var routeKey = "master.control.*";
+            var processor = new MasterControlProcessor(_rabbitDeviceTracker, _backgroundHandler);
+            var consumer = new MasterControlConsumer(factory, processor, exchangeName, routeKey);
+            _mqConnectionManager.AddConnection(consumer);
 
         }
 

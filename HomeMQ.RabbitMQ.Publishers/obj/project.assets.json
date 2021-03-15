@@ -132,6 +132,21 @@
           "bin/placeholder/BaseClasses.dll": {}
         }
       },
+      "HomeMQ.Managers/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BaseClasses": "1.0.0",
+          "HomeMQ.Models": "1.0.0",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "bin/placeholder/HomeMQ.Managers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HomeMQ.Managers.dll": {}
+        }
+      },
       "HomeMQ.Models/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -164,6 +179,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "HomeMQ.Managers": "1.0.0",
           "RabbitMQ.Client": "6.2.1"
         },
         "compile": {
@@ -651,6 +667,11 @@
       "type": "project",
       "path": "../../SharedProjects/Standard/BaseClasses/BaseClasses.csproj",
       "msbuildProject": "../../SharedProjects/Standard/BaseClasses/BaseClasses.csproj"
+    },
+    "HomeMQ.Managers/1.0.0": {
+      "type": "project",
+      "path": "../HomeMQ.Managers/HomeMQ.Managers.csproj",
+      "msbuildProject": "../HomeMQ.Managers/HomeMQ.Managers.csproj"
     },
     "HomeMQ.Models/1.0.0": {
       "type": "project",

@@ -470,6 +470,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "HomeMQ.Managers": "1.0.0",
           "HomeMQ.Models": "1.0.0",
           "NetworkDeviceModels": "1.0.0",
           "WiznetControllers": "1.0.0"
@@ -612,6 +613,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "HomeMQ.Managers": "1.0.0",
           "RabbitMQ.Client": "6.2.1"
         },
         "compile": {
@@ -1790,6 +1792,7 @@
       "HomeMQ.Core >= 1.0.0",
       "HomeMQ.CoreBlazor >= 1.0.0",
       "HomeMQ.DapperCore >= 1.0.0",
+      "HomeMQ.Managers >= 1.0.0",
       "HomeMQ.Models >= 1.0.0",
       "WiznetControllers >= 1.0.0"
     ]
@@ -1834,6 +1837,9 @@
             },
             "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Core\\HomeMQ.DapperCore.csproj": {
               "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Dapper.Core\\HomeMQ.DapperCore.csproj"
+            },
+            "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Managers\\HomeMQ.Managers.csproj": {
+              "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Managers\\HomeMQ.Managers.csproj"
             },
             "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj": {
               "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj"

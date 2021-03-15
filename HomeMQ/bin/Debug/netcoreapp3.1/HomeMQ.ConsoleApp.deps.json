@@ -36,6 +36,14 @@
           }
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
       "System.ComponentModel.Annotations/5.0.0": {
         "runtime": {
           "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {
@@ -59,12 +67,23 @@
       },
       "DeviceManagers/1.0.0": {
         "dependencies": {
+          "HomeMQ.Managers": "1.0.0",
           "HomeMQ.Models": "1.0.0",
           "NetworkDeviceModels": "1.0.0",
           "WiznetControllers": "1.0.0"
         },
         "runtime": {
           "DeviceManagers.dll": {}
+        }
+      },
+      "HomeMQ.Managers/1.0.0": {
+        "dependencies": {
+          "BaseClasses": "1.0.0",
+          "HomeMQ.Models": "1.0.0",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "HomeMQ.Managers.dll": {}
         }
       },
       "HomeMQ.Models/1.0.0": {
@@ -117,6 +136,13 @@
       "path": "mvvmcross/7.1.2",
       "hashPath": "mvvmcross.7.1.2.nupkg.sha512"
     },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
     "System.ComponentModel.Annotations/5.0.0": {
       "type": "package",
       "serviceable": true,
@@ -137,6 +163,11 @@
       "sha512": ""
     },
     "DeviceManagers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HomeMQ.Managers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

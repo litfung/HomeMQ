@@ -26,3 +26,6 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ\bin\Debug\netcoreapp3.1\WiznetControll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ\bin\Debug\netcoreapp3.1\HomeMQ.Models.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ\bin\Debug\netcoreapp3.1\NetworkDeviceModels.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ\obj\Debug\netcoreapp3.1\HomeMQ.ConsoleApp.csproj.CopyComplete
+C:\Users\devin\source\repos\HomeMQ\HomeMQ\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ\bin\Debug\netcoreapp3.1\HomeMQ.Managers.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ\bin\Debug\netcoreapp3.1\HomeMQ.Managers.pdb

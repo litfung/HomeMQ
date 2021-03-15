@@ -20,6 +20,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WiznetControllers;
 
+
 namespace HomeMQ.FirstBlazor
 {
     public class Startup
@@ -39,7 +40,7 @@ namespace HomeMQ.FirstBlazor
             services.AddServerSideBlazor();
             services.AddSingleton<IMessenger, Messenger>();
             services.AddSingleton<ILogManager, LogManager>();
-            services.AddSingleton<IStateManager, StateManager>();
+            services.AddSingleton<IStateManager, HomeStateManager>();
             services.AddSingleton<IMQConnectionManager, MQConnectionManager>();
             services.AddSingleton<IRabbitControlledManager, RabbitControlledDeviceManager>();
             services.AddTransient<IMasterControlProcessor, MasterControlProcessor>();

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "GhMup8Q4jCicsG0fDQY7eI2nMmuzFuNJlzfBn1ZgaSkPEfto30bLT/1hvyP2sxCiPJ3q+bY3O02BrvaWedJdrw==",
+  "dgSpecHash": "Jzl06XePRCxb8S5CHV+zvzBZs2JokjbOsiYzpktPE7qQfx2SoZTscODh/AL0nuvsS6JhuaGENtDWb7HpQCOgpg==",
   "success": true,
   "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ\\HomeMQ.ConsoleApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\devin\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\mvvmcross\\7.1.2\\mvvmcross.7.1.2.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
   ],

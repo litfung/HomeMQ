@@ -31,9 +31,11 @@ namespace HomeMQ.RabbitMQ.ConsumerTest
             var exchangeName = "rtsh_topics";
             var routeKey = "master.control.*";
             var messenger = new Messenger();
+            var logManager = new LogManager();
+            var backgroundHandler = new SimpleBackgroundHandler(messenger, logManager);
 
             var rabbitManager = new RabbitControlledDeviceManager();
-            var mp = new MasterControlProcessor(rabbitManager, messenger);
+            var mp = new MasterControlProcessor(rabbitManager, backgroundHandler);
 
             var firstConsumer = new MasterControlConsumer(conn, null, exchangeName, routeKey).WithPrefetchCount(100);
             firstConsumer.Consume();

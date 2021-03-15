@@ -12,8 +12,8 @@ namespace HomeMQ.RabbitMQ.Consumer
 
         #region Fields
         //private RabbitControlledDeviceManager Manager => RabbitControlledDeviceManager.Instance;
-        private IRabbitControlledManager manager;
-        private IMessenger messenger;
+        private IRabbitControlledManager _rabbitTracker;
+        private IBackgroundHandler _backgroundHandler;
         #endregion
 
         #region Properties
@@ -21,10 +21,10 @@ namespace HomeMQ.RabbitMQ.Consumer
         #endregion
 
         #region Constructors
-        public MasterControlProcessor(IRabbitControlledManager iManager, IMessenger iMessenger)
+        public MasterControlProcessor(IRabbitControlledManager rabbitTracker, IBackgroundHandler backgroundHandler)
         {
-            manager = iManager;
-            messenger = iMessenger;
+            _rabbitTracker = rabbitTracker;
+            _backgroundHandler = backgroundHandler;
         }
         #endregion
 
@@ -37,7 +37,7 @@ namespace HomeMQ.RabbitMQ.Consumer
             var device = data.ToPiDeviceStatus();
             var found = false;
 
-            foreach (var item in manager.AllDevices)
+            foreach (var item in _rabbitTracker.AllDevices)
             {
                 if (item.Hostname.Equals(device.Hostname))
                 {
@@ -48,8 +48,8 @@ namespace HomeMQ.RabbitMQ.Consumer
 
             if (!found)
             {
-                manager.AddDevice(device);
-                messenger.Send(new UpdateViewMessage());
+                _rabbitTracker.AddDevice(device);
+                _backgroundHandler.SendMessage(new UpdateViewMessage());
             }
 
             

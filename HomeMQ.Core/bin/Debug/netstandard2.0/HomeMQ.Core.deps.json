@@ -143,6 +143,7 @@
       },
       "DeviceManagers/1.0.0": {
         "dependencies": {
+          "HomeMQ.Managers": "1.0.0",
           "HomeMQ.Models": "1.0.0",
           "NetworkDeviceModels": "1.0.0",
           "WiznetControllers": "1.0.0"
@@ -203,6 +204,7 @@
       },
       "RabbitMqManagers/1.0.0": {
         "dependencies": {
+          "HomeMQ.Managers": "1.0.0",
           "RabbitMQ.Client": "6.2.1"
         },
         "runtime": {

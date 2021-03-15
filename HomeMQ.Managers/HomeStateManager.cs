@@ -1,4 +1,6 @@
 ﻿using BaseClasses;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeMQ.Managers
 {
-    public class StateManager : IStateManager
+    public class HomeStateManager : IHomeStateManager
     {
         //#region Singleton
         //private static readonly Lazy<StateManager> instance = new Lazy<StateManager>();
@@ -24,11 +26,11 @@ namespace HomeMQ.Managers
         #region Properties
         //public SavedStateModel State { get; private set; }
         public List<RabbitMQConfigurationModel> RabbitConnections { get; private set; } = new List<RabbitMQConfigurationModel>();
-
+        public JObject State { get; set; }
         #endregion
 
         #region Constructors
-        public StateManager()
+        public HomeStateManager()
         {
             LoadState();
         }
@@ -45,7 +47,12 @@ namespace HomeMQ.Managers
                 Hostname = "192.168.68.109"
             };
 
+            //var tmp = JObject.FromObject(testConfig);//    JsonConvert.SerializeObject(testConfig);
+            //State = tmp;
             RabbitConnections.Add(testConfig);
+
+            //var wiznetConfig = new WiznetSCPIConfigurationModel
+            //var 
 
         }
 

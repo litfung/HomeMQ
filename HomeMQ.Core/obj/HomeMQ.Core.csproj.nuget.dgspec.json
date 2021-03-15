@@ -554,6 +554,9 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
+              "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Managers\\HomeMQ.Managers.csproj": {
+                "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Managers\\HomeMQ.Managers.csproj"
+              },
               "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj": {
                 "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Models\\HomeMQ.Models.csproj"
               },
@@ -689,7 +692,11 @@
         "frameworks": {
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Managers\\HomeMQ.Managers.csproj": {
+                "projectPath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Managers\\HomeMQ.Managers.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

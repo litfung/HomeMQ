@@ -10,19 +10,19 @@ using System.Text;
 
 namespace HomeMQ.RabbitMQ.Consumer
 {
-    public class MasterControlConsumer : TopicConsumer
+    public class MasterControlConsumer : TopicConsumer, IRabbitConnection
     {
         //private RabbitControlledDeviceManager RabbitManager = RabbitControlledDeviceManager.Instance;
 
-        private IMasterControlProcessor commandProcessor;
+        private IMasterControlProcessor responseProcessor;
         public MasterControlConsumer(IConnection conn, IMasterControlProcessor processor, string exchange, string routeKey) : base(conn, exchange, routeKey)
         {
-            commandProcessor = processor;
+            responseProcessor = processor;
         }
 
         public MasterControlConsumer(IConnectionFactory factory, IMasterControlProcessor processor, string exchange, string routeKey, string readableName = null) : base(factory, exchange, routeKey, readableName)
         {
-            commandProcessor = processor;
+            responseProcessor = processor;
         }
 
         public override void HandleBasicDeliver(string consumerTag, ulong deliveryTag, bool redelivered, string exchange, string routingKey, IBasicProperties properties, ReadOnlyMemory<byte> body)
@@ -54,7 +54,7 @@ namespace HomeMQ.RabbitMQ.Consumer
             //Option 2: Handle with Messenger
 
             //Option 3 : Use DI of a command processor
-            commandProcessor.Process(jo);
+            responseProcessor.Process(jo);
             //Console.WriteLine();
         }
     }
