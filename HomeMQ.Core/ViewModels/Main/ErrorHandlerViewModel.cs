@@ -1,72 +1,62 @@
-﻿//using BaseClasses;
-//using BaseViewModels;
-//using MvvmCross.Commands;
-//using System;
-//using System.Collections.Generic;
-//using System.Collections.ObjectModel;
-//using System.Text;
-//using System.Threading.Tasks;
+﻿using BaseClasses;
+using BaseViewModels;
+using MvvmCross.Commands;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Text;
+using System.Threading.Tasks;
 
-//namespace HomeMQ.Core.ViewModels
-//{
-//    public class ErrorHandlerViewModel : BaseViewModel, IErrorViewModel
-//    {
-//        #region Fields
-//        private IMessenger messenger;
-//        private ILogManager logger;
-//        #endregion
+namespace HomeMQ.Core.ViewModels
+{
+    public class ErrorHandlerViewModel : BaseViewModel, IErrorViewModel
+    {
+        #region Fields
+        #endregion
 
-//        #region Properties
-//        private LogMessage logMessage;
-//        public LogMessage LogMessage
-//        {
-//            get { return logMessage; }
-//            set
-//            {
-//                if (logMessage != value)
-//                {
-//                    logMessage = value;
-//                    RaisePropertyChanged();
-//                    RaisePropertyChanged(nameof(CanShowMessage));
-//                }
-//            }
-//        }
+        #region Properties
+        public string Message => _backgroundHandler.CurrentNotification;
+        public int MessageNumber
+        {
+            get
+            {
+                return _backgroundHandler.NotificationIndex + 1;
+            }
+        }
+        public int MessageCount => _backgroundHandler.NotificationCount;
+        public bool HasMessages => _backgroundHandler.NotificationCount != 0;
 
-//        public bool CanShowMessage => logMessage != null;
+        #endregion
 
-//        #endregion
+        #region Commands
+        public IMvxCommand DismissMessageCommand { get; private set; }
+        public IMvxCommand PreviousMessageCommand { get; private set; }
+        public IMvxCommand NextMessageCommand { get; set; }
+        #endregion
 
-//        #region Commands
-//        public IMvxCommand DismissMessageCommand { get; private set; }
-//        public IMvxCommand PreviousMessageCommand { get; private set; }
-//        public IMvxCommand NextMessageCommand { get;  set; }
-//        #endregion
+        #region Constructors
+        public ErrorHandlerViewModel(IBackgroundHandler backgroundHandler) : base(backgroundHandler)
+        {
+            _backgroundHandler = backgroundHandler;
+            DismissMessageCommand = new MvxAsyncCommand(OnDismiss);
+        }
 
-//        #region Constructors
-//        public ErrorHandlerViewModel(IMainControl mc) : base(mc.Messenger)//   IMessenger mess, ILogManager logs)
-//        {
-//            //messenger = mc.Messenger;//  mess;
-//            //logger = mc.LogManager;// logs;
-//            //messenger.Register<UpdateViewMessage>(this, async x => await OnUpdateView());
-//            //DismissMessageCommand = new MvxCommand(OnDismiss);
-//        }
+        private async Task OnDismiss()
+        {
+            _backgroundHandler.DismissCurrentMessage();
+        }
+        #endregion
 
-//        public override async Task OnUpdateView()
-//        {
-//            //logger.Err
-//            await base.OnUpdateView();
-//        }
+        #region Methods
+        public override async Task UpdateUIControlAccess()
+        {
+            await base.UpdateUIControlAccess();
+            await RaisePropertyChanged(nameof(Message));
+            await RaisePropertyChanged(nameof(MessageNumber));
+            await RaisePropertyChanged(nameof(HasMessages));
+            await RaisePropertyChanged(nameof(MessageCount));
+        }
+        #endregion
 
-
-//        private void OnDismiss()
-//        {
-
-//        }
-//        #endregion
-
-//        #region Methods
-
-//        #endregion
-
-//    }
-//}
+    }
+}

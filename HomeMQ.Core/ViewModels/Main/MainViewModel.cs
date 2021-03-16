@@ -21,7 +21,7 @@ namespace HomeMQ.Core.ViewModels
     {
         //private IMainControl mainControl;
         IBackgroundHandler _backgroundHandler;
-        //private IMvxNavigationService navService;
+        INotificationHandler _notificationService;
         IMessenger _messenger;
         IHomeStateManager _stateManager;
         ILogManager _logManager;
@@ -36,19 +36,19 @@ namespace HomeMQ.Core.ViewModels
         //IMasterControlProcessor commandProcessor;
         //IPiControlPublisher piController;
 
-        //private IErrorViewModel errorHandlerViewModel;
-        //public IErrorViewModel ErrorHandlerViewModel
-        //{
-        //    get { return errorHandlerViewModel; }
-        //    set
-        //    {
-        //        if (errorHandlerViewModel != value)
-        //        {
-        //            errorHandlerViewModel = value;
-        //            RaisePropertyChanged();
-        //        }
-        //    }
-        //}
+        private IErrorViewModel errorHandlerViewModel;
+        public IErrorViewModel ErrorHandlerViewModel
+        {
+            get { return errorHandlerViewModel; }
+            set
+            {
+                if (errorHandlerViewModel != value)
+                {
+                    errorHandlerViewModel = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
 
 
         private INavigationViewModel detailViewModel;
@@ -79,10 +79,11 @@ namespace HomeMQ.Core.ViewModels
             }
         }
 
+
+
         public MainViewModel()// IBackgroundHandler backgroundHandler)
         {
-            //_stateManager = new HomeStateManager();
-            _stateManager = HomeStateManager.StaticLoadState();
+            _stateManager = HomeStateManager.Create(ConfigType.OutputPath, "config.json");
             InitializeBackgroundHandler();
             InitializeWiznetStuff();
             InitializeRabbitStuff();
@@ -94,8 +95,10 @@ namespace HomeMQ.Core.ViewModels
         {
             _messenger = new Messenger();
             _logManager = new LogManager();
-            
-            _backgroundHandler = new SimpleBackgroundHandler(_messenger, _logManager);
+            _notificationService = new SimpleNotificationService();
+
+
+            _backgroundHandler = new SimpleBackgroundHandler(_messenger, _logManager, _notificationService);
             _backgroundHandler.RegisterMessage<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
             _backgroundHandler.RegisterMessage<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
             //messenger = iMessenger;
@@ -142,9 +145,10 @@ namespace HomeMQ.Core.ViewModels
 
         private async Task NavigateStart()
         {
-            MasterViewModel = new MenuViewModel(this);// mainControl);
+            MasterViewModel = new MenuViewModel(this);
+            ErrorHandlerViewModel = new ErrorHandlerViewModel(_backgroundHandler);
             NavigateToPrimaryOverview();
-            //ErrorHandlerViewModel = new ErrorHandlerViewModel(mainControl);
+            //
             //mainControl.NavigatePrimaryOverview();
         }
 

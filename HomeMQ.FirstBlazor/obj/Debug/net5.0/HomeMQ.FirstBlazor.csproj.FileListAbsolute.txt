@@ -117,3 +117,5 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\HomeMQ.Ra
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\RabbitMQ.Control.Core.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\HomeMQ.RabbitMQ.Consumers.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\RabbitMQ.Control.Core.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\config.json
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstBlazor\bin\Debug\net5.0\config_base.json

@@ -41,3 +41,5 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcor
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\RabbitMQ.Control.Core.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Consumers.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\RabbitMQ.Control.Core.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\config.json
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.ConsumerTest\bin\Debug\netcoreapp3.1\config_base.json

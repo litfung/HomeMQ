@@ -28,13 +28,4 @@
     </Resource>
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="config_base.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="config.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>

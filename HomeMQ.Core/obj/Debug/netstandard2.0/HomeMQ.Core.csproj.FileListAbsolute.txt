@@ -30,3 +30,5 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\HomeMQ.R
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\RabbitMQ.Control.Core.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\HomeMQ.RabbitMQ.Consumers.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\RabbitMQ.Control.Core.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\config.json
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Core\bin\Debug\netstandard2.0\config_base.json

@@ -38,15 +38,18 @@ namespace HomeMQ.FirstBlazor
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+
+            services.AddSingleton<IHomeStateManager>(HomeStateManager.Create(ConfigType.OutputPath, "config.json"));
             services.AddSingleton<IMessenger, Messenger>();
             services.AddSingleton<ILogManager, LogManager>();
-            services.AddSingleton<IHomeStateManager, HomeStateManager>();
-            services.AddSingleton<IStateManager, HomeStateManager>();
             services.AddSingleton<IBackgroundHandler, SimpleBackgroundHandler>();
+
+
             services.AddSingleton<IWiznetManager, WiznetManager>();
 
             services.AddSingleton<IMQFactoryManager, MQFactoryManager>();
             services.AddSingleton<IRabbitControlledManager, RabbitControlledDeviceManager>();
+
             services.AddTransient<IMasterControlProcessor, MasterControlProcessor>();
             services.AddSingleton<IMQConnectionManager, MQConnectionManager>();
             services.AddSingleton<WeatherForecastService>();
@@ -62,7 +65,8 @@ namespace HomeMQ.FirstBlazor
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.ApplicationServices.GetService<IMainControl>();
+            app.ApplicationServices.GetService<IMQFactoryManager>();
+            app.ApplicationServices.GetService<IMQConnectionManager>();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

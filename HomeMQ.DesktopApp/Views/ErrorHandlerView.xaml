@@ -4,11 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HomeMQ.DesktopApp.Views"
+             xmlns:cvt="clr-namespace:WPFConverters;assembly=WPFConverters"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Grid DockPanel.Dock="Top"
-                   Background="Red">
+        <Grid Background="Red"
+              Visibility="{Binding HasMessages, Converter={cvt:BooleanToVisibilityConverter}, ConverterParameter=Collapse}"
+              >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="Auto"/>
@@ -16,11 +18,18 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Text="Error : Register Write Failed,0xFFFF" />
-            <TextBlock Text="Error 1 of 2" Grid.Column="1"/>
+            <TextBlock Text="{Binding Message}" />
+            <StackPanel Orientation="Horizontal" Grid.Column="1">
+                <TextBlock Text="Error" />
+                <TextBlock Text="{Binding MessageNumber}" />
+                <TextBlock Text="of" />
+                <TextBlock Text="{Binding MessageCount}" />
+            </StackPanel>
+            
             <Button Content="{StaticResource LeftArrow}" FontFamily="{StaticResource FontAwesome}" Grid.Column="2"/>
             <Button Content="{StaticResource RightArrow}" FontFamily="{StaticResource FontAwesome}"  Grid.Column="3"/>
-            <Button Content="{StaticResource CloseX}" FontFamily="{StaticResource FontAwesome}"  Grid.Column="4"/>
+            <Button Content="{StaticResource CloseX}" FontFamily="{StaticResource FontAwesome}"  Grid.Column="4"
+                    Command="{Binding DismissMessageCommand}"/>
         </Grid>
     </Grid>
 </UserControl>

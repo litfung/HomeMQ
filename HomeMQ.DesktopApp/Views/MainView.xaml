@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HomeMQ.DesktopApp.Views"
              xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
-             mc:Ignorable="d" 
+                  mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="1000">
 
     <UserControl.Resources>
@@ -15,7 +15,8 @@
     </UserControl.Resources>
     <DockPanel Background="{StaticResource PrimaryBackgroundBrush}">
         <ContentControl Content="{Binding ErrorHandlerViewModel}"
-                        DockPanel.Dock="Top"/>
+                        DockPanel.Dock="Top" 
+                        />
         <ContentControl Content="{Binding MasterViewModel}"
                         DockPanel.Dock="Left"/>
         <!--<Expander ExpandDirection="Down" IsExpanded="False" DockPanel.Dock="Top" >

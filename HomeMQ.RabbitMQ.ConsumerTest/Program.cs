@@ -32,7 +32,8 @@ namespace HomeMQ.RabbitMQ.ConsumerTest
             var routeKey = "master.control.*";
             var messenger = new Messenger();
             var logManager = new LogManager();
-            var backgroundHandler = new SimpleBackgroundHandler(messenger, logManager);
+            var notificationService = new SimpleNotificationService();
+            var backgroundHandler = new SimpleBackgroundHandler(messenger, logManager, notificationService);
 
             var rabbitManager = new RabbitControlledDeviceManager();
             var mp = new MasterControlProcessor(rabbitManager, backgroundHandler);

@@ -10,6 +10,12 @@ using System.Threading.Tasks;
 
 namespace HomeMQ.Managers
 {
+
+    public enum ConfigType
+    {
+        LocalPath,
+        OutputPath
+    }
     public class HomeStateManager : IHomeStateManager
     {
         #region Fields
@@ -39,16 +45,28 @@ namespace HomeMQ.Managers
             //return LoadFromJson();
         }
 
-        public static HomeStateManager StaticLoadState()
+        public static HomeStateManager Create(ConfigType type, string fileName)
         {
             //SimpleLoad();
-            return LoadFromJson();
+            switch (type)
+            {
+                case ConfigType.LocalPath:
+                    //Not quite what I was looking for but it works /shrug
+                    var tmp = "config.json";
+                    return LoadFromJson(tmp);
+                    //Debug.WriteLine(tmp);
+                case ConfigType.OutputPath:
+                    var filePath = new FileInfo($@"{AppDomain.CurrentDomain.BaseDirectory}{fileName}").FullName;
+                    return LoadFromJson(filePath);
+                default:
+                    throw new ArgumentException("Need proper config type");
+            }
+            
         }
 
-        private static HomeStateManager LoadFromJson()
+        private static HomeStateManager LoadFromJson(string fullPath)
         {
-            var filePath = new FileInfo($@"{AppDomain.CurrentDomain.BaseDirectory}config.json");
-            using (var file = File.OpenText(filePath.FullName))
+            using (var file = File.OpenText(fullPath))
             {
                 var serializer = new JsonSerializer();
                 var tmp = (HomeStateManager)serializer.Deserialize(file, typeof(HomeStateManager));
@@ -92,12 +110,12 @@ namespace HomeMQ.Managers
             };
             WiznetConnections.Add(firstWiz);
 
-            SaveState();
+            SaveState("renew_config.json");
         }
 
-        private void SaveState()
+        private void SaveState(string fileName)
         {
-            var filePath = new FileInfo($@"{AppDomain.CurrentDomain.BaseDirectory}config2.json");
+            var filePath = new FileInfo($@"{AppDomain.CurrentDomain.BaseDirectory}{fileName}");
 
             using (var file = File.CreateText(filePath.FullName))
             {

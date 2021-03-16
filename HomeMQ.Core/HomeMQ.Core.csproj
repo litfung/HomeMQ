@@ -21,4 +21,22 @@
     <ProjectReference Include="..\HomeMQ.RabbitMQ.Publishers\HomeMQ.RabbitMQ.Publishers.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Resource Include="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="config_base.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="config_base.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
