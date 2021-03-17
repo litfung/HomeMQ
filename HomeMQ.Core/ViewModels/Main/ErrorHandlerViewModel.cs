@@ -16,6 +16,7 @@ namespace HomeMQ.Core.ViewModels
 
         #region Properties
         public string Message => _backgroundHandler.CurrentNotification;
+        public string MessageCountInfo => $"Message {MessageNumber} of {MessageCount}";
         public int MessageNumber
         {
             get
@@ -39,11 +40,33 @@ namespace HomeMQ.Core.ViewModels
         {
             _backgroundHandler = backgroundHandler;
             DismissMessageCommand = new MvxAsyncCommand(OnDismiss);
+            PreviousMessageCommand = new MvxAsyncCommand(OnPrevious, CanPrevious);
+            NextMessageCommand = new MvxAsyncCommand(OnNext, CanNext);
+        }
+
+        private bool CanNext()
+        {
+            return true;
+        }
+
+        private async Task OnNext()
+        {
+            await _backgroundHandler.ShowNextMessage();
+        }
+
+        private bool CanPrevious()
+        {
+            return true;
+        }
+
+        private async Task OnPrevious()
+        {
+            await _backgroundHandler.ShowPreviousMessage();
         }
 
         private async Task OnDismiss()
         {
-            _backgroundHandler.DismissCurrentMessage();
+            await _backgroundHandler.DismissCurrentMessage();
         }
         #endregion
 
@@ -52,9 +75,9 @@ namespace HomeMQ.Core.ViewModels
         {
             await base.UpdateUIControlAccess();
             await RaisePropertyChanged(nameof(Message));
-            await RaisePropertyChanged(nameof(MessageNumber));
+            await RaisePropertyChanged(nameof(MessageCountInfo));
             await RaisePropertyChanged(nameof(HasMessages));
-            await RaisePropertyChanged(nameof(MessageCount));
+            //await RaisePropertyChanged(nameof(MessageCount));
         }
         #endregion
 
