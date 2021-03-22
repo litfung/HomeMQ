@@ -1,4 +1,5 @@
 ﻿using BaseClasses;
+using BaseClasses.StateManagers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -11,12 +12,8 @@ using System.Threading.Tasks;
 namespace HomeMQ.Managers
 {
 
-    public enum ConfigType
-    {
-        LocalPath,
-        OutputPath
-    }
-    public class HomeStateManager : IHomeStateManager
+    
+    public class HomeStateManager : StateManager, IHomeStateManager
     {
         #region Fields
         private const string stateFilename = "home_control.json";
@@ -45,34 +42,34 @@ namespace HomeMQ.Managers
             //return LoadFromJson();
         }
 
-        public static HomeStateManager Create(ConfigType type, string fileName)
-        {
-            //SimpleLoad();
-            switch (type)
-            {
-                case ConfigType.LocalPath:
-                    //Not quite what I was looking for but it works /shrug
-                    var tmp = "config.json";
-                    return LoadFromJson(tmp);
-                    //Debug.WriteLine(tmp);
-                case ConfigType.OutputPath:
-                    var filePath = new FileInfo($@"{AppDomain.CurrentDomain.BaseDirectory}{fileName}").FullName;
-                    return LoadFromJson(filePath);
-                default:
-                    throw new ArgumentException("Need proper config type");
-            }
+        //public static HomeStateManager Create(ConfigType type, string fileName)
+        //{
+        //    //SimpleLoad();
+        //    switch (type)
+        //    {
+        //        case ConfigType.LocalPath:
+        //            //Not quite what I was looking for but it works /shrug
+        //            var tmp = "config.json";
+        //            return LoadFromJson(tmp);
+        //            //Debug.WriteLine(tmp);
+        //        case ConfigType.OutputPath:
+        //            var filePath = new FileInfo($@"{AppDomain.CurrentDomain.BaseDirectory}{fileName}").FullName;
+        //            return LoadFromJson(filePath);
+        //        default:
+        //            throw new ArgumentException("Need proper config type");
+        //    }
             
-        }
+        //}
 
-        private static HomeStateManager LoadFromJson(string fullPath)
-        {
-            using (var file = File.OpenText(fullPath))
-            {
-                var serializer = new JsonSerializer();
-                var tmp = (HomeStateManager)serializer.Deserialize(file, typeof(HomeStateManager));
-                return tmp;
-            }
-        }
+        //private static HomeStateManager LoadFromJson(string fullPath)
+        //{
+        //    using (var file = File.OpenText(fullPath))
+        //    {
+        //        var serializer = new JsonSerializer();
+        //        var tmp = (HomeStateManager)serializer.Deserialize(file, typeof(HomeStateManager));
+        //        return tmp;
+        //    }
+        //}
 
         private void SimpleLoad()
         {
@@ -113,16 +110,7 @@ namespace HomeMQ.Managers
             SaveState("renew_config.json");
         }
 
-        private void SaveState(string fileName)
-        {
-            var filePath = new FileInfo($@"{AppDomain.CurrentDomain.BaseDirectory}{fileName}");
-
-            using (var file = File.CreateText(filePath.FullName))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, this);
-            }
-        }
+        
         #endregion
     }
 }

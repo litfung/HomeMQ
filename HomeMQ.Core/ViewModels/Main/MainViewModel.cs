@@ -1,4 +1,5 @@
 ﻿using BaseClasses;
+using BaseClasses.StateManagers;
 using BaseViewModels;
 using DeviceManagers;
 using HomeMQ.Managers;
@@ -83,7 +84,8 @@ namespace HomeMQ.Core.ViewModels
 
         public MainViewModel()// IBackgroundHandler backgroundHandler)
         {
-            _stateManager = HomeStateManager.Create(ConfigType.OutputPath, "config.json");
+            _stateManager = StateManager.Create<HomeStateManager>(ConfigType.OutputPath, "config.json");
+            //_stateManager = HomeStateManager.Create(ConfigType.OutputPath, "config.json");
             InitializeBackgroundHandler();
             InitializeWiznetStuff();
             InitializeRabbitStuff();

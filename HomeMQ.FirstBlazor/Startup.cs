@@ -1,4 +1,5 @@
 using BaseClasses;
+using BaseClasses.StateManagers;
 using DeviceManagers;
 using HomeMQ.Core;
 using HomeMQ.CoreBlazor.ViewModels;
@@ -39,9 +40,10 @@ namespace HomeMQ.FirstBlazor
             services.AddRazorPages();
             services.AddServerSideBlazor();
 
-            services.AddSingleton<IHomeStateManager>(HomeStateManager.Create(ConfigType.OutputPath, "config.json"));
+            services.AddSingleton<IHomeStateManager>(StateManager.Create<HomeStateManager>(ConfigType.OutputPath, "config.json"));
             services.AddSingleton<IMessenger, Messenger>();
             services.AddSingleton<ILogManager, LogManager>();
+            services.AddSingleton<INotificationHandler, SimpleNotificationService>();
             services.AddSingleton<IBackgroundHandler, SimpleBackgroundHandler>();
 
 

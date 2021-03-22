@@ -56,3 +56,4 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstWebAPI\bin\Debug\net5.0\HomeMQ.Da
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstWebAPI\bin\Debug\net5.0\HomeMQ.Models.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstWebAPI\bin\Debug\net5.0\BaseClasses.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstWebAPI\bin\Debug\net5.0\NetworkDeviceModels.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.FirstWebAPI\bin\Debug\net5.0\Newtonsoft.Json.dll

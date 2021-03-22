@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "mLjg6mIke9Iop/g5SeXYNPVZUVvdN9HICMCVXS4r1Oa6RW6/2A8TWNXcPqes9jCz/5jXK8WbnKe1+3S1U94H7g==",
+  "dgSpecHash": "HXDaOn5xla6DDUJcjBpm6mf8+pBlRQ8kfgDlExd1UkixxlvAUsn4I32Cci46HoBRd/DgO6FCQlqR2UGIsRzL2A==",
   "success": true,
   "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.BlazorCore\\HomeMQ.CoreBlazor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\devin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\mvvmcross\\7.1.2\\mvvmcross.7.1.2.nupkg.sha512",
-    "C:\\Users\\devin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\devin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }

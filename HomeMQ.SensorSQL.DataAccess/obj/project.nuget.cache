@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "TPfr5BJTUrep0CCh5+F8C2JKWQC5VbdR2AB7/TZAVmHnDzLwpw4YlqQ8HH2gYj+iP+Rv/TCwvPxwsjyrSPu30g==",
+  "dgSpecHash": "tPmyHD3NGswsnmOqssfu7eXXSFs5abn8dyBvhNyQoyFLoJojHvdl0x0L+vC9OwPg+7Q1WHFcw7Qfd+afCBZVzA==",
   "success": true,
   "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.SensorSQL.DataAccess\\HomeMQ.SensorSQL.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\devin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
