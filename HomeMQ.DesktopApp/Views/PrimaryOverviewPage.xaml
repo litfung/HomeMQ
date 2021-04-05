@@ -8,6 +8,9 @@
         mc:Ignorable="d"
         d:Height="450" d:Width="800">
     <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Start Pi1" Command="{Binding StartPi1Command}"/>
+        </StackPanel>
         <StackPanel Orientation="Horizontal" Background="{StaticResource PrimaryBackgroundBrush}" x:Name="mainGrid">
             <ContentControl Content="{Binding RabbitConsumer}" />
             <ItemsControl ItemsSource="{Binding WiznetStatusControls}"/>

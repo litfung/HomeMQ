@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using RabbitMQ.Client;
+using RabbitMQ.Control.Core;
 using System;
 using System.Text;
 using System.Threading;

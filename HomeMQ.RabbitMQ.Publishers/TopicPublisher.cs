@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace HomeMQ.RabbitMQ.Publishers
 {
-    public class TopicPublisher : IRabbitMQConnection
+    public class TopicPublisher : IRabbitMQConnection, ITopicPublisher
     {
         #region Fields
         private DefaultContractResolver contractResolver;
@@ -62,7 +62,7 @@ namespace HomeMQ.RabbitMQ.Publishers
                 NamingStrategy = new SnakeCaseNamingStrategy()
             };
 
-            var _ = ScheduleNextMessage();
+            var _ = PublishMessages();// ScheduleNextMessage();
         }
         #endregion
 
@@ -84,26 +84,47 @@ namespace HomeMQ.RabbitMQ.Publishers
             return Task.CompletedTask;
         }
 
-        public async Task ScheduleNextMessage()
+        public async Task PublishMessages()
         {
-            try
+            while (true)
             {
-                if (MessageQueue.Count > 1)
+                try
                 {
-                    var next = MessageQueue.Dequeue();
-                    await Publish(next.ControlMessage, next.RoutingKey);
+                    if (MessageQueue.Count > 1)
+                    {
+                        var next = MessageQueue.Dequeue();
+                        await Publish(next, next.RoutingKey);
+                    }
                 }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                }
+
+                await Task.Delay(1);
             }
-            catch(Exception ex)
-            {
-                Debug.WriteLine(ex.Message);
-            }
+        }
+
+        //public async Task ScheduleNextMessage()
+        //{
+        //    try
+        //    {
+        //        if (MessageQueue.Count > 1)
+        //        {
+        //            var next = MessageQueue.Dequeue();
+        //            await Publish(next.ControlMessage, next.RoutingKey);
+        //        }
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        Debug.WriteLine(ex.Message);
+        //    }
             
                 
             
-            await Task.Delay(1);
-            await ScheduleNextMessage();
-        }
+        //    await Task.Delay(1);
+        //    await ScheduleNextMessage();
+        //}
 
         public void AddMessage(RabbitControlMessage rcm)
         {

@@ -156,7 +156,7 @@ namespace HomeMQ.Core.ViewModels
 
         public void NavigateToPrimaryOverview()
         {
-            _backgroundHandler.SendMessage(new DetailNavigationMessage(new PrimaryOverviewViewModel(_backgroundHandler, _wiznetManager, _rabbitDeviceTracker)));
+            _backgroundHandler.SendMessage(new DetailNavigationMessage(new PrimaryOverviewViewModel(_backgroundHandler, _wiznetManager, _rabbitDeviceTracker, _mqConnectionManager)));
         }
     }
 }

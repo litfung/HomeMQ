@@ -654,8 +654,6 @@
       },
       "DeviceManagers/1.0.0": {
         "dependencies": {
-          "HomeMQ.Managers": "1.0.0",
-          "HomeMQ.Models": "1.0.0",
           "NetworkDeviceModels": "1.0.0",
           "WiznetControllers": "1.0.0"
         },

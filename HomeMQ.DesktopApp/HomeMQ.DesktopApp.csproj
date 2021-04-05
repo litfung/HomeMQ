@@ -19,6 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\SharedProjects\DotNet5Desktop\WPFConverters\WPFConverters.csproj" />
     <ProjectReference Include="..\..\SharedProjects\DotNet5Desktop\WPFToggleButtons\WPFToggleButtons.csproj" />
+    <ProjectReference Include="..\..\SharedProjects\Standard\BaseViewModels\BaseViewModels.csproj" />
     <ProjectReference Include="..\HomeMQ.Core\HomeMQ.Core.csproj" />
   </ItemGroup>
 

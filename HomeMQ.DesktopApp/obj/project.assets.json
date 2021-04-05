@@ -106,8 +106,6 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "HomeMQ.Managers": "1.0.0",
-          "HomeMQ.Models": "1.0.0",
           "NetworkDeviceModels": "1.0.0",
           "WiznetControllers": "1.0.0"
         },
@@ -221,6 +219,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "BaseClasses": "1.0.0",
           "RabbitMQ.Client": "6.2.1"
         },
         "compile": {
@@ -264,7 +263,7 @@
       },
       "WPFConverters/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
           "bin/placeholder/WPFConverters.dll": {}
         },
@@ -277,7 +276,7 @@
       },
       "WPFToggleButtons/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
           "bin/placeholder/WPFToggleButtons.dll": {}
         },
@@ -616,6 +615,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
+      "BaseViewModels >= 1.0.0",
       "HomeMQ.Core >= 1.0.0",
       "MvvmCross >= 7.1.2",
       "MvvmCross.Platforms.Wpf >= 7.1.2",
@@ -663,6 +663,9 @@
             },
             "C:\\Users\\devin\\source\\repos\\SharedProjects\\DotNet5Desktop\\WPFToggleButtons\\WPFToggleButtons.csproj": {
               "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\DotNet5Desktop\\WPFToggleButtons\\WPFToggleButtons.csproj"
+            },
+            "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseViewModels\\BaseViewModels.csproj": {
+              "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseViewModels\\BaseViewModels.csproj"
             }
           }
         }

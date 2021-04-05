@@ -4,6 +4,7 @@
     <!--Mouseover Border-->
     <!--<Color x:Key="MouseoverBorder">#FF7EB4EA</Color>-->
     <SolidColorBrush x:Key="MouseoverBorderBrush" Color="#FF7EB4EA"/>
+    <SolidColorBrush x:Key="KeyboardFocusBrush" Color="#00d646"/>
 
     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -36,7 +37,7 @@
                             <Setter Property="BorderThickness" TargetName="border" Value="2"/>
                         </Trigger>
                         <Trigger Property="IsKeyboardFocused" Value="True">
-                            <Setter Property="BorderBrush" TargetName="border" Value="Orange"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource KeyboardFocusBrush}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

@@ -1,5 +1,6 @@
 ﻿using HomeMQ.Models;
 using RabbitMQ.Client;
+using RabbitMQ.Control.Core;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -37,7 +38,7 @@ namespace HomeMQ.RabbitMQ.Publishers
         private async Task StatusPoll()
         {
             //await Publish(new ControlMessage(new StatusCheck()), "rasp.control.all");
-            AddMessage(new RabbitControlMessage(new ControlMessage(new StatusCheck()), "rasp.control.all"));
+            AddMessage(new RabbitControlMessage(new StatusCheck(), "rasp.control.all"));
             await Task.Delay(1000);
             await StatusPoll();
         }

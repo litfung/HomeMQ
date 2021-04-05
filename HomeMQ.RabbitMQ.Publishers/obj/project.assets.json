@@ -167,6 +167,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "BaseClasses": "1.0.0",
           "RabbitMQ.Client": "6.2.1"
         },
         "compile": {

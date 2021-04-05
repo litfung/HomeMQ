@@ -244,7 +244,11 @@
         "frameworks": {
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj": {
+                "projectPath": "C:\\Users\\devin\\source\\repos\\SharedProjects\\Standard\\BaseClasses\\BaseClasses.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

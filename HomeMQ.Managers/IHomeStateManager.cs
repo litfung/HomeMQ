@@ -6,7 +6,7 @@ using System.Text;
 
 namespace HomeMQ.Managers
 {
-    public interface IHomeStateManager : IStateManager
+    public interface IHomeStateManager : ITcpStateManager
     {
 
         List<RabbitMQFactoryModel> RabbitFactories { get; }

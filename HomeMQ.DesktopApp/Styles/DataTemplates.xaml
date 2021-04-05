@@ -2,13 +2,14 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:HomeMQ.DesktopApp.Styles"
                     xmlns:views="clr-namespace:HomeMQ.DesktopApp.Views"
-                    xmlns:vms="clr-namespace:HomeMQ.Core.ViewModels;assembly=HomeMQ.Core">
+                    xmlns:vms="clr-namespace:HomeMQ.Core.ViewModels;assembly=HomeMQ.Core"
+                    xmlns:basevms="clr-namespace:BaseViewModels;assembly=BaseViewModels">
 
     <DataTemplate DataType="{x:Type vms:MenuViewModel}">
         <views:MenuView/>
     </DataTemplate>
 
-    <DataTemplate DataType="{x:Type vms:ErrorHandlerViewModel}">
+    <DataTemplate DataType="{x:Type basevms:ErrorHandlerViewModel}">
         <views:ErrorHandlerView/>
     </DataTemplate>
 

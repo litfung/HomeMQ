@@ -1,4 +1,6 @@
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.PublisherTest.exe
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\config.json
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\config_base.json
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.PublisherTest.deps.json
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.PublisherTest.runtimeconfig.json
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.PublisherTest.runtimeconfig.dev.json
@@ -15,8 +17,10 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreap
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.Core.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.Managers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.Models.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Consumers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Publishers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\NetworkDeviceModels.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\RabbitMQ.Control.Core.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\RabbitMqManagers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\WiznetControllers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.Core.pdb
@@ -25,8 +29,10 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreap
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\DeviceManagers.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.Managers.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.Models.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Consumers.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Publishers.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\NetworkDeviceModels.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\RabbitMQ.Control.Core.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\RabbitMqManagers.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\WiznetControllers.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\obj\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.PublisherTest.csprojAssemblyReference.cache
@@ -37,9 +43,3 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\obj\Debug\netcoreap
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\obj\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.PublisherTest.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\obj\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.PublisherTest.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\obj\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.PublisherTest.genruntimeconfig.cache
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Consumers.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\RabbitMQ.Control.Core.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\HomeMQ.RabbitMQ.Consumers.pdb
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\RabbitMQ.Control.Core.pdb
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\config.json
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publisher\bin\Debug\netcoreapp3.1\config_base.json

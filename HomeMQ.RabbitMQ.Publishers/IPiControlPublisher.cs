@@ -2,7 +2,7 @@
 
 namespace HomeMQ.RabbitMQ.Publishers
 {
-    public interface IPiControlPublisher
+    public interface IPiControlPublisher : ITopicPublisher
     {
     }
 }

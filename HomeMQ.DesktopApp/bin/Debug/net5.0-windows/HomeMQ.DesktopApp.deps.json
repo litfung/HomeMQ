@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "HomeMQ.DesktopApp/1.0.0": {
         "dependencies": {
+          "BaseViewModels": "1.0.0",
           "HomeMQ.Core": "1.0.0",
           "MvvmCross": "7.1.2",
           "MvvmCross.Platforms.Wpf": "7.1.2",
@@ -79,8 +80,6 @@
       },
       "DeviceManagers/1.0.0": {
         "dependencies": {
-          "HomeMQ.Managers": "1.0.0",
-          "HomeMQ.Models": "1.0.0",
           "NetworkDeviceModels": "1.0.0",
           "WiznetControllers": "1.0.0"
         },
@@ -159,6 +158,7 @@
       },
       "RabbitMQ.Control.Core/1.0.0": {
         "dependencies": {
+          "BaseClasses": "1.0.0",
           "RabbitMQ.Client": "6.2.1"
         },
         "runtime": {

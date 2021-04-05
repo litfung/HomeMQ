@@ -3,6 +3,7 @@ using BaseViewModels;
 using DeviceManagers;
 using HomeMQ.RabbitMQ.Consumer;
 using MvvmCross;
+using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using RabbitMQ.Client;
 using RabbitMqManagers;
@@ -61,6 +62,9 @@ namespace HomeMQ.Core.ViewModels
 
         #endregion
 
+        #region Commands
+        public IMvxCommand StartPi1Command { get; }
+        #endregion
         #region Constructors
 
         public PrimaryOverviewViewModel(IBackgroundHandler backgroundHandler, IWiznetManager wiznetManager, IRabbitControlledManager deviceManager) : base(backgroundHandler)
@@ -68,6 +72,8 @@ namespace HomeMQ.Core.ViewModels
             _backgroundHandler = backgroundHandler;
             _wiznetManager = wiznetManager;
             _deviceManager = deviceManager;
+
+            StartPi1Command = new MvxAsyncCommand(OnStartPi1);
             foreach (var item in _wiznetManager.AllWiznets)
             {
                 WiznetStatusControls.Add(new WiznetStatusViewModel(_backgroundHandler, (IWiznetPiControl)item));
@@ -75,6 +81,8 @@ namespace HomeMQ.Core.ViewModels
 
             RabbitConsumer = new RabbitConsumerViewModel(_backgroundHandler, _deviceManager);
         }
+
+
         //public PrimaryOverviewViewModel(IMessenger iMessenger, IWiznetManager wizManager, IMQConnectionManager mqConnections, 
         //    IMasterControlProcessor processor, IRabbitControlledManager dManager) : base(iMessenger)
         //{
@@ -105,6 +113,11 @@ namespace HomeMQ.Core.ViewModels
         //{
         //    throw new NotImplementedException();
         //}
+
+        private Task OnStartPi1()
+        {
+            throw new NotImplementedException();
+        }
         #endregion
 
     }

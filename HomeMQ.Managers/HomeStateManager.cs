@@ -24,6 +24,9 @@ namespace HomeMQ.Managers
         public List<RabbitMQFactoryModel> RabbitFactories { get; private set; } = new List<RabbitMQFactoryModel>();
         public List<RabbitMQConnectionModel> RabbitConnections { get; set; } = new List<RabbitMQConnectionModel>();
         public List<WiznetConnectionModel> WiznetConnections { get; set; } = new List<WiznetConnectionModel>();
+
+        public List<TcpConnectionModel> TcpConnections { get; set; } = new List<TcpConnectionModel>();
+
         //public JObject State { get; set; }
 
         #endregion

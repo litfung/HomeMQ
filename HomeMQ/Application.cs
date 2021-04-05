@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WiznetControllers;
-using HomeMQ.Managers;
 using BaseClasses.StateManagers;
 
 namespace HomeMQ.ConsoleApp

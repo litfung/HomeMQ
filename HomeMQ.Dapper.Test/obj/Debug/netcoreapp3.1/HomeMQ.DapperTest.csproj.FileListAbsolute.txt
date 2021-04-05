@@ -1,7 +1,3 @@
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.csprojAssemblyReference.cache
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.AssemblyInfoInputs.cache
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.AssemblyInfo.cs
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.csproj.CoreCompileInputs.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\HomeMQ.DapperTest.exe
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\HomeMQ.DapperTest.deps.json
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\HomeMQ.DapperTest.runtimeconfig.json
@@ -44,6 +40,10 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\ru
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\HomeMQ.DapperCore.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\bin\Debug\netcoreapp3.1\HomeMQ.DapperCore.pdb
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.csprojAssemblyReference.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.AssemblyInfoInputs.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.AssemblyInfo.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.csproj.CoreCompileInputs.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.csproj.CopyComplete
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.Dapper.Test\obj\Debug\netcoreapp3.1\HomeMQ.DapperTest.pdb

@@ -4,6 +4,8 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publishers\bin\Debug\netstand
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publishers\bin\Debug\netstandard2.0\BaseClasses.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publishers\bin\Debug\netstandard2.0\HomeMQ.Models.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publishers\bin\Debug\netstandard2.0\NetworkDeviceModels.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publishers\bin\Debug\netstandard2.0\RabbitMQ.Control.Core.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publishers\bin\Debug\netstandard2.0\RabbitMQ.Control.Core.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publishers\bin\Debug\netstandard2.0\HomeMQ.Models.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publishers\bin\Debug\netstandard2.0\BaseClasses.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publishers\bin\Debug\netstandard2.0\NetworkDeviceModels.pdb
@@ -14,5 +16,3 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publishers\obj\Debug\netstand
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publishers\obj\Debug\netstandard2.0\HomeMQ.RabbitMQ.Publishers.csproj.CopyComplete
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publishers\obj\Debug\netstandard2.0\HomeMQ.RabbitMQ.Publishers.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publishers\obj\Debug\netstandard2.0\HomeMQ.RabbitMQ.Publishers.pdb
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publishers\bin\Debug\netstandard2.0\RabbitMQ.Control.Core.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.RabbitMQ.Publishers\bin\Debug\netstandard2.0\RabbitMQ.Control.Core.pdb
