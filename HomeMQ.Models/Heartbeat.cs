@@ -9,4 +9,9 @@ namespace HomeMQ.Models
         public string Data { get; set; } = "";
     }
 
+    public class StartPoll
+    {
+
+    }
+
 }

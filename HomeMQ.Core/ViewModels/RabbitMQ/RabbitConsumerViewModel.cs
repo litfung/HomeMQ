@@ -16,7 +16,7 @@ namespace HomeMQ.Core.ViewModels
     public class RabbitConsumerViewModel : BaseViewModel, IRabbitConsumerViewModel
     {
         #region Fields
-        private ITopicConsumer consumer;
+        //private ITopicConsumer consumer;
         private IRabbitControlledManager _deviceManager;
         #endregion
 
@@ -66,10 +66,10 @@ namespace HomeMQ.Core.ViewModels
             await base.OnUpdateView();
         }
 
-        public void Consume()
-        {
-            consumer.Consume();
-        }
+        //public void Consume()
+        //{
+        //    consumer.Consume();
+        //}
 
         public void Stop()
         {

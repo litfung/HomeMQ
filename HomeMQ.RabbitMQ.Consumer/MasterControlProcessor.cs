@@ -12,6 +12,13 @@ namespace HomeMQ.RabbitMQ.Consumer
         #region Fields
         private IRabbitControlledManager _rabbitTracker;
         private IBackgroundHandler _backgroundHandler;
+
+        //private Dictionary<string, Type> ResponseDictionary = new Dictionary<string, Type>(StringComparer.OrdinalIgnoreCase)
+        //{
+        //    {"status_check_response", typeof(StatusCheck)},
+        //    {"start_poll_response", typeof(StartPoll) }
+        //};
+        
         #endregion
 
         #region Properties

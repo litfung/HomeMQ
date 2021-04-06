@@ -15,13 +15,6 @@ namespace HomeMQ.Models
         public List<string> AlternateNames { get; set; } = new List<string>();
     }
 
-    //public class PiInterfaceData : IInterfaceData
-    //{
-    //    public string Name { get; set; }
-    //    public string MAC { get; set; }
-    //    public string IPAddress { get; set; }
-    //}
-
-
+    public class 
 
 }

@@ -1,11 +1,14 @@
 ﻿using BaseClasses;
 using BaseViewModels;
 using DeviceManagers;
+using HomeMQ.Models;
 using HomeMQ.RabbitMQ.Consumer;
+using HomeMQ.RabbitMQ.Publishers;
 using MvvmCross;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using RabbitMQ.Client;
+using RabbitMQ.Control.Core;
 using RabbitMqManagers;
 using System;
 using System.Collections.Generic;
@@ -21,9 +24,8 @@ namespace HomeMQ.Core.ViewModels
         #region Fields
         bool isDisplayed = true;
         private IWiznetManager _wiznetManager;
-        private IMQFactoryManager rabbitConnectionManager;
-        private IMasterControlProcessor rabbitCommandProcessor;
         private IRabbitControlledManager _deviceManager;
+        private IPiControlPublisher _commandPublisher;
         #endregion
 
         #region Properties
@@ -40,9 +42,6 @@ namespace HomeMQ.Core.ViewModels
                 }
             }
         }
-
-
-
         private IRabbitConsumerViewModel rabbitConsumer;
         public IRabbitConsumerViewModel RabbitConsumer
         {
@@ -67,11 +66,14 @@ namespace HomeMQ.Core.ViewModels
         #endregion
         #region Constructors
 
-        public PrimaryOverviewViewModel(IBackgroundHandler backgroundHandler, IWiznetManager wiznetManager, IRabbitControlledManager deviceManager) : base(backgroundHandler)
+        public PrimaryOverviewViewModel(IBackgroundHandler backgroundHandler, IWiznetManager wiznetManager, IRabbitControlledManager deviceManager, IPiControlPublisher commandPublisher) : base(backgroundHandler)
         {
             _backgroundHandler = backgroundHandler;
             _wiznetManager = wiznetManager;
             _deviceManager = deviceManager;
+            _commandPublisher = commandPublisher;
+
+            
 
             StartPi1Command = new MvxAsyncCommand(OnStartPi1);
             foreach (var item in _wiznetManager.AllWiznets)
@@ -116,7 +118,8 @@ namespace HomeMQ.Core.ViewModels
 
         private Task OnStartPi1()
         {
-            throw new NotImplementedException();
+            _commandPublisher.AddMessage(new RabbitControlMessage(new StartPoll(), "rasp.control.pi1"));
+            return Task.CompletedTask;
         }
         #endregion
 
