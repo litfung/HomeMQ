@@ -10,6 +10,9 @@
     <StackPanel>
         <StackPanel Orientation="Horizontal">
             <Button Content="Start Pi1" Command="{Binding StartPi1Command}"/>
+            <Button Content="Start All Pis" Command="{Binding StartAllPisCommand}"/>
+            <Button Content="Stop Pi1" Command="{Binding StopPi1Command}"/>
+            <Button Content="Stop All Pis" Command="{Binding StopAllPisCommand}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Background="{StaticResource PrimaryBackgroundBrush}" x:Name="mainGrid">
             <ContentControl Content="{Binding RabbitConsumer}" />

@@ -30,6 +30,24 @@ namespace HomeMQ.Models
             };
             return device;
         }
+
+        public PiDeviceStatus UpdatePollingStatus()
+        {
+            var interfaces = new List<IInterfaceData>();
+
+            foreach (var item in Payload.Interfaces)
+            {
+                interfaces.Add(item);
+            }
+
+            var device = new PiDeviceStatus
+            {
+                Hostname = Header.Hostname,
+                Status = Payload.Status,
+                Interfaces = interfaces
+            };
+            return device;
+        }
     }
 
     public class Header

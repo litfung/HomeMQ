@@ -76,7 +76,7 @@ namespace HomeMQ.RabbitMQ.Publishers
             });
 
             var body = Encoding.UTF8.GetBytes(message);
-
+            //Debug.WriteLine($"publish string -->{message}");
             var props = Channel.CreateBasicProperties();
             props.ContentType = "application/json";
 

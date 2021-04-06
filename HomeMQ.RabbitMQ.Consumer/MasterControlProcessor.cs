@@ -1,8 +1,10 @@
 ﻿using BaseClasses;
 using DeviceManagers;
 using HomeMQ.Models;
+using NetworkDeviceModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace HomeMQ.RabbitMQ.Consumer
@@ -39,6 +41,28 @@ namespace HomeMQ.RabbitMQ.Consumer
 
         public void Process(ControlResponse data)
         {
+            switch (data.Header.Command)
+            {
+                case "status_check_response":
+                    UpdateDeviceStatus(data);
+                    break;
+                case "start_poll_response":
+                    UpdatePollingStatus(data);
+                    break;
+                case "stop_poll_response":
+                    UpdatePollingStatus(data);
+                    break;
+                default:
+                    break;
+            }
+
+            
+
+            
+        }
+
+        private void UpdateDeviceStatus(ControlResponse data)
+        {
             var device = data.ToPiDeviceStatus();
             var found = false;
 
@@ -56,8 +80,16 @@ namespace HomeMQ.RabbitMQ.Consumer
                 _rabbitTracker.AddDevice(device);
                 _backgroundHandler.SendMessage(new UpdateViewMessage());
             }
+        }
 
-            
+        private void UpdatePollingStatus(ControlResponse data)
+        {
+            IRabbitControlled tmp;
+            if(_rabbitTracker.DevicesByName.TryGetValue(data.Header.Hostname, out tmp))
+            {
+                tmp.Status = data.Payload.Status;
+                _backgroundHandler.SendMessage(new UpdateViewMessage());
+            }
         }
     }
 }

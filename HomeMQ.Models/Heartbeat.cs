@@ -6,12 +6,17 @@ namespace HomeMQ.Models
 {
     public class StatusCheck
     {
-        public string Data { get; set; } = "";
     }
 
     public class StartPoll
     {
 
     }
+
+    public class StopPoll
+    {
+
+    }
+
 
 }

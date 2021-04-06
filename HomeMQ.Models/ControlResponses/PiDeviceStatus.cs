@@ -15,6 +15,6 @@ namespace HomeMQ.Models
         public List<string> AlternateNames { get; set; } = new List<string>();
     }
 
-    public class 
+    //public class 
 
 }

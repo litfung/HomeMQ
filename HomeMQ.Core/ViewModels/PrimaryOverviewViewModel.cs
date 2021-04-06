@@ -63,6 +63,9 @@ namespace HomeMQ.Core.ViewModels
 
         #region Commands
         public IMvxCommand StartPi1Command { get; }
+        public IMvxCommand StartAllPisCommand { get; }
+        public IMvxCommand StopPi1Command { get; }
+        public IMvxCommand StopAllPisCommand { get; }
         #endregion
         #region Constructors
 
@@ -72,10 +75,11 @@ namespace HomeMQ.Core.ViewModels
             _wiznetManager = wiznetManager;
             _deviceManager = deviceManager;
             _commandPublisher = commandPublisher;
-
             
-
             StartPi1Command = new MvxAsyncCommand(OnStartPi1);
+            StartAllPisCommand = new MvxAsyncCommand(OnStartAllPis);
+            StopPi1Command = new MvxAsyncCommand(OnStopPi1);
+            StopAllPisCommand = new MvxAsyncCommand(OnStopAllPis);
             foreach (var item in _wiznetManager.AllWiznets)
             {
                 WiznetStatusControls.Add(new WiznetStatusViewModel(_backgroundHandler, (IWiznetPiControl)item));
@@ -119,6 +123,24 @@ namespace HomeMQ.Core.ViewModels
         private Task OnStartPi1()
         {
             _commandPublisher.AddMessage(new RabbitControlMessage(new StartPoll(), "rasp.control.pi1"));
+            return Task.CompletedTask;
+        }
+
+        private Task OnStartAllPis()
+        {
+            _commandPublisher.AddMessage(new RabbitControlMessage(new StartPoll(), "rasp.control.all"));
+            return Task.CompletedTask;
+        }
+
+        private Task OnStopPi1()
+        {
+            _commandPublisher.AddMessage(new RabbitControlMessage(new StopPoll(), "rasp.control.pi1"));
+            return Task.CompletedTask;
+        }
+
+        private Task OnStopAllPis()
+        {
+            _commandPublisher.AddMessage(new RabbitControlMessage(new StopPoll(), "rasp.control.all"));
             return Task.CompletedTask;
         }
         #endregion
