@@ -1,6 +1,7 @@
 ﻿using BaseClasses;
 using BaseViewModels;
 using DeviceManagers;
+using HomeMQ.Models;
 using HomeMQ.RabbitMQ.Consumer;
 using MvvmCross.ViewModels;
 using NetworkDeviceModels;
@@ -59,7 +60,7 @@ namespace HomeMQ.Core.ViewModels
             var vmList = new List<IRabbitControlViewModel>();
             foreach (var item in _deviceManager.AllDevices)
             {
-                vmList.Add(new RabbitControlStatusViewModel(_backgroundHandler, item));
+                vmList.Add(new RabbitControlStatusViewModel(_backgroundHandler, (IBoontonPi)item));
             }
             Devices = new ObservableCollection<IRabbitControlViewModel>(vmList);
             //Devices = new ObservableCollection<IRabbitControlled>((IEnumerable<IRabbitControlled>)deviceManager.AllDevices);

@@ -1,5 +1,6 @@
 ﻿using BaseClasses;
 using BaseViewModels;
+using HomeMQ.Models;
 using NetworkDeviceModels;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace HomeMQ.Core.ViewModels
     public class RabbitControlStatusViewModel : BaseViewModel, IRabbitControlViewModel
     {
         #region Fields
-        private IRabbitControlled Device;
+        private IBoontonPi Device;
         #endregion
 
         #region Properties
@@ -43,6 +44,19 @@ namespace HomeMQ.Core.ViewModels
             }
         }
 
+        public string Timestamp
+        {
+            get { return Device.LastUpdateTime.ToString(); }
+            set
+            {
+                if (Device.Status != value)
+                {
+                    Device.Status = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         private ObservableCollection<InterfaceInfoViewModel> interfaces = new ObservableCollection<InterfaceInfoViewModel>();
         public ObservableCollection<InterfaceInfoViewModel> Interfaces
         {
@@ -57,21 +71,41 @@ namespace HomeMQ.Core.ViewModels
             }
         }
 
+        private ObservableCollection<string> sensors = new ObservableCollection<string>();
+        public ObservableCollection<string> Sensors
+        {
+            get { return sensors; }
+            set
+            {
+                if (sensors != value)
+                {
+                    sensors = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
 
         #endregion
 
         #region Constructors
-        public RabbitControlStatusViewModel(IBackgroundHandler backgroundHandler, IRabbitControlled device) : base(backgroundHandler)
+        public RabbitControlStatusViewModel(IBackgroundHandler backgroundHandler, IBoontonPi device) : base(backgroundHandler)
         {
             Device = device;
             var tmp = new List<InterfaceInfoViewModel>();
-
+            var tmpSensors = new List<string>();
             foreach (var item in Device.Interfaces)
             {
                 tmp.Add(new InterfaceInfoViewModel(item));
             }
 
+            foreach (var sensor in Device.Sensors)
+            {
+                tmpSensors.Add(sensor.SerialNumber);
+            }
+
             Interfaces = new ObservableCollection<InterfaceInfoViewModel>(tmp);
+            Sensors = new ObservableCollection<string>(tmpSensors);
         }
         #endregion
 

@@ -14,6 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using WiznetControllers;
 
@@ -26,6 +27,7 @@ namespace HomeMQ.Core.ViewModels
         private IWiznetManager _wiznetManager;
         private IRabbitControlledManager _deviceManager;
         private IPiControlPublisher _commandPublisher;
+        private CancellationToken statusToken;
         #endregion
 
         #region Properties
@@ -57,8 +59,6 @@ namespace HomeMQ.Core.ViewModels
         }
 
 
-        //public ObservableCollection<WiznetControlsSCPI> Wiznet { get; set; }
-
         #endregion
 
         #region Commands
@@ -66,7 +66,9 @@ namespace HomeMQ.Core.ViewModels
         public IMvxCommand StartAllPisCommand { get; }
         public IMvxCommand StopPi1Command { get; }
         public IMvxCommand StopAllPisCommand { get; }
+        public IMvxCommand BoontonStartupCommand { get; }
         #endregion
+       
         #region Constructors
 
         public PrimaryOverviewViewModel(IBackgroundHandler backgroundHandler, IWiznetManager wiznetManager, IRabbitControlledManager deviceManager, IPiControlPublisher commandPublisher) : base(backgroundHandler)
@@ -80,46 +82,21 @@ namespace HomeMQ.Core.ViewModels
             StartAllPisCommand = new MvxAsyncCommand(OnStartAllPis);
             StopPi1Command = new MvxAsyncCommand(OnStopPi1);
             StopAllPisCommand = new MvxAsyncCommand(OnStopAllPis);
+            BoontonStartupCommand = new MvxAsyncCommand(OnBoontonStartup);
             foreach (var item in _wiznetManager.AllWiznets)
             {
                 WiznetStatusControls.Add(new WiznetStatusViewModel(_backgroundHandler, (IWiznetPiControl)item));
             }
 
             RabbitConsumer = new RabbitConsumerViewModel(_backgroundHandler, _deviceManager);
+
+            _ = PollRabbitDevices();
         }
-
-
-        //public PrimaryOverviewViewModel(IMessenger iMessenger, IWiznetManager wizManager, IMQConnectionManager mqConnections, 
-        //    IMasterControlProcessor processor, IRabbitControlledManager dManager) : base(iMessenger)
-        //{
-        //    WiznetManager = wizManager;
-        //    rabbitConnectionManager = mqConnections;
-        //    rabbitCommandProcessor = processor;
-        //    deviceManager = dManager;
-
-        //    foreach (var item in WiznetManager.AllWiznets)
-        //    {
-        //        WiznetStatusControls.Add(new WiznetStatusViewModel(iMessenger, (IWiznetPiControl)item));
-        //    }
-
-
-        //    var exchangeName = "rtsh_topics";
-        //    var routeKey = "master.control.*";
-        //    var factory = mqConnections.FactoriesByName["home"];
-        //    var consumer = new MasterControlConsumer(factory, rabbitCommandProcessor, exchangeName, routeKey, "master control");
-
-        //    RabbitConsumer = new RabbitConsumerViewModel(iMessenger, consumer, deviceManager);
-        //}
 
 
         #endregion
 
         #region Methods
-        //private Task OnUpdateView()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
         private Task OnStartPi1()
         {
             _commandPublisher.AddMessage(new RabbitControlMessage(new StartPoll(), "rasp.control.pi1"));
@@ -141,6 +118,34 @@ namespace HomeMQ.Core.ViewModels
         private Task OnStopAllPis()
         {
             _commandPublisher.AddMessage(new RabbitControlMessage(new StopPoll(), "rasp.control.all"));
+            return Task.CompletedTask;
+        }
+        
+        private async Task PollRabbitDevices()
+        {
+            while (!statusToken.IsCancellationRequested)
+            {
+                foreach (var device in _deviceManager.AllDevices)
+                {
+                    if ((DateTime.Now - device.LastUpdateTime).TotalSeconds > 10.0)
+                    {
+                        device.Status = "lost";
+                    }
+                    else if ((DateTime.Now - device.LastUpdateTime).TotalSeconds > 4.0 )
+                    {
+                        device.Status = "stale";
+                    }
+                }
+
+                _backgroundHandler.SendMessage(new UpdateViewMessage());
+                await Task.Delay(2000);
+            }
+
+        }
+
+        private Task OnBoontonStartup()
+        {
+            _commandPublisher.AddMessage(new RabbitControlMessage(new BoontonStartup(), "rasp.control.all"));
             return Task.CompletedTask;
         }
         #endregion

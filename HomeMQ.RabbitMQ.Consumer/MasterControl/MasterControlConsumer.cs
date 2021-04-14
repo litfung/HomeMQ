@@ -64,7 +64,7 @@ namespace HomeMQ.RabbitMQ.Consumer
             var bodyString = Encoding.UTF8.GetString(body.ToArray());
             Debug.WriteLine(bodyString);
 
-            var resp = JsonConvert.DeserializeObject<ControlResponse>(bodyString);
+            var resp = JsonConvert.DeserializeObject<ControlResponse>(bodyString, jsonSettings);
             responseProcessor.Process(resp);
             //Debug.WriteLine(device.Header.Command);
             //var type = Type.GetType(device.Header.Command);

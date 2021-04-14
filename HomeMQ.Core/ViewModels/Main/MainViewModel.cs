@@ -121,26 +121,9 @@ namespace HomeMQ.Core.ViewModels
             _rabbitDeviceTracker = new RabbitControlledDeviceManager();
             _mqConnectionManager = new MQConnectionManager(_stateManager, _mqFactoryManager, _backgroundHandler, _rabbitDeviceTracker);
         }
-        //public MainViewModel(IMessenger iMessenger)
-        //{
-        //    //messenger = new Messenger();
-        //    //stateManager = new StateManager();
-        //    //logManager = new LogManager();
-        //    //wiznetManager = new WiznetManager();
-        //    //rabbitConnectionManager = new MQConnectionManager();
-        //    //deviceManager = new RabbitControlledDeviceManager();
-        //    //commandProcessor = new MasterControlProcessor(deviceManager, messenger);
-        //    ////IPiControlPublisher piController = new PiControlPublisher();
-        //    //mainControl = new MainControl(stateManager, messenger, logManager, wiznetManager, rabbitConnectionManager, deviceManager, commandProcessor);
-        //    //messenger.Register<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
-        //    //mainControl.Messenger.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
-        //    messenger.Register<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
-
-        //}
 
         public override Task Initialize()
         {
-
             _ = NavigateStart();
             return base.Initialize();
         }
@@ -150,8 +133,6 @@ namespace HomeMQ.Core.ViewModels
             MasterViewModel = new MenuViewModel(this);
             ErrorHandlerViewModel = new ErrorHandlerViewModel(_backgroundHandler);
             NavigateToPrimaryOverview();
-            //
-            //mainControl.NavigatePrimaryOverview();
         }
 
         public void NavigateToPrimaryOverview()

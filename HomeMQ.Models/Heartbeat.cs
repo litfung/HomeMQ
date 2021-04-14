@@ -18,5 +18,10 @@ namespace HomeMQ.Models
 
     }
 
+    public class BoontonStartup
+    {
+
+    }
+
 
 }

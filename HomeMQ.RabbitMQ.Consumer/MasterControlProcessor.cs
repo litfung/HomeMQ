@@ -44,31 +44,25 @@ namespace HomeMQ.RabbitMQ.Consumer
             switch (data.Header.Command)
             {
                 case "status_check_response":
-                    UpdateDeviceStatus(data);
+                    UpdateDevices(data);
                     break;
+                case "boonton_startup_response":
                 case "start_poll_response":
-                    UpdatePollingStatus(data);
-                    break;
                 case "stop_poll_response":
-                    UpdatePollingStatus(data);
+                    UpdateDeviceStatus(data);
                     break;
                 default:
                     break;
             }
-
-            
-
-            
         }
 
-        private void UpdateDeviceStatus(ControlResponse data)
+        private void UpdateDevices(ControlResponse data)
         {
-            var device = data.ToPiDeviceStatus();
             var found = false;
 
             foreach (var item in _rabbitTracker.AllDevices)
             {
-                if (item.Hostname.Equals(device.Hostname))
+                if (item.Hostname.Equals(data.Header.Hostname))
                 {
                     found = true;
                     break;
@@ -77,17 +71,23 @@ namespace HomeMQ.RabbitMQ.Consumer
 
             if (!found)
             {
+                var device = data.ToPiDeviceStatus();
                 _rabbitTracker.AddDevice(device);
                 _backgroundHandler.SendMessage(new UpdateViewMessage());
             }
+            else
+            {
+                UpdateDeviceStatus(data);
+            }
         }
 
-        private void UpdatePollingStatus(ControlResponse data)
+        private void UpdateDeviceStatus(ControlResponse data)
         {
             IRabbitControlled tmp;
-            if(_rabbitTracker.DevicesByName.TryGetValue(data.Header.Hostname, out tmp))
+            if (_rabbitTracker.DevicesByName.TryGetValue(data.Header.Hostname, out tmp))
             {
                 tmp.Status = data.Payload.Status;
+                tmp.LastUpdateTime = DateTime.Now;
                 _backgroundHandler.SendMessage(new UpdateViewMessage());
             }
         }

@@ -10,8 +10,11 @@
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="{Binding Hostname}"/>
             <TextBlock Text="{Binding Status}"/>
+            <TextBlock Text="{Binding Timestamp}"/>
         </StackPanel>
         
         <ItemsControl ItemsSource="{Binding Interfaces}"/>
+
+        <ItemsControl ItemsSource="{Binding Sensors}"/>
     </StackPanel>
 </UserControl>
