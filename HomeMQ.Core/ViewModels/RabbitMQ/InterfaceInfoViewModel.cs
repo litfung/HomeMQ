@@ -62,7 +62,7 @@ namespace HomeMQ.Core.ViewModels
         public InterfaceInfoViewModel(IInterfaceData nInfo)
         {
             info = nInfo;
-    }
+        }
         #endregion
 
         #region Methods

@@ -30,6 +30,9 @@
     <Compile Update="Views\RabbitConnections\RabbitControlStatusView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Sensors\SensorInfoView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\UpgradeDebugView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -81,6 +84,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\RabbitConnections\RabbitControlStatusView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Sensors\SensorInfoView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\UpgradeDebugView.xaml">

@@ -1,6 +1,7 @@
 ﻿using BaseClasses;
 using BaseViewModels;
 using HomeMQ.Models;
+using HomeMQ.RabbitMQ.Publishers;
 using NetworkDeviceModels;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace HomeMQ.Core.ViewModels
     {
         #region Fields
         private IBoontonPi Device;
+        private IPiControlPublisher _commandPublisher;
         #endregion
 
         #region Properties
@@ -71,8 +73,8 @@ namespace HomeMQ.Core.ViewModels
             }
         }
 
-        private ObservableCollection<string> sensors = new ObservableCollection<string>();
-        public ObservableCollection<string> Sensors
+        private ObservableCollection<SensorInfoViewModel> sensors = new ObservableCollection<SensorInfoViewModel>();
+        public ObservableCollection<SensorInfoViewModel> Sensors
         {
             get { return sensors; }
             set
@@ -89,11 +91,12 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public RabbitControlStatusViewModel(IBackgroundHandler backgroundHandler, IBoontonPi device) : base(backgroundHandler)
+        public RabbitControlStatusViewModel(IBackgroundHandler backgroundHandler, IBoontonPi device, IPiControlPublisher commandPublisher) : base(backgroundHandler)
         {
             Device = device;
+            _commandPublisher = commandPublisher;
             var tmp = new List<InterfaceInfoViewModel>();
-            var tmpSensors = new List<string>();
+            var tmpSensors = new List<SensorInfoViewModel>();
             foreach (var item in Device.Interfaces)
             {
                 tmp.Add(new InterfaceInfoViewModel(item));
@@ -101,11 +104,11 @@ namespace HomeMQ.Core.ViewModels
 
             foreach (var sensor in Device.Sensors)
             {
-                tmpSensors.Add(sensor.SerialNumber);
+                tmpSensors.Add(new SensorInfoViewModel(sensor, _commandPublisher));
             }
 
             Interfaces = new ObservableCollection<InterfaceInfoViewModel>(tmp);
-            Sensors = new ObservableCollection<string>(tmpSensors);
+            Sensors = new ObservableCollection<SensorInfoViewModel>(tmpSensors);
         }
         #endregion
 

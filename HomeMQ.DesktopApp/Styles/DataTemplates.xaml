@@ -41,7 +41,11 @@
         <views:InterfaceInfoView/>
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vms:SensorInfoViewModel}">
+        <views:SensorInfoView/>
+    </DataTemplate>
 
 
-    
+
+
 </ResourceDictionary>

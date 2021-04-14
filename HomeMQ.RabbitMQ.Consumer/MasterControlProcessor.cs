@@ -41,55 +41,83 @@ namespace HomeMQ.RabbitMQ.Consumer
 
         public void Process(ControlResponse data)
         {
-            switch (data.Header.Command)
+            var device = data.ToPiDeviceStatus();
+            if (_rabbitTracker.DevicesByName.TryGetValue(device.Hostname, out var tmp) )
             {
-                case "status_check_response":
-                    UpdateDevices(data);
-                    break;
-                case "boonton_startup_response":
-                case "start_poll_response":
-                case "stop_poll_response":
-                    UpdateDeviceStatus(data);
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        private void UpdateDevices(ControlResponse data)
-        {
-            var found = false;
-
-            foreach (var item in _rabbitTracker.AllDevices)
-            {
-                if (item.Hostname.Equals(data.Header.Hostname))
-                {
-                    found = true;
-                    break;
-                }
-            }
-
-            if (!found)
-            {
-                var device = data.ToPiDeviceStatus();
-                _rabbitTracker.AddDevice(device);
-                _backgroundHandler.SendMessage(new UpdateViewMessage());
+                UpdateDeviceStatus((IBoontonPi)tmp, device);
             }
             else
             {
-                UpdateDeviceStatus(data);
+                AddDevice(device);
             }
+            //switch (data.Header.Command)
+            //{
+            //    case "status_check_response":
+            //        UpdateDevices(data);
+            //        break;
+            //    case "boonton_startup_response":
+            //    case "start_poll_response":
+            //    case "stop_poll_response":
+            //        UpdateDeviceStatus(data);
+            //        break;
+            //    default:
+            //        break;
+            //}
         }
 
-        private void UpdateDeviceStatus(ControlResponse data)
+        private void UpdateDeviceStatus(IBoontonPi current, IBoontonPi update)
         {
-            IRabbitControlled tmp;
-            if (_rabbitTracker.DevicesByName.TryGetValue(data.Header.Hostname, out tmp))
+            current.Status = update.Status;
+            current.LastUpdateTime = DateTime.Now;
+            if (update.Sensors != null)
             {
-                tmp.Status = data.Payload.Status;
-                tmp.LastUpdateTime = DateTime.Now;
-                _backgroundHandler.SendMessage(new UpdateViewMessage());
+                current.Sensors = update.Sensors;
             }
+            _backgroundHandler.SendMessage(new UpdateViewMessage());
         }
+
+        private void AddDevice(IRabbitControlled device)
+        {
+            _rabbitTracker.AddDevice(device);
+            _backgroundHandler.SendMessage(new UpdateViewMessage());
+        }
+
+        //private void UpdateDevices(ControlResponse data)
+        //{
+        //    var found = false;
+        //    var device = data.ToPiDeviceStatus();
+
+        //    foreach (var item in _rabbitTracker.AllDevices)
+        //    {
+        //        if (item.Hostname.Equals(data.Header.Hostname))
+        //        {
+        //            found = true;
+        //            var tmp = (IBoontonPi)item;
+        //            tmp.Status = device.Status;
+        //            tmp.Sensors = device.Sensors;
+        //            tmp.LastUpdateTime = DateTime.Now;
+
+        //            break;
+        //        }
+        //    }
+
+        //    if (!found)
+        //    {
+        //        _rabbitTracker.AddDevice(device);
+        //        _backgroundHandler.SendMessage(new UpdateViewMessage());
+        //    }
+        //}
+
+        //private void UpdateDeviceStatus(ControlResponse data)
+        //{
+        //    IRabbitControlled tmp;
+        //    if (_rabbitTracker.DevicesByName.TryGetValue(data.Header.Hostname, out tmp))
+        //    {
+        //        var device = (IBoontonPi)tmp;
+        //        device.Status = data.Payload.Status;
+        //        device.LastUpdateTime = DateTime.Now;
+        //        _backgroundHandler.SendMessage(new UpdateViewMessage());
+        //    }
+        //}
     }
 }

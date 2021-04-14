@@ -3,6 +3,7 @@ using BaseViewModels;
 using DeviceManagers;
 using HomeMQ.Models;
 using HomeMQ.RabbitMQ.Consumer;
+using HomeMQ.RabbitMQ.Publishers;
 using MvvmCross.ViewModels;
 using NetworkDeviceModels;
 using RabbitMQ.Client;
@@ -19,6 +20,7 @@ namespace HomeMQ.Core.ViewModels
         #region Fields
         //private ITopicConsumer consumer;
         private IRabbitControlledManager _deviceManager;
+        private IPiControlPublisher _commandPublisher;
         #endregion
 
         #region Properties
@@ -39,18 +41,11 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        //public RabbitConsumerViewModel(IMessenger iMessenger, MasterControlConsumer topicConsumer, IRabbitControlledManager dManager) : base(iMessenger)
-        //{
-        //    messenger = iMessenger;
-        //    consumer = topicConsumer;
-        //    deviceManager = dManager;
-        //    Consume();
-        //}
-
-        public RabbitConsumerViewModel(IBackgroundHandler backgroundHandler, IRabbitControlledManager deviceManager) : base(backgroundHandler)
+        public RabbitConsumerViewModel(IBackgroundHandler backgroundHandler, IRabbitControlledManager deviceManager, IPiControlPublisher commandPublisher) : base(backgroundHandler)
         {
             _deviceManager = deviceManager;
-            _ = OnUpdateView();
+            _commandPublisher = commandPublisher;
+        _ = OnUpdateView();
         }
         #endregion
 
@@ -60,17 +55,11 @@ namespace HomeMQ.Core.ViewModels
             var vmList = new List<IRabbitControlViewModel>();
             foreach (var item in _deviceManager.AllDevices)
             {
-                vmList.Add(new RabbitControlStatusViewModel(_backgroundHandler, (IBoontonPi)item));
+                vmList.Add(new RabbitControlStatusViewModel(_backgroundHandler, (IBoontonPi)item, _commandPublisher));
             }
             Devices = new ObservableCollection<IRabbitControlViewModel>(vmList);
-            //Devices = new ObservableCollection<IRabbitControlled>((IEnumerable<IRabbitControlled>)deviceManager.AllDevices);
             await base.OnUpdateView();
         }
-
-        //public void Consume()
-        //{
-        //    consumer.Consume();
-        //}
 
         public void Stop()
         {

@@ -23,5 +23,26 @@ namespace HomeMQ.Models
 
     }
 
+    public class BoontonCloseSensors
+    {
+
+    }
+
+    public class BoontonResetSensors
+    {
+
+    }
+
+    public class BoontonLoadFromConfig
+    {
+        public string Serial { get; set; }
+        public string Filename { get; set; }
+        public BoontonLoadFromConfig(string serial, string filename)
+        {
+            Serial = serial;
+            Filename = filename;
+        }
+    }
+
 
 }

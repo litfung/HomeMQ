@@ -1,9 +1,0 @@
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.SensorSQLProject\bin\Debug\HomeMQ.SensorSQLProject.dacpac
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.SensorSQLProject\bin\Debug\HomeMQ.SensorSQLProject.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.SensorSQLProject\bin\Debug\HomeMQ.SensorSQLProject.pdb
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.SensorSQLProject\obj\Debug\HomeMQ.SensorSQLProject.dll
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.SensorSQLProject\obj\Debug\HomeMQ.SensorSQLProject.pdb
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.SensorSQLProject\obj\Debug\Model.xml
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.SensorSQLProject\obj\Debug\refactor.xml
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.SensorSQLProject\obj\Debug\postdeploy.sql
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.SensorSQLProject\obj\Debug\predeploy.sql

@@ -34,17 +34,22 @@ namespace HomeMQ.Models
 
         public BoontonPiStatus ToPiDeviceStatus()
         {
-            var interfaces = new List<IInterfaceData>();
-            var sensors = new List<ISensorData>();
-            foreach (var item in Payload.Interfaces)
+            List<IInterfaceData> interfaces = null;// new List<IInterfaceData>();
+            List<ISensorData> sensors = null;// new List<ISensorData>();
+            if (Payload.Interfaces != null)
             {
-                interfaces.Add(item);
+                interfaces = new List<IInterfaceData>(Payload.Interfaces);
             }
 
-            foreach (var sensor in Payload.Sensors)
+            if (Payload.Sensors != null)
             {
-                sensors.Add(sensor);
+                sensors = new List<ISensorData>(Payload.Sensors);
             }
+
+            //foreach (var sensor in Payload.Sensors)
+            //{
+            //    sensors.Add(sensor);
+            //}
 
             var device = new BoontonPiStatus
             {
@@ -57,23 +62,23 @@ namespace HomeMQ.Models
             return device;
         }
 
-        public PiDeviceStatus UpdatePollingStatus()
-        {
-            var interfaces = new List<IInterfaceData>();
+        //public PiDeviceStatus UpdatePollingStatus()
+        //{
+        //    var interfaces = new List<IInterfaceData>();
 
-            foreach (var item in Payload.Interfaces)
-            {
-                interfaces.Add(item);
-            }
+        //    foreach (var item in Payload.Interfaces)
+        //    {
+        //        interfaces.Add(item);
+        //    }
 
-            var device = new PiDeviceStatus
-            {
-                Hostname = Header.Hostname,
-                Status = Payload.Status,
-                Interfaces = interfaces
-            };
-            return device;
-        }
+        //    var device = new PiDeviceStatus
+        //    {
+        //        Hostname = Header.Hostname,
+        //        Status = Payload.Status,
+        //        Interfaces = interfaces
+        //    };
+        //    return device;
+        //}
     }
 
     public class Header
@@ -99,5 +104,6 @@ namespace HomeMQ.Models
     public class SensorInfo : ISensorData
     {
         public string SerialNumber { get; set; }
+        public string Status { get; set; }
     }
 }
