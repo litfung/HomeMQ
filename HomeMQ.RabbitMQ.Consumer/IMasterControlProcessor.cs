@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HomeMQ.RabbitMQ.Consumer
+namespace HomeMQ.RabbitMQ.Consumers
 {
     public interface IMasterControlProcessor
     {

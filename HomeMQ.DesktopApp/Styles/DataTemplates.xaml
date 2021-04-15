@@ -45,6 +45,10 @@
         <views:SensorInfoView/>
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vms:RabbitControlOverviewViewModel}">
+        <views:RabbitControlOverviewPage/>
+    </DataTemplate>
+
 
 
 

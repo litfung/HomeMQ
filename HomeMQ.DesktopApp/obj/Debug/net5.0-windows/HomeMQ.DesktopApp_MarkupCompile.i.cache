@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\App.xaml
-181660983829
+19-1273684951
 
-161909376347
-2111252216377
-MainWindow.xaml;Styles\Buttons.xaml;Styles\Collections.xaml;Styles\Colors.xaml;Styles\DataTemplates.xaml;Styles\Fonts.xaml;Styles\Texts.xaml;Views\ErrorHandlerView.xaml;Views\InterfaceInfoView.xaml;Views\MainView.xaml;Views\MenuView.xaml;Views\PrimaryOverviewPage.xaml;Views\RabbitConnections\RabbitConsumerView.xaml;Views\RabbitConnections\RabbitControlStatusView.xaml;Views\Sensors\SensorInfoView.xaml;Views\UpgradeDebugView.xaml;Views\WiznetConnections\WiznetPiControlView.xaml;Views\WiznetConnections\WiznetStatusView.xaml;
+17893595403
+212558295025
+MainWindow.xaml;Styles\Buttons.xaml;Styles\Collections.xaml;Styles\Colors.xaml;Styles\DataTemplates.xaml;Styles\Fonts.xaml;Styles\Texts.xaml;Views\InterfaceInfoView.xaml;Views\Main\ErrorHandlerView.xaml;Views\Main\MainView.xaml;Views\Main\MenuView.xaml;Views\PrimaryOverviewPage.xaml;Views\RabbitConnections\RabbitConsumerView.xaml;Views\RabbitConnections\RabbitControlStatusView.xaml;Views\RabbitControlOverviewPage.xaml;Views\Sensors\SensorInfoView.xaml;Views\UpgradeDebugView.xaml;Views\WiznetConnections\WiznetPiControlView.xaml;Views\WiznetConnections\WiznetStatusView.xaml;
 
 True
 

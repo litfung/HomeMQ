@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "tPmyHD3NGswsnmOqssfu7eXXSFs5abn8dyBvhNyQoyFLoJojHvdl0x0L+vC9OwPg+7Q1WHFcw7Qfd+afCBZVzA==",
+  "dgSpecHash": "mNJ3ri7AzMoKIwBMUiSU676ky11evlDiCa7UDeXN2bCTCkHxGEzi7oIg0MCVP4p0h3i8for/xXozZ+LDZbJXEw==",
   "success": true,
   "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.SensorSQL.DataAccess\\HomeMQ.SensorSQL.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\devin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\mvvmcross\\7.1.2\\mvvmcross.7.1.2.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\mvvmcross.plugin.messenger\\7.1.2\\mvvmcross.plugin.messenger.7.1.2.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"

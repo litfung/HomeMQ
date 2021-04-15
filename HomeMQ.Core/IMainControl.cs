@@ -1,7 +1,7 @@
 ﻿using BaseClasses;
 using DeviceManagers;
 using HomeMQ.Managers;
-using HomeMQ.RabbitMQ.Consumer;
+using HomeMQ.RabbitMQ.Consumers;
 using HomeMQ.RabbitMQ.Publishers;
 using RabbitMqManagers;
 using WiznetControllers;

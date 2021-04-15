@@ -3,7 +3,7 @@ using BaseClasses.StateManagers;
 using BaseViewModels;
 using DeviceManagers;
 using HomeMQ.Managers;
-using HomeMQ.RabbitMQ.Consumer;
+using HomeMQ.RabbitMQ.Consumers;
 using HomeMQ.RabbitMQ.Publishers;
 using MvvmCross;
 using MvvmCross.Navigation;
@@ -99,7 +99,6 @@ namespace HomeMQ.Core.ViewModels
             _logManager = new LogManager();
             _notificationService = new SimpleNotificationService();
 
-
             _backgroundHandler = new SimpleBackgroundHandler(_messenger, _logManager, _notificationService);
             _backgroundHandler.RegisterMessage<MasterNavigationMessage>(this, x => MasterViewModel = x.NavigateToViewModel);
             _backgroundHandler.RegisterMessage<DetailNavigationMessage>(this, x => DetailViewModel = x.NavigateToViewModel);
@@ -137,8 +136,25 @@ namespace HomeMQ.Core.ViewModels
 
         public void NavigateToPrimaryOverview()
         {
-            var publisher = (IPiControlPublisher)_mqConnectionManager.ConnectionsByName["pi controller 1"];
+            IPiControlPublisher publisher;
+            //try
+            //{
+            //    publisher = (IPiControlPublisher)_mqConnectionManager.ConnectionsByName["pi controller 1"];
+            //}
+            //catch (Exception)
+            //{
+                publisher = new NonePiControlPublisher(); 
+            //}
+            //new ViewUnloadedMessage()
+            _backgroundHandler.SendMessage(new ViewUnloadedMessage());
             _backgroundHandler.SendMessage(new DetailNavigationMessage(new PrimaryOverviewViewModel(_backgroundHandler, _wiznetManager, _rabbitDeviceTracker, publisher)));
+        }
+
+        public void NavigateToSensorControl()
+        {
+            var publisher = (IPiControlPublisher)_mqConnectionManager.ConnectionsByName["pi controller 1"];
+            _backgroundHandler.SendMessage(new ViewUnloadedMessage());
+            _backgroundHandler.SendMessage(new DetailNavigationMessage(new RabbitControlOverviewViewModel(_backgroundHandler, _rabbitDeviceTracker, publisher)));
         }
     }
 }

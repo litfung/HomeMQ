@@ -95,21 +95,27 @@ namespace HomeMQ.Core.ViewModels
         {
             Device = device;
             _commandPublisher = commandPublisher;
-            var tmp = new List<InterfaceInfoViewModel>();
-            var tmpSensors = new List<SensorInfoViewModel>();
+            //var tmp = new List<InterfaceInfoViewModel>();
+            //var tmpSensors = new List<SensorInfoViewModel>();
             foreach (var item in Device.Interfaces)
             {
-                tmp.Add(new InterfaceInfoViewModel(item));
+                //tmp.Add(new InterfaceInfoViewModel(item));
+                Interfaces.Add(new InterfaceInfoViewModel(item));
             }
 
             foreach (var sensor in Device.Sensors)
             {
-                tmpSensors.Add(new SensorInfoViewModel(sensor, _commandPublisher));
+                //tmpSensors.Add(new SensorInfoViewModel());// sensor, _commandPublisher));
+                Sensors.Add(new SensorInfoViewModel());// sensor, _commandPublisher));
             }
-
-            Interfaces = new ObservableCollection<InterfaceInfoViewModel>(tmp);
-            Sensors = new ObservableCollection<SensorInfoViewModel>(tmpSensors);
+            //Interfaces.Clear();
+            //Sensors.Clear();
+            //Interfaces = new ObservableCollection<InterfaceInfoViewModel>(tmp);
+            //Sensors = new ObservableCollection<SensorInfoViewModel>(tmpSensors);
+            
         }
+
+        
         #endregion
 
         #region Methods

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "qBAo49ZKMJmO7hQcruPDh6y/oLAzZTKQq0SRuwkk8sl/AJg0Lk521Ml8vA2Aanhtwv5SMpg5kICLkwu0XahqoQ==",
+  "dgSpecHash": "lUOgCV0acO9OORHY2cAHrXJk7QYO/Q/mXTJm+GEs4bjG9276KWy3370RH/2EeFOYD/sk2G1MxTliU/jkaVmvpw==",
   "success": true,
   "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.RabbitMQ.Consumer\\HomeMQ.RabbitMQ.Consumers.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\devin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\mvvmcross\\7.1.2\\mvvmcross.7.1.2.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\mvvmcross.plugin.messenger\\7.1.2\\mvvmcross.plugin.messenger.7.1.2.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",

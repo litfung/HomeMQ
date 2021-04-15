@@ -18,7 +18,7 @@ namespace HomeMQ.DesktopApp.Views
     /// <summary>
     /// Interaction logic for PrimaryOverviewView.xaml
     /// </summary>
-    public partial class PrimaryOverviewPage : MvxWpfView
+    public partial class PrimaryOverviewPage : UserControl
     {
         public PrimaryOverviewPage()
         {

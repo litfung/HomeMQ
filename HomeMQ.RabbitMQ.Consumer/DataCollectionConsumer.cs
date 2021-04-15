@@ -1,4 +1,4 @@
-﻿using HomeMQ.RabbitMQ.Consumer;
+﻿using HomeMQ.RabbitMQ.Consumers;
 using RabbitMQ.Client;
 using System;
 using System.Collections.Generic;

@@ -1,7 +1,7 @@
 ﻿using BaseClasses;
 using BaseViewModels;
 using DeviceManagers;
-using HomeMQ.RabbitMQ.Consumer;
+using HomeMQ.RabbitMQ.Consumers;
 using MvvmCross.Commands;
 using MvvmCross.ViewModels;
 using RabbitMqManagers;
@@ -75,6 +75,7 @@ namespace HomeMQ.Core.ViewModels
 
         public void ShowSecondPage()
         {
+            _navService.NavigateToSensorControl();
             //mainControl.NavigateUpgradeDebug();
             //messenger.Send(new DetailNavigationMessage(new PrimaryOverviewViewModel(messenger)));
         }

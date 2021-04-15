@@ -1,4 +1,4 @@
-﻿<views:MvxWpfView x:Class="HomeMQ.DesktopApp.Views.PrimaryOverviewPage"
+﻿<UserControl x:Class="HomeMQ.DesktopApp.Views.PrimaryOverviewPage"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,18 +8,9 @@
         mc:Ignorable="d"
         d:Height="450" d:Width="800">
     <StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Button Content="Start Pi1" Command="{Binding StartPi1Command}"/>
-            <Button Content="Start All Pis" Command="{Binding StartAllPisCommand}"/>
-            <Button Content="Stop Pi1" Command="{Binding StopPi1Command}"/>
-            <Button Content="Stop All Pis" Command="{Binding StopAllPisCommand}"/>
-            <Button Content="Boonton Startup" Command="{Binding BoontonStartupCommand}"/>
-            <Button Content="Boonton Close Sensors" Command="{Binding BoontonCloseSensorsCommand}"/>
-            <Button Content="Boonton Reset Sensors" Command="{Binding BoontonResetSensorsCommand}"/>
-        </StackPanel>
         <StackPanel Orientation="Horizontal" Background="{StaticResource PrimaryBackgroundBrush}" x:Name="mainGrid">
             <ContentControl Content="{Binding RabbitConsumer}" />
             <ItemsControl ItemsSource="{Binding WiznetStatusControls}"/>
         </StackPanel>
     </StackPanel>
-</views:MvxWpfView>
+</UserControl>

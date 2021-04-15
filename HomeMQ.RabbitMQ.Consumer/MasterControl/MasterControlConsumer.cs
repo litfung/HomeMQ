@@ -11,7 +11,7 @@ using System.Diagnostics;
 using System.Dynamic;
 using System.Text;
 
-namespace HomeMQ.RabbitMQ.Consumer
+namespace HomeMQ.RabbitMQ.Consumers
 {
     public class MasterControlConsumer : TopicConsumer
     {

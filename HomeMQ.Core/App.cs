@@ -8,7 +8,7 @@ using MvvmCross;
 using WiznetControllers;
 using DeviceManagers;
 using RabbitMqManagers;
-using HomeMQ.RabbitMQ.Consumer;
+using HomeMQ.RabbitMQ.Consumers;
 using HomeMQ.RabbitMQ.Publishers;
 using HomeMQ.Managers;
 using BaseClasses;

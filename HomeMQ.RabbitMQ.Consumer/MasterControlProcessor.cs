@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace HomeMQ.RabbitMQ.Consumer
+namespace HomeMQ.RabbitMQ.Consumers
 {
     public class MasterControlProcessor : IMasterControlProcessor
     {
@@ -44,10 +44,14 @@ namespace HomeMQ.RabbitMQ.Consumer
             var device = data.ToPiDeviceStatus();
             if (_rabbitTracker.DevicesByName.TryGetValue(device.Hostname, out var tmp) )
             {
+                Debug.WriteLine("Master processor device found");
+                //_backgroundHandler.SendMessage(new UpdateViewMessage());
                 UpdateDeviceStatus((IBoontonPi)tmp, device);
             }
             else
             {
+                Debug.WriteLine("Master processor device not found");
+                //_backgroundHandler.SendMessage(new UpdateViewMessage());
                 AddDevice(device);
             }
             //switch (data.Header.Command)

@@ -492,6 +492,27 @@
           }
         }
       },
+      "MvvmCross/7.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/MvvmCross.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/MvvmCross.dll": {}
+        }
+      },
+      "MvvmCross.Plugin.Messenger/7.1.2": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross": "7.1.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/MvvmCross.Plugin.Messenger.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MvvmCross.Plugin.Messenger.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -1605,6 +1626,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "MvvmCross": "7.1.2",
+          "MvvmCross.Plugin.Messenger": "7.1.2",
           "Newtonsoft.Json": "12.0.3"
         },
         "compile": {
@@ -2448,6 +2471,67 @@
         "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "MvvmCross/7.1.2": {
+      "sha512": "1tYkYslR8c7Dp/3itlx8+djBp+cim/ieS1Xp+d/waL0Yrl3H4HGmqxSm89yz/Ts+H9pmrS5DeKpOb+HUOzaERQ==",
+      "type": "package",
+      "path": "mvvmcross/7.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/monoandroid10.0/MvvmCross.dll",
+        "lib/monoandroid10.0/MvvmCross.pdb",
+        "lib/monoandroid10.0/MvvmCross.xml",
+        "lib/net461/MvvmCross.dll",
+        "lib/net461/MvvmCross.pdb",
+        "lib/net461/MvvmCross.xml",
+        "lib/netcoreapp3.1/MvvmCross.dll",
+        "lib/netcoreapp3.1/MvvmCross.pdb",
+        "lib/netcoreapp3.1/MvvmCross.xml",
+        "lib/netstandard2.0/MvvmCross.dll",
+        "lib/netstandard2.0/MvvmCross.pdb",
+        "lib/netstandard2.0/MvvmCross.xml",
+        "lib/tizen40/MvvmCross.dll",
+        "lib/tizen40/MvvmCross.pdb",
+        "lib/tizen40/MvvmCross.xml",
+        "lib/uap10.0.16299/MvvmCross.dll",
+        "lib/uap10.0.16299/MvvmCross.pdb",
+        "lib/uap10.0.16299/MvvmCross.pri",
+        "lib/uap10.0.16299/MvvmCross.xml",
+        "lib/xamarinios10/MvvmCross.dll",
+        "lib/xamarinios10/MvvmCross.pdb",
+        "lib/xamarinios10/MvvmCross.xml",
+        "lib/xamarinmac20/MvvmCross.dll",
+        "lib/xamarinmac20/MvvmCross.pdb",
+        "lib/xamarinmac20/MvvmCross.xml",
+        "lib/xamarintvos10/MvvmCross.dll",
+        "lib/xamarintvos10/MvvmCross.pdb",
+        "lib/xamarintvos10/MvvmCross.xml",
+        "lib/xamarinwatchos10/MvvmCross.dll",
+        "lib/xamarinwatchos10/MvvmCross.pdb",
+        "lib/xamarinwatchos10/MvvmCross.xml",
+        "mvvmcross.7.1.2.nupkg.sha512",
+        "mvvmcross.nuspec",
+        "readme.txt"
+      ]
+    },
+    "MvvmCross.Plugin.Messenger/7.1.2": {
+      "sha512": "Fc1RUrSVk2FbEUNod/001PJ29jCOtIVppHx34ycX8zHB40XjpdX5dGYTGitcxmse5rz6SUL1pVf+7+fslBcbrg==",
+      "type": "package",
+      "path": "mvvmcross.plugin.messenger/7.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/netstandard2.0/MvvmCross.Plugin.Messenger.dll",
+        "lib/netstandard2.0/MvvmCross.Plugin.Messenger.pdb",
+        "lib/netstandard2.0/MvvmCross.Plugin.Messenger.xml",
+        "mvvmcross.plugin.messenger.7.1.2.nupkg.sha512",
+        "mvvmcross.plugin.messenger.nuspec"
       ]
     },
     "Newtonsoft.Json/12.0.3": {

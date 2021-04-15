@@ -10,66 +10,66 @@ using System.Threading.Tasks;
 
 namespace HomeMQ.Core.ViewModels
 {
-    public class SensorInfoViewModel : MvxViewModel
+    public class SensorInfoViewModel// : MvxViewModel
     {
         #region Fields
-        private ISensorData sensor;
-        private IPiControlPublisher _commandPublisher;
+        //private ISensorData sensor;
+        //private IPiControlPublisher _commandPublisher;
         #endregion
 
         #region Properties
 
-        public string SerialNumber
-        {
-            get { return sensor.SerialNumber; }
-            set
-            {
-                if (sensor.SerialNumber != value)
-                {
-                    sensor.SerialNumber = value;
-                    RaisePropertyChanged();
-                }
-            }
-        }
+        //public string SerialNumber
+        //{
+        //    get { return sensor.SerialNumber; }
+        //    set
+        //    {
+        //        if (sensor.SerialNumber != value)
+        //        {
+        //            sensor.SerialNumber = value;
+        //            RaisePropertyChanged();
+        //        }
+        //    }
+        //}
 
 
-        public string Status
-        {
-            get { return sensor.Status; }
-            set
-            {
-                if (sensor.Status != value)
-                {
-                    sensor.Status = value;
-                    RaisePropertyChanged();
-                }
-            }
-        }
+        //public string Status
+        //{
+        //    get { return sensor.Status; }
+        //    set
+        //    {
+        //        if (sensor.Status != value)
+        //        {
+        //            sensor.Status = value;
+        //            RaisePropertyChanged();
+        //        }
+        //    }
+        //}
 
 
         #endregion
 
         #region Commands
-        public IMvxCommand LoadFromConfigCommand { get; }
+        //public IMvxCommand LoadFromConfigCommand { get; }
         #endregion
 
         #region Constructors
-        public SensorInfoViewModel(ISensorData nSensor, IPiControlPublisher commandPublisher)
+        public SensorInfoViewModel()//ISensorData nSensor, IPiControlPublisher commandPublisher)
         {
-            sensor = nSensor;
-            _commandPublisher = commandPublisher;
-            LoadFromConfigCommand = new MvxAsyncCommand(OnLoadFromConfig);
+            //sensor = nSensor;
+            //_commandPublisher = commandPublisher;
+            //LoadFromConfigCommand = new MvxAsyncCommand(OnLoadFromConfig);
         }
 
 
         #endregion
 
         #region Methods
-        private Task OnLoadFromConfig()
-        {
-            _commandPublisher.AddMessage(new RabbitControlMessage(new BoontonLoadFromConfig(sensor.SerialNumber, "help.json"), "rasp.control.all"));
-            return Task.CompletedTask;
-        }
+        //private Task OnLoadFromConfig()
+        //{
+        //    _commandPublisher.AddMessage(new RabbitControlMessage(new BoontonLoadFromConfig(sensor.SerialNumber, "help.json"), "rasp.control.all"));
+        //    return Task.CompletedTask;
+        //}
         #endregion
 
     }

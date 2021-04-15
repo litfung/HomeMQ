@@ -278,6 +278,14 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "MvvmCross": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
+            "MvvmCross.Plugin.Messenger": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

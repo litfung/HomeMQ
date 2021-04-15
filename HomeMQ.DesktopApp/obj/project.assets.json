@@ -26,6 +26,18 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
+      "MvvmCross.Plugin.Messenger/7.1.2": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross": "7.1.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/MvvmCross.Plugin.Messenger.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MvvmCross.Plugin.Messenger.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -79,6 +91,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "MvvmCross": "7.1.2",
+          "MvvmCross.Plugin.Messenger": "7.1.2",
           "Newtonsoft.Json": "12.0.3"
         },
         "compile": {
@@ -353,6 +367,22 @@
         "mvvmcross.platforms.wpf.7.1.2.nupkg.sha512",
         "mvvmcross.platforms.wpf.nuspec",
         "readme.txt"
+      ]
+    },
+    "MvvmCross.Plugin.Messenger/7.1.2": {
+      "sha512": "Fc1RUrSVk2FbEUNod/001PJ29jCOtIVppHx34ycX8zHB40XjpdX5dGYTGitcxmse5rz6SUL1pVf+7+fslBcbrg==",
+      "type": "package",
+      "path": "mvvmcross.plugin.messenger/7.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/netstandard2.0/MvvmCross.Plugin.Messenger.dll",
+        "lib/netstandard2.0/MvvmCross.Plugin.Messenger.pdb",
+        "lib/netstandard2.0/MvvmCross.Plugin.Messenger.xml",
+        "mvvmcross.plugin.messenger.7.1.2.nupkg.sha512",
+        "mvvmcross.plugin.messenger.nuspec"
       ]
     },
     "Newtonsoft.Json/12.0.3": {

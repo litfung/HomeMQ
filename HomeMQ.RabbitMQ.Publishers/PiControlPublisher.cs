@@ -4,6 +4,7 @@ using RabbitMQ.Control.Core;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace HomeMQ.RabbitMQ.Publishers
@@ -13,6 +14,7 @@ namespace HomeMQ.RabbitMQ.Publishers
 
         #region Fields
         //private Queue<ControlMessage>
+        private CancellationTokenSource statusToken = new CancellationTokenSource();
         #endregion
 
         #region Properties
@@ -30,18 +32,27 @@ namespace HomeMQ.RabbitMQ.Publishers
         {
             //var homeFactory = rabbitConnectionManager.FactoriesByName["home"];
             //var connection = homeFactory.CreateConnection(clientProvidedName: connectionName);
-            var _ = StatusPoll();
+            _ = StatusPoll();
         }
         #endregion
 
         #region Methods
         private async Task StatusPoll()
         {
-            //await Publish(new ControlMessage(new StatusCheck()), "rasp.control.all");
-            AddMessage(new RabbitControlMessage(new StatusCheck(), "rasp.control.all"));
-            await Task.Delay(1000);
-            await StatusPoll();
+            while (!statusToken.IsCancellationRequested)
+            {
+                AddMessage(new RabbitControlMessage(new StatusCheck(), "rasp.control.all"));
+                await Task.Delay(1000);
+            }
         }
+
+        //private async Task StatusPoll()
+        //{
+        //    //await Publish(new ControlMessage(new StatusCheck()), "rasp.control.all");
+        //    AddMessage(new RabbitControlMessage(new StatusCheck(), "rasp.control.all"));
+        //    await Task.Delay(1000);
+        //    await StatusPoll();
+        //}
 
         #endregion
 

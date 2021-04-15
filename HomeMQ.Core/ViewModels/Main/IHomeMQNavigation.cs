@@ -7,5 +7,6 @@ namespace HomeMQ.Core.ViewModels
     public interface IHomeMQNavigation
     {
         void NavigateToPrimaryOverview();
+        void NavigateToSensorControl();
     }
 }

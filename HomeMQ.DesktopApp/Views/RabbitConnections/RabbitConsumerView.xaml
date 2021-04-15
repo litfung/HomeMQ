@@ -6,9 +6,9 @@
              xmlns:local="clr-namespace:HomeMQ.DesktopApp.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <ScrollViewer Height="600">
         <!--<DataGrid ItemsSource="{Binding Devices}" Width="300"/>-->
         <ItemsControl ItemsSource="{Binding Devices}"/>
 
-    </Grid>
+    </ScrollViewer>
 </UserControl>

@@ -9,16 +9,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\ErrorHandlerView.xaml.cs">
+    <Compile Update="Views\Main\ErrorHandlerView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\InterfaceInfoView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\MainView.xaml.cs">
+    <Compile Update="Views\Main\MainView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\MenuView.xaml.cs">
+    <Compile Update="Views\Main\MenuView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\PrimaryOverviewPage.xaml.cs">
@@ -28,6 +28,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\RabbitConnections\RabbitControlStatusView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RabbitControlOverviewPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Sensors\SensorInfoView.xaml.cs">
@@ -65,16 +68,16 @@
     <Page Update="Styles\Texts.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\ErrorHandlerView.xaml">
+    <Page Update="Views\Main\ErrorHandlerView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\InterfaceInfoView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\MainView.xaml">
+    <Page Update="Views\Main\MainView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\MenuView.xaml">
+    <Page Update="Views\Main\MenuView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\PrimaryOverviewPage.xaml">
@@ -84,6 +87,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\RabbitConnections\RabbitControlStatusView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RabbitControlOverviewPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Sensors\SensorInfoView.xaml">

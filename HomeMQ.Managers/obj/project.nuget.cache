@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mPfBKnaAuVBXpjiMl+dqMSrN4pr5qJ+v4pcaS45uW7UKLFMIkKNBikKCZz8FuuUrryPNPlqOsPMunWeeWYEwgg==",
+  "dgSpecHash": "Fq79OA58iYHWJdtZjhZA2LJ/KTlucZgMArxtSg3UXWIse4mLVmXWXhOb6gpzgqlKkx9x+gxx7Cw2hcQPnHQTXw==",
   "success": true,
   "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.Managers\\HomeMQ.Managers.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\devin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\mvvmcross\\7.1.2\\mvvmcross.7.1.2.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\mvvmcross.plugin.messenger\\7.1.2\\mvvmcross.plugin.messenger.7.1.2.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"

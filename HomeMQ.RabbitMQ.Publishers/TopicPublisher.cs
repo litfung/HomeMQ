@@ -16,7 +16,8 @@ namespace HomeMQ.RabbitMQ.Publishers
         #region Fields
         private DefaultContractResolver contractResolver;
         private Queue<RabbitControlMessage> MessageQueue = new Queue<RabbitControlMessage>();
-
+        private IBasicProperties publishProperties;
+        private JsonSerializerSettings jsonSettings;
         #endregion
 
         #region Properties
@@ -62,25 +63,28 @@ namespace HomeMQ.RabbitMQ.Publishers
                 NamingStrategy = new SnakeCaseNamingStrategy()
             };
 
-            var _ = PublishMessages();// ScheduleNextMessage();
+            publishProperties = Channel.CreateBasicProperties();
+            publishProperties.ContentType = "application/json";
+
+            jsonSettings = new JsonSerializerSettings
+            {
+                ContractResolver = contractResolver,
+                Formatting = Formatting.Indented
+            };
+
+
+            _ = PublishMessages();// ScheduleNextMessage();
         }
         #endregion
 
         #region Methods
         public Task Publish(object o, string routingKey)
         {
-            var message = JsonConvert.SerializeObject(o, new JsonSerializerSettings
-            {
-                ContractResolver = contractResolver,
-                Formatting = Formatting.Indented
-            });
-
+            var message = JsonConvert.SerializeObject(o, jsonSettings);
             var body = Encoding.UTF8.GetBytes(message);
             //Debug.WriteLine($"publish string -->{message}");
-            var props = Channel.CreateBasicProperties();
-            props.ContentType = "application/json";
-
-            Channel.BasicPublish(exchange: ExchangeName, routingKey: routingKey, basicProperties: props, body: body);
+            
+            Channel.BasicPublish(exchange: ExchangeName, routingKey: routingKey, basicProperties: publishProperties, body: body);
             return Task.CompletedTask;
         }
 

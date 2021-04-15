@@ -1,9 +1,6 @@
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\HomeMQ.DesktopApp.csprojAssemblyReference.cache
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\MainWindow.g.cs
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\ErrorHandlerView.g.cs
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\InterfaceInfoView.g.cs
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\MainView.g.cs
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\MenuView.g.cs
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\PrimaryOverviewPage.g.cs
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitConnections\RabbitConsumerView.g.cs
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitConnections\RabbitControlStatusView.g.cs
@@ -64,10 +61,7 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\St
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Styles\DataTemplates.baml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Styles\Fonts.baml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Styles\Texts.baml
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\ErrorHandlerView.baml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\InterfaceInfoView.baml
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\MainView.baml
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\MenuView.baml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\PrimaryOverviewPage.baml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitConnections\RabbitConsumerView.baml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitConnections\RabbitControlStatusView.baml
@@ -85,3 +79,12 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Ho
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\ref\HomeMQ.DesktopApp.dll
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\HomeMQ.DesktopApp.pdb
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\HomeMQ.DesktopApp.genruntimeconfig.cache
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\Main\ErrorHandlerView.g.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\Main\MainView.g.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\Main\MenuView.g.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitControlOverviewPage.g.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\Main\ErrorHandlerView.baml
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\Main\MainView.baml
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\Main\MenuView.baml
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitControlOverviewPage.baml
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\MvvmCross.Plugin.Messenger.dll

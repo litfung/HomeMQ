@@ -25,6 +25,17 @@
           }
         }
       },
+      "MvvmCross.Plugin.Messenger/7.1.2": {
+        "dependencies": {
+          "MvvmCross": "7.1.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MvvmCross.Plugin.Messenger.dll": {
+            "assemblyVersion": "7.1.2.0",
+            "fileVersion": "7.1.2.0"
+          }
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -78,6 +89,13 @@
       "sha512": "sha512-Bua4RosymWv27EUT7ZD2ixrNeuYQmbqdomhWlpqa4Vop1XjS3XFzop1yv00Z37vroT1YA7VHxbFZEtoDOzv/fg==",
       "path": "mvvmcross.platforms.wpf/7.1.2",
       "hashPath": "mvvmcross.platforms.wpf.7.1.2.nupkg.sha512"
+    },
+    "MvvmCross.Plugin.Messenger/7.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Fc1RUrSVk2FbEUNod/001PJ29jCOtIVppHx34ycX8zHB40XjpdX5dGYTGitcxmse5rz6SUL1pVf+7+fslBcbrg==",
+      "path": "mvvmcross.plugin.messenger/7.1.2",
+      "hashPath": "mvvmcross.plugin.messenger.7.1.2.nupkg.sha512"
     },
     "Newtonsoft.Json/12.0.3": {
       "type": "package",

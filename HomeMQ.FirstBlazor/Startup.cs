@@ -6,7 +6,7 @@ using HomeMQ.CoreBlazor.ViewModels;
 using HomeMQ.DapperCore;
 using HomeMQ.FirstBlazor.Data;
 using HomeMQ.Managers;
-using HomeMQ.RabbitMQ.Consumer;
+using HomeMQ.RabbitMQ.Consumers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;

@@ -1,4 +1,4 @@
-﻿using HomeMQ.RabbitMQ.Consumer;
+﻿using HomeMQ.RabbitMQ.Consumers;
 using HomeMQ.Core;
 using Newtonsoft.Json;
 using RabbitMQ.Client;

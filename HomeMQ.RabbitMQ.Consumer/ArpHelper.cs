@@ -8,7 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace HomeMQ.RabbitMQ.Consumer
+namespace HomeMQ.RabbitMQ.Consumers
 {
     public class ArpEntity
     {

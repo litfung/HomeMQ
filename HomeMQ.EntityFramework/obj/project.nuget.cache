@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TnaCO1BDqWTOUwI1w/c1Dd8DxXPGYuZyNo/Lxc5RYcIiG0jQ2qj7U6rlm+WkapUqqKSxhS0+gwPDDvPVLXYf8A==",
+  "dgSpecHash": "1Z5dHixJOPR7GULAg4NMUXpsAeWbwDq72IwHpjThDod1rKOfvKvUWVnW5/Rik3rmB53U99PgCIAFcwPHg8BJKw==",
   "success": true,
   "projectFilePath": "C:\\Users\\devin\\source\\repos\\HomeMQ\\HomeMQ.EntityFramework\\HomeMQ.EntityFramework.csproj",
   "expectedPackageFiles": [
@@ -40,6 +40,8 @@
     "C:\\Users\\devin\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\mvvmcross\\7.1.2\\mvvmcross.7.1.2.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\mvvmcross.plugin.messenger\\7.1.2\\mvvmcross.plugin.messenger.7.1.2.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\devin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

@@ -2,7 +2,7 @@
 using BaseViewModels;
 using DeviceManagers;
 using HomeMQ.Models;
-using HomeMQ.RabbitMQ.Consumer;
+using HomeMQ.RabbitMQ.Consumers;
 using HomeMQ.RabbitMQ.Publishers;
 using MvvmCross;
 using MvvmCross.Commands;
@@ -27,7 +27,7 @@ namespace HomeMQ.Core.ViewModels
         private IWiznetManager _wiznetManager;
         private IRabbitControlledManager _deviceManager;
         private IPiControlPublisher _commandPublisher;
-        private CancellationToken statusToken;
+        private CancellationTokenSource statusToken = new CancellationTokenSource();
         #endregion
 
         #region Properties
@@ -61,32 +61,17 @@ namespace HomeMQ.Core.ViewModels
 
         #endregion
 
-        #region Commands
-        public IMvxCommand StartPi1Command { get; }
-        public IMvxCommand StartAllPisCommand { get; }
-        public IMvxCommand StopPi1Command { get; }
-        public IMvxCommand StopAllPisCommand { get; }
-        public IMvxCommand BoontonStartupCommand { get; }
-        public IMvxCommand BoontonCloseSensorsCommand { get; }
-        public IMvxCommand BoontonResetSensorsCommand { get; }
-        #endregion
+        
 
         #region Constructors
 
         public PrimaryOverviewViewModel(IBackgroundHandler backgroundHandler, IWiznetManager wiznetManager, IRabbitControlledManager deviceManager, IPiControlPublisher commandPublisher) : base(backgroundHandler)
         {
-            _backgroundHandler = backgroundHandler;
+            //_backgroundHandler = backgroundHandler;
             _wiznetManager = wiznetManager;
             _deviceManager = deviceManager;
             _commandPublisher = commandPublisher;
-            
-            StartPi1Command = new MvxAsyncCommand(OnStartPi1);
-            StartAllPisCommand = new MvxAsyncCommand(OnStartAllPis);
-            StopPi1Command = new MvxAsyncCommand(OnStopPi1);
-            StopAllPisCommand = new MvxAsyncCommand(OnStopAllPis);
-            BoontonStartupCommand = new MvxAsyncCommand(OnBoontonStartup);
-            BoontonCloseSensorsCommand = new MvxAsyncCommand(OnBoontonCloseSensors);
-            BoontonResetSensorsCommand = new MvxAsyncCommand(OnBoontonResetSensors);
+
             foreach (var item in _wiznetManager.AllWiznets)
             {
                 WiznetStatusControls.Add(new WiznetStatusViewModel(_backgroundHandler, (IWiznetPiControl)item));
@@ -94,37 +79,23 @@ namespace HomeMQ.Core.ViewModels
 
             RabbitConsumer = new RabbitConsumerViewModel(_backgroundHandler, _deviceManager, _commandPublisher);
 
-            _ = PollRabbitDevices();
+            //_ = PollRabbitDevices();
         }
 
 
         #endregion
 
+        #region Override Methods
+        public override async Task OnUnloaded()
+        {
+            statusToken.Cancel();
+            await base.OnUnloaded();
+        }
+        #endregion
+
         #region Methods
-        private Task OnStartPi1()
-        {
-            _commandPublisher.AddMessage(new RabbitControlMessage(new StartPoll(), "rasp.control.pi1"));
-            return Task.CompletedTask;
-        }
 
-        private Task OnStartAllPis()
-        {
-            _commandPublisher.AddMessage(new RabbitControlMessage(new StartPoll(), "rasp.control.all"));
-            return Task.CompletedTask;
-        }
 
-        private Task OnStopPi1()
-        {
-            _commandPublisher.AddMessage(new RabbitControlMessage(new StopPoll(), "rasp.control.pi1"));
-            return Task.CompletedTask;
-        }
-
-        private Task OnStopAllPis()
-        {
-            _commandPublisher.AddMessage(new RabbitControlMessage(new StopPoll(), "rasp.control.all"));
-            return Task.CompletedTask;
-        }
-        
         private async Task PollRabbitDevices()
         {
             while (!statusToken.IsCancellationRequested)
@@ -144,25 +115,6 @@ namespace HomeMQ.Core.ViewModels
                 _backgroundHandler.SendMessage(new UpdateViewMessage());
                 await Task.Delay(2000);
             }
-
-        }
-
-        private Task OnBoontonStartup()
-        {
-            _commandPublisher.AddMessage(new RabbitControlMessage(new BoontonStartup(), "rasp.control.all"));
-            return Task.CompletedTask;
-        }
-
-        private Task OnBoontonCloseSensors()
-        {
-            _commandPublisher.AddMessage(new RabbitControlMessage(new BoontonCloseSensors(), "rasp.control.all"));
-            return Task.CompletedTask;
-        }
-
-        private Task OnBoontonResetSensors()
-        {
-            _commandPublisher.AddMessage(new RabbitControlMessage(new BoontonResetSensors(), "rasp.control.all"));
-            return Task.CompletedTask;
         }
         #endregion
 
