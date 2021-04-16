@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HomeMQ.RabbitMQ.Consumers
 {
-    public interface IMasterControlProcessor
+    public interface IMasterControlProcessor : IRabbitProcessor
     {
         void Process(ControlResponse data);
     }

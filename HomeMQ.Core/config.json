@@ -12,7 +12,14 @@
       "FactoryName": "home",
       "ExchangeName": "rtsh_topics",
       "RabbitMQDirection": 1,
-      "ConnectionName": "Master consumer"
+      "ConnectionName": "Master consumer",
+      "ProcessorType" :  "MasterControlProcessor"
+    },
+    {
+      "FactoryName": "home",
+      "ExchangeName": "rtsh_topics",
+      "RabbitMQDirection": 1,
+      "ConnectionName": "Data Collection Consumer"
     },
     {
       "FactoryName": "home",

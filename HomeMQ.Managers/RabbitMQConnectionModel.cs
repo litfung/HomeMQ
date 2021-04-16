@@ -9,7 +9,9 @@ namespace HomeMQ.Managers
         public string FactoryName { get; set; }
         public string ExchangeName { get; set; }
         public RabbitMQDirection RabbitMQDirection { get; set; }
+        public string[] RouteKeys { get; set; }
         public string ConnectionName { get; set; }
+        public string ProcessorType { get; set; }
     }
 
     public enum RabbitMQDirection

@@ -54,30 +54,41 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Override Methods
-        public override async Task OnUpdateView()
+        public Task PollUpdates()
         {
-            _uiContext?.Send((x) =>
+            var vmList = new List<IRabbitControlViewModel>();
+            Devices.Clear();
+            foreach (var item in _deviceManager.AllDevices)
             {
-                var vmList = new List<IRabbitControlViewModel>();
-                Devices.Clear();
-                foreach (var item in _deviceManager.AllDevices)
-                {
-                    Devices.Add(new RabbitControlStatusViewModel(_backgroundHandler, (IBoontonPi)item, _commandPublisher));
-                }
-            },
-            null);
-            //App
-            //var vmList = new List<IRabbitControlViewModel>();
-            //foreach (var item in _deviceManager.AllDevices)
-            //{
-            //    Devices.Add(new RabbitControlStatusViewModel(_backgroundHandler, (IBoontonPi)item, _commandPublisher));
-            //}
-            //Devices
-
-            //Devices.Clear();
-            //Devices = new ObservableCollection<IRabbitControlViewModel>(vmList);
-            //await base.OnUpdateView();
+                Devices.Add(new RabbitControlStatusViewModel(_backgroundHandler, (IBoontonPi)item, _commandPublisher));
+            }
+            return Task.CompletedTask;
         }
+
+        //public override async Task OnUpdateView()
+        //{
+        //    _uiContext?.Send((x) =>
+        //    {
+        //        var vmList = new List<IRabbitControlViewModel>();
+        //        Devices.Clear();
+        //        foreach (var item in _deviceManager.AllDevices)
+        //        {
+        //            Devices.Add(new RabbitControlStatusViewModel(_backgroundHandler, (IBoontonPi)item, _commandPublisher));
+        //        }
+        //    },
+        //    null);
+        //    //App
+        //    //var vmList = new List<IRabbitControlViewModel>();
+        //    //foreach (var item in _deviceManager.AllDevices)
+        //    //{
+        //    //    Devices.Add(new RabbitControlStatusViewModel(_backgroundHandler, (IBoontonPi)item, _commandPublisher));
+        //    //}
+        //    //Devices
+
+        //    //Devices.Clear();
+        //    //Devices = new ObservableCollection<IRabbitControlViewModel>(vmList);
+        //    //await base.OnUpdateView();
+        //}
 
         #endregion
 

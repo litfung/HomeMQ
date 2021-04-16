@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HomeMQ.Core.ViewModels
 {
-    public interface IRabbitControlViewModel
+    public interface IRabbitControlViewModel : IDisposable
     {
     }
 }

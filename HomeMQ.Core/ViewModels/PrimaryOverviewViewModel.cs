@@ -79,6 +79,8 @@ namespace HomeMQ.Core.ViewModels
 
             RabbitConsumer = new RabbitConsumerViewModel(_backgroundHandler, _deviceManager, _commandPublisher);
 
+            _ = PollUpdates();
+
             //_ = PollRabbitDevices();
         }
 
@@ -95,6 +97,16 @@ namespace HomeMQ.Core.ViewModels
 
         #region Methods
 
+        private async Task PollUpdates()
+        {
+            while (!statusToken.IsCancellationRequested)
+            {
+                await RabbitConsumer.PollUpdates();
+
+                await Task.Delay(1000);
+            }
+            
+        }
 
         private async Task PollRabbitDevices()
         {

@@ -85,6 +85,7 @@ namespace HomeMQ.Models
     {
         public string Command { get; set; }
         public string Hostname { get; set; }
+        public string Type { get; set; }
     }
 
     public class ResponsePayload
