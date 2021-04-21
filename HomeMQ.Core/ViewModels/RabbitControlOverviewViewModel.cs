@@ -7,6 +7,7 @@ using MvvmCross.Commands;
 using RabbitMQ.Control.Core;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -23,12 +24,13 @@ namespace HomeMQ.Core.ViewModels
 
         #region Properties
 
+        public ObservableCollection<IBoontonPiControlViewModel> BoontonPis { get; set; }
         #endregion
 
         #region Commands
-        public IMvxCommand StartPi1Command { get; }
+        //public IMvxCommand StartPi1Command { get; }
         public IMvxCommand StartAllPisCommand { get; }
-        public IMvxCommand StopPi1Command { get; }
+        //public IMvxCommand StopPi1Command { get; }
         public IMvxCommand StopAllPisCommand { get; }
         public IMvxCommand BoontonStartupCommand { get; }
         public IMvxCommand BoontonCloseSensorsCommand { get; }
@@ -41,9 +43,9 @@ namespace HomeMQ.Core.ViewModels
             _deviceManager = deviceManager;
             _commandPublisher = commandPublisher;
 
-            StartPi1Command = new MvxAsyncCommand(OnStartPi1);
+            //StartPi1Command = new MvxAsyncCommand(OnStartPi1);
             StartAllPisCommand = new MvxAsyncCommand(OnStartAllPis);
-            StopPi1Command = new MvxAsyncCommand(OnStopPi1);
+            //StopPi1Command = new MvxAsyncCommand(OnStopPi1);
             StopAllPisCommand = new MvxAsyncCommand(OnStopAllPis);
             BoontonStartupCommand = new MvxAsyncCommand(OnBoontonStartup);
             BoontonCloseSensorsCommand = new MvxAsyncCommand(OnBoontonCloseSensors);

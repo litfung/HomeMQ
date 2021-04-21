@@ -1,7 +1,10 @@
-﻿using HomeMQ.RabbitMQ.Consumers;
+﻿using HomeMQ.Models;
+using HomeMQ.RabbitMQ.Consumers;
+using Newtonsoft.Json;
 using RabbitMQ.Client;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace HomeMQ.RabbitMQ.Consumers
@@ -9,7 +12,7 @@ namespace HomeMQ.RabbitMQ.Consumers
     public class DataCollectionConsumer : TopicConsumer
     {
         #region Fields
-
+        private IDataCollectionProcessor _processor;
         #endregion
 
         #region Properties
@@ -17,8 +20,14 @@ namespace HomeMQ.RabbitMQ.Consumers
         #endregion
 
         #region Constructors
-        public DataCollectionConsumer(IConnectionFactory factory, string exchange, string routeKey, string consumerName = null) : base(factory, exchange, routeKey, consumerName)
+        public DataCollectionConsumer(IConnectionFactory factory, IDataCollectionProcessor processor, string exchange, string routeKey, string consumerName = null) : base(factory, exchange, routeKey, consumerName)
         {
+            _processor = processor;
+        }
+
+        public DataCollectionConsumer(IConnectionFactory factory, IDataCollectionProcessor processor, string exchange, List<string> routeKeys, string consumerName = null) : base(factory, exchange, routeKeys, consumerName)
+        {
+            _processor = processor;
         }
         #endregion
 
@@ -27,6 +36,10 @@ namespace HomeMQ.RabbitMQ.Consumers
         {
             Model.BasicAck(deliveryTag, false);
             var bodyString = Encoding.UTF8.GetString(body.ToArray());
+            Debug.WriteLine(bodyString);
+
+            var resp = JsonConvert.DeserializeObject<DataSaveMessage>(bodyString, jsonSettings);
+            _processor.Process(resp);
 
 
         }

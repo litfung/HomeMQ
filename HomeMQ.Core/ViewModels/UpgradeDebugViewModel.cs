@@ -17,7 +17,6 @@ namespace HomeMQ.Core.ViewModels
         private Process mainProcess;
         private StreamWriter myStreamWriter;
         private StreamReader myStreamReader;
-        private IBackgroundHandler _backgroundHandler;
         #endregion
 
         #region Properties
@@ -61,14 +60,10 @@ namespace HomeMQ.Core.ViewModels
         #region Constructors
         public UpgradeDebugViewModel(IBackgroundHandler backgroundHandler) : base(backgroundHandler)
         {
-            _backgroundHandler = backgroundHandler;
             EnterKeyCommand = new MvxCommand(OnSendCmdMessage, CanSendCmdMessage);
             StartCmdConsoleCommand = new MvxCommand(OnStartCmdConsole);
             StopCmdConsoleCommand = new MvxCommand(OnStopCmdConsole);
         }
-
-        
-
         #endregion
 
         #region Methods

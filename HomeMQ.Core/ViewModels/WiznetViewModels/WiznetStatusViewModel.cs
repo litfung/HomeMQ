@@ -87,7 +87,7 @@ namespace HomeMQ.Core.ViewModels
                 new WiznetPiControlViewModel(backgroundHandler, Wiznet, 2),
             };
 
-            _backgroundHandler .RegisterMessage<UpdateViewMessage>(this, async x => await OnUpdateView());
+            _backgroundHandler.RegisterMessage<UpdateViewMessage>(this, async x => await OnUpdateView());
             _backgroundHandler.RegisterMessage<ViewUnloadedMessage>(this, async x => await OnUnloaded());
         }
         #endregion
@@ -106,6 +106,17 @@ namespace HomeMQ.Core.ViewModels
         public virtual async Task OnUpdateView()
         {
             await UpdateUIControlAccess();
+        }
+
+        public override async Task OnUnloaded()
+        {
+            while (PiPowerControls.Count > 0)
+            {
+                var vm = PiPowerControls[0];
+                PiPowerControls.RemoveAt(0);
+                vm = null;
+            }
+            await base.OnUnloaded();
         }
 
         public async Task OnConnect()

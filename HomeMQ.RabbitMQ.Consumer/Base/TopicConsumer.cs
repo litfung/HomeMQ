@@ -1,4 +1,6 @@
-﻿using RabbitMQ.Client;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using RabbitMQ.Client;
 using RabbitMQ.Control.Core;
 using System;
 using System.Collections.Generic;
@@ -9,7 +11,7 @@ namespace HomeMQ.RabbitMQ.Consumers
     public abstract class TopicConsumer : DefaultBasicConsumer, ITopicConsumer, IRabbitMQConnection
     {
         #region Fields
-
+        protected JsonSerializerSettings jsonSettings;
         #endregion
 
         #region Properties
@@ -27,6 +29,7 @@ namespace HomeMQ.RabbitMQ.Consumers
             ExchangeName = exchange;
             RoutingKeys = new List<string> { routeKey };
             Model = Connection.CreateModel();
+            InitJsonSettings();
         }
 
         public TopicConsumer(IConnectionFactory factory, string exchange, string routeKey, string consumerName = null)
@@ -46,6 +49,7 @@ namespace HomeMQ.RabbitMQ.Consumers
             ExchangeName = exchange;
             RoutingKeys = routeKeys;
             Model = Connection.CreateModel();
+            InitJsonSettings();
         }
 
         //public static TopicConsumer Create(TopicConsumer consumer, IConnectionFactory factory, string exchange, List<string> routeKeys, string consumerName = null)
@@ -70,6 +74,17 @@ namespace HomeMQ.RabbitMQ.Consumers
         public void AddRouteKey(string key)
         {
             RoutingKeys.Add(key);
+        }
+
+        public virtual void InitJsonSettings()
+        {
+            jsonSettings = new JsonSerializerSettings
+            {
+                ContractResolver = new DefaultContractResolver
+                {
+                    NamingStrategy = new SnakeCaseNamingStrategy()
+                }
+            };
         }
 
         //public void AddTopicProcessor(ITopicProcessor processor)

@@ -12,13 +12,27 @@
       "FactoryName": "home",
       "ExchangeName": "rtsh_topics",
       "RabbitMQDirection": 1,
-      "ConnectionName": "Master consumer"
+      "ConnectionName": "Master consumer",
+      "ProcessorType": "MasterControlProcessor",
+      "RouteKeys": [
+        "master.control.*"
+      ]
+    },
+    {
+      "FactoryName": "home",
+      "ExchangeName": "rtsh_topics",
+      "RabbitMQDirection": 1,
+      "ConnectionName": "DataCollectionConsumer",
+      "RouteKeys": [
+        "data.save.*"
+      ]
     },
     {
       "FactoryName": "home",
       "ExchangeName": "rtsh_topics",
       "RabbitMQDirection": 0,
       "ConnectionName": "pi controller 1"
+
     }
   ],
   "TcpConnections": [ { "IPAddress": "169.254.208.100" } ]

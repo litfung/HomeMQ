@@ -1,4 +1,6 @@
-﻿namespace HomeMQ.RabbitMQ.Consumers
+﻿using HomeMQ.Models;
+
+namespace HomeMQ.RabbitMQ.Consumers
 {
     public interface IDataCollectionProcessor : IRabbitProcessor
     {

@@ -80,8 +80,7 @@ namespace HomeMQ.Core.ViewModels
             RabbitConsumer = new RabbitConsumerViewModel(_backgroundHandler, _deviceManager, _commandPublisher);
 
             _ = PollUpdates();
-
-            //_ = PollRabbitDevices();
+            _ = PollRabbitDevices();
         }
 
 
@@ -103,7 +102,7 @@ namespace HomeMQ.Core.ViewModels
             {
                 await RabbitConsumer.PollUpdates();
 
-                await Task.Delay(1000);
+                await Task.Delay(2000);
             }
             
         }
@@ -112,17 +111,29 @@ namespace HomeMQ.Core.ViewModels
         {
             while (!statusToken.IsCancellationRequested)
             {
-                foreach (var device in _deviceManager.AllDevices)
+                try
                 {
-                    if ((DateTime.Now - device.LastUpdateTime).TotalSeconds > 10.0)
+                    foreach (var device in _deviceManager.AllDevices)
                     {
-                        device.Status = "lost";
-                    }
-                    else if ((DateTime.Now - device.LastUpdateTime).TotalSeconds > 4.0 )
-                    {
-                        device.Status = "stale";
+                        if ((DateTime.Now - device.LastUpdateTime).TotalSeconds > 15.0)
+                        {
+                            _deviceManager.RemoveDevice(device);
+                        }
+                        else if ((DateTime.Now - device.LastUpdateTime).TotalSeconds > 10.0)
+                        {
+                            device.Status = "lost";
+                        }
+                        else if ((DateTime.Now - device.LastUpdateTime).TotalSeconds > 4.0)
+                        {
+                            device.Status = "stale";
+                        }
                     }
                 }
+                catch(InvalidOperationException ioe)
+                {
+                    
+                }
+                
 
                 _backgroundHandler.SendMessage(new UpdateViewMessage());
                 await Task.Delay(2000);

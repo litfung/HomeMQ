@@ -10,6 +10,8 @@ using RabbitMQ.Client;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -22,12 +24,12 @@ namespace HomeMQ.Core.ViewModels
         //private ITopicConsumer consumer;
         private IRabbitControlledManager _deviceManager;
         private IPiControlPublisher _commandPublisher;
-        private SynchronizationContext _uiContext;
+        //private SynchronizationContext _uiContext;
         #endregion
 
         #region Properties
-        private ObservableCollection<IRabbitControlViewModel> devices = new ObservableCollection<IRabbitControlViewModel>();
-        public ObservableCollection<IRabbitControlViewModel> Devices
+        private ObservableCollection<IRabbitControlViewModel<IBoontonPi>> devices = new ObservableCollection<IRabbitControlViewModel<IBoontonPi>>();
+        public ObservableCollection<IRabbitControlViewModel<IBoontonPi>> Devices
         {
             get { return devices; }
             set
@@ -47,7 +49,7 @@ namespace HomeMQ.Core.ViewModels
         {
             _deviceManager = deviceManager;
             _commandPublisher = commandPublisher;
-            _uiContext = SynchronizationContext.Current;
+            //_uiContext = SynchronizationContext.Current;
             _ = OnUpdateView();
             //_ = InitView();
         }
@@ -56,14 +58,74 @@ namespace HomeMQ.Core.ViewModels
         #region Override Methods
         public Task PollUpdates()
         {
-            var vmList = new List<IRabbitControlViewModel>();
-            Devices.Clear();
-            foreach (var item in _deviceManager.AllDevices)
-            {
-                Devices.Add(new RabbitControlStatusViewModel(_backgroundHandler, (IBoontonPi)item, _commandPublisher));
-            }
+            ReconcileCollection();
             return Task.CompletedTask;
         }
+
+        void ReconcileCollection()
+        {
+            //var idk = _deviceManager.DevicesByName.Keys;
+            var ocHostnames = from device in Devices select device.Device.Hostname;
+            var dmHostnames = _deviceManager.DevicesByName.Keys;
+            var ocMissingNames = dmHostnames.Where(x => !ocHostnames.Any(x.Contains));
+            var dmMissingNames = ocHostnames.Where(x => !dmHostnames.Any(x.Contains));
+
+            try
+            {
+                //Add new viewmodels previously not found in device manager
+                foreach (var item in ocMissingNames)
+                {
+                    var newDevice = _deviceManager.DevicesByName[item];
+                    Devices.Add(new RabbitControlStatusViewModel(_backgroundHandler, (IBoontonPi)newDevice, _commandPublisher));
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"PollUpdates Error {ex.Message}");
+            }
+
+            //Remove old viewmodels no longer found in device manager
+            var tmp = new List<IRabbitControlViewModel<IBoontonPi>>();//  Devices.Where(x => dmMissingNames.Any(x.Device.Hostname.Contains));
+
+            foreach (var item in Devices)
+            {
+                if (!dmHostnames.Contains(item.Device.Hostname))
+                {
+                    tmp.Add(item);
+                }
+            }
+            try
+            {
+                foreach (var item in tmp)
+                {
+                    var index = Devices.IndexOf(item);
+                    var vm = Devices[index];
+                    vm = null;
+                    Devices.RemoveAt(index);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"PollUpdates Error {ex.Message}");
+            }
+        }
+
+        //public override async Task OnUnloaded()
+        //{
+        //    while(Devices.Count > 0)
+        //    {
+        //        var vm = Devices[0];
+        //        Devices.RemoveAt(0);
+        //        vm = null;
+        //    }
+        //    await base.OnUnloaded();
+        //}
+
+        //public override async Task OnUpdateView()
+        //{
+        //    ReconcileCollection();
+        //    await base.OnUpdateView();
+        //}
 
         //public override async Task OnUpdateView()
         //{

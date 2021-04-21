@@ -7,17 +7,19 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace HomeMQ.Core.ViewModels
 {
-    public class RabbitControlStatusViewModel : BaseViewModel, IRabbitControlViewModel
+    public class RabbitControlStatusViewModel : BaseViewModel, IRabbitControlViewModel<IBoontonPi>
     {
         #region Fields
-        private IBoontonPi Device;
         private IPiControlPublisher _commandPublisher;
         #endregion
 
         #region Properties
+
+        public IBoontonPi Device { get; private set; }
 
         public string Hostname
         {
@@ -89,6 +91,10 @@ namespace HomeMQ.Core.ViewModels
             }
         }
 
+        
+
+
+
 
         #endregion
 
@@ -108,13 +114,19 @@ namespace HomeMQ.Core.ViewModels
             foreach (var sensor in Device.Sensors)
             {
                 //tmpSensors.Add(new SensorInfoViewModel());// sensor, _commandPublisher));
-                Sensors.Add(new SensorInfoViewModel());// sensor, _commandPublisher));
+                Sensors.Add(new SensorInfoViewModel(sensor, _commandPublisher));
             }
             //Interfaces.Clear();
             //Sensors.Clear();
             //Interfaces = new ObservableCollection<InterfaceInfoViewModel>(tmp);
             //Sensors = new ObservableCollection<SensorInfoViewModel>(tmpSensors);
             
+        }
+
+        public override async Task OnUpdateView()
+        {
+            await RaiseAllPropertiesChanged();
+            await base.OnUpdateView();
         }
 
         protected virtual void Dispose(bool disposing)
