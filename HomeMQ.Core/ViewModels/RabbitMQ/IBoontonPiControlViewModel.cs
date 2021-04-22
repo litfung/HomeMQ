@@ -1,6 +1,8 @@
-﻿namespace HomeMQ.Core.ViewModels
+﻿using HomeMQ.Models;
+
+namespace HomeMQ.Core.ViewModels
 {
-    public interface IBoontonPiControlViewModel
+    public interface IBoontonPiControlViewModel : IRabbitControlViewModel<IBoontonPi>
     {
     }
 }

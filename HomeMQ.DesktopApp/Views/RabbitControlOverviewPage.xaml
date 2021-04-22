@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:HomeMQ.DesktopApp.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <StackPanel>
         <StackPanel Orientation="Horizontal">
             <!--<Button Content="Start Pi1" Command="{Binding StartPi1Command}"/>-->
             <Button Content="Start All Pis" Command="{Binding StartAllPisCommand}"/>
@@ -16,7 +16,7 @@
             <Button Content="Boonton Close Sensors" Command="{Binding BoontonCloseSensorsCommand}"/>
             <Button Content="Boonton Reset Sensors" Command="{Binding BoontonResetSensorsCommand}"/>
         </StackPanel>
-        <ItemsControl ItemsSource="{Binding BoontonPis}"/>
+        <ItemsControl ItemsSource="{Binding Devices}"/>
 
-    </Grid>
+    </StackPanel>
 </UserControl>

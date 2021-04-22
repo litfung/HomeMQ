@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
         <TextBlock Text="{Binding SerialNumber}"/>
         <TextBlock Text="{Binding Status}" HorizontalAlignment="Center" Grid.Column="1"/>
-        <Button Content="Load from Config" Grid.Column="2" Command="{Binding LoadFromConfigCommand}"/>
+        <!--<Button Content="Load from Config" Grid.Column="2" Command="{Binding LoadFromConfigCommand}"/>-->
 
     </Grid>
 </UserControl>

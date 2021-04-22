@@ -3,7 +3,6 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Ma
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\InterfaceInfoView.g.cs
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\PrimaryOverviewPage.g.cs
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitConnections\RabbitConsumerView.g.cs
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitConnections\RabbitControlStatusView.g.cs
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\Sensors\SensorInfoView.g.cs
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\UpgradeDebugView.g.cs
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\WiznetConnections\WiznetPiControlView.g.cs
@@ -64,7 +63,6 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\St
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\InterfaceInfoView.baml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\PrimaryOverviewPage.baml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitConnections\RabbitConsumerView.baml
-C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitConnections\RabbitControlStatusView.baml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\Sensors\SensorInfoView.baml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\UpgradeDebugView.baml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\WiznetConnections\WiznetPiControlView.baml
@@ -88,3 +86,9 @@ C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Vi
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\Main\MenuView.baml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitControlOverviewPage.baml
 C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\bin\Debug\net5.0-windows\MvvmCross.Plugin.Messenger.dll
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitConnections\RabbitPiStatusView.g.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitConnections\RabbitPiStatusView.baml
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitConnections\RabbitPiControlView.g.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\RabbitConnections\RabbitPiControlView.baml
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\Sensors\SensorControlView.g.cs
+C:\Users\devin\source\repos\HomeMQ\HomeMQ.DesktopApp\obj\Debug\net5.0-windows\Views\Sensors\SensorControlView.baml

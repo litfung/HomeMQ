@@ -33,8 +33,12 @@
         <views:RabbitConsumerStatusView/>
     </DataTemplate>
 
-    <DataTemplate DataType="{x:Type vms:RabbitControlStatusViewModel}">
-        <views:RabbitControlStatusView/>
+    <DataTemplate DataType="{x:Type vms:BoontonPiStatusViewModel}">
+        <views:RabbitPiStatusView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vms:BoontonPiControlViewModel}">
+        <views:RabbitPiControlView/>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type vms:InterfaceInfoViewModel}">
@@ -43,6 +47,10 @@
 
     <DataTemplate DataType="{x:Type vms:SensorInfoViewModel}">
         <views:SensorInfoView/>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type vms:SensorControlViewModel}">
+        <views:SensorControlView/>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type vms:RabbitControlOverviewViewModel}">

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HomeMQ.Core.ViewModels
 {
-    public class SensorInfoViewModel : MvxViewModel
+    public class SensorControlViewModel : MvxViewModel, ISensorInfoViewModel
     {
         #region Fields
         private ISensorData sensor;
@@ -54,7 +54,7 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Constructors
-        public SensorInfoViewModel(ISensorData nSensor, IPiControlPublisher commandPublisher)
+        public SensorControlViewModel(ISensorData nSensor, IPiControlPublisher commandPublisher)
         {
             sensor = nSensor;
             _commandPublisher = commandPublisher;

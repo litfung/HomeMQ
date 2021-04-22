@@ -8,6 +8,8 @@ using RabbitMQ.Control.Core;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -24,7 +26,7 @@ namespace HomeMQ.Core.ViewModels
 
         #region Properties
 
-        public ObservableCollection<IBoontonPiControlViewModel> BoontonPis { get; set; }
+        public ObservableCollection<IBoontonPiControlViewModel> Devices { get; set; } = new ObservableCollection<IBoontonPiControlViewModel>();
         #endregion
 
         #region Commands
@@ -50,10 +52,71 @@ namespace HomeMQ.Core.ViewModels
             BoontonStartupCommand = new MvxAsyncCommand(OnBoontonStartup);
             BoontonCloseSensorsCommand = new MvxAsyncCommand(OnBoontonCloseSensors);
             BoontonResetSensorsCommand = new MvxAsyncCommand(OnBoontonResetSensors);
+
+            _ = PollUpdates();
         }
         #endregion
 
         #region Methods
+
+        private async Task PollUpdates()
+        {
+            while (!statusToken.IsCancellationRequested)
+            {
+                ReconcileCollections();
+
+                await Task.Delay(2000);
+            }
+
+        }
+
+        void ReconcileCollections()
+        {
+            //var idk = _deviceManager.DevicesByName.Keys;
+            var ocHostnames = from device in Devices select device.Device.Hostname;
+            var dmHostnames = _deviceManager.DevicesByName.Keys;
+            var ocMissingNames = dmHostnames.Where(x => !ocHostnames.Any(x.Contains));
+            var dmMissingNames = ocHostnames.Where(x => !dmHostnames.Any(x.Contains));
+
+            try
+            {
+                //Add new viewmodels previously not found in device manager
+                foreach (var item in ocMissingNames)
+                {
+                    var newDevice = _deviceManager.DevicesByName[item];
+                    Devices.Add(new BoontonPiControlViewModel(_backgroundHandler, (IBoontonPi)newDevice, _commandPublisher));
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"PollUpdates Error {ex.Message}");
+            }
+
+            //Remove old viewmodels no longer found in device manager
+            var tmp = new List<IBoontonPiControlViewModel>();//  Devices.Where(x => dmMissingNames.Any(x.Device.Hostname.Contains));
+
+            foreach (var item in Devices)
+            {
+                if (!dmHostnames.Contains(item.Device.Hostname))
+                {
+                    tmp.Add(item);
+                }
+            }
+            try
+            {
+                foreach (var item in tmp)
+                {
+                    var index = Devices.IndexOf(item);
+                    var vm = Devices[index];
+                    vm = null;
+                    Devices.RemoveAt(index);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"PollUpdates Error {ex.Message}");
+            }
+        }
         private Task OnStartPi1()
         {
             _commandPublisher.AddMessage(new RabbitControlMessage(new StartPoll(), "rasp.control.pi1"));

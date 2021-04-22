@@ -28,8 +28,8 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Properties
-        private ObservableCollection<IRabbitControlViewModel<IBoontonPi>> devices = new ObservableCollection<IRabbitControlViewModel<IBoontonPi>>();
-        public ObservableCollection<IRabbitControlViewModel<IBoontonPi>> Devices
+        private ObservableCollection<IBoontonPiControlViewModel> devices = new ObservableCollection<IBoontonPiControlViewModel>();
+        public ObservableCollection<IBoontonPiControlViewModel> Devices
         {
             get { return devices; }
             set
@@ -76,7 +76,7 @@ namespace HomeMQ.Core.ViewModels
                 foreach (var item in ocMissingNames)
                 {
                     var newDevice = _deviceManager.DevicesByName[item];
-                    Devices.Add(new RabbitControlStatusViewModel(_backgroundHandler, (IBoontonPi)newDevice, _commandPublisher));
+                    Devices.Add(new BoontonPiStatusViewModel(_backgroundHandler, (IBoontonPi)newDevice));
                 }
             }
             catch (Exception ex)
@@ -85,7 +85,7 @@ namespace HomeMQ.Core.ViewModels
             }
 
             //Remove old viewmodels no longer found in device manager
-            var tmp = new List<IRabbitControlViewModel<IBoontonPi>>();//  Devices.Where(x => dmMissingNames.Any(x.Device.Hostname.Contains));
+            var tmp = new List<IBoontonPiControlViewModel>();//  Devices.Where(x => dmMissingNames.Any(x.Device.Hostname.Contains));
 
             foreach (var item in Devices)
             {

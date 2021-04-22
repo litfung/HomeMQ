@@ -18,9 +18,9 @@ namespace HomeMQ.DesktopApp.Views
     /// <summary>
     /// Interaction logic for RabbitControlStatusView.xaml
     /// </summary>
-    public partial class RabbitControlStatusView : UserControl
+    public partial class RabbitPiStatusView : UserControl
     {
-        public RabbitControlStatusView()
+        public RabbitPiStatusView()
         {
             InitializeComponent();
         }

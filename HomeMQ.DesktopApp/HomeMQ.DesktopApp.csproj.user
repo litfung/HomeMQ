@@ -27,7 +27,7 @@
     <Compile Update="Views\RabbitConnections\RabbitConsumerView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\RabbitConnections\RabbitControlStatusView.xaml.cs">
+    <Compile Update="Views\RabbitConnections\RabbitPiStatusView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\RabbitControlOverviewPage.xaml.cs">
@@ -86,10 +86,16 @@
     <Page Update="Views\RabbitConnections\RabbitConsumerView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\RabbitConnections\RabbitControlStatusView.xaml">
+    <Page Update="Views\RabbitConnections\RabbitPiControlView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RabbitConnections\RabbitPiStatusView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\RabbitControlOverviewPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Sensors\SensorControlView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Sensors\SensorInfoView.xaml">
