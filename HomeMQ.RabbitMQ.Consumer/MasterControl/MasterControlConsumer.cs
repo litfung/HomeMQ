@@ -59,7 +59,7 @@ namespace HomeMQ.RabbitMQ.Consumers
         {
             Model.BasicAck(deliveryTag, false);
             var bodyString = Encoding.UTF8.GetString(body.ToArray());
-            Debug.WriteLine(bodyString);
+            //Debug.WriteLine(bodyString);
 
             var resp = JsonConvert.DeserializeObject<ControlResponse>(bodyString, jsonSettings);
             _processor.Process(resp);

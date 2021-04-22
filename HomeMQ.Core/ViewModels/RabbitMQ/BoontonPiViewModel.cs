@@ -106,6 +106,20 @@ namespace HomeMQ.Core.ViewModels
 
         #region Methods
 
+        public Task PollUpdates()
+        {
+            ReconcileSensors();
+            return Task.CompletedTask;
+        }
+
+        protected abstract void ReconcileSensors();
+
+        
+        public override async Task OnUpdateView()
+        {
+            await RaiseAllPropertiesChanged();
+            await base.OnUpdateView();
+        }
         #endregion
     }
 }

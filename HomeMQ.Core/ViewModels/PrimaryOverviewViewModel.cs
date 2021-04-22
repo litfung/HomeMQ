@@ -90,6 +90,13 @@ namespace HomeMQ.Core.ViewModels
         public override async Task OnUnloaded()
         {
             statusToken.Cancel();
+            while (WiznetStatusControls.Count > 0)
+            {
+                var vm = WiznetStatusControls[0];
+                WiznetStatusControls.RemoveAt(0);
+                vm = null;
+            }
+            
             await base.OnUnloaded();
         }
         #endregion

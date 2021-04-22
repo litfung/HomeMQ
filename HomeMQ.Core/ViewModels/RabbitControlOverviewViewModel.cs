@@ -21,7 +21,7 @@ namespace HomeMQ.Core.ViewModels
         #region Fields
         private IRabbitControlledManager _deviceManager;
         private IPiControlPublisher _commandPublisher;
-        private CancellationToken statusToken;
+        private CancellationTokenSource statusToken = new CancellationTokenSource();
         #endregion
 
         #region Properties
@@ -55,6 +55,12 @@ namespace HomeMQ.Core.ViewModels
 
             _ = PollUpdates();
         }
+
+        public override Task OnUnloaded()
+        {
+            statusToken.Cancel();
+            return base.OnUnloaded();
+        }
         #endregion
 
         #region Methods
@@ -64,7 +70,10 @@ namespace HomeMQ.Core.ViewModels
             while (!statusToken.IsCancellationRequested)
             {
                 ReconcileCollections();
-
+                foreach (var device in Devices)
+                {
+                    await device.PollUpdates();
+                }
                 await Task.Delay(2000);
             }
 

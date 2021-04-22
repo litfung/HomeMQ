@@ -103,11 +103,6 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Methods
-        public virtual async Task OnUpdateView()
-        {
-            await UpdateUIControlAccess();
-        }
-
         public override async Task OnUnloaded()
         {
             while (PiPowerControls.Count > 0)

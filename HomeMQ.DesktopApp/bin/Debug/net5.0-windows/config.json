@@ -22,7 +22,8 @@
       "FactoryName": "home",
       "ExchangeName": "rtsh_topics",
       "RabbitMQDirection": 1,
-      "ConnectionName": "DataCollectionConsumer",
+      "ConnectionName": "Data Collection",
+      "ProcessorType": "DataCollectionProcessor",
       "RouteKeys": [
         "data.save.*"
       ]

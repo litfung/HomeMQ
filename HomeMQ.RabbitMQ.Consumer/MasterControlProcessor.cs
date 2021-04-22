@@ -44,13 +44,13 @@ namespace HomeMQ.RabbitMQ.Consumers
             var device = data.ToPiDeviceStatus();
             if (_rabbitTracker.DevicesByName.TryGetValue(device.Hostname, out var tmp) )
             {
-                Debug.WriteLine("Master processor device found");
+                //Debug.WriteLine("Master processor device found");
                 //_backgroundHandler.SendMessage(new UpdateViewMessage());
                 UpdateDeviceStatus((IBoontonPi)tmp, device);
             }
             else
             {
-                Debug.WriteLine("Master processor device not found");
+                //Debug.WriteLine("Master processor device not found");
                 //_backgroundHandler.SendMessage(new UpdateViewMessage());
                 AddDevice(device);
             }

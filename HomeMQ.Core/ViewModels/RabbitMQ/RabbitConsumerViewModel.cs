@@ -56,10 +56,13 @@ namespace HomeMQ.Core.ViewModels
         #endregion
 
         #region Override Methods
-        public Task PollUpdates()
+        public async Task PollUpdates()
         {
             ReconcileCollection();
-            return Task.CompletedTask;
+            foreach (var item in Devices)
+            {
+                await item.PollUpdates();
+            }
         }
 
         void ReconcileCollection()

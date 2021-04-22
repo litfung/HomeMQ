@@ -23,7 +23,15 @@ namespace HomeMQ.RabbitMQ.Consumers
         #region Methods
         public void Process(DataSaveMessage data)
         {
-            Debug.WriteLine("Data Collection Processor process");
+            foreach (var item in data.Payload.Data)
+            {
+                if (item > -30.0)
+                {
+                    Debug.WriteLine(item);
+                }
+                
+            }
+            //Debug.WriteLine("Data Collection Processor process");
         }
         #endregion
 
