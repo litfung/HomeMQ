@@ -67,7 +67,7 @@ namespace HomeMQ.Core.ViewModels
         #region Methods
         private Task OnLoadFromConfig()
         {
-            _commandPublisher.AddMessage(new RabbitControlMessage(new BoontonLoadFromConfig(sensor.SerialNumber, "help.json"), "rasp.control.all"));
+            _commandPublisher.AddMessage(new RabbitControlMessage(new BoontonLoadFromConfig(sensor.SerialNumber, "../pi_total_control/config/test_boonton_config.json"), "rasp.control.all"));
             return Task.CompletedTask;
         }
         #endregion

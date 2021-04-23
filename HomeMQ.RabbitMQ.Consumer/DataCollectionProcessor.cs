@@ -23,6 +23,21 @@ namespace HomeMQ.RabbitMQ.Consumers
         #region Methods
         public void Process(DataSaveMessage data)
         {
+            switch (data.Header.Type)
+            {
+                case "trace":
+                    //var dbData = data.RfPowerTrace();
+                    Debug.WriteLine($"trace {data.Payload.Data[0]}");
+                    break;
+                case "pulse_data":
+                    //var dbData = data.RfPowerTrace();
+                    Debug.WriteLine($"pulse_data {data.Payload.Data[0]}");
+                    break;
+                default:
+                    break;
+            }
+
+
             foreach (var item in data.Payload.Data)
             {
                 if (item > -30.0)
